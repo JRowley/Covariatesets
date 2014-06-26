@@ -1,0 +1,202 @@
+%% Page settings.
+\documentclass[10pt,a4paper,twoside]{article}
+\usepackage[top=1.5in, left=1.2in, bottom=1.5in, right=1.2in]{geometry}
+%==================================================%
+%% Encoding packages.
+\usepackage[UKenglish]{babel}
+\usepackage[nodayofweek]{datetime}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{calc}
+\usepackage{natbib}
+%==================================================%
+%% Document details.
+\usepackage{titling}
+\title{Information and admissible sets}
+\author{Jeff Rowley}
+\newcommand{\thedate}{\today}
+% Enter document details here.
+\newcommand{\details}{C:/Dropbox/TeXTemplates/}
+% Enter the file path here for the UCL logo and bibliography.
+% Change this file path for different computer systems.
+%==================================================%
+%% Date macro.
+\newcommand{\theseason}[1]{
+\ifcase \month 
+\or Winter\or Winter\or Spring\or Spring\or Spring\or Summer\or Summer\or Summer\or Autumn\or Autumn\or Autumn\or Winter\fi}
+% Displays the season.
+% Obsolete in this template.
+%==================================================%
+%% Useful packages.
+\usepackage{enumerate}		% Lists.
+\usepackage{bbm}			% Indicator functions.
+\usepackage{lipsum}			% Random text generator.
+\usepackage{MnSymbol}		% Arrows.
+\usepackage{graphicx}		% Graphics.
+%==================================================%
+%% Theorem environments.
+\newcounter{countthm}[section]
+\newcounter{countlem}[section]
+\newcounter{countex}[section]
+% Creates new counters which reset at each new section. 
+\renewcommand{\thecountthm}{\thesection.\arabic{countthm}}
+\renewcommand{\thecountlem}{\thesection.\arabic{countlem}}
+\renewcommand{\thecountex}{\thesection.\arabic{countex}}
+% Redefines counters to include the section number.
+\newtheorem{thm}[countthm]{Theorem}
+% Creates a theorem environment - type \thm to begin.
+\newtheorem{lem}[countlem]{Lemma}
+% Creates a lemma environment - type \lem to begin.
+\newtheorem{ex}[countex]{Example}
+% Creates an example environment - type \ex to begin.
+\newtheorem*{Acknowledgements}{Acknowledgements}
+% Creates a thanks environment.
+\newcommand{\newthm}[1]{\newtheorem*{#1}{#1}}
+% A macro that makes defining new theorem environments quick.
+% Type \newthm{<Theorem name here>} to begin.
+%==================================================%
+%% Math operators.
+\DeclareMathOperator*{\plim}{plim}
+% Writes plim in math environment - type \plim to enter.
+\DeclareMathOperator*{\argmax}{argmax}
+% Writes argmax in math environment - type \argmax to enter.
+\DeclareMathOperator*{\argmin}{argmin}
+% Writes argmin in math environment - type \argmin to enter.
+\DeclareMathOperator*{\argsup}{argsup}
+% Writes argsup in math environment - type \argsup to enter.
+\DeclareMathOperator*{\arginf}{arginf}
+% Writes arginf in math environment - type \arginf to enter.
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}} 
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}} 
+% Pastes an independence symbol - type \independent to enter.
+%==================================================%
+%% Equation numbering.
+\numberwithin{equation}{subsection}
+% Numbers equations up to the subsection. To change level,
+% replace subsection with section.
+%==================================================%
+%% Counters.
+\newcounter{saveenumi}
+\newcounter{saveenumi1}
+\setcounter{section}{0}
+%==================================================%
+\newcommand{\ESRC}{I acknowledge financial support from the Economic and Social Research Council (ESRC).}
+%==================================================%
+%% The title page.
+\makeatletter				
+% Changes @ to catcode 11.
+\renewcommand{\@maketitle}{
+\null
+\graphicspath{ {\details} }
+\flushleft{\includegraphics[width=40mm]{UCL_Logo_Orange}}
+\hspace{5mm}
+\normalsize Department of Economics, University College London\\
+\vskip\bigskipamount
+\leaders\vrule width \textwidth\vskip0.4pt 
+\vskip\bigskipamount 
+\nointerlineskip
+% This completes the UCL banner.
+\begin{center}
+\begin{minipage}{100mm}
+\begin{center}
+\vspace{20mm}
+\LARGE
+\textbf{
+\@title}
+\par
+\vspace{10mm}
+\normalsize
+\@author
+\par
+\vspace{5mm}
+\normalsize
+\thedate
+\end{center}
+\end{minipage}
+\end{center}
+}
+\makeatother				
+% Reverts @ to catcode 12.
+%==================================================%
+%% Packages to load at end of preamble. 
+% Note conflict between Tkz-euclide package set and 
+% game theory package set. Load one or the other.
+\usepackage{hyperref}
+%\usepackage[numbered]{mcode}
+
+%% Tkz-euclide package set.
+%\usepackage{tkz-euclide}
+%\usepackage{pgfplots}
+%\usepgfplotslibrary{external} 
+%\tikzexternalize[prefix=tikz/]
+
+%% Game theory package set.
+\usepackage{pstricks}	
+\usepackage{egameps}		 
+\usepackage{pst-3d}			
+\usepackage{sgame}	
+\renewcommand{\gamestretch}{1.5}
+%==================================================%
+%% Further notes regarding egameps package.
+% The egameps package is incompatible with this template
+% due to UCL logo. Solution is to independently run 
+% egameps through on a latex blank document, then insert 
+% pdf into this document. Recall that to run egameps:
+% "latex" --> "DVi->PS" --> "PS->PDF"
+% then use "includegraphics[]" with trim option. 
+%==================================================%
+%% Headers and footers.
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+% This redefines the \rightmark command so that the section number does not appear.
+% NOTE: To remove the section number, delete <<\thesection.\>>
+\lhead[\thepage]{\rightmark}
+\rhead[\rightmark]{\thepage}
+\chead[]{}
+\cfoot[]{}
+\lfoot[\thetitle]{}
+\rfoot[]{\theauthor}
+\renewcommand*\thesection{\arabic{section}}
+\usepackage{epigraph}
+%==================================================%
+%% Start of document.
+\begin{document}
+\maketitle
+\vspace{10mm}
+\begin{abstract}
+\noindent <<Abstract here>>
+\begin{Acknowledgements}
+<<Acknowledgements here>>
+\ESRC
+\end{Acknowledgements}
+\end{abstract}
+\vspace{5mm}
+%==================================================%
+%% Document.
+\noindent The identification of a structural characteristic by a model is dependent upon the restrictions that are embedded in such a model, and upon data. Restrictions are either verifiable, that is consistent with dependence and independence relations that are observed in data, or are non-verifiable. Where the sum of verifiable and non-verifiable restrictions that a model embeds exclude all structures that are consistent with data then such a model is observationally restrictive \citep{krE50}, and falsified. Observational restrictiveness is then a criterion by which to judge competing models; where competing models are not observationally restrictive then a criterion by which to judge competing models is the relative strength of the restrictions that models embed, with less stringent restrictions being preferred to more stringent ones. Accordingly, a model is judged to be more credible relative to another if it is not observationally restrictive, or if it is not observationally restrictive and it embeds less stringent non-verifiable restrictions.\footnote{Some qualification must be made. Although parsimony is a sensible criterion by which to judge competing models it is unsatisfactory in one respect; specifically, a model that nests another is deemed to be less credible even if it differs only in restrictions that are founded in economic theory. Restrictions that are founded in economic theory should be considered credible regardless of their stringency.} That credibility rests upon the stringency of non-verifiable restrictions where a model is not observationally restrictive is precisely because those verifiable restrictions that are embedded must be valid. The notion of credibility is (more eloquently) explicated in \cite{book.manski}. 
+
+Identification of structure versus structural characteristic.
+
+The purpose of a model in economics is to determine the nature of relationships, principally causal relationships, between economic variables using data. If a model is preferred to another then it follows that estimation of structural characteristics using that model will also be preferred. Credibility is one characteristic of a model for which a preference ordering over models might be constructed. The idea that more credible models lead to more credible inference motivates the use of minimally restrictive models that incorporate only assumptions on the latent structure that are founded in economic theory, or that are the least stringent assumptions that might be made before a model becomes uninformative. However, by their very nature, minimally restrictive models incorporate weak restrictions that are not necessarily, and are commonly not, sufficient to ensure point identification. That is, the restrictions that are embedded in a model do not restrict the set of admissible structures sufficiently such that a mapping from any distribution in the image of a model on the space of probability distributions is a singleton set. Recent advances have meant that the identified set of structures can be recovered.  
+
+The use of models in economics is to determine the nature of relationships, principally causal, between economic variables. Simple logic dictates that if a model is preferred to another on the basis of credibility then the inferences that can be drawn from data using that model should also be preferred. This drive towards credible modelling has manifested recently with the development of tools 
+
+Credibility motivates partial identification. 
+\begin{quote}
+\textit{Causas rerum natruralium non plures admitti debere, qu{\`{a}}m qu{\ae} \& vera sint \& earum Ph{\ae}nomenis explicandis sufficiunt.}\\ 
+\vspace{10pt}
+\--- Isaac Newton, \textit{Philosophi{\ae} Naturalis Principia Mathematica.}
+\end{quote}
+
+\section{Introduction}
+
+%==================================================%
+%% Bibliography.
+\bibliographystyle{chicago}
+\bibliography{\details Bibliography}
+\end{document}
