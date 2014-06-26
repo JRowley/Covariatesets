@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.22)  26 JUN 2014 10:14
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.22)  26 JUN 2014 15:13
 entering extended mode
 **Information*and*admissible*sets.tex
 
@@ -1153,7 +1153,7 @@ out")
 out")
 \@outlinefile=\write3
 
-<C:/Dropbox/TeXTemplates/UCL_Logo_Orange.jpg, id=7, 501.875pt x 148.555pt>
+<C:/Dropbox/TeXTemplates/UCL_Logo_Orange.jpg, id=11, 501.875pt x 148.555pt>
 File: C:/Dropbox/TeXTemplates/UCL_Logo_Orange.jpg Graphic file (type jpg)
 
 <use C:/Dropbox/TeXTemplates/UCL_Logo_Orange.jpg>
@@ -1184,42 +1184,55 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!{U:/PortableTex/MiKTeX/pdftex/config/pdftex.map} <C:/Dr
 opbox/TeXTemplates/UCL_Logo_Orange.jpg>]
+LaTeX Font Info:    Try loading font information for U+bbm on input line 201.
+
+(U:\PortableTex\MiKTeX\tex\latex\bbm\ubbm.fd
+File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
+)
 ("\\econ-fs\Home3\zctpep9\GitHub\Covariatesets\Information and admissible sets.
-bbl")
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 204.
- [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 204.
+bbl" [2])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 211.
+ [3]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 211.
 
 ("\\econ-fs\Home3\zctpep9\GitHub\Covariatesets\Information and admissible sets.
 aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 204.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 204.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 211.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 211.
 Package rerunfilecheck Info: File `Information*and*admissible*sets.out' has not
  changed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 13487 strings out of 493921
- 188510 string characters out of 3149748
- 400882 words of memory out of 3000000
- 16483 multiletter control sequences out of 15000+200000
- 25352 words of font info for 70 fonts, out of 3000000 for 9000
+ 13516 strings out of 493921
+ 189192 string characters out of 3149748
+ 401882 words of memory out of 3000000
+ 16500 multiletter control sequences out of 15000+200000
+ 26272 words of font info for 76 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 37i,11n,51p,1817b,401s stack positions out of 5000i,500n,10000p,200000b,50000s
- <U:\PortableTex\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <U:\P
-ortableTex\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk> <U:\PortableT
-ex\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <U:\PortableTex\MiKTe
-X\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <U:\PortableTex\MiKTeX\fonts\
-pk\ljfour\jknappen\ec\dpi600\ecti0900.pk> <U:\PortableTex\MiKTeX\fonts\pk\ljfou
-r\jknappen\ec\dpi600\ecrm0900.pk> <U:\PortableTex\MiKTeX\fonts\pk\ljfour\jknapp
-en\ec\dpi600\ecbx0900.pk> <U:\PortableTex\MiKTeX\fonts\pk\ljfour\jknappen\ec\dp
-i600\ecrm0700.pk> <U:\PortableTex\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecb
-x1728.pk> <U:\PortableTex\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk
->
-Output written on "Information and admissible sets.pdf" (2 pages, 106144 bytes)
+ 37i,11n,51p,1817b,451s stack positions out of 5000i,500n,10000p,200000b,50000s
+{U:/PortableTex/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{U:/PortableTex
+/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolA.enc} <U:\PortableTex\MiKTeX\fonts\pk
+\ljfour\public\bbm\dpi600\bbm10.pk>{U:/PortableTex/MiKTeX/fonts/enc/dvips/mnsym
+bol/MnSymbolS.enc}{U:/PortableTex/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolE.enc
+} <U:\PortableTex\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <U:\Po
+rtableTex\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk> <U:\PortableTe
+x\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <U:\PortableTex\MiKTeX
+\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <U:\PortableTex\MiKTeX\fonts\p
+k\ljfour\jknappen\ec\dpi600\ecti0900.pk> <U:\PortableTex\MiKTeX\fonts\pk\ljfour
+\jknappen\ec\dpi600\ecrm0900.pk> <U:\PortableTex\MiKTeX\fonts\pk\ljfour\jknappe
+n\ec\dpi600\ecbx0900.pk> <U:\PortableTex\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi
+600\ecrm0700.pk> <U:\PortableTex\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx
+1728.pk> <U:\PortableTex\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk>
+<U:/PortableTex/MiKTeX/fonts/type1/public/mnsymbol/MnSymbol10.pfb><U:/PortableT
+ex/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><U:/PortableTex/MiKTeX/font
+s/type1/public/amsfonts/cm/cmmi7.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmr10.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
+7.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "Information and admissible sets.pdf" (3 pages, 178496 bytes)
 .
 PDF statistics:
- 299 PDF objects out of 1000 (max. 8388607)
- 8 named destinations out of 1000 (max. 500000)
- 14 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 355 PDF objects out of 1000 (max. 8388607)
+ 11 named destinations out of 1000 (max. 500000)
+ 22 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -194,9 +194,16 @@ Credibility motivates partial identification.
 \vspace{10pt}
 \--- Isaac Newton, \textit{Philosophi{\ae} Naturalis Principia Mathematica.}
 \end{quote}
+%==================================================%
+\section*{Notation}
+There is a probability space $(\Omega,\Sigma,\mathbb{P})$ on which are defined random variables $(Y,D,X,Z,U)$. Here, $(Y,D,X,Z)$ are observable with supports $(\mathcal{R}_Y,\mathcal{R}_D,\mathcal{R}_X,\mathcal{R}_Z)$, and $U$ is unobservable with as yet unspecified support. I allow $(X,Z,U)$ to be vectors, in which case the support is given by the Cartesian product of the supports of each element in the vector. I refer to $Y$ as the dependent variable, to $D$ as the endogenous variable, to $X$ as the exogenous variable, to $Z$ as the instrumental variable, and to $U$ as unobservable heterogeneity. The logic of this naming convention will be made clear by the restrictions that are imposed upon these random variables in the main text. Lower case letters are used to represent specific values of these random variables.
 
+I denote by $Y(d)$ the counterfactual value of $Y$ when $D$ is externally fixed, and by $D(z)$ the counterfactual value of $D$ when $Z$ is externally fixed. I denote by $\mathbb{E}$ the expectation operator, and  by $\mathbbm{1}$ the indicator function. Related to these concepts are the average causal effects $ACE(D\rightarrow Y)$ and $ACE(Z\rightarrow X)$ that are defined as $\mathbb{E}[Y(d_1)-Y(d_0)]$ and $\mathbb{E}[D(z_1)-D(z_0)]$, respectively. To distinguish between population and sample quantities, I subscript sample quantities by $n$. 
+%==================================================%
 \section{Introduction}
-
+%==================================================%
+\section{A threshold crossing model}
+I adopt the following notation: $Y$ is a random variable that is observable with support $\mathcal{R}_Y$, and that is to be interpreted as an outcome; $D$ is a random variable that is observable with support $\mathcal{R}_D$, and that is to be interpreted as 
 %==================================================%
 %% Bibliography.
 \bibliographystyle{chicago}
