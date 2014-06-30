@@ -1,9 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.23)  30 JUN 2014 12:43
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.23)  30 JUN 2014 19:31
 entering extended mode
-**Identification*-*observational*restrictiveness.tex
-
-("C:\Users\Jeffro\Documents\GitHub\Covariatesets\Diagrams\Identification - obse
-rvational restrictiveness.tex"
+**Setidentification.tex
+(C:\Users\Jeffro\Documents\GitHub\Covariatesets\Diagrams\Setidentification.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -652,8 +650,7 @@ File: tikzlibrarybackgrounds.code.tex 2010/02/08 v2.10 (rcs-revision 1.2)
 librarypositioning.code.tex"
 File: tikzlibrarypositioning.code.tex 2008/10/06 v2.10 (rcs-revision 1.7)
 )
-("C:\Users\Jeffro\Documents\GitHub\Covariatesets\Diagrams\Identification - obse
-rvational restrictiveness.aux")
+(C:\Users\Jeffro\Documents\GitHub\Covariatesets\Diagrams\Setidentification.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
@@ -666,7 +663,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
- ABD: EveryShipout initializing macros
+ABD: EveryShipout initializing macros
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count101
@@ -682,28 +679,25 @@ LaTeX Font Info:    ... okay on input line 31.
 \everyMPtoPDFconversion=\toks28
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 43.
+(Font)              <7> on input line 48.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 43.
+(Font)              <5> on input line 48.
  [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-("C:\Users\Jeffro\Documents\GitHub\Covariatesets\Diagrams\Identification - obse
-rvational restrictiveness.aux") ) 
+(C:\Users\Jeffro\Documents\GitHub\Covariatesets\Diagrams\Setidentification.aux)
+ ) 
 Here is how much of TeX's memory you used:
- 12162 strings out of 494045
- 254220 string characters out of 3148384
- 346721 words of memory out of 3000000
- 15224 multiletter control sequences out of 15000+200000
+ 12187 strings out of 494045
+ 254383 string characters out of 3148384
+ 348799 words of memory out of 3000000
+ 15249 multiletter control sequences out of 15000+200000
  3640 words of font info for 14 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 49i,7n,60p,453b,640s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
-y10.pfb>
-Output written on "Identification - observational restrictiveness.pdf" (1 page,
- 30644 bytes).
+ 49i,7n,60p,424b,641s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb>
+Output written on Setidentification.pdf (1 page, 23842 bytes).
 PDF statistics:
- 21 PDF objects out of 1000 (max. 8388607)
+ 17 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
