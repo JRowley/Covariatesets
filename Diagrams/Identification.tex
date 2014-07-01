@@ -31,19 +31,19 @@
 \begin{document}
 \centering
 \begin{tikzpicture}
-  \coordinate (o) at (0,0) {};
-  \coordinate (p) at (-8,0);
-  \coordinate (q) at (0.8,-1.2);
-  \coordinate (r) at (-8,0.4);
-  \draw[rounded corners=2mm,thick] (o) \irregularcircle{4cm}{4mm};
-  \draw[rounded corners=1mm, thick] (p) \irregularcircle{2cm}{2mm};
-  \draw[rounded corners=0.6mm,thick,fill=gray!50] (q) \irregularcircle{1.2cm}{1.2mm};
-  \draw[rounded corners=0.4mm,thick,fill=gray!50] (r) \irregularcircle{0.8cm}{0.8mm};
-  \node (a) at (0.8,-1.2) [] {$\mathcal{M}$};
-  \node (b) at (-8,0.4) [] {$\mathcal{I}$};
-  \node (c) at (0,4) [label=above:$\mathcal{S}$] {};
-  \node (d) at (-8,2) [label=above:$\mathcal{P}$] {};
-  \draw [pil] (q.south west) to [bend left=45] node [] {} (r.south east); 
+  	\coordinate (o) at (0,0) {};
+  	\coordinate (p) at (-8,0);
+  	\coordinate (q) at (0.8,-1.2);
+  	\coordinate (r) at (-8,0.4);
+  	\pgfmathsetseed{1990}\draw[rounded corners=2mm,thick] (o) \irregularcircle{4cm}{4mm};
+  	\pgfmathsetseed{2001}\draw[rounded corners=1mm, thick] (p) \irregularcircle{2cm}{2mm};
+  	\pgfmathsetseed{2008}\draw[rounded corners=0.6mm,thick,fill=gray!50] (q) \irregularcircle{1.2cm}{1.2mm};
+  	\pgfmathsetseed{2014}\draw[rounded corners=0.4mm,thick,fill=gray!50] (r) \irregularcircle{0.8cm}{0.8mm};
+  	\node (a) at (0.8,-1.2) [] {$\mathcal{M}$};
+  	\node (b) at (-8,0.4) [] {$\mathcal{I}$};
+  	\node (c) at (0,4) [label=above:$\mathcal{S}$] {};
+  	\node (d) at (-8,2) [label=above:$\mathcal{P}$] {};
+  	\draw [pil] (q.south west) to [bend left=45] node [] {} (r.south east); 
 %  \draw [pilar] (r.north east) to [bend left=45] node [] {} (q.north west);
 \end{tikzpicture}
 \end{document}

@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.22)  1 JUL 2014 15:27
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.22)  1 JUL 2014 18:00
 entering extended mode
-**Pointidentification.tex
-(\\econ-fs\Home3\zctpep9\GitHub\Covariatesets\Diagrams\Pointidentification.tex
+**Uniform.tex
+(\\econ-fs\Home3\zctpep9\GitHub\Covariatesets\Diagrams\Uniform.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -624,19 +624,20 @@ File: tikzlibrarybackgrounds.code.tex 2010/02/08 v2.10 (rcs-revision 1.2)
 positioning.code.tex
 File: tikzlibrarypositioning.code.tex 2008/10/06 v2.10 (rcs-revision 1.7)
 )
-(\\econ-fs\Home3\zctpep9\GitHub\Covariatesets\Diagrams\Pointidentification.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
+(\\econ-fs\Home3\zctpep9\GitHub\Covariatesets\Diagrams\Uniform.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+
 ABD: EveryShipout initializing macros
 (U:\PortableTex\MiKTeX\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -653,25 +654,24 @@ ABD: EveryShipout initializing macros
 \everyMPtoPDFconversion=\toks28
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 48.
+(Font)              <7> on input line 54.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 48.
+(Font)              <5> on input line 54.
  [1{U:/PortableTex/MiKTeX/pdftex/config/pdftex.map}]
-(\\econ-fs\Home3\zctpep9\GitHub\Covariatesets\Diagrams\Pointidentification.aux)
- ) 
+(\\econ-fs\Home3\zctpep9\GitHub\Covariatesets\Diagrams\Uniform.aux) ) 
 Here is how much of TeX's memory you used:
- 12227 strings out of 493921
- 253878 string characters out of 3149748
- 349528 words of memory out of 3000000
- 15290 multiletter control sequences out of 15000+200000
+ 12221 strings out of 493921
+ 253496 string characters out of 3149748
+ 373936 words of memory out of 3000000
+ 15284 multiletter control sequences out of 15000+200000
  3640 words of font info for 14 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 49i,7n,60p,426b,651s stack positions out of 5000i,500n,10000p,200000b,50000s
-<U:/PortableTex/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><U:/Portable
-Tex/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb>
-Output written on Pointidentification.pdf (1 page, 23826 bytes).
+ 49i,7n,60p,414b,662s stack positions out of 5000i,500n,10000p,200000b,50000s
+<U:/Portab
+leTex/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Uniform.pdf (1 page, 19081 bytes).
 PDF statistics:
- 17 PDF objects out of 1000 (max. 8388607)
+ 13 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
