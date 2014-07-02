@@ -24,7 +24,15 @@
     pilar/.style={
            ->,
            blue,
-}
+		   },
+    pilon/.style={
+           ->,
+           yellow,
+           },
+    pilot/.style={
+    	   ->,
+    	   gray,
+    	   }       
 }
 \begin{document}
 \centering
@@ -39,6 +47,7 @@
   		\pgfmathsetseed{2008}\draw[clip] (q) [rounded corners=0.6mm] \irregularcircle{1.2cm}{1.2mm};
   		\pgfmathsetseed{2008}\draw[rounded corners=0.6mm,thick,fill=red!50] (q) \irregularcircle{1.2cm}{1.2mm};
   		\pgfmathsetseed{2008}\draw[rounded corners=0.6mm,thick,fill=blue!50] (-0.4,-1.2) \irregularcircle{1.2cm}{1.2mm};
+  		\pgfmathsetseed{2008}\draw[rounded corners=0.6mm,thick,fill=yellow!50] (2,-2.5) \irregularcircle{1.2cm}{1.2mm};
 	\end{scope}
 	\pgfmathsetseed{2008}\draw[rounded corners=0.6mm,thick] (q) \irregularcircle{1.2cm}{1.2mm};
 	\begin{scope}
@@ -46,6 +55,8 @@
 	\pgfmathsetseed{2014}\draw[rounded corners=0.4mm,thick,fill=red!50] (r) \irregularcircle{0.8cm}{0.8mm};
 	\pgfmathsetseed{1990}\draw[rounded corners=0.1mm,thick,fill=blue!50] (-8.2,0.1) \irregularcircle{0.2cm}{0.2mm};
 	\pgfmathsetseed{1990}\draw[rounded corners=0.2mm,thick,fill=blue!50] (-7.4,0.8) \irregularcircle{0.4cm}{0.4mm};
+	\pgfmathsetseed{1990}\draw[rounded corners=0.2mm,thick,fill=yellow!50] (-8.8,0.5) \irregularcircle{0.4cm}{0.4mm};
+	\pgfmathsetseed{1990}\draw[rounded corners=0.1mm,thick,fill=gray!50] (-8,1.1) \irregularcircle{0.2cm}{0.2mm};
 	\end{scope}
  	\pgfmathsetseed{2014}\draw[rounded corners=0.4mm,thick] (r) \irregularcircle{0.8cm}{0.8mm};
   	\node (a) at (-8.25,0.3) [] {};
@@ -55,6 +66,9 @@
   	\node (e) at (-9.7,3) [] {$\color{red}\mathcal{P}$};
   	\node (f) at (-2,-1.6) [] {$\color{blue}\mathcal{M}$};
   	\node (g) at (1.8,0.8) [] {$\color{red}\mathcal{M}$};
+  	\node (h) at (2.5,-2.5) [] {$\color{yellow}\mathcal{M}$};
+  	\node (i) at (-9.4,-0.4) [] {$\color{yellow}\mathcal{P}$};
+  	\node (j) at (-7.7,3) [] {$\color{gray}\mathcal{P}$};
 %  	\node (c) at (0,4) [label=above:$\mathcal{S}$] {};
 %  	\node (d) at (-8,2) [label=above:$\mathcal{P}$] {};
 %  	\draw [pil] (q.south west) to [bend left=45] node [] {} (r.south east); 
@@ -63,5 +77,8 @@
   	\draw [pil] (e) to [bend right=15] node [] {} (c);
   	\draw [pilar] (f) to [bend right=15] node [] {} (0.2,-1.2);
   	\draw [pil] (g) to [bend left=15] node [] {} (1.2,-0.8);
+  	\draw [pilon] (h) to [bend left=15] node [] {} (1.5,-1.8);
+  	\draw [pilon] (i) to [bend left=15] node [] {} (-8.6,0.4);
+  	\draw [pilot] (j) to [bend right=15] node [] {} (-8,0.95);
 \end{tikzpicture}
 \end{document}
