@@ -189,41 +189,9 @@
 %% Document.
 %==================================================%
 \section{Introduction}
-I explore the effect of incorporating information on the identified set of values for the average causal effect of an endogenous variable on an outcome variable (the parameter of interest) that is delivered by a non-parametric model that embeds an exclusion restriction and an independence restriction that together characterise an instrumental variable. Endogenous variation enters the model since agents are permitted to non-randomly select a scalar observable characteristic. I consider the effect of combining many instrumental variables into a composite instrumental variable with many points of support on the identified set of values for counterfactual outcome distributions. Further, I consider the effect of enriching individual behaviour by allowing relevant exogenous variables to affect individual choice; specifically, I allow these variables to enter the structural equations that determine the endogenous variable and that determine the outcome variable. I establish the conditions under which the parameter of interest in the enriched model is equivalent to the parameter of interest in a model that does not explicitly account for the contribution of additional relevant exogenous variables. 
-
-The model that I consider partially identifies the parameter of interest. That is, the restrictions on the set of admissible structures (or data generating processes) that are implied by the model are insufficient to exclude observationally equivalent structures that deliver different values of the parameter of interest. The restrictions that are implied are nonetheless sufficient to restrict the set of values of the parameter of interest up to a non-trivial set. This concept is described graphically in Figure~\ref{fig:partials}. 
-\section{A}
-The model that I consider is partially identifying. That is, the restrictions on the set of admissible structures (or data generating processes) that are implied by the model are insufficient to exclude observationally equivalent structures. Furthermore, the model is unable to identify the structural characteristic of interest 
-
-\section{B}
-I explore the effect of incorporating information on the identified set of values for the average causal effect of an endogenous variable on an outcome variable (the parameter of interest) that is delivered by a non-parametric model. The model is weakly restrictive in that it does not embed a structural equation 
+I explore the effect of incorporating information for a non-parametric model that permits non-random selection. In permitting non-random selection the model introduces endogenous variation in a scalar random variable, and it is the average causal effect of this endogenous variable on the outcome variable that is of interest. The model embeds an exclusion restriction and an independence restriction that together characterise an instrumental variable with this instrumental variable providing exogenous variation that is used to measure the causal effect of the endogenous variable on the outcome variable. Asides from the existence of an instrumental variable the model is silent as to the relationship between the endogenous variable and the instrumental variable, and only specifies the relationship between the outcome variable and the endogenous variable up to a non-parametric index function. As such, the model is credible \citep{book.manski} in that it embeds only weak non-verifiable restrictions but does not identify the average causal effect of the endogenous variable on the outcome variable.\footnote{Assumptions that cannot be tested using data; the model does embed some non-trivial non-verifiable restrictions that might be relaxed.} Rather the model partially identifies the average causal effect of the endogenous variable on the outcome variable. 
 
 
- that embeds an exclusion restriction and an independence restriction that together characterise an instrumental variable. The model is weakly restrictive in that it 
- 
-\section{C}
-Points to make:
-\begin{itemize}
-\item Non-parametric IV model with endogenous variable
-\item Non-random selection
-\item Average causal effect of endogenous variable on outcome variable is parameter of interest
-\item Model partially identifies the parameter of interest
-\item Model is weakly restrictive in that it does not specify a distribution for unobserved heterogeneity (imposes a normalisation and allows all distributional assumption to enter the non-parametric threshold function) and does not specify a selection equation
-\item Credible identification
-\item Want to incorporate additional information for the purpose of efficiency and to potentially provide tighter bounds on parameter of interest; may also be that conditional parameter of interest is useful
-\end{itemize}
-Related literature:
-\begin{itemize}
-\item \cite{cr13} The starting point for analysis
-\item \cite{crs13} Characterise level sets and identification
-\item \cite{bp97} Binary treatment characterise the identified set under non-compliance; weaker restrictions than presented here
-\item \cite{kI09} Continuous outcome variable; nesting of identified set under different model assumptions
-\item \cite{bLpO03} Average structural function when continuous endogenous regressor
-\item \cite{bEmOImOF12} Random set theory
-\end{itemize}
-
-\section{D}
-I explore the effect of incorporating information for a non-parametric model that permits non-random selection. In permitting non-random selection the model introduces endogenous variation in a scalar random variable, and it is the average causal effect of this endogenous variable on the outcome variable that is of interest. The model embeds an exclusion restriction and an independence restriction that together characterise an instrumental variable with this instrumental variable providing exogenous variation that is used to measure the causal effect of the endogenous variable on the outcome variable. Asides from the existence of an instrumental variable the model is agnostic with respect to the relationship between the endogenous variable and the instrumental variable, and only specifies the relationship between the outcome variable and the endogenous variable up to a non-parametric index function. As such, the model is credible \citep{book.manski} in that it embeds only weak non-verifiable restrictions but does not identify the average causal effect of the endogenous variable on the outcome variable.\footnote{Assumptions that cannot be tested using data; the model does embed some non-trivial non-verifiable restrictions that might be relaxed.} Rather the model partially identifies the average causal effect of the endogenous variable on the outcome variable. 
 %==================================================%
 \section*{Notation}
 There is a probability space $(\Omega,\Sigma,\mathbb{P})$ on which are defined random variables $(Y,D,X,Z,U)$. Here, $(Y,D,X,Z)$ are observable with supports $(\mathcal{R}_Y,\mathcal{R}_D,\mathcal{R}_X,\mathcal{R}_Z)$, and $U$ is unobservable with as yet unspecified support. I allow $(X,Z,U)$ to be vectors, in which case the support is given by the Cartesian product of the supports of each element in the vector. I refer to $Y$ as the outcome variable, to $D$ as the endogenous variable, to $X$ as the exogenous variable, to $Z$ as the instrumental variable, and to $U$ as unobservable heterogeneity. The logic of this naming convention will be made clear by the restrictions that are imposed upon these random variables in the main text. Lower case letters are used to represent specific values of these random variables.
@@ -310,3 +278,36 @@ Further terminology and notation is introduced in Figure~\ref{fig:models} throug
 \bibliographystyle{chicago}
 \bibliography{\details Bibliography}
 \end{document}
+
+%I explore the effect of incorporating information on the identified set of values for the average causal effect of an endogenous variable on an outcome variable (the parameter of interest) that is delivered by a non-parametric model that embeds an exclusion restriction and an independence restriction that together characterise an instrumental variable. Endogenous variation enters the model since agents are permitted to non-randomly select a scalar observable characteristic. I consider the effect of combining many instrumental variables into a composite instrumental variable with many points of support on the identified set of values for counterfactual outcome distributions. Further, I consider the effect of enriching individual behaviour by allowing relevant exogenous variables to affect individual choice; specifically, I allow these variables to enter the structural equations that determine the endogenous variable and that determine the outcome variable. I establish the conditions under which the parameter of interest in the enriched model is equivalent to the parameter of interest in a model that does not explicitly account for the contribution of additional relevant exogenous variables. 
+%
+%The model that I consider partially identifies the parameter of interest. That is, the restrictions on the set of admissible structures (or data generating processes) that are implied by the model are insufficient to exclude observationally equivalent structures that deliver different values of the parameter of interest. The restrictions that are implied are nonetheless sufficient to restrict the set of values of the parameter of interest up to a non-trivial set. This concept is described graphically in Figure~\ref{fig:partials}. 
+%\section{A}
+%The model that I consider is partially identifying. That is, the restrictions on the set of admissible structures (or data generating processes) that are implied by the model are insufficient to exclude observationally equivalent structures. Furthermore, the model is unable to identify the structural characteristic of interest 
+%
+%\section{B}
+%I explore the effect of incorporating information on the identified set of values for the average causal effect of an endogenous variable on an outcome variable (the parameter of interest) that is delivered by a non-parametric model. The model is weakly restrictive in that it does not embed a structural equation 
+%
+%
+% that embeds an exclusion restriction and an independence restriction that together characterise an instrumental variable. The model is weakly restrictive in that it 
+% 
+%\section{C}
+%Points to make:
+%\begin{itemize}
+%\item Non-parametric IV model with endogenous variable
+%\item Non-random selection
+%\item Average causal effect of endogenous variable on outcome variable is parameter of interest
+%\item Model partially identifies the parameter of interest
+%\item Model is weakly restrictive in that it does not specify a distribution for unobserved heterogeneity (imposes a normalisation and allows all distributional assumption to enter the non-parametric threshold function) and does not specify a selection equation
+%\item Credible identification
+%\item Want to incorporate additional information for the purpose of efficiency and to potentially provide tighter bounds on parameter of interest; may also be that conditional parameter of interest is useful
+%\end{itemize}
+%Related literature:
+%\begin{itemize}
+%\item \cite{cr13} The starting point for analysis
+%\item \cite{crs13} Characterise level sets and identification
+%\item \cite{bp97} Binary treatment characterise the identified set under non-compliance; weaker restrictions than presented here
+%\item \cite{kI09} Continuous outcome variable; nesting of identified set under different model assumptions
+%\item \cite{bLpO03} Average structural function when continuous endogenous regressor
+%\item \cite{bEmOImOF12} Random set theory
+%\end{itemize}
