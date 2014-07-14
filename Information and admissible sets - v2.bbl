@@ -1,22 +1,10 @@
 \begin{thebibliography}{}
 
-\bibitem[\protect\citeauthoryear{Balke and Pearl}{Balke and Pearl}{1997}]{bp97}
-Balke, A. and J.~Pearl (1997).
-\newblock Bounds on treatment effects from studies with imperfect compliance.
-\newblock {\em Journal of the American Statistical Association\/}~{\em
-  92\/}(439), 1171 -- 1176.
-
-\bibitem[\protect\citeauthoryear{Beresteanu, Molchanov, and
-  Molinari}{Beresteanu et~al.}{2012}]{bEmOImOF12}
-Beresteanu, A., I.~Molchanov, and F.~Molinari (2012).
-\newblock Partial identification using random set theory.
-\newblock {\em Journal of Econometrics\/}~{\em 166\/}(1), 17 -- 32.
-
-\bibitem[\protect\citeauthoryear{Blundell and Powell}{Blundell and
-  Powell}{2003}]{bLpO03}
-Blundell, R. and J.~L. Powell (2003).
-\newblock Endogeneity in nonparametric and semiparametric regression models.
-\newblock {\em Econometric Society Monographs\/}~{\em 36}, 312 -- 357.
+\bibitem[\protect\citeauthoryear{Abrevaya, Hsu, and Lieli}{Abrevaya
+  et~al.}{2013}]{13.misc.abrevaya}
+Abrevaya, J., Y.-C. Hsu, and R.~P. Lieli (2013).
+\newblock Estimating conditional average treatment effects.
+\newblock Technical report, Working paper.
 
 \bibitem[\protect\citeauthoryear{Chesher and Rosen}{Chesher and
   Rosen}{2013}]{cr13}
@@ -25,11 +13,12 @@ Chesher, A. and A.~M. Rosen (2013).
   variables?.
 \newblock {\em American Economic Review\/}~{\em 103\/}(3), 557 -- 562.
 
-\bibitem[\protect\citeauthoryear{Chesher, Rosen, and Smolinski}{Chesher
-  et~al.}{2013}]{crs13}
-Chesher, A., A.~M. Rosen, and K.~Smolinski (2013).
-\newblock An instrumental variable model of multiple discrete choice.
-\newblock {\em Quantitative Economics\/}~{\em 4\/}(2), 157 -- 196.
+\bibitem[\protect\citeauthoryear{Heckman and Vytlacil}{Heckman and
+  Vytlacil}{2005}]{hEvY05}
+Heckman, J.~J. and E.~Vytlacil (2005).
+\newblock Structural equations, treatment effects, and econometric policy
+  evaluation1.
+\newblock {\em Econometrica\/}~{\em 73\/}(3), 669 -- 738.
 
 \bibitem[\protect\citeauthoryear{Hurwicz}{Hurwicz}{1950}]{h50}
 Hurwicz, L. (1950).
@@ -37,11 +26,11 @@ Hurwicz, L. (1950).
 \newblock {\em Statistical Inference in Dynamic Economic Models (T. Koopmans,
   ed.). Cowles Commission, Monograph\/}~{\em 10}, 245 -- 257.
 
-\bibitem[\protect\citeauthoryear{Kitagawa}{Kitagawa}{2009}]{kI09}
-Kitagawa, T. (2009).
-\newblock Identification region of the potential outcome distributions under
-  instrument independence.
-\newblock {\em Econometrica (Revise and resubmit)\/}.
+\bibitem[\protect\citeauthoryear{Khan and Tamer}{Khan and Tamer}{2010}]{kHt10}
+Khan, S. and E.~Tamer (2010).
+\newblock Irregular identification, support conditions, and inverse weight
+  estimation.
+\newblock {\em Econometrica\/}~{\em 78\/}(6), 2021 -- 2042.
 
 \bibitem[\protect\citeauthoryear{Koopmans and Reiers{\o}l}{Koopmans and
   Reiers{\o}l}{1950}]{krE50}
