@@ -23,7 +23,7 @@
 \author{Jeff Rowley}
 \newcommand{\thedate}{\today}
 % Enter document details here.
-\newcommand{\details}{C:/Users/Jeffro/Dropbox/TeXTemplates/}
+\newcommand{\details}{C:/Dropbox/TeXTemplates/}
 % Enter the file path here for the UCL logo and bibliography.
 % Change this file path for different computer systems.
 \newcommand{\homePC}{C:/Users/Jeffro/Documents/}
@@ -201,15 +201,15 @@ It is useful to distinguish between classes of information since each class ente
 
 Incorporating information of either class is generally sensible for a number of reasons. Firstly, incorporating information is known to be efficient; variation that is attributable to an observable variable is instead attributable to unobservable heterogeneity when that variable is omitted. Secondly, the effect of incorporating information for partially identifying models is not well-documented; one hypothesis is that incorporating information narrows bounds on admissible sets. Such an effect is not documented in identifying models precisely because such models deliver a point estimate (a set of length zero), but point estimates may shift as information is incorporated. A contribution that I make is in showing that \color{red} incorporating information leads to narrower bounds on the admissible sets \color{black} that are delivered by the aforementioned model. A further reason to particularly favour incorporating exogenous variables is that the average causal effect of the endogenous variable on the outcome variable in identifiable sub-populations can be recovered. I name this structural characteristic the conditional average causal effect of the endogenous variable on the outcome variable, and index it by the conditioning value.\footnote{The conditioning value is specifically the value of the exogenous variables. \cite{hEvY05} defines a parameter $ATE(x)$ that is equivalent to the conditional average causal effect of the endogenous variable on the outcome variable at the conditioning value $x$. \cite{kHt10} and \cite{13.misc.abrevaya} instead refer to this parameter as the conditional average treatment effect and abbreviate this as $CATE(x)$.} Understanding the effect of an intervention in sub-populations can be interesting if the intervention can be targeted or if the intervention is to be applied elsewhere in a population that differs according to its observable characteristics. 
 
-A relevant question is how to relate conditional causal effects to (unconditional) causal effects. More precisely, how does the average causal effect of the endogenous variable on the outcome variable relate to its conditional counterparts? I show that the average causal effect of the endogenous variable on the outcome variable can be expressed as a function of its conditional counterparts when the non-parametric binary choice model is augmented. I establish the conditions under which conditional causal effects can be informative about bounds on (unconditional) causal effects. That is, I establish the conditions under which bounds on conditional causal effects can be used to tighten bounds on (unconditional) causal effects, exploiting the mapping from one to the other.
+A relevant question is how to relate conditional causal effects to (unconditional) causal effects. More precisely, how does the average causal effect of the endogenous variable on the outcome variable relate to its conditional counterparts? I show that the average causal effect of the endogenous variable on the outcome variable can be expressed as a function of its conditional counterparts when the non-parametric binary choice model is augmented. I establish the conditions under which conditional causal effects can be informative about bounds on (unconditional) causal effects. That is, I establish the conditions under which bounds on conditional causal effects can be used to narrow bounds on (unconditional) causal effects, exploiting the mapping from one to the other.
 
+I demonstrate application of the non-parametric binary choice model, elucidating the practical difficulties that arise when estimating set identifying models (focusing on those issues that arise from incorporating information). As in \cite{cr13} I estimate the average causal effect of childbirth on a mother's labour force participation using US census data. I extend \cite{cr13} in a number of ways. Firstly, I report statistical uncertainty in the estimate of the average causal effect of childbirth on a mother's labour force participation using a method that is outlined in \cite{cHlr13}. Secondly, I enrich the support of the instrumental variable and explore the effect that this has on the admissible set of values for the average causal effect of childbirth on a mother's labour force participation, and on its accompanying confidence region. Thirdly, I enrich individual response by permitting the structural equation for labour force participation to depend upon the age and other such predetermined and immutable characteristics of mothers. I discuss the complication of calculating statistical uncertainty when exogenous variables are permitted to enter the structural equation for labour force participation. With respect to the second and third extensions, it is necessary that I augment the model by embedding additional restrictions. I discuss the credibility of these restrictions and how the augmented model relates to the model of \cite{cr13} in each case. 
 
+The non-parametric binary choice model of \cite{cr13} is but one in a broad class of non-parametric models that encompass the ideal of minimal restrictiveness. \cite{bp97} and \cite{sHvY11} assume non-parametric binary choice models that partially identify the average causal effect of the endogenous variable on the outcome variable. \cite{bp97} relax additivity of unobservable heterogeneity in the structural equation for the outcome variable but require that a weakly restrictive structural equation for the endogenous variable is embedded in the model. \cite{sHvY11} maintains additivity of unobservable heterogeneity in the structural equation for the outcome variable but permits the threshold to depend upon exogenous variables. \cite{sHvY11} requires that a structural equation for the endogenous variable that is additive in unobservable heterogeneity is embedded in the model. 
 
-Having studied the potential implications of incorporating information for a non-parametric binary choice model from a theoretical standpoint I consider application. As in \cite{cr13} I estimate the average causal effect of childbirth on a mother's labour force participation using \US census data. I extend \cite{cr13} by 
+\cite{c05} and \cite{kI09} permit continuous variation in the outcome variable whilst maintaining discrete variation in the endogenous variable. \cite{c05} requires that a non-parametric triangular structural form be embedded in the model and that the structural equation for the outcome variable is monotonic in unobservable heterogeneity. Crucially, 
 
-
-%This paper is an extension of \cite{cr13}. Like \cite{cr13}, I specify a non-parametric model that embeds a threshold crossing restriction and study the admissible set of values for the average causal effect of the endogenous variable on the outcome variable that is delivered by this model. \cite{cr13} estimates the admissible set of values for the average causal effect of the endogenous variable on the outcome variable and compares this to estimates of the local average treatment effect.\footnote{It should be noted that these are not only distinct parameters but that each is identified (or partially identified) under a non-nested set of restrictions.} In contrast, my interest is only in the average causal effect of the endogenous variable on the outcome variable. As in \cite{cr13}, estimates are for data on female labour force participation in the \US , but I also derive general conditions on the probability distribution of observable variables that are necessary for each model to deliver different bounds. 
-
+\cite{bEmOImOF12} exten
 
 %==================================================%
 \section*{Notation}
@@ -235,13 +235,13 @@ U&\independent Z
 \centering
 \begin{subfigure}{0.8\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Identification.pdf}
+  \includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/Identification.pdf}
   \caption{A model $\mathcal{M}$ is a set of structures that forms a proper subset of the class of all structures $\mathcal{S}$. Each structure in $\mathcal{M}$ generates a probability distribution in the class of all probability distributions (of observable variables) $\mathcal{P}$. Then the image $\mathcal{I}$ is the set of all probability distributions that are generated by structures in $\mathcal{M}$.}
   \label{fig:model}
   \end{subfigure}
 \begin{subfigure}{0.8\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Observationalrestrictiveness.pdf}
+  \includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/Observationalrestrictiveness.pdf}
   \caption{A structure $S$ is incompatible with data if it generates a probability distribution (of observable variables) $P$ that is distinct from a realised probability distribution $\mathbb{P}$. If all structures in $\mathcal{M}$ are incompatible with data then $\mathcal{M}$ is said to be observationally restrictive, and is falsified. This condition is equivalent to $\mathbb{P}\in\mathcal{P}\setminus\mathcal{I}$.}
   \label{fig:obs.restrict}
   \end{subfigure}
@@ -253,13 +253,13 @@ U&\independent Z
 \centering
 \begin{subfigure}{0.8\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Pointidentification.pdf}
+  \includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/Pointidentification.pdf}
   \caption{A model $\mathcal{M}$ is said to identify a structure $S$ if the probability distribution (of observable variables) $P$ that is generated by $S$ is distinct from those generated by other structures in $\mathcal{M}$. The structures $S_a$, $S_b$ and $S_c$ are said to be observationally equivalent as they all generate $P$ but $S_b$ and $S_c$ are not admitted by $\mathcal{M}$. As $S_a$ is the only structure that is admitted by $\mathcal{M}$ and that generates $P$, $S_a$ is identified by $\mathcal{M}$. For completeness, $\mathcal{M}$ is said to be uniformly identifying if it identifies each structure that it admits.}
   \label{fig:identify}
   \end{subfigure}
   \begin{subfigure}{0.8\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Setidentification.pdf}
+  \includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/Setidentification.pdf}
   \caption{As $S_a$ and $S_b$ are observationally equivalent and are both admitted by $\mathcal{M}$ then $\mathcal{M}$ does not identify either $S_a$ or $S_b$. Nonetheless, as $\mathcal{M}$ restricts the set of observationally equivalent structures that generate $P$ to $S_a$ and $S_b$ then $\mathcal{M}$ partially identifies $S_a$ (and $S_b$ to within $\lbrace S_a,S_b\rbrace$).}
   \label{fig:partial}
   \end{subfigure}
@@ -271,13 +271,13 @@ U&\independent Z
 \centering
 \begin{subfigure}{0.8\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Characteristic.pdf}
+  \includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/Characteristic.pdf}
   \caption{A structural characteristic $\chi$ is a function of a structure $S$. A model $\mathcal{M}$ can be partitioned such that structures in a partition deliver the same value for $\chi$. Structures in the red partition $\color{red}\mathcal{M}$ deliver the value $a$ for $\chi$, and structures in the red partition $\color{blue}\mathcal{M}$ deliver the value $b$ for $\chi$. If $\chi$ is constant across all observationally equivalent structures that $\mathcal{M}$ admits then $\mathcal{M}$ is said to identify $\chi$. As $\chi(S_a)$ is equal to $\chi(S_b)$ (is equal to $a$) $\mathcal{M}$ identifies $\chi$.}
   \label{fig:characteristic}
   \end{subfigure}
   \begin{subfigure}{0.8\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Uniform.pdf}
+  \includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/Uniform.pdf}
   \caption{If $\mathcal{M}$ identifies $\chi$ for all structures in $\mathcal{M}$ then $\mathcal{M}$ is said to uniformly identify $\chi$. The class of all probability distributions (of observable variables) is partitioned into the blue partition $\color{red}\mathcal{P}$ and into the red partition $\color{blue}\mathcal{P}$. Probability distributions in $\color{red}\mathcal{P}$ are generated by (potentially many) structures in $\color{red}\mathcal{M}$, and probability distributions in $\color{blue}\mathcal{P}$ are generated by (potentially many) structures in $\color{blue}\mathcal{M}$. It is important that the number of partitions in $\mathcal{M}$ and in $\mathcal{P}$ are equal, although that number can be countably infinite. In the context of Figure~\ref{fig:uniform} $\mathcal{M}$ uniformly identifies $\chi$ since observationally equivalent structures that $\mathcal{M}$ admits are in the same colour of $\mathcal{M}$. More conveniently, whether $\mathcal{M}$ uniformly identifies $\chi$ can be determined by the existence of an identifying correspondence $G$, a functional. $\color{red}P$ is a probability distribution in $\color{red}\mathcal{P}$, and $\color{blue}P$ is a probability distribution in $\color{blue}\mathcal{P}$. Then $\mathcal{M}$ uniformly identifies $\chi$ if the value of $G(\color{red}P\color{black})$ is $a$ and if the value of $G(\color{blue}P\color{black})$ is $b$, holding for any such $\color{red}P$ and $\color{blue}P$. Notice that if $\mathcal{M}$ uniformly identifies all $\chi$ then $\mathcal{M}$ also uniformly identifies structures.}
   \label{fig:uniform}
   \end{subfigure}
@@ -293,7 +293,7 @@ U&\independent Z
 \end{subfigure}
 \begin{subfigure}{0.8\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Partial.pdf}
+  \includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/Partial.pdf}
   \caption{That probability distributions in $\color{gray}\mathcal{P}$ are generated by structures in $\color{red}\mathcal{M}$ and in $\color{yellow}\mathcal{M}$ creates a complication; the value of $\chi$ is not constant across observationally equivalent structures that $\mathcal{M}$ admits and that generate a probability distribution in $\color{gray}\mathcal{P}$. So $\mathcal{M}$ does not uniformly identify $\chi$. Consideration of the identifying correspondence $G$ determines that this corresponds to there being structures in $\mathcal{M}$ for which $G$ does not deliver the value of $\chi$ when applied to the probability distributions that these structures generate. Nonetheless, if $\mathcal{M}$ restricts the set of values of $\chi$ for any probability distribution in $\mathcal{P}$ then $\mathcal{M}$ does have some non-trivial identifying power for $\chi$. Then $\mathcal{M}$ is said to uniformly partially identify $\chi$ if $\mathcal{M}$ and $\mathcal{P}$ can each be partitioned into countably many disjoint subsets and that a probability distribution in a partition of $\mathcal{P}$ is not generated by a structure in at least one partition of $\mathcal{M}$, holding for any such partition of $\mathcal{P}$. In the context of Figure~\ref{fig:partials} $\color{red}\mathcal{M}$ identifies $\chi$ up to $\lbrace a,c\rbrace$, $\color{blue}\mathcal{M}$ identifies $\chi$ uniquely to $b$, and $\color{yellow}\mathcal{M}$ identifies $\chi$ up to $\lbrace a,c\rbrace$. Each partition of $\mathcal{P}$ includes probability distributions that are generated by structures in at least one partition of $\mathcal{M}$. Equivalently, if $G$ is permitted to be a multivalued functional (or one-to-many) then $\mathcal{M}$ uniformly partially identifies $\chi$ if $G$ exists and if $G(P)$ contains the set of values of $\chi$ that are delivered by structures that generate $P$, holding for all such $P$. A caveat must be applied here; $G$ cannot be trivial in the sense that it is constant across all such $P$. Clearly this definition of $G$ does not exclude the possibility that there is multiplicity of identifying correspondences that satisfy this property. Sharpness is a desirable property in such circumstances; a functional $G$ that can be shown to deliver smaller sets according to some well-defined distance measure across all possible $P$ (and that satisfies the properties above) should be preferred to any alternative identifying correspondence.}
   \label{fig:partial1}
   \end{subfigure}
