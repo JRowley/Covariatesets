@@ -12,12 +12,6 @@ Balke, A. and J.~Pearl (1997).
 \newblock {\em Journal of the American Statistical Association\/}~{\em
   92\/}(439), 1171 -- 1176.
 
-\bibitem[\protect\citeauthoryear{Beresteanu, Molchanov, and
-  Molinari}{Beresteanu et~al.}{2012}]{bEmOImOF12}
-Beresteanu, A., I.~Molchanov, and F.~Molinari (2012).
-\newblock Partial identification using random set theory.
-\newblock {\em Journal of Econometrics\/}~{\em 166\/}(1), 17 -- 32.
-
 \bibitem[\protect\citeauthoryear{Chernozhukov, Lee, and Rosen}{Chernozhukov
   et~al.}{2013}]{cHlr13}
 Chernozhukov, V., S.~Lee, and A.~M. Rosen (2013).
@@ -28,6 +22,11 @@ Chernozhukov, V., S.~Lee, and A.~M. Rosen (2013).
 Chesher, A. (2005).
 \newblock Nonparametric identification under discrete variation.
 \newblock {\em Econometrica\/}~{\em 73\/}(5), 1525 -- 1550.
+
+\bibitem[\protect\citeauthoryear{Chesher}{Chesher}{2010}]{c10}
+Chesher, A. (2010).
+\newblock Instrumental variable models for discrete outcomes.
+\newblock {\em Econometrica\/}~{\em 78\/}(2), 575 -- 601.
 
 \bibitem[\protect\citeauthoryear{Chesher and Rosen}{Chesher and
   Rosen}{2013}]{cr13}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.22)  21 JUL 2014 16:54
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.22)  22 JUL 2014 17:35
 entering extended mode
 **Information*and*admissible*sets*-*v2.tex
 
@@ -1219,104 +1219,100 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!{U:/PortableTex/MiKTeX/pdftex/config/pdftex.map} <C:/Dr
 opbox/TeXTemplates/UCL_Logo_Orange.jpg>] [2]
-LaTeX Font Info:    Try loading font information for U+bbm on input line 224.
+LaTeX Font Info:    Try loading font information for U+bbm on input line 225.
 
 (U:\PortableTex\MiKTeX\tex\latex\bbm\ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 ) [3]
-<U:/GitHub/Covariatesets/Diagrams/Identification.pdf, id=116, 411.90288pt x 250
+<U:/GitHub/Covariatesets/Diagrams/Identification.pdf, id=124, 411.90288pt x 250
 .71667pt>
 File: U:/GitHub/Covariatesets/Diagrams/Identification.pdf Graphic file (type pd
 f)
  <use U:/GitHub/Covariatesets/Diagrams/Identification.pdf>
 Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Identification.pdf us
-ed on input line 244.
+ed on input line 245.
 (pdftex.def)             Requested size: 339.24956pt x 206.50714pt.
 
-<U:/GitHub/Covariatesets/Diagrams/Observationalrestrictiveness.pdf, id=117, 411
+<U:/GitHub/Covariatesets/Diagrams/Observationalrestrictiveness.pdf, id=125, 411
 .90288pt x 232.2537pt>
 File: U:/GitHub/Covariatesets/Diagrams/Observationalrestrictiveness.pdf Graphic
  file (type pdf)
 
 <use U:/GitHub/Covariatesets/Diagrams/Observationalrestrictiveness.pdf>
 Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Observationalrestrict
-iveness.pdf used on input line 250.
+iveness.pdf used on input line 251.
 (pdftex.def)             Requested size: 339.24956pt x 191.29979pt.
 
-<U:/GitHub/Covariatesets/Diagrams/Pointidentification.pdf, id=118, 411.90288pt 
+<U:/GitHub/Covariatesets/Diagrams/Pointidentification.pdf, id=126, 411.90288pt 
 x 259.32483pt>
 File: U:/GitHub/Covariatesets/Diagrams/Pointidentification.pdf Graphic file (ty
 pe pdf)
  <use U:/GitHub/Covariatesets/Diagrams/Pointidentification.pdf>
 Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Pointidentification.p
-df used on input line 262.
+df used on input line 263.
 (pdftex.def)             Requested size: 339.24956pt x 213.5974pt.
 
-<U:/GitHub/Covariatesets/Diagrams/Setidentification.pdf, id=119, 411.90288pt x 
+<U:/GitHub/Covariatesets/Diagrams/Setidentification.pdf, id=127, 411.90288pt x 
 259.32483pt>
 File: U:/GitHub/Covariatesets/Diagrams/Setidentification.pdf Graphic file (type
  pdf)
  <use U:/GitHub/Covariatesets/Diagrams/Setidentification.pdf>
 Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Setidentification.pdf
- used on input line 268.
+ used on input line 269.
 (pdftex.def)             Requested size: 339.24956pt x 213.5974pt.
 
-<U:/GitHub/Covariatesets/Diagrams/Characteristic.pdf, id=120, 411.90288pt x 259
+<U:/GitHub/Covariatesets/Diagrams/Characteristic.pdf, id=128, 411.90288pt x 259
 .32483pt>
 File: U:/GitHub/Covariatesets/Diagrams/Characteristic.pdf Graphic file (type pd
 f)
  <use U:/GitHub/Covariatesets/Diagrams/Characteristic.pdf>
 Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Characteristic.pdf us
-ed on input line 280.
+ed on input line 281.
 (pdftex.def)             Requested size: 339.24956pt x 213.5974pt.
 
-<U:/GitHub/Covariatesets/Diagrams/Uniform.pdf, id=121, 411.90288pt x 232.2537pt
+<U:/GitHub/Covariatesets/Diagrams/Uniform.pdf, id=129, 411.90288pt x 232.2537pt
 >
 File: U:/GitHub/Covariatesets/Diagrams/Uniform.pdf Graphic file (type pdf)
  <use U:/GitHub/Covariatesets/Diagrams/Uniform.pdf>
 Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Uniform.pdf used on i
-nput line 286.
+nput line 287.
 (pdftex.def)             Requested size: 339.24956pt x 191.29979pt.
 
-<U:/GitHub/Covariatesets/Diagrams/Partial.pdf, id=124, 411.90288pt x 232.2537pt
+<U:/GitHub/Covariatesets/Diagrams/Partial.pdf, id=132, 411.90288pt x 232.2537pt
 >
 File: U:/GitHub/Covariatesets/Diagrams/Partial.pdf Graphic file (type pdf)
  <use U:/GitHub/Covariatesets/Diagrams/Partial.pdf>
 Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Partial.pdf used on i
-nput line 302.
+nput line 303.
 (pdftex.def)             Requested size: 339.24956pt x 191.29979pt.
 
 ("\\econ-fs\Home3\zctpep9\GitHub\Covariatesets\Information and admissible sets 
 - v2.bbl")
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 313.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 314.
  [4] [5 <U:/GitHub/Covariatesets/Diagrams/Identification.pdf> <U:/GitHub/Covari
 atesets/Diagrams/Observationalrestrictiveness.pdf>] [6 <U:/GitHub/Covariatesets
 /Diagrams/Pointidentification.pdf> <U:/GitHub/Covariatesets/Diagrams/Setidentif
 ication.pdf>] [7 <U:/GitHub/Covariatesets/Diagrams/Characteristic.pdf> <U:/GitH
 ub/Covariatesets/Diagrams/Uniform.pdf>] [8 <U:/GitHub/Covariatesets/Diagrams/Pa
 rtial.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 313.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 314.
 
 ("\\econ-fs\Home3\zctpep9\GitHub\Covariatesets\Information and admissible sets 
 - v2.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 313.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 313.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 314.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 314.
 Package rerunfilecheck Info: File `Information*and*admissible*sets*-*v2.out' ha
 s not changed.
 (rerunfilecheck)             Checksum: <no file>.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 14732 strings out of 493921
- 211996 string characters out of 3149748
- 463269 words of memory out of 3000000
+ 14733 strings out of 493921
+ 211979 string characters out of 3149748
+ 463369 words of memory out of 3000000
  17660 multiletter control sequences out of 15000+200000
  31346 words of font info for 92 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 42i,12n,75p,2635b,624s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,11n,75p,2635b,624s stack positions out of 5000i,500n,10000p,200000b,50000s
 {U:/PortableTex/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{U:/PortableTex
 /MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{U:/PortableTex/MiKTeX/fonts/enc
 /dvips/mnsymbol/MnSymbolD.enc}{U:/PortableTex/MiKTeX/fonts/enc/dvips/mnsymbol/M
@@ -1342,10 +1338,10 @@ onts/cm/cmmi9.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.p
 fb><U:/PortableTex/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><U:/PortableT
 ex/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><U:/PortableTex/MiKTeX/font
 s/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Information and admissible sets - v2.pdf" (8 pages, 370205 b
+Output written on "Information and admissible sets - v2.pdf" (8 pages, 372332 b
 ytes).
 PDF statistics:
- 608 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 500000)
+ 617 PDF objects out of 1000 (max. 8388607)
+ 33 named destinations out of 1000 (max. 500000)
  57 words of extra memory for PDF output out of 10000 (max. 10000000)
 
