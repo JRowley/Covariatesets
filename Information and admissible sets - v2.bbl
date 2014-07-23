@@ -12,6 +12,12 @@ Balke, A. and J.~Pearl (1997).
 \newblock {\em Journal of the American Statistical Association\/}~{\em
   92\/}(439), 1171 -- 1176.
 
+\bibitem[\protect\citeauthoryear{Beresteanu, Molchanov, and
+  Molinari}{Beresteanu et~al.}{2012}]{bEmOImOF12}
+Beresteanu, A., I.~Molchanov, and F.~Molinari (2012).
+\newblock Partial identification using random set theory.
+\newblock {\em Journal of Econometrics\/}~{\em 166\/}(1), 17 -- 32.
+
 \bibitem[\protect\citeauthoryear{Chernozhukov, Lee, and Rosen}{Chernozhukov
   et~al.}{2013}]{cHlr13}
 Chernozhukov, V., S.~Lee, and A.~M. Rosen (2013).
@@ -34,6 +40,12 @@ Chesher, A. and A.~M. Rosen (2013).
 \newblock What do instrumental variable models deliver with discrete dependent
   variables?.
 \newblock {\em American Economic Review\/}~{\em 103\/}(3), 557 -- 562.
+
+\bibitem[\protect\citeauthoryear{Chesher, Rosen, and Smolinski}{Chesher
+  et~al.}{2013}]{crs13}
+Chesher, A., A.~M. Rosen, and K.~Smolinski (2013).
+\newblock An instrumental variable model of multiple discrete choice.
+\newblock {\em Quantitative Economics\/}~{\em 4\/}(2), 157 -- 196.
 
 \bibitem[\protect\citeauthoryear{Heckman and Vytlacil}{Heckman and
   Vytlacil}{2005}]{hEvY05}
@@ -71,11 +83,23 @@ Manski, C.~F. (2013).
 \newblock {\em Public Policy in an Uncertain World: Analysis and Decisions.}
 \newblock Cambridge and London: Harvard University Press.
 
+\bibitem[\protect\citeauthoryear{Molchanov}{Molchanov}{2005}]{book.molchanov}
+Molchanov, I. (2005).
+\newblock {\em Theory of Random Sets}.
+\newblock Springer.
+
 \bibitem[\protect\citeauthoryear{Shaikh and Vytlacil}{Shaikh and
   Vytlacil}{2011}]{sHvY11}
 Shaikh, A.~M. and E.~J. Vytlacil (2011).
 \newblock Partial identification in triangular systems of equations with binary
   dependent variables.
 \newblock {\em Econometrica\/}~{\em 79\/}(3), 949 -- 955.
+
+\bibitem[\protect\citeauthoryear{Strotz and Wold}{Strotz and
+  Wold}{1960}]{sTw60}
+Strotz, R.~H. and H.~O. Wold (1960).
+\newblock Recursive vs. nonrecursive systems: An attempt at synthesis (part i
+  of a triptych on causal chain systems).
+\newblock {\em Econometrica: Journal of the Econometric Society\/}, 417 -- 427.
 
 \end{thebibliography}
