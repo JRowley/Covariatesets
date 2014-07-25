@@ -6,6 +6,18 @@ Abrevaya, J., Y.-C. Hsu, and R.~P. Lieli (2013).
 \newblock Estimating conditional average treatment effects.
 \newblock Technical report, Working paper.
 
+\bibitem[\protect\citeauthoryear{Angrist}{Angrist}{2014}]{Angristdatabank}
+Angrist, J.~D. (2014).
+\newblock Angrist data archive.
+\newblock [Online; accessed 25-July-2014].
+
+\bibitem[\protect\citeauthoryear{Angrist and Evans}{Angrist and
+  Evans}{1998}]{ae98}
+Angrist, J.~D. and W.~N. Evans (1998).
+\newblock Children and their parents' labor supply: Evidence from exogenous
+  variation in family size.
+\newblock {\em American Economic Review\/}~{\em 88\/}(3), 450 -- 477.
+
 \bibitem[\protect\citeauthoryear{Balke and Pearl}{Balke and Pearl}{1997}]{bp97}
 Balke, A. and J.~Pearl (1997).
 \newblock Bounds on treatment effects from studies with imperfect compliance.
