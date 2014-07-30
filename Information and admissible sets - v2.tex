@@ -225,17 +225,17 @@ I write the expectation operator as $\mathbb{E}$, and the indicator function as 
 I introduce further terminology and notation in Figure~\ref{fig:models} through Figure~\ref{fig:partials}. This specifically relates to models and structures, and is consistent with the approach that is formally laid out in \cite{h50} and in \cite{krE50}. 
 %==================================================%
 \section*{Application}
-I estimate the average causal effect of childbirth on a mother's labour force participation using {\US} census data. The data are obtainable from \cite{Angristdatabank}, and are described in \cite{ae98}. To summarise, the dataset consists of 254,654 households that were recorded as part of the 1980 {\US} census. The dataset specifically contains observations of married households with at least two children under the age of 18 years and where the mother is aged between 21 years and 35 years. For clarity, I translate each variable in the data into the mathematical notation that I employ.
+I estimate the average causal effect of childbirth on a mother's employment using {\US} census data. The data are obtainable from \cite{Angristdatabank}, and are described in \cite{ae98}. To summarise, the dataset consists of 254,654 households that were recorded as part of the 1980 {\US} census. The dataset specifically contains observations of married households with at least two children under the age of 18 years and where the mother is aged between 21 years and 35 years. For clarity, I translate each variable in the data into the mathematical notation that I employ.
 \begin{align*}
 Y&\equiv\mathbbm{1}[\text{Mother is employed in 1979}]\\
 D&\equiv\mathbbm{1}[\text{Three or more children in the household}]
 \end{align*}
-As $(X,Z)$ are continually redefined in the main text, I do not define these variables as I do $(Y,D)$. Instead, I note those variables that at some point or other form part of the definition of $(X,Z)$. $X$ is a function of mother's race or ethnicity (shortened to race).\footnote{\cite{ae98} also treats mother's age, and mother's age at the time of her first birth (shortened to birthing age) as exogenous variables.} $Z$ is a function of whether the oldest two children in the household share the same gender, and whether the second pregnancy was a multiple pregnancy.
+As $(X,Z)$ are continually redefined in the main text, I do not define these variables as I do $(Y,D)$. Instead, I note those variables that at some point or other form part of the definition of $(X,Z)$. $X$ is a function of mother's race or ethnicity (shortened to race).\footnote{\cite{ae98} also treats mother's age, and mother's age at the time of her first birth (shortened to birthing age) as exogenous variables.} $Z$ is a function of whether the oldest two children in the household share the same gender (shortened to child gender), and whether the second pregnancy was a multiple pregnancy.
 
-I refer to the application throughout the main text so as to illustrate how technical conditions on variables and on the relationship between variables restrict the behaviour of economic agents, in this case mothers. 
+I refer to the application throughout the main text so as to illustrate how technical conditions on variables and on the relationship between variables restrict the behaviour of economic agents, in this case mothers. For brevity, I simply refer to race when discussing $X$ in the context of the application, and child gender when discussing $Z$ in the context of the application.
 %==================================================%
 \section{A non-parametric model of binary choice}
-I begin by introducing the non-parametric binary choice model that is described in \cite{cr13}. The model constitutes the set of structures that are consistent with Restriction \small{M}\normalsize{1} through Restriction \small{M}\normalsize{4}. 
+I begin by introducing the non-parametric binary choice model that is described in \cite{cr13}. The model constitutes the set of structures that are consistent with Restriction \small{M}\normalsize{1} through Restriction \small{M}\normalsize{5}. 
 \newthm{Axiom}
 \begin{Axiom}
 Economic agents are utility maximising, selecting between alternatives in a choice set according to the utility that they attach to that choice. Utility is perfectly observable by economic agents and is determined by a well-defined utility function for each choice. Each agent is permitted to value each choice differently. 
@@ -252,74 +252,56 @@ Restriction \small{M}\normalsize{1} is a verifiable restriction. $(Y,D,X,Z)$ are
 \setcounter{enumi}{2}
 \item $\mathrlap{\text{\bf Scalar $\boldsymbol{U}$.}}$\phantom{\textbf{Joint independence.}} $U$ is an unobservable scalar such that $\mathcal{R}_U$ is an open subset of $\mathbb{R}$ with strictly positive Lebesgue measure.
 \end{enumerate}
-Suppose that the utility of choice $m$ is determined by the utility function
-\[V_m(O,N)\]
-where $O$ is the vector of all observable determinants of utility, and $N$ is the vector of all unobservable determinants. Then if the cardinality of $\text{supp}$ is no greater than the cardinality of $\mathbb{R}$ then there exists a bijection $\text{supp}(N)\mapsto \mathbb{R}$, which has output $U$. It follows that there exists a utility function $\tilde{V}_m$ such that
-\[V_m(O,N)\equiv\tilde{V}_m(O,U).\]
-Restriction \small{M}\normalsize{2} can then be regarded as a normalisation rather than as a restriction in that $U$ is simply a projection of a high-dimensional vector onto $\mathbb{R}$ that preserves uniqueness. 
+Restriction \small{M}\normalsize{2} is a non-verifiable restriction. The restriction is not overly restrictive in that it is equivalent to those determinants of utility that are unobservable being defined on a set of cardinality no greater than $2^{\aleph_0}$. As most economic variables are defined on $\mathbb{R}$ or on a subset of $\mathbb{R}$ it is uncontroversial to assume that this restriction is satisfied. In the context of the application, the restriction implies that variables such as job application ability and taste for leisure are quantifiable and can be defined on $\mathbb{R}$. 
 \begin{enumerate}[\bf \small{M}\normalsize{3}.] 
 \setcounter{enumi}{2}
 \item $\mathrlap{\text{\bf Joint independence.}}$\phantom{\textbf{Joint independence.}} $U\independent (X,Z)$.
 \end{enumerate}
-Restriction \small{M}\normalsize{2} is a non-verifiable restriction. The restriction is stronger than the marginal independence relations $U\independent X$ and $U\independent Z$ since it imposes extra constraints on the joint distribution $\mathbb{P}(u,x,z)$. 
-%
-%
-%
-%
-%
-%is a non-verifiable restriction. The restriction implies the marginal independence relations 
-%\begin{equation}
-%U\independent X\label{M2:1}
-%\end{equation}
-%and
-%\begin{equation}
-%U\independent Z,\label{M2:2}
-%\end{equation}
-%and restricts the dependence between $U$ and combinations of $(X,Z)$. Importantly, the restriction does not rule out dependence between $X$ and $Z$. In the context of the application, ability is independent of birthing age and the occurrence of a multiple second birth, but multiple second births are .    
-%
-%
-%as Restriction \small{M}\normalsize{2} implies (\ref{M2:1}) and (\ref{M2:2}), but also restricts the joint distribution of $(X,Z)$. 
-%independence (of $U$ and $X$, and of $U$ and $Z$) in that it 
-%
-%The restriction is stronger than marginal independence (of $U$ and $X$, and of $U$ and $Z$); in fact, Restriction \small{M}\normalsize{2} implies marginal independence. The distinction between 
-%
-%
-%The restriction states that labour market ability is independent of a mother's race or ethnicity, and is independent of whether her second pregnancy was a multiple pregnancy. 
-%\begin{enumerate}[\bf \small{M}\normalsize{3}.] 
-%\setcounter{enumi}{2}
-%\item $\mathrlap{\text{\bf Exclusion.}}$\phantom{\textbf{Joint independence.}} 
-%\end{enumerate}
-%\begin{enumerate}[\bf \small{M}\normalsize{4}.] 
-%\setcounter{enumi}{3}
-%\item $\mathrlap{\text{\bf Monotonicity.}}$\phantom{\textbf{Joint independence.}} Restriction IV.
-%\end{enumerate}
-%\begin{enumerate}[\bf I.]
-%\item \textbf{Discrete support.} $(Y,D)$ have binary support. $(X,Z)$ have discrete support.
-%\item \textbf{Independence.} $U\independent (X,Z)$.
-%\item \textbf{Exclusion.} $Y=h(D,X,U)$.
-%\item \textbf{Monotonicity.} $h(D,X,U)=\mathbbm{1}[p(D,X)-U>0]$.
-%\end{enumerate}
-%Normalisation on $U$ to be distributed uniformly on $[0,1]$
-%
-%Independence and Exclusion are the normal rank and order conditions. Exclusion states that $Z$ does not affect $Y$ directly. If a mother has the same gender children then this should not affect her decision to participate or not. Similarly, if mother has twins or higher plurality birth then this should not directly affect her decision to participate. Although having two young children versus two older children may differentially affect decision to go to work...
-%
-%Monotonicity states that the threshold is independent of $U$. This means that all mothers must never increase their labour supply or never decrease their labour supply. It rules out some mothers increasing their labour supply in response to children, and others decreasing. Non-monotonic response is considered in \cite{bp97}.
+Restriction \small{M}\normalsize{3} is a non-verifiable restriction. The restriction nests the restrictions $U\independent X$ and $U\independent Z$ (marginal independence), and is the strongest possible restriction that might be imposed upon the joint distribution of $(X,Z,U)$. The restriction excludes some correlation structures of $(X,Z)$ that are permitted by marginal independence. In the context of the application, the restriction implies that variables such as job application ability and taste for leisure are independent of combinations of race and child gender, and are independent of race and of child gender. 
+\begin{enumerate}[\bf \small{M}\normalsize{4}.] 
+\setcounter{enumi}{3}
+\item $\mathrlap{\text{\bf Exclusion.}}$\phantom{\textbf{Joint independence.}} $Y\equiv h(D,X,U)$.
+\end{enumerate}  
+Restriction \small{M}\normalsize{4} is a non-verifiable restriction. The restriction excludes $Z$ from $h$ and so excludes $Z$ from having a causal effect on $Y$. The restriction is equivalent to an order condition. In the context of the application, the restriction implies that child gender does not have a causal effect on female employment.  
+\begin{enumerate}[\bf \small{M}\normalsize{5}.] 
+\setcounter{enumi}{4}
+\item $\mathrlap{\text{\bf Monotonicity.}}$\phantom{\textbf{Joint independence.}} $h$ is a non-parametric threshold crossing function that is normalised to be increasing in $U$. $U$ is normalised to be distributed uniformly on $[0,1]$.
+\end{enumerate} 
+Restriction \small{M}\normalsize{5} is a non-verifiable restriction. The restriction implies that individual response is monotonic. In the context of the application, the restriction implies that the causal effect of childbirth on a mother's employment is positive for all mothers or is negative for all mothers. The restriction permits the threshold to be a non-parametric function of $(D,X)$ and implies that the distribution of $U$ can be relatively unrestricted beyond Restriction \small{M}\normalsize{2}.  
+
+Restriction \small{M}\normalsize{1} through Restriction \small{M}\normalsize{5} can be written more compactly as Restriction \small{M}\normalsize{1}' through Restriction \small{M}\normalsize{5}'. Restriction \small{M}\normalsize{1}' particularly makes clear the relationship between $Y$ and $(D,X,Z,U)$. 
+\begin{enumerate}[\bf \small{M}\normalsize 1'.]
+\item $Y=\mathbbm{1}[p(D,X)>U]$.
+\item $U\vert(X,Z)\sim\text{unif}(0,1)$.
+\item $\mathcal{R}_D=\lbrace 0,1\rbrace$.
+\item $\mathcal{R}_X=\lbrace x_1,...,x_K\rbrace$.
+\item $\mathcal{R}_Z=\lbrace z_1,...,z_L\rbrace$.
+\end{enumerate}
 %==================================================%
 \section{Credibility in economic modelling}
+I discuss the credibility of Restriction \small{M}\normalsize{3} through Restriction \small{M}\normalsize{5}, theoretically and in the context of the application. I discuss the advantage of a single equation structural model over more restrictive models, and the advantage of a single equation structural model over reduced form analysis.
+
+\cite{book.manski} advocates the use of credible economic models, but what constitutes a credible economic model? The restrictions that are embedded in an economic model can be categorised as verifiable and non-verifiable. Verifiable restrictions are those that can be verified using data, while non-verifiable restrictions are those restrictions that can never be verified even if data is collected for the population. Verifiable restrictions are an obvious basis on which to select between competing models since if data is incompatible with a verifiable restriction then any model that embeds that restriction must be incompatible with the data generating process. Credibility then rests upon the non-verifiable restrictions that a model embeds. The more stringent are the non-verifiable restrictions that a model embeds then the less credible is the model. The exception is if a non-verifiable restriction is motivated by economic theory (monotonicity, say). Occam's razor promotes the ideal of parsimony.
+
+A subsequent question is then what are the implications of the credibility of economic models for the estimates that they deliver? Logic dictates that if a model is preferred to another then any estimates that are delivered by the first model should be preferred to the estimates that are deliver by the less preferred model. This is regardless of the information that is contained in the estimates. At the extreme, if a model is considered to be incredible then the estimates that the model delivers should be rejected.  
+
+Restriction \small{M}\normalsize{3} is a particularly stringent restriction. 
+ 
+The credibility of this assumption is questionable in that job application ability may be correlated with race (if employer discrimination systematically favours particular races), and taste for leisure may be correlated with child gender (if parents value leisure more when their children are of mixed gender). I suggest that the credibility of the restriction is no more questionable than marginal independence in the context of the application since it seems unlikely that either unobservable variable is correlated with combinations of race and child gender, rather than with race or with child gender.
 %==================================================%
 \section{Incorporating information}
 \subsection{Enriching the support of the instrumental variable}
 \subsection{Enriching individual response}
 %==================================================%
-\section{A non-parametric model of binary choice}
-I begin by introducing the non-parametric binary choice model that is studied in \cite{cr13}. I discuss the credibility of the restrictions that 
-are embedded in the model and the limitations of these restrictions. I then augment the model and incorporate information. Firstly, I enrich the support of the instrumental variable. Secondly, I enrich the structural function for the outcome variable by allowing individual response to depend upon exogenous variables as well as on the endogenous variable. In both cases, I discuss the credibility of the restrictions that are embedded in the augmented model and the limitations of these restrictions. I discuss the effect of incorporating both classes of information on the admissible set of values for the average causal effect of the endogenous variable on the outcome variable. 
-\subsection{A baseline model}
-\cite{cr13} 
-\begin{align*}
-Y&=\mathbbm{1}[p(D)>U]\\
-U&\independent Z
-\end{align*}
+%\section{A non-parametric model of binary choice}
+%I begin by introducing the non-parametric binary choice model that is studied in \cite{cr13}. I discuss the credibility of the restrictions that 
+%are embedded in the model and the limitations of these restrictions. I then augment the model and incorporate information. Firstly, I enrich the support of the instrumental variable. Secondly, I enrich the structural function for the outcome variable by allowing individual response to depend upon exogenous variables as well as on the endogenous variable. In both cases, I discuss the credibility of the restrictions that are embedded in the augmented model and the limitations of these restrictions. I discuss the effect of incorporating both classes of information on the admissible set of values for the average causal effect of the endogenous variable on the outcome variable. 
+%\subsection{A baseline model}
+%\cite{cr13} 
+%\begin{align*}
+%Y&=\mathbbm{1}[p(D)>U]\\
+%U&\independent Z
+%\end{align*}
 %==================================================%
 %% Diagrams
 %==================================================%
@@ -394,6 +376,7 @@ U&\independent Z
 \end{figure}
 %==================================================%
 %% Bibliography.
+\newpage
 \bibliographystyle{chicago}
 \bibliography{\details Bibliography}
 \end{document}

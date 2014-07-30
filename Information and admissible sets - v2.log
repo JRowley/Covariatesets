@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.22)  28 JUL 2014 18:37
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.22)  30 JUL 2014 16:56
 entering extended mode
 **Information*and*admissible*sets*-*v2.tex
 
@@ -1206,7 +1206,7 @@ LaTeX Info: Redefining \nameref on input line 184.
 - v2.out")
 \@outlinefile=\write3
 
-<C:/Dropbox/TeXTemplates/UCL_Logo_Orange.jpg, id=31, 501.875pt x 148.555pt>
+<C:/Dropbox/TeXTemplates/UCL_Logo_Orange.jpg, id=23, 501.875pt x 148.555pt>
 File: C:/Dropbox/TeXTemplates/UCL_Logo_Orange.jpg Graphic file (type jpg)
 
 <use C:/Dropbox/TeXTemplates/UCL_Logo_Orange.jpg>
@@ -1252,98 +1252,107 @@ LaTeX Warning: The counter will not be printed.
 
 
 LaTeX Warning: The counter will not be printed.
-             The label is: \bf \small {M}\normalsize {3}. on input line 260.
+             The label is: \bf \small {M}\normalsize {3}. on input line 256.
+
+
+LaTeX Warning: The counter will not be printed.
+             The label is: \bf \small {M}\normalsize {4}. on input line 261.
 
 [4]
-<U:/GitHub/Covariatesets/Diagrams/Identification.pdf, id=180, 411.90288pt x 250
+
+LaTeX Warning: The counter will not be printed.
+             The label is: \bf \small {M}\normalsize {5}. on input line 266.
+
+[5]
+<U:/GitHub/Covariatesets/Diagrams/Identification.pdf, id=184, 411.90288pt x 250
 .71667pt>
 File: U:/GitHub/Covariatesets/Diagrams/Identification.pdf Graphic file (type pd
 f)
  <use U:/GitHub/Covariatesets/Diagrams/Identification.pdf>
 Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Identification.pdf us
-ed on input line 330.
+ed on input line 312.
 (pdftex.def)             Requested size: 339.24956pt x 206.50714pt.
 
-<U:/GitHub/Covariatesets/Diagrams/Observationalrestrictiveness.pdf, id=181, 411
+<U:/GitHub/Covariatesets/Diagrams/Observationalrestrictiveness.pdf, id=185, 411
 .90288pt x 232.2537pt>
 File: U:/GitHub/Covariatesets/Diagrams/Observationalrestrictiveness.pdf Graphic
  file (type pdf)
 
 <use U:/GitHub/Covariatesets/Diagrams/Observationalrestrictiveness.pdf>
 Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Observationalrestrict
-iveness.pdf used on input line 336.
+iveness.pdf used on input line 318.
 (pdftex.def)             Requested size: 339.24956pt x 191.29979pt.
 
-<U:/GitHub/Covariatesets/Diagrams/Pointidentification.pdf, id=182, 411.90288pt 
+<U:/GitHub/Covariatesets/Diagrams/Pointidentification.pdf, id=186, 411.90288pt 
 x 259.32483pt>
 File: U:/GitHub/Covariatesets/Diagrams/Pointidentification.pdf Graphic file (ty
 pe pdf)
  <use U:/GitHub/Covariatesets/Diagrams/Pointidentification.pdf>
 Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Pointidentification.p
-df used on input line 348.
+df used on input line 330.
 (pdftex.def)             Requested size: 339.24956pt x 213.5974pt.
 
-<U:/GitHub/Covariatesets/Diagrams/Setidentification.pdf, id=183, 411.90288pt x 
+<U:/GitHub/Covariatesets/Diagrams/Setidentification.pdf, id=187, 411.90288pt x 
 259.32483pt>
 File: U:/GitHub/Covariatesets/Diagrams/Setidentification.pdf Graphic file (type
  pdf)
  <use U:/GitHub/Covariatesets/Diagrams/Setidentification.pdf>
 Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Setidentification.pdf
- used on input line 354.
+ used on input line 336.
 (pdftex.def)             Requested size: 339.24956pt x 213.5974pt.
 
-<U:/GitHub/Covariatesets/Diagrams/Characteristic.pdf, id=184, 411.90288pt x 259
+<U:/GitHub/Covariatesets/Diagrams/Characteristic.pdf, id=188, 411.90288pt x 259
 .32483pt>
 File: U:/GitHub/Covariatesets/Diagrams/Characteristic.pdf Graphic file (type pd
 f)
  <use U:/GitHub/Covariatesets/Diagrams/Characteristic.pdf>
 Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Characteristic.pdf us
-ed on input line 366.
+ed on input line 348.
 (pdftex.def)             Requested size: 339.24956pt x 213.5974pt.
 
-<U:/GitHub/Covariatesets/Diagrams/Uniform.pdf, id=185, 411.90288pt x 232.2537pt
+<U:/GitHub/Covariatesets/Diagrams/Uniform.pdf, id=189, 411.90288pt x 232.2537pt
 >
 File: U:/GitHub/Covariatesets/Diagrams/Uniform.pdf Graphic file (type pdf)
  <use U:/GitHub/Covariatesets/Diagrams/Uniform.pdf>
 Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Uniform.pdf used on i
-nput line 372.
+nput line 354.
 (pdftex.def)             Requested size: 339.24956pt x 191.29979pt.
 
-<U:/GitHub/Covariatesets/Diagrams/Partial.pdf, id=188, 411.90288pt x 232.2537pt
+<U:/GitHub/Covariatesets/Diagrams/Partial.pdf, id=192, 411.90288pt x 232.2537pt
 >
 File: U:/GitHub/Covariatesets/Diagrams/Partial.pdf Graphic file (type pdf)
  <use U:/GitHub/Covariatesets/Diagrams/Partial.pdf>
 Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Partial.pdf used on i
-nput line 388.
+nput line 370.
 (pdftex.def)             Requested size: 339.24956pt x 191.29979pt.
-
+ [6] [7 <U:/GitHub/Covariatesets/Diagrams/Identification.pdf> <U:/GitHub/Covari
+atesets/Diagrams/Observationalrestrictiveness.pdf>] [8 <U:/GitHub/Covariatesets
+/Diagrams/Pointidentification.pdf> <U:/GitHub/Covariatesets/Diagrams/Setidentif
+ication.pdf>] [9 <U:/GitHub/Covariatesets/Diagrams/Characteristic.pdf> <U:/GitH
+ub/Covariatesets/Diagrams/Uniform.pdf>] [10 <U:/GitHub/Covariatesets/Diagrams/P
+artial.pdf>]
 ("\\econ-fs\Home3\zctpep9\GitHub\Covariatesets\Information and admissible sets 
-- v2.bbl" [5] [6 <U:/GitHub/Covariatesets/Diagrams/Identification.pdf> <U:/GitH
-ub/Covariatesets/Diagrams/Observationalrestrictiveness.pdf>] [7 <U:/GitHub/Cova
-riatesets/Diagrams/Pointidentification.pdf> <U:/GitHub/Covariatesets/Diagrams/S
-etidentification.pdf>] [8 <U:/GitHub/Covariatesets/Diagrams/Characteristic.pdf>
- <U:/GitHub/Covariatesets/Diagrams/Uniform.pdf>] [9 <U:/GitHub/Covariatesets/Di
-agrams/Partial.pdf>])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 399.
- [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 399.
+- v2.bbl")
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 382.
+ [11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 382.
 
 ("\\econ-fs\Home3\zctpep9\GitHub\Covariatesets\Information and admissible sets 
 - v2.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 399.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 399.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 382.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 382.
 Package rerunfilecheck Info: File `Information*and*admissible*sets*-*v2.out' ha
 s not changed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 15297 strings out of 493921
- 221542 string characters out of 3149748
- 477319 words of memory out of 3000000
- 18166 multiletter control sequences out of 15000+200000
+ 15301 strings out of 493921
+ 221544 string characters out of 3149748
+ 470961 words of memory out of 3000000
+ 18164 multiletter control sequences out of 15000+200000
  42305 words of font info for 122 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 42i,14n,75p,2635b,610s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,14n,75p,2636b,610s stack positions out of 5000i,500n,10000p,200000b,50000s
 {U:/PortableTex/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{U:/PortableTex
 /MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{U:/PortableTex/MiKTeX/fonts/enc
 /dvips/mnsymbol/MnSymbolD.enc}{U:/PortableTex/MiKTeX/fonts/enc/dvips/mnsymbol/M
@@ -1361,20 +1370,21 @@ ableTex\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk> <U:\PortableTex\
 MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <U:\PortableTex\MiKTeX\f
 onts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk><U:/PortableTex/MiKTeX/fonts/type
 1/public/mnsymbol/MnSymbol10.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/mnsy
-mbol/MnSymbol8.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/mnsymbol/MnSymbol9
-.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><U:/Porta
-bleTex/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><U:/PortableTex/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmmi7.pfb><U:/PortableTex/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmmi8.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmmi9.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><U:
-/PortableTex/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><U:/PortableTex/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><U:/PortableTex/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/amsfon
-ts/symbols/msbm10.pfb>
-Output written on "Information and admissible sets - v2.pdf" (10 pages, 420369 
+mbol/MnSymbol7.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/mnsymbol/MnSymbol8
+.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/mnsymbol/MnSymbol9.pfb><U:/Porta
+bleTex/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><U:/PortableTex/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmmi6.pfb><U:/PortableTex/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmmi7.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmmi8.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><U:/
+PortableTex/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><U:/PortableTex/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><U:/PortableTex/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmr5.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmr7.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+><U:/PortableTex/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "Information and admissible sets - v2.pdf" (11 pages, 438901 
 bytes).
 PDF statistics:
- 755 PDF objects out of 1000 (max. 8388607)
- 54 named destinations out of 1000 (max. 500000)
- 97 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 767 PDF objects out of 1000 (max. 8388607)
+ 60 named destinations out of 1000 (max. 500000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
