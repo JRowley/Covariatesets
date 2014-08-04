@@ -194,7 +194,7 @@
 %==================================================%
 %% Document.
 %==================================================%
-I explore the effect of incorporating information for a non-parametric binary choice model. The model permits endogenous variation in a scalar random variable that is due to non-random selection, and it is the average causal effect of this endogenous variable on the outcome variable that is of interest. The model embeds an exclusion restriction and an independence restriction that together define an instrumental variable but is silent as to the relationship between the endogenous variable and the instrumental variable. I restrict the relationship between the outcome variable and the endogenous variable up to a non-parametric threshold crossing function. The model is credible \citep{book.manski} in that it embeds only weak non-verifiable restrictions, but does not identify the average causal effect of the endogenous variable on the outcome variable.\footnote{Assumptions that cannot be tested using data. The model does embed some non-trivial non-verifiable restrictions that might be relaxed.} Rather, the model partially identifies the average causal effect of the endogenous variable on the outcome variable. 
+I explore the effect of incorporating information for a non-parametric binary choice model. The model permits endogenous variation in a scalar random variable that is due to non-random selection, and it is the average causal effect of this endogenous variable on the outcome variable that is of interest. The model embeds an exclusion restriction and an independence restriction that together define an instrumental variable but is silent as to the relationship between the endogenous variable and the instrumental variable. I restrict the relationship between the outcome variable and the endogenous variable up to a non-parametric threshold crossing function. The model is credible \citep{book.manski} in that it embeds restrictions that impose weaker constraints on assumed behaviour, but does not identify the average causal effect of the endogenous variable on the outcome variable.\footnote{Assumptions that cannot be tested using data. The model does embed some non-trivial non-verifiable restrictions that might be relaxed.} Rather, the model partially identifies the average causal effect of the endogenous variable on the outcome variable. 
 
 I define information to be those additional characteristics of economic agents that are observable with the caveat that these characteristics are exogenous and relevant are to the latent structure. It is convenient to think of such characteristics as being predetermined and immutable; characteristics that result from choices that are made jointly with the outcome variable are excluded by the definition. Accordingly, exogenous variables and instrumental variables are each regarded as information, and I distinguish between these classes of information. I study how the admissible set of values for the average causal effect of the endogenous variable on the outcome variable changes as each class of information is incorporated into the model separately. 
 
@@ -239,7 +239,7 @@ I refer to the application throughout the main text so as to illustrate how tech
 \begin{Axiom}
 Economic agents are utility maximising, selecting between alternatives in a choice set according to the utility that they attach to that choice. Utility is perfectly observable by economic agents and is determined by a well-defined utility function for each choice. Each agent is permitted to value each choice differently. 
 \end{Axiom}
-\noindent I begin by introducing the non-parametric binary choice model that is described in \cite{cr13}. The model constitutes the set of structures that are consistent with Restriction \small{M}\normalsize{1} through Restriction \small{M}\normalsize{5}. 
+\noindent I introduce the non-parametric binary choice model that is described in \cite{cr13}. The model constitutes the set of structures that are consistent with Restriction \small{M}\normalsize{1} through Restriction \small{M}\normalsize{5}. 
 \begin{enumerate}[\bf \small{M}\normalsize{1}.] 
 \item $\mathrlap{\text{\bf Discrete support.}}$\phantom{\textbf{Joint independence.}} $(Y,D,X,Z)$ are observable and have discrete supports (with at least two points of support). Further, $(Y,D)$ have binary supports and are normalised such that\begin{enumerate}[(a)]
 \item $\mathcal{R}_Y=\lbrace 0,1\rbrace$ and
@@ -281,11 +281,44 @@ Restriction \small{M}\normalsize{1} through Restriction \small{M}\normalsize{5} 
 \section{Credibility in economic modelling}
 I discuss the advantage of a single equation model over more restrictive models, and the advantage of a single equation model over reduced form analysis. I discuss the credibility of Restriction \small{M}\normalsize{3} through Restriction \small{M}\normalsize{5}, theoretically and in the context of the application. 
 
-Credibility is a statement of the validity and plausibility of the restrictions that a model embeds, and is a desirable property. Specifically, the validity of verifiable restrictions and the plausibility of non-verifiable restrictions. If a model embeds verifiable restrictions that are incompatible with data then it is invalid and incredible, else it is valid with its credibility dependent upon the plausibility of non-verifiable restrictions. I regard non-verifiable restrictions that are consistent with economic theory or that are less restrictive as more plausible. This approach is consistent with the law of decreasing credibility \citep{book.manski} and with Occam's razor.
+Credibility is a statement of the validity and the plausibility of the restrictions that a model embeds, and is a desirable property. The need to discuss both validity and plausibility arises because restrictions can be either verifiable or non-verifiable. The distinction between verifiable and non-verifiable restrictions is that verifiable restrictions are testable using data while non-verifiable restrictions cannot be tested even if data is collected for the population. As verifiable restrictions can be rejected or not rejected on the basis of observed behaviour, it makes sense to talk about such restrictions as being valid or invalid. In contrast, the validity of non-verifiable restrictions is indeterminable. Whether to accept a set of non-verifiable restrictions as an accurate representation of how economic agents behave is subjective and depends upon how plausible the restrictions seem. Restrictions that are founded in economic theory, or that impose weaker constraints on assumed behaviour are more plausible (a view that is consistent with Occam's razor, a widely accepted principle of parsimony).      
 
-A discouraging quality of more credible models is that they often do not uniformly identify structures or structural characteristics of interest. Typically, such models are partially identifying due to the weak restrictions that they embed. Characterising the admissible set of structures or the admissible set of values for a structural characteristic of interest can be complex and computationally difficult. Further, the fact that more credible models do not produce unique conclusions regarding the nature of economic behaviours is dissuasive. Although tractability is a legitimate concern, assuming a more restrictive model in order to produce a unique conclusion is not. \cite{book.manski} states that estimation and inference that is produced by more restrictive models than is necessary displays incredible certitude. I suggest that it is an inherent and widespread misunderstanding that conclusions that display ambiguity are inferior to conclusions that do not; conclusions that are produced by a more credible model are more informative than conclusions that are produced by a less credible model, regardless of whether they display ambiguity or not. 
+I regard a model as incredible if the verifiable restrictions that it embeds are invalid. I regard a model as more credible relative to another if the verifiable restrictions that it embeds are valid, and if the non-verifiable restrictions that it embeds are more plausible. \cite{book.manski} adopts an equivalent stance, formalised as The Law of Decreasing Credibility. 
 
-A single equation model is generally preferable to a more restrictive model that embeds a structural equation for the endogenous variable, and more stringent restrictions on the structural equation for the outcome variable. 
+Models that embed restrictions that impose weaker constraints on assumed behaviour are typically not uniformly identifying. Instead, such models are typically partially identifying. More commonly, 
+\begin{enumerate}[(a)]
+\item a more restrictive model is assumed that identifies a feature of interest;
+\item or, identification of a different feature is sought and a model that embeds restrictions that impose weak constraints on assumed behaviour is assumed.\footnote{The local average treatment effect \citep{ai94} is an example of a feature that is identified by a model that embeds restrictions that impose weak constraints on assumed behaviour.} 
+\end{enumerate}
+I suggest that these responses to partial identification are motivated by two concerns. Namely, that characterising the admissible set of structures or the admissible set of values for a structural characteristic of interest can be complex and computationally difficult, and that partially identifying models do not produce unique conclusions. Although tractability is a legitimate concern, there is an inherent and widespread misunderstanding that models that do not produce unique conclusions are inferior regardless of the restrictions that they embed. Conclusions that are produced by more credible models should always be preferred, even if these conclusions display ambiguity. 
+
+I caution against both responses. In the first response, a more restrictive model is assumed specifically for the purpose of achieving identification. \cite{krE50} remarks that a model should be constructed purely from prior knowledge of the studied behaviour, and to do otherwise violates scientific honesty. \cite{book.manski} remarks that this response displays incredible certitude. In the second response, the feature that is identified is often less interesting and has less value than the original feature of interest. For example, the local average treatment effect is informative of the effect of an intervention for those economic agents that are affected but this sub-population is not identifiable. The local average treatment effect is only useful for \emph{ex-post} evaluation. Nonetheless, it is promising that the second response should implicitly recognise the importance of credibility.
+
+To emphasise the advantage of a single equation model, I introduce two models. The first is described in \cite{hE78} and is an example of a more restrictive model (the multivariate probit model). The second is described in \cite{ai94} and is an example of a model that identifies a different feature. 
+
+\begin{enumerate}[\bf \small{H}\normalsize 1.]
+\item $Y=\mathbbm{1}[X'\alpha+D\beta>U_Y]$.
+\item $D=\mathbbm{1}[X'\delta+Z\gamma>U_D]$.
+\item $(U_Y,U_D)|(X,Z)\sim\mathcal{N}(\mu,\Sigma)$.
+\end{enumerate}
+A single equation model is more credible than the multivariate probit model. Firstly, the multivariate probit model restricts the relationship between variables to have a parametric and linear index representation (Restriction \small{H}\normalsize{1} and Restriction \small{H}\normalsize{2}). This restriction is not entirely implausible as economic agents might well perform reasonably simple calculations, but is not trivial and excludes some forms of individual response and individual selection that are permitted by more flexible non-parametric index representations. Secondly, the multivariate probit model restricts the distribution of $U$ to have a parametric distribution (Restriction \small{H}\normalsize{3}). A single equation model is not free of distributional restrictions in that it restricts the relationship between $U$ and $(X,Z)$, but the multivariate probit model goes beyond this by restricting $U$ to belong to the class of parametric distributions. The restriction implies that the relationship between variables is fully specified. There is no reason to suppose that $U$ should be parametric, nor that there is full knowledge of the process that generates endogeneity. Non-verifiable restrictions that impose a distribution on $U$ are particularly implausible, and models that embed such restrictions are incredible.
+\begin{enumerate}[\bf \small{A}\normalsize 1.]
+\item $Y=\mathbbm{1}[X'\alpha+D\beta>U_Y]$.
+\item $D=\mathbbm{1}[X'\delta+Z\gamma>U_D]$.
+\item $(U_Y,U_D)|(X,Z)\sim\mathcal{N}(\mu,\Sigma)$.
+\end{enumerate}
+
+
+%Further, the fact that partially identifying models do not produce unique conclusions regarding how economic agents behave 
+%
+%As more credible models impose weaker constraints on assumed behaviour they 
+%
+%
+%Credibility is a statement of the validity and plausibility of the restrictions that a model embeds, and is a desirable property. Specifically, the validity of verifiable restrictions and the plausibility of non-verifiable restrictions. If a model embeds verifiable restrictions that are incompatible with data then it is invalid and incredible, else it is valid with its credibility dependent upon the plausibility of non-verifiable restrictions. I regard non-verifiable restrictions that are consistent with economic theory or that are less restrictive as more plausible. This approach is consistent with the law of decreasing credibility \citep{book.manski} and with Occam's razor.
+%
+%A discouraging quality of more credible models is that they often do not uniformly identify structures or structural characteristics of interest. Typically, such models are partially identifying due to the weak restrictions that they embed. Characterising the admissible set of structures or the admissible set of values for a structural characteristic of interest can be complex and computationally difficult. Further, the fact that more credible models do not produce unique conclusions regarding the nature of economic behaviours is dissuasive. Although tractability is a legitimate concern, assuming a more restrictive model in order to produce a unique conclusion is not. \cite{book.manski} states that estimation and inference that is produced by more restrictive models than is necessary displays incredible certitude. I suggest that it is an inherent and widespread misunderstanding that conclusions that display ambiguity are inferior to conclusions that do not; conclusions that are produced by a more credible model are more informative than conclusions that are produced by a less credible model, regardless of whether they display ambiguity or not. 
+%
+%A single equation model is generally preferable to a more restrictive model that embeds a structural equation for the endogenous variable, and more stringent restrictions on the structural equation for the outcome variable. 
 
 
 %The restrictions that are embedded in an economic model can be categorised as verifiable and non-verifiable. Verifiable restrictions are those that can be verified using data, while non-verifiable restrictions are those restrictions that can never be verified even if data is collected for the population. Verifiable restrictions are an obvious basis on which to select between competing models since if data is incompatible with a verifiable restriction then any model that embeds that restriction must be incompatible with the data generating process. Credibility then rests upon the non-verifiable restrictions that a model embeds. The more stringent are the non-verifiable restrictions that a model embeds then the less credible is the model. The exception is if a non-verifiable restriction is motivated by economic theory (monotonicity, say). Occam's razor promotes the ideal of parsimony.
@@ -387,36 +420,3 @@ A single equation model is generally preferable to a more restrictive model that
 \bibliographystyle{chicago}
 \bibliography{\details Bibliography}
 \end{document}
-
-%I explore the effect of incorporating information on the identified set of values for the average causal effect of an endogenous variable on an outcome variable (the parameter of interest) that is delivered by a non-parametric model that embeds an exclusion restriction and an independence restriction that together characterise an instrumental variable. Endogenous variation enters the model since agents are permitted to non-randomly select a scalar observable characteristic. I consider the effect of combining many instrumental variables into a composite instrumental variable with many points of support on the identified set of values for counterfactual outcome distributions. Further, I consider the effect of enriching individual behaviour by allowing relevant exogenous variables to affect individual choice; specifically, I allow these variables to enter the structural equations that determine the endogenous variable and that determine the outcome variable. I establish the conditions under which the parameter of interest in the enriched model is equivalent to the parameter of interest in a model that does not explicitly account for the contribution of additional relevant exogenous variables. 
-%
-%The model that I consider partially identifies the parameter of interest. That is, the restrictions on the set of admissible structures (or data generating processes) that are implied by the model are insufficient to exclude observationally equivalent structures that deliver different values of the parameter of interest. The restrictions that are implied are nonetheless sufficient to restrict the set of values of the parameter of interest up to a non-trivial set. This concept is described graphically in Figure~\ref{fig:partials}. 
-%\section{A}
-%The model that I consider is partially identifying. That is, the restrictions on the set of admissible structures (or data generating processes) that are implied by the model are insufficient to exclude observationally equivalent structures. Furthermore, the model is unable to identify the structural characteristic of interest 
-%
-%\section{B}
-%I explore the effect of incorporating information on the identified set of values for the average causal effect of an endogenous variable on an outcome variable (the parameter of interest) that is delivered by a non-parametric model. The model is weakly restrictive in that it does not embed a structural equation 
-%
-%
-% that embeds an exclusion restriction and an independence restriction that together characterise an instrumental variable. The model is weakly restrictive in that it 
-% 
-%\section{C}
-%Points to make:
-%\begin{itemize}
-%\item Non-parametric IV model with endogenous variable
-%\item Non-random selection
-%\item Average causal effect of endogenous variable on outcome variable is parameter of interest
-%\item Model partially identifies the parameter of interest
-%\item Model is weakly restrictive in that it does not specify a distribution for unobserved heterogeneity (imposes a normalisation and allows all distributional assumption to enter the non-parametric threshold function) and does not specify a selection equation
-%\item Credible identification
-%\item Want to incorporate additional information for the purpose of efficiency and to potentially provide tighter bounds on parameter of interest; may also be that conditional parameter of interest is useful
-%\end{itemize}
-%Related literature:
-%\begin{itemize}
-%\item \cite{cr13} The starting point for analysis
-%\item \cite{crs13} Characterise level sets and identification
-%\item \cite{bp97} Binary treatment characterise the identified set under non-compliance; weaker restrictions than presented here
-%\item \cite{kI09} Continuous outcome variable; nesting of identified set under different model assumptions
-%\item \cite{bLpO03} Average structural function when continuous endogenous regressor
-%\item \cite{bEmOImOF12} Random set theory
-%\end{itemize}

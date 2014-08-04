@@ -59,6 +59,11 @@ Chesher, A., A.~M. Rosen, and K.~Smolinski (2013).
 \newblock An instrumental variable model of multiple discrete choice.
 \newblock {\em Quantitative Economics\/}~{\em 4\/}(2), 157 -- 196.
 
+\bibitem[\protect\citeauthoryear{Heckman}{Heckman}{1978}]{hE78}
+Heckman, J.~J. (1978, July).
+\newblock {Dummy Endogenous Variables in a Simultaneous Equation System}.
+\newblock {\em Econometrica\/}~{\em 46\/}(4), 931 -- 59.
+
 \bibitem[\protect\citeauthoryear{Heckman and Vytlacil}{Heckman and
   Vytlacil}{2005}]{hEvY05}
 Heckman, J.~J. and E.~Vytlacil (2005).
@@ -71,6 +76,12 @@ Hurwicz, L. (1950).
 \newblock Generalization of the concept of identification.
 \newblock {\em Statistical Inference in Dynamic Economic Models (T. Koopmans,
   ed.). Cowles Commission, Monograph\/}~{\em 10}, 245 -- 257.
+
+\bibitem[\protect\citeauthoryear{Imbens and Angrist}{Imbens and
+  Angrist}{1994}]{ai94}
+Imbens, G.~W. and J.~D. Angrist (1994).
+\newblock Identification and estimation of local average treatment effects.
+\newblock {\em Econometrica\/}~{\em 62\/}(2), 467 -- 475.
 
 \bibitem[\protect\citeauthoryear{Khan and Tamer}{Khan and Tamer}{2010}]{kHt10}
 Khan, S. and E.~Tamer (2010).
