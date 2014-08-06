@@ -60,7 +60,7 @@ Chesher, A., A.~M. Rosen, and K.~Smolinski (2013).
 \newblock {\em Quantitative Economics\/}~{\em 4\/}(2), 157 -- 196.
 
 \bibitem[\protect\citeauthoryear{Heckman}{Heckman}{1978}]{hE78}
-Heckman, J.~J. (1978, July).
+Heckman, J.~J. (1978).
 \newblock {Dummy Endogenous Variables in a Simultaneous Equation System}.
 \newblock {\em Econometrica\/}~{\em 46\/}(4), 931 -- 59.
 
@@ -110,6 +110,11 @@ Manski, C.~F. (2013).
 Molchanov, I. (2005).
 \newblock {\em Theory of Random Sets}.
 \newblock Springer.
+
+\bibitem[\protect\citeauthoryear{Pearl}{Pearl}{1993}]{p93}
+Pearl, J. (1993).
+\newblock Aspects of graphical models connected with causality.
+\newblock {\em Department of Statistics, UCLA\/}.
 
 \bibitem[\protect\citeauthoryear{Shaikh and Vytlacil}{Shaikh and
   Vytlacil}{2011}]{sHvY11}
