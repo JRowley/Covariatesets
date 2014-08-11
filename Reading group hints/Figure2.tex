@@ -1,0 +1,56 @@
+\documentclass[class=minimal, border = 0pt, crop]{standalone}
+\usepackage{pgf}
+\usepackage{tikz}
+\usepackage[utf8]{inputenc}
+\usetikzlibrary{arrows,automata,shapes,calc, backgrounds}
+\usetikzlibrary{positioning}
+\pagestyle{empty}
+\tikzset{
+    state/.style={
+           rectangle,
+           rounded corners,
+           draw=black, very thick,
+           minimum height=2em,
+           inner sep=5pt,
+           text centered,
+           },
+    pil/.style={
+           ->,
+           thick,
+           shorten <=4pt,
+           shorten >=4pt,
+           },
+    ball/.style={
+           circle,
+           draw,
+           align=center,
+           anchor=north,
+           inner sep=0,
+           fill=black,
+           }
+}
+
+\begin{document}
+\centering
+\begin{tikzpicture}[->,>=stealth']
+\tikzstyle{every node}=[draw,shape=circle, fill=black]
+\node (a1) at (0,0) [label=above:$X_1$] {};
+\node (a2) at (-1,-1) [label=left:$X_3$] {};
+\node (a3) at (1,-1) [label=right:$X_4$] {};
+\node (a4) at (2,0) [label=above:$X_2$] {};
+\node (a5) at (3,-1) [label=right:$X_5$] {};
+\node (a6) at (-1,-2) [label=left:$X_A$] {};
+\node (a7) at (1,-2) [label=below:$X_6$] {};
+\node (a8) at (2,-3) [label=right:$X_B$] {};
+\path (a1) edge[pil, bend right = 15] (a2.north);
+\path (a1) edge[pil, bend left = 15] (a3.north);
+\path (a4) edge[pil, bend right = 15] (a3.north);
+\path (a4) edge[pil, bend left = 15] (a5.north);
+\path (a2) edge[pil] (a6.north);
+\path (a3) edge[pil, bend right = 15] (a6.north);
+\path (a3) edge[pil, bend left = 15] (a8.north);
+\path (a5) edge[pil, bend right = 15] (a8.north);
+\path (a6) edge[pil] (a7);
+\path (a7) edge[pil, bend left = 15] (a8.north);
+\end{tikzpicture}
+\end{document}
