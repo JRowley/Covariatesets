@@ -3,7 +3,7 @@ library("mvtnorm", lib.loc="U:/PortableTex/R-3.0.2/library")
 library("plyr", lib.loc="U:/PortableTex/R-3.0.2/library")
 library("matrixStats", lib.loc="U:/PortableTex/R-3.0.2/library")
 rm(Useful.count)
-Useful <- PUMS80M[ , c("workedm", "morekids", "boys2")]
+Useful <- PUMS80M[ , c("workedm", "morekids", "girls2")]
 rm(PUMS80M)
 # =======================================================================================
 # STEP 1
@@ -23,8 +23,8 @@ p <- 1-alpha/2
 # Define a variable Y that takes the value 1 whenever workedm == 1.
 Useful$Y <- ifelse(Useful$workedm == 1, 1, 0)
 # Define variables (X1,X2) that indicate the events (V=1,V=2).
-Useful$X1 <- ifelse(Useful$boys2 == 0, 1, 0)
-Useful$X2 <- ifelse(Useful$boys2 == 1, 1, 0)
+Useful$X1 <- ifelse(Useful$girls2 == 0, 1, 0)
+Useful$X2 <- ifelse(Useful$girls2 == 1, 1, 0)
 # Regress Y on (X1,X2) and compute estimated covariance matrix for the parameters.
 Regression <- lm(Y ~ 0 + X1 + X2, data = Useful)
 # Find variance matrix.
@@ -89,7 +89,7 @@ U.RHO.0
 # =======================================================================================
 load("~/My work/RStudio working directory/Confidence regions for dissertation.RData")
 rm(Useful.count)
-Useful <- PUMS80M[ , c("workedm", "morekids", "boys2")]
+Useful <- PUMS80M[ , c("workedm", "morekids", "girls2")]
 rm(PUMS80M)
 # Set gamma_n.
 gamma <- 1 - 0.1/log(nrow(Useful))
@@ -103,8 +103,8 @@ p <- 1-alpha/2
 # Define a variable Y that takes the value 1 whenever workedm == 1 & morekids == 0.
 Useful$Y <- ifelse(Useful$workedm == 1 & Useful$morekids == 0, 1, 0)
 # Define variables (X1,X2) that indicate the events (V=1,V=2).
-Useful$X1 <- ifelse(Useful$boys2 == 0, 1, 0)
-Useful$X2 <- ifelse(Useful$boys2 == 1, 1, 0)
+Useful$X1 <- ifelse(Useful$girls2 == 0, 1, 0)
+Useful$X2 <- ifelse(Useful$girls2 == 1, 1, 0)
 # Regress Y on (X1,X2) and compute estimated covariance matrix for the parameters.
 Regression <- lm(Y ~ 0 + X1 + X2, data = Useful)
 # Find variance matrix.
@@ -169,7 +169,7 @@ L.RHO.0
 # =======================================================================================
 load("~/My work/RStudio working directory/Confidence regions for dissertation.RData")
 rm(Useful.count)
-Useful <- PUMS80M[ , c("workedm", "morekids", "boys2")]
+Useful <- PUMS80M[ , c("workedm", "morekids", "girls2")]
 rm(PUMS80M)
 # Set gamma_n.
 gamma <- 1 - 0.1/log(nrow(Useful))
@@ -183,8 +183,8 @@ p <- 1-alpha/2
 # Define a variable Y that takes the value 1 whenever workedm == 0 & morekids == 1.
 Useful$Y <- ifelse(Useful$workedm == 0 & Useful$morekids == 1, 1, 0)
 # Define variables (X1,X2) that indicate the events (V=1,V=2).
-Useful$X1 <- ifelse(Useful$boys2 == 0, 1, 0)
-Useful$X2 <- ifelse(Useful$boys2 == 1, 1, 0)
+Useful$X1 <- ifelse(Useful$girls2 == 0, 1, 0)
+Useful$X2 <- ifelse(Useful$girls2 == 1, 1, 0)
 # Regress Y on (X1,X2) and compute estimated covariance matrix for the parameters.
 Regression <- lm(Y ~ 0 + X1 + X2, data = Useful)
 # Find variance matrix.
@@ -249,7 +249,7 @@ U.RHO.01
 # =======================================================================================
 load("~/My work/RStudio working directory/Confidence regions for dissertation.RData")
 rm(Useful.count)
-Useful <- PUMS80M[ , c("workedm", "morekids", "boys2")]
+Useful <- PUMS80M[ , c("workedm", "morekids", "girls2")]
 rm(PUMS80M)
 # Set gamma_n.
 gamma <- 1 - 0.1/log(nrow(Useful))
@@ -263,8 +263,8 @@ p <- 1-alpha/2
 # Define a variable Y that takes the value 1 whenever workedm == 1.
 Useful$Y <- ifelse(Useful$workedm == 1, 1, 0)
 # Define variables (X1,X2) that indicate the events (V=1,V=2).
-Useful$X1 <- ifelse(Useful$boys2 == 0, 1, 0)
-Useful$X2 <- ifelse(Useful$boys2 == 1, 1, 0)
+Useful$X1 <- ifelse(Useful$girls2 == 0, 1, 0)
+Useful$X2 <- ifelse(Useful$girls2 == 1, 1, 0)
 # Regress Y on (X1,X2) and compute estimated covariance matrix for the parameters.
 Regression <- lm(Y ~ 0 + X1 + X2, data = Useful)
 # Find variance matrix.

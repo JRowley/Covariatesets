@@ -3,7 +3,7 @@ library("mvtnorm", lib.loc="U:/PortableTex/R-3.0.2/library")
 library("plyr", lib.loc="U:/PortableTex/R-3.0.2/library")
 library("matrixStats", lib.loc="U:/PortableTex/R-3.0.2/library")
 rm(Useful.count)
-Useful <- PUMS80M[ , c("workedm", "morekids", "boys2")]
+Useful <- PUMS80M[ , c("workedm", "morekids", "girls2")]
 rm(PUMS80M)
 # =======================================================================================
 # STEP 1
@@ -20,11 +20,11 @@ p <- 1-alpha/2
 # =======================================================================================
 # UPPER BOUND ON RHO.0
 # =======================================================================================
-# Define a variable Y that takes the value 1 whenever workedm == 1.
-Useful$Y <- ifelse(Useful$workedm == 1, 1, 0)
+# Define a variable Y that takes the value 1 whenever workedm == 0 & morekids == 0.
+Useful$Y <- ifelse(Useful$workedm == 0 & Useful$morekids == 0, 1, 0)
 # Define variables (X1,X2) that indicate the events (V=1,V=2).
-Useful$X1 <- ifelse(Useful$boys2 == 0, 1, 0)
-Useful$X2 <- ifelse(Useful$boys2 == 1, 1, 0)
+Useful$X1 <- ifelse(Useful$girls2 == 0, 1, 0)
+Useful$X2 <- ifelse(Useful$girls2 == 1, 1, 0)
 # Regress Y on (X1,X2) and compute estimated covariance matrix for the parameters.
 Regression <- lm(Y ~ 0 + X1 + X2, data = Useful)
 # Find variance matrix.
@@ -53,7 +53,7 @@ gamma.value <- floor(gamma * R)
 k.aux <- sort(g[,3])[gamma.value]
 rm(gamma.value)
 # Compute the set hat{V}_n.
-Check <- data.frame(Regression$coefficients)
+Check <- data.frame(1-Regression$coefficients)
 colnames(Check) <- c("Coefficient")
 Check$min.term <- c(
   Check[1,1] + k.aux * s1,
@@ -89,7 +89,7 @@ U.RHO.0
 # =======================================================================================
 load("~/My work/RStudio working directory/Confidence regions for dissertation.RData")
 rm(Useful.count)
-Useful <- PUMS80M[ , c("workedm", "morekids", "boys2")]
+Useful <- PUMS80M[ , c("workedm", "morekids", "girls2", "multi2nd")]
 rm(PUMS80M)
 # Set gamma_n.
 gamma <- 1 - 0.1/log(nrow(Useful))
@@ -100,11 +100,11 @@ Draws <- rmvnorm(R, mean = rep(0, 2), sigma = diag(2))
 alpha <- 0.05
 # By Bonferroni's inequality, we have that the 'adjusted' level should be 1-alpha/n.
 p <- 1-alpha/2
-# Define a variable Y that takes the value 1 whenever workedm == 1 & morekids == 0.
-Useful$Y <- ifelse(Useful$workedm == 1 & Useful$morekids == 0, 1, 0)
+# Define a variable Y that takes the value 1 whenever workedm == 1.
+Useful$Y <- ifelse(Useful$workedm == 1, 1, 0)
 # Define variables (X1,X2) that indicate the events (V=1,V=2).
-Useful$X1 <- ifelse(Useful$boys2 == 0, 1, 0)
-Useful$X2 <- ifelse(Useful$boys2 == 1, 1, 0)
+Useful$X1 <- ifelse(Useful$girls2 == 0, 1, 0)
+Useful$X2 <- ifelse(Useful$girls2 == 1, 1, 0)
 # Regress Y on (X1,X2) and compute estimated covariance matrix for the parameters.
 Regression <- lm(Y ~ 0 + X1 + X2, data = Useful)
 # Find variance matrix.
@@ -169,7 +169,7 @@ L.RHO.0
 # =======================================================================================
 load("~/My work/RStudio working directory/Confidence regions for dissertation.RData")
 rm(Useful.count)
-Useful <- PUMS80M[ , c("workedm", "morekids", "boys2")]
+Useful <- PUMS80M[ , c("workedm", "morekids", "girls2")]
 rm(PUMS80M)
 # Set gamma_n.
 gamma <- 1 - 0.1/log(nrow(Useful))
@@ -180,11 +180,11 @@ Draws <- rmvnorm(R, mean = rep(0, 2), sigma = diag(2))
 alpha <- 0.05
 # By Bonferroni's inequality, we have that the 'adjusted' level should be 1-alpha/n.
 p <- 1-alpha/2
-# Define a variable Y that takes the value 1 whenever workedm == 0 & morekids == 1.
-Useful$Y <- ifelse(Useful$workedm == 0 & Useful$morekids == 1, 1, 0)
+# Define a variable Y that takes the value 1 whenever workedm == 1.
+Useful$Y <- ifelse(Useful$workedm == 1, 1, 0)
 # Define variables (X1,X2) that indicate the events (V=1,V=2).
-Useful$X1 <- ifelse(Useful$boys2 == 0, 1, 0)
-Useful$X2 <- ifelse(Useful$boys2 == 1, 1, 0)
+Useful$X1 <- ifelse(Useful$girls2 == 0, 1, 0)
+Useful$X2 <- ifelse(Useful$girls2 == 1, 1, 0)
 # Regress Y on (X1,X2) and compute estimated covariance matrix for the parameters.
 Regression <- lm(Y ~ 0 + X1 + X2, data = Useful)
 # Find variance matrix.
@@ -213,7 +213,7 @@ gamma.value <- floor(gamma * R)
 k.aux <- sort(g[,3])[gamma.value]
 rm(gamma.value)
 # Compute the set hat{V}_n.
-Check <- data.frame(1-Regression$coefficients)
+Check <- data.frame(Regression$coefficients)
 colnames(Check) <- c("Coefficient")
 Check$min.term <- c(
   Check[1,1] + k.aux * s1,
@@ -249,7 +249,7 @@ U.RHO.01
 # =======================================================================================
 load("~/My work/RStudio working directory/Confidence regions for dissertation.RData")
 rm(Useful.count)
-Useful <- PUMS80M[ , c("workedm", "morekids", "boys2")]
+Useful <- PUMS80M[ , c("workedm", "morekids", "girls2")]
 rm(PUMS80M)
 # Set gamma_n.
 gamma <- 1 - 0.1/log(nrow(Useful))
@@ -260,11 +260,11 @@ Draws <- rmvnorm(R, mean = rep(0, 2), sigma = diag(2))
 alpha <- 0.05
 # By Bonferroni's inequality, we have that the 'adjusted' level should be 1-alpha/n.
 p <- 1-alpha/2
-# Define a variable Y that takes the value 1 whenever workedm == 1.
-Useful$Y <- ifelse(Useful$workedm == 1, 1, 0)
+# Define a variable Y that takes the value 1 whenever workedm == 1 & morekids == 1.
+Useful$Y <- ifelse(Useful$workedm == 1 & Useful$morekids == 1, 1, 0)
 # Define variables (X1,X2) that indicate the events (V=1,V=2).
-Useful$X1 <- ifelse(Useful$boys2 == 0, 1, 0)
-Useful$X2 <- ifelse(Useful$boys2 == 1, 1, 0)
+Useful$X1 <- ifelse(Useful$girls2 == 0, 1, 0)
+Useful$X2 <- ifelse(Useful$girls2 == 1, 1, 0)
 # Regress Y on (X1,X2) and compute estimated covariance matrix for the parameters.
 Regression <- lm(Y ~ 0 + X1 + X2, data = Useful)
 # Find variance matrix.
