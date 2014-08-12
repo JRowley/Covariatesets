@@ -20,8 +20,8 @@ p <- 1-alpha/2
 # =======================================================================================
 # UPPER BOUND ON RHO.0
 # =======================================================================================
-# Define a variable Y that takes the value 1 whenever workedm == 0 & morekids == 0.
-Useful$Y <- ifelse(Useful$workedm == 0 & Useful$morekids == 0, 1, 0)
+# Define a variable Y that takes the value 1 whenever workedm == 1.
+Useful$Y <- ifelse(Useful$workedm == 1, 1, 0)
 # Define variables (X1,X2,X3,X4,X5) that indicate the events (V=1,V=2,V=3,V=4,V=5).
 Useful$X1 <- ifelse(Useful$multi2nd == 0 & Useful$boys2 == 1, 1, 0)
 Useful$X2 <- ifelse(Useful$multi2nd == 0 & Useful$girls2 == 1, 1, 0)
@@ -68,7 +68,7 @@ gamma.value <- floor(gamma * R)
 k.aux <- sort(g[,3])[gamma.value]
 rm(gamma.value)
 # Compute the set hat{V}_n.
-Check <- data.frame(1-Regression$coefficients)
+Check <- data.frame(Regression$coefficients)
 colnames(Check) <- c("Coefficient")
 Check$min.term <- c(
   Check[1,1] + k.aux * s1,
@@ -121,8 +121,8 @@ Draws <- rmvnorm(R, mean = rep(0, 5), sigma = diag(5))
 alpha <- 0.05
 # By Bonferroni's inequality, we have that the 'adjusted' level should be 1-alpha/n.
 p <- 1-alpha/2
-# Define a variable Y that takes the value 1 whenever workedm == 1.
-Useful$Y <- ifelse(Useful$workedm == 1, 1, 0)
+# Define a variable Y that takes the value 1 whenever workedm == 1 & morekids == 0.
+Useful$Y <- ifelse(Useful$workedm == 1 & Useful$morekids == 0, 1, 0)
 # Define variables (X1,X2,X3,X4,X5) that indicate the events (V=1,V=2,V=3,V=4,V=5).
 Useful$X1 <- ifelse(Useful$multi2nd == 0 & Useful$boys2 == 1, 1, 0)
 Useful$X2 <- ifelse(Useful$multi2nd == 0 & Useful$girls2 == 1, 1, 0)
@@ -222,8 +222,8 @@ Draws <- rmvnorm(R, mean = rep(0, 5), sigma = diag(5))
 alpha <- 0.05
 # By Bonferroni's inequality, we have that the 'adjusted' level should be 1-alpha/n.
 p <- 1-alpha/2
-# Define a variable Y that takes the value 1 whenever workedm == 1.
-Useful$Y <- ifelse(Useful$workedm == 1, 1, 0)
+# Define a variable Y that takes the value 1 whenever workedm == 0 & morekids == 1.
+Useful$Y <- ifelse(Useful$workedm == 0 & Useful$morekids == 1, 1, 0)
 # Define variables (X1,X2,X3,X4,X5) that indicate the events (V=1,V=2,V=3,V=4,V=5).
 Useful$X1 <- ifelse(Useful$multi2nd == 0 & Useful$boys2 == 1, 1, 0)
 Useful$X2 <- ifelse(Useful$multi2nd == 0 & Useful$girls2 == 1, 1, 0)
@@ -270,7 +270,7 @@ gamma.value <- floor(gamma * R)
 k.aux <- sort(g[,3])[gamma.value]
 rm(gamma.value)
 # Compute the set hat{V}_n.
-Check <- data.frame(Regression$coefficients)
+Check <- data.frame(1-Regression$coefficients)
 colnames(Check) <- c("Coefficient")
 Check$min.term <- c(
   Check[1,1] + k.aux * s1,
@@ -323,8 +323,8 @@ Draws <- rmvnorm(R, mean = rep(0, 5), sigma = diag(5))
 alpha <- 0.05
 # By Bonferroni's inequality, we have that the 'adjusted' level should be 1-alpha/n.
 p <- 1-alpha/2
-# Define a variable Y that takes the value 1 whenever workedm == 1 & morekids == 1.
-Useful$Y <- ifelse(Useful$workedm == 1 & Useful$morekids == 1, 1, 0)
+# Define a variable Y that takes the value 1 whenever workedm == 1.
+Useful$Y <- ifelse(Useful$workedm == 1, 1, 0)
 # Define variables (X1,X2,X3,X4,X5) that indicate the events (V=1,V=2,V=3,V=4,V=5).
 Useful$X1 <- ifelse(Useful$multi2nd == 0 & Useful$boys2 == 1, 1, 0)
 Useful$X2 <- ifelse(Useful$multi2nd == 0 & Useful$girls2 == 1, 1, 0)
