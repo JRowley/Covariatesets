@@ -440,6 +440,37 @@ Hence, I have that
   \label{fig:partials}
 \end{figure}
 %==================================================%
+\begin{figure}[p]
+\centering
+\caption{Panel (a) and Panel (b) show directed acyclic graphs that are able to represent the same probability distribution of $(A,B)$ ($U$ is unobservable). In Panel (a), $U$ causes $A$ and $B$. Panel (a) is a representation of selection in that particular values of $B$ are strongly associated with particular values of $A$ independently of the causal effect of $B$. In Panel (b), $U$ causes $A$ but has an indirect effect on $B$ through $A$. Panel (a) is a representation of simultaneity in that $A$ is a cause of and an effect of $B$. The equivalence between the two directed acyclic graphs is that $A$ can always be written as $\xi(B,U)$ for $\xi : \mathcal{R}_B\times\mathcal{R}_U\rightarrow\mathcal{R}_A$ (provided that Panel (b) is convergent).}
+\begin{subfigure}{0.4\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Indistinguishable1.pdf}
+  \caption{A causal structure with selection.}
+  \label{fig:indistinguishable1}
+  \end{subfigure}
+  \begin{subfigure}{0.4\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Indistinguishable2.pdf}
+  \caption{A causal structure with feedback.}
+  \label{fig:indistinguishable2}
+  \end{subfigure}
+   \begin{subfigure}{0.4\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Exogenous1.pdf}
+  \caption{An exogenous causal effect.}
+  \label{fig:exogenous1}
+  \end{subfigure}
+   \begin{subfigure}{0.4\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Exogenous2.pdf}
+  \caption{An exogenous causal effect.}
+  \label{fig:exogenous2}
+  \end{subfigure}
+  \caption{To recover the causal effect of $B$ on $A$, it is necessary that there exists an external and measurable factor that causes variation in $B$. This external and measurable factor is known as an instrumental variable. In Panel (c), $C$ causes $B$. It is convenient to think of $C$ as a switch that forces $B$ to take particular values. The difference between the value of $A$ when $C$ is $\mathtt{on}$ versus when $C$ is $\mathtt{off}$ is the causal effect of $B$ on $A$. In Panel (d), it is $V$ that causes $B$ ($V$ is unobservable). As $V$ causes $B$ and $C$, it is sufficient to look at $C$ to measure exogenous variation in $B$. As such, the causal effect of $B$ on $A$ is recoverable using variation in $C$. This is an important point about the nature of an instrumental variable.}
+  \label{fig:causality}
+\end{figure}
+%==================================================%
 %% Bibliography.
 \newpage
 \bibliographystyle{chicago}
