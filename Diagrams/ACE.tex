@@ -37,8 +37,8 @@
 \centering
 \begin{tikzpicture}
  \coordinate (O) at (0,0);
-  \draw[<->] (-1,0) -- (10,0) coordinate[label = {right:$\mathbb{E}[Y(0)]$}] (xmax);
-  \draw[<->] (0,-1) -- (0,10) coordinate[label = {above:$\mathbb{E}[Y(1)]$}] (ymax);
+  \draw[->] (0,0) -- (10,0) coordinate[label = {right:$\mathbb{E}[Y(0)]$}] (xmax);
+  \draw[->] (0,0) -- (0,10) coordinate[label = {above:$\mathbb{E}[Y(1)]$}] (ymax);
   \draw[->,help lines] (0,0) -- (9.3,9.3);
   \draw[help lines] (6.15,6.15) -- (5.95,6.35) -- (6.15,6.55) -- (6.35,6.35);
   \draw[help lines] (0,0)+(0:1.2) arc(0:45:1.2) ;

@@ -16,7 +16,7 @@ Draws <- rmvnorm(R, mean = rep(0, 5), sigma = diag(5))
 # Set the appropriate quantile of the confidence region.
 alpha <- 0.05
 # By Bonferroni's inequality, we have that the 'adjusted' level should be 1-alpha/n.
-p <- 1-alpha/2
+p <- 1-alpha/4
 # =======================================================================================
 # UPPER BOUND ON RHO.0
 # =======================================================================================
@@ -120,7 +120,7 @@ Draws <- rmvnorm(R, mean = rep(0, 5), sigma = diag(5))
 # Set the appropriate quantile of the confidence region.
 alpha <- 0.05
 # By Bonferroni's inequality, we have that the 'adjusted' level should be 1-alpha/n.
-p <- 1-alpha/2
+p <- 1-alpha/4
 # Define a variable Y that takes the value 1 whenever workedm == 1.
 Useful$Y <- ifelse(Useful$workedm == 1, 1, 0)
 # Define variables (X1,X2,X3,X4,X5) that indicate the events (V=1,V=2,V=3,V=4,V=5).
@@ -221,7 +221,7 @@ Draws <- rmvnorm(R, mean = rep(0, 5), sigma = diag(5))
 # Set the appropriate quantile of the confidence region.
 alpha <- 0.05
 # By Bonferroni's inequality, we have that the 'adjusted' level should be 1-alpha/n.
-p <- 1-alpha/2
+p <- 1-alpha/4
 # Define a variable Y that takes the value 1 whenever workedm == 1.
 Useful$Y <- ifelse(Useful$workedm == 1, 1, 0)
 # Define variables (X1,X2,X3,X4,X5) that indicate the events (V=1,V=2,V=3,V=4,V=5).
@@ -322,7 +322,7 @@ Draws <- rmvnorm(R, mean = rep(0, 5), sigma = diag(5))
 # Set the appropriate quantile of the confidence region.
 alpha <- 0.05
 # By Bonferroni's inequality, we have that the 'adjusted' level should be 1-alpha/n.
-p <- 1-alpha/2
+p <- 1-alpha/4
 # Define a variable Y that takes the value 1 whenever workedm == 1 & morekids == 1.
 Useful$Y <- ifelse(Useful$workedm == 1 & Useful$morekids == 1, 1, 0)
 # Define variables (X1,X2,X3,X4,X5) that indicate the events (V=1,V=2,V=3,V=4,V=5).

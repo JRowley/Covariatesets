@@ -442,35 +442,31 @@ Hence, I have that
 %==================================================%
 \begin{figure}[p]
 \centering
-\begin{subfigure}{0.8\textwidth}
-  \caption{Panel (b) and Panel (c) show directed acyclic graphs that are able to represent the same probability distribution of $(Y,D)$. In Panel (a), $U$ causes $Y$ and $D$. Panel (b) is a representation of selection in that particular values of $D$ are strongly associated with particular values of $Y$ independently of the causal effect of $D$. In Panel (c), $U$ causes $Y$ but has an indirect effect on $D$ through $Y$. Panel (c) is a representation of simultaneity in that $Y$ is both a cause of and an effect of $D$. The equivalence between the two directed acyclic graphs is that $Y$ can always be written as $\xi(D,U)$ for $\xi : \mathcal{R}_D\times\mathcal{R}_U\rightarrow\mathcal{R}_Y$ (provided that Panel (c) is convergent).}
-  \end{subfigure}
 \begin{subfigure}{0.4\textwidth}
   \centering
   \includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/Indistinguishable1.pdf}
-  \caption{A causal structure with selection.}
   \label{fig:indistinguishable1}
   \end{subfigure}
   \begin{subfigure}{0.4\textwidth}
   \centering
   \includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/Indistinguishable2.pdf}
-  \caption{A causal structure with feedback.}
   \label{fig:indistinguishable2}
+  \end{subfigure}
+\begin{subfigure}{0.8\textwidth}
+  \caption{The left- and right-hand panels show directed acyclic graphs that are able to represent the same probability distribution of $(Y,D)$. In the left-hand panel, $U$ causes $Y$ and $D$. The left-hand panel is a representation of selection in that particular values of $D$ are strongly associated with particular values of $Y$ independently of the causal effect of $D$. In the right-hand panel, $U$ causes $Y$ but has an indirect effect on $D$ through $Y$. The right-hand panel is a representation of simultaneity in that $Y$ is both a cause of and an effect of $D$. The equivalence between the two directed acyclic graphs is that $Y$ can always be written as $\xi(D,U)$ for $\xi : \mathcal{R}_D\times\mathcal{R}_U\rightarrow\mathcal{R}_Y$ (provided that the right-hand panel is convergent).}
   \end{subfigure}
    \begin{subfigure}{0.4\textwidth}
   \centering
   \includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/Exogenous1.pdf}
-  \caption{An exogenous causal effect.}
   \label{fig:exogenous1}
   \end{subfigure}
    \begin{subfigure}{0.4\textwidth}
   \centering
   \includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/Exogenous2.pdf}
-  \caption{An exogenous causal effect.}
   \label{fig:exogenous2}
   \end{subfigure}
   \begin{subfigure}{0.8\textwidth}
-  \caption{To recover the causal effect of $D$ on $Y$, it is necessary that there exists an external and measurable factor that causes variation in $D$. This external and measurable factor is known as an instrumental variable. In Panel (d), $Z$ causes $D$. It is convenient to think of $Z$ as a switch that forces $D$ to take particular values. The difference between the value of $Y$ when $Z$ is $\mathtt{on}$ versus when $Z$ is $\mathtt{off}$ is the causal effect of $D$ on $Y$. In Panel (e), it is $V$ that causes $Z$ ($V$ is unobservable). As $V$ causes $D$ and $Z$, it is sufficient to look at $Z$ to measure exogenous variation in $D$. As such, the causal effect of $D$ on $Y$ is recoverable using variation in $Z$. This is an important point about the nature of an instrumental variable; namely, that the relationship between $D$ and $Z$ need not be causal.}
+  \caption{To recover the causal effect of $D$ on $Y$, it is necessary that there exists an external and measurable factor that causes variation in $D$. This external and measurable factor is known as an instrumental variable. In the left-hand panel, $Z$ causes $D$. It is convenient to think of $Z$ as a switch that forces $D$ to take particular values. The difference between the value of $Y$ when $Z$ is $\mathtt{on}$ versus when $Z$ is $\mathtt{off}$ is the causal effect of $D$ on $Y$. In the right-hand panel, it is $V$ that causes $D$ ($V$ is unobservable). As $V$ causes $D$ and $Z$, it may be sufficient to look at $Z$ to measure exogenous variation in $D$ (although it is not always). As such, the causal effect of $D$ on $Y$ is recoverable using variation in $Z$. This is an important point about the nature of an instrumental variable; namely, that the relationship between $D$ and $Z$ need not be causal.}
   \end{subfigure}
   \caption{A note on causality.}
   \label{fig:causality}
