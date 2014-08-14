@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.23)  14 AUG 2014 17:08
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.23)  14 AUG 2014 18:53
 entering extended mode
-**Confidence.tex
-(C:\Users\Jeffro\Documents\GitHub\Covariatesets\Diagrams\Confidence.tex
+**Admissiblevalues.tex
+(C:\Users\Jeffro\Documents\GitHub\Covariatesets\Tables\Admissiblevalues.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -43,11 +43,26 @@ File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
 File: standalone.cfg 2011/12/21 v1.0 Default configuration file for 'standalone
 ' class
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\minimal.cls"
-Document Class: minimal 2001/05/25 Standard LaTeX minimal class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
 )
 \sa@box=\box26
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty"
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty"
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrcs.sty"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.tex"
 \pgfutil@everybye=\toks16
@@ -87,10 +102,10 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count81
+\Gread@gobject=\count89
 ))
-\Gin@req@height=\dimen102
-\Gin@req@width=\dimen103
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\systemlayer\pgfsys.sty"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys.code.tex"
@@ -104,20 +119,20 @@ Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
 x"
 \pgfkeys@tmptoks=\toks19
 ))
-\pgf@x=\dimen104
-\pgf@y=\dimen105
-\pgf@xa=\dimen106
-\pgf@ya=\dimen107
-\pgf@xb=\dimen108
-\pgf@yb=\dimen109
-\pgf@xc=\dimen110
-\pgf@yc=\dimen111
+\pgf@x=\dimen105
+\pgf@y=\dimen106
+\pgf@xa=\dimen107
+\pgf@ya=\dimen108
+\pgf@xb=\dimen109
+\pgf@yb=\dimen110
+\pgf@xc=\dimen111
+\pgf@yc=\dimen112
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count82
-\c@pgf@countb=\count83
-\c@pgf@countc=\count84
-\c@pgf@countd=\count85
+\c@pgf@counta=\count90
+\c@pgf@countb=\count91
+\c@pgf@countc=\count92
+\c@pgf@countd=\count93
  ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgf.cfg"
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
@@ -133,8 +148,8 @@ File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.t
 ex"
 File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
-\pgfsyssoftpath@smallbuffer@items=\count86
-\pgfsyssoftpath@bigbuffer@items=\count87
+\pgfsyssoftpath@smallbuffer@items=\count94
+\pgfsyssoftpath@bigbuffer@items=\count95
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.code.t
 ex"
@@ -163,8 +178,8 @@ Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathcalc.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathutil.code.tex")
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex"
-\pgfmath@dimen=\dimen112
-\pgfmath@count=\count88
+\pgfmath@dimen=\dimen113
+\pgfmath@count=\count96
 \pgfmath@box=\box28
 \pgfmath@toks=\toks20
 \pgfmath@stack@operand=\toks21
@@ -186,37 +201,37 @@ tex")
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.misc.code.t
 ex"))) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex
 "
-\c@pgfmathroundto@lastzeros=\count89
+\c@pgfmathroundto@lastzeros=\count97
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex
 "
 File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
-\pgf@picminx=\dimen113
-\pgf@picmaxx=\dimen114
-\pgf@picminy=\dimen115
-\pgf@picmaxy=\dimen116
-\pgf@pathminx=\dimen117
-\pgf@pathmaxx=\dimen118
-\pgf@pathminy=\dimen119
-\pgf@pathmaxy=\dimen120
-\pgf@xx=\dimen121
-\pgf@xy=\dimen122
-\pgf@yx=\dimen123
-\pgf@yy=\dimen124
-\pgf@zx=\dimen125
-\pgf@zy=\dimen126
+\pgf@picminx=\dimen114
+\pgf@picmaxx=\dimen115
+\pgf@picminy=\dimen116
+\pgf@picmaxy=\dimen117
+\pgf@pathminx=\dimen118
+\pgf@pathmaxx=\dimen119
+\pgf@pathminy=\dimen120
+\pgf@pathmaxy=\dimen121
+\pgf@xx=\dimen122
+\pgf@xy=\dimen123
+\pgf@yx=\dimen124
+\pgf@yy=\dimen125
+\pgf@zx=\dimen126
+\pgf@zy=\dimen127
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconstruct.c
 ode.tex"
 File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
-\pgf@path@lastx=\dimen127
-\pgf@path@lasty=\dimen128
+\pgf@path@lastx=\dimen128
+\pgf@path@lasty=\dimen129
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage.code.
 tex"
 File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
-\pgf@shorten@end@additional=\dimen129
-\pgf@shorten@start@additional=\dimen130
+\pgf@shorten@end@additional=\dimen130
+\pgf@shorten@start@additional=\dimen131
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex
 "
@@ -224,19 +239,19 @@ File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
 \pgfpic=\box29
 \pgf@hbox=\box30
 \pgf@layerbox@main=\box31
-\pgf@picture@serial@count=\count90
+\pgf@picture@serial@count=\count98
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicstate.co
 de.tex"
 File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
-\pgflinewidth=\dimen131
+\pgflinewidth=\dimen132
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransformations
 .code.tex"
 File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
-\pgf@pt@x=\dimen132
-\pgf@pt@y=\dimen133
-\pgf@pt@temp=\dimen134
+\pgf@pt@x=\dimen133
+\pgf@pt@y=\dimen134
+\pgf@pt@temp=\dimen135
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.code.tex"
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -255,8 +270,8 @@ File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
-\pgf@max=\dimen135
-\pgf@sys@shading@range@num=\count91
+\pgf@max=\dimen136
+\pgf@sys@shading@range@num=\count99
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.code.te
 x"
 File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
@@ -287,8 +302,8 @@ File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-0-65.
 sty"
 Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen136
-\pgf@nodesepend=\dimen137
+\pgf@nodesepstart=\dimen137
+\pgf@nodesepend=\dimen138
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-1-18.
 sty"
@@ -299,8 +314,8 @@ Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgffor.code.tex"
 Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
-\pgffor@iter=\dimen138
-\pgffor@skip=\dimen139
+\pgffor@iter=\dimen139
+\pgffor@skip=\dimen140
 \pgffor@stack=\toks23
 \pgffor@toks=\toks24
 ))
@@ -310,29 +325,29 @@ Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothandlers.
 code.tex"
 File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
-\pgf@plot@mark@count=\count92
-\pgfplotmarksize=\dimen140
+\pgf@plot@mark@count=\count100
+\pgfplotmarksize=\dimen141
 )
-\tikz@lastx=\dimen141
-\tikz@lasty=\dimen142
-\tikz@lastxsaved=\dimen143
-\tikz@lastysaved=\dimen144
-\tikzleveldistance=\dimen145
-\tikzsiblingdistance=\dimen146
+\tikz@lastx=\dimen142
+\tikz@lasty=\dimen143
+\tikz@lastxsaved=\dimen144
+\tikz@lastysaved=\dimen145
+\tikzleveldistance=\dimen146
+\tikzsiblingdistance=\dimen147
 \tikz@figbox=\box34
 \tikz@tempbox=\box35
-\tikztreelevel=\count93
-\tikznumberofchildren=\count94
-\tikznumberofcurrentchild=\count95
-\tikz@fig@count=\count96
+\tikztreelevel=\count101
+\tikznumberofchildren=\count102
+\tikznumberofcurrentchild=\count103
+\tikz@fig@count=\count104
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmodulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
-\pgfmatrixcurrentrow=\count97
-\pgfmatrixcurrentcolumn=\count98
-\pgf@matrix@numberofcolumns=\count99
+\pgfmatrixcurrentrow=\count105
+\pgfmatrixcurrentcolumn=\count106
+\pgf@matrix@numberofcolumns=\count107
 )
-\tikz@expandcount=\count100
+\tikz@expandcount=\count108
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
 librarytopaths.code.tex"
@@ -557,7 +572,7 @@ Now handling font encoding U ...
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsmath.sty"
 Package: amsmath 2000/07/18 v2.13 AMS math features
-\@mathmargin=\skip41
+\@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amstext.sty"
@@ -566,49 +581,49 @@ Package: amstext 2000/06/29 v2.01
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks27
-\ex@=\dimen147
+\ex@=\dimen148
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen148
+\pmbraise@=\dimen149
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count101
+\inf@bad=\count109
 LaTeX Info: Redefining \frac on input line 211.
-\uproot@=\count102
-\leftroot@=\count103
+\uproot@=\count110
+\leftroot@=\count111
 LaTeX Info: Redefining \overline on input line 307.
-\classnum@=\count104
-\DOTSCASE@=\count105
+\classnum@=\count112
+\DOTSCASE@=\count113
 LaTeX Info: Redefining \ldots on input line 379.
 LaTeX Info: Redefining \dots on input line 382.
 LaTeX Info: Redefining \cdots on input line 467.
 \Mathstrutbox@=\box36
 \strutbox@=\box37
-\big@size=\dimen149
+\big@size=\dimen150
 LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
-\macc@depth=\count106
-\c@MaxMatrixCols=\count107
+\macc@depth=\count114
+\c@MaxMatrixCols=\count115
 \dotsspace@=\muskip10
-\c@parentequation=\count108
-\dspbrk@lvl=\count109
+\c@parentequation=\count116
+\dspbrk@lvl=\count117
 \tag@help=\toks28
-\row@=\count110
-\column@=\count111
-\maxfields@=\count112
+\row@=\count118
+\column@=\count119
+\maxfields@=\count120
 \andhelp@=\toks29
-\eqnshift@=\dimen150
-\alignsep@=\dimen151
-\tagshift@=\dimen152
-\tagwidth@=\dimen153
-\totwidth@=\dimen154
-\lineht@=\dimen155
+\eqnshift@=\dimen151
+\alignsep@=\dimen152
+\tagshift@=\dimen153
+\tagwidth@=\dimen154
+\totwidth@=\dimen155
+\lineht@=\dimen156
 \@envbody=\toks30
-\multlinegap=\skip42
-\multlinetaggap=\skip43
+\multlinegap=\skip44
+\multlinetaggap=\skip45
 \mathdisplay@stack=\toks31
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
@@ -620,9 +635,9 @@ Package: amsthm 2004/08/06 v2.20
 \thm@headfont=\toks34
 \thm@notefont=\toks35
 \thm@headpunct=\toks36
-\thm@preskip=\skip44
-\thm@postskip=\skip45
-\thm@headsep=\skip46
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
 \dth@everypar=\toks37
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
@@ -632,7 +647,7 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryarrows.code.t
 ex"
 File: pgflibraryarrows.code.tex 2008/10/27 v2.10 (rcs-revision 1.9)
-\arrowsize=\dimen156
+\arrowsize=\dimen157
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
 libraryautomata.code.tex"
@@ -722,14 +737,14 @@ librarydecorations.pathreplacing.code.tex"
 librarydecorations.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduledecorations.code
 .tex"
-\pgfdecoratedcompleteddistance=\dimen157
-\pgfdecoratedremainingdistance=\dimen158
-\pgfdecoratedinputsegmentcompleteddistance=\dimen159
-\pgfdecoratedinputsegmentremainingdistance=\dimen160
-\pgf@decorate@distancetomove=\dimen161
-\pgf@decorate@repeatstate=\count113
-\pgfdecorationsegmentamplitude=\dimen162
-\pgfdecorationsegmentlength=\dimen163
+\pgfdecoratedcompleteddistance=\dimen158
+\pgfdecoratedremainingdistance=\dimen159
+\pgfdecoratedinputsegmentcompleteddistance=\dimen160
+\pgfdecoratedinputsegmentremainingdistance=\dimen161
+\pgf@decorate@distancetomove=\dimen162
+\pgf@decorate@repeatstate=\count121
+\pgfdecorationsegmentamplitude=\dimen163
+\pgfdecorationsegmentlength=\dimen164
 )
 \tikz@lib@dec@box=\box60
 )
@@ -743,57 +758,79 @@ ecorations.pathmorphing.code.tex"))
 librarypositioning.code.tex"
 File: tikzlibrarypositioning.code.tex 2008/10/06 v2.10 (rcs-revision 1.7)
 )
-(C:\Users\Jeffro\Documents\GitHub\Covariatesets\Diagrams\Confidence.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
+("C:\Program Files\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen165
+\lightrulewidth=\dimen166
+\cmidrulewidth=\dimen167
+\belowrulesep=\dimen168
+\belowbottomsep=\dimen169
+\aboverulesep=\dimen170
+\abovetopsep=\dimen171
+\cmidrulesep=\dimen172
+\cmidrulekern=\dimen173
+\defaultaddspace=\dimen174
+\@cmidla=\count122
+\@cmidlb=\count123
+\@aboverulesep=\dimen175
+\@belowrulesep=\dimen176
+\@thisruleclass=\count124
+\@lastruleclass=\count125
+\@thisrulewidth=\dimen177
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+\bigstrutjot=\dimen178
+)
+(C:\Users\Jeffro\Documents\GitHub\Covariatesets\Tables\Admissiblevalues.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
 
 ABD: EveryShipout initializing macros
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count114
-\scratchdimen=\dimen164
+\scratchcounter=\count126
+\scratchdimen=\dimen179
 \scratchbox=\box61
-\nofMPsegments=\count115
-\nofMParguments=\count116
+\nofMPsegments=\count127
+\nofMParguments=\count128
 \everyMPshowfont=\toks38
-\MPscratchCnt=\count117
-\MPscratchDim=\dimen165
-\MPnumerator=\count118
-\makeMPintoPDFobject=\count119
+\MPscratchCnt=\count129
+\MPscratchDim=\dimen180
+\MPnumerator=\count130
+\makeMPintoPDFobject=\count131
 \everyMPtoPDFconversion=\toks39
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 47.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-) [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(C:\Users\Jeffro\Documents\GitHub\Covariatesets\Diagrams\Confidence.aux) ) 
+) [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+(C:\Users\Jeffro\Documents\GitHub\Covariatesets\Tables\Admissiblevalues.aux) ) 
 Here is how much of TeX's memory you used:
- 13235 strings out of 494045
- 276765 string characters out of 3148384
- 339670 words of memory out of 3000000
- 16250 multiletter control sequences out of 15000+200000
- 4719 words of font info for 19 fonts, out of 3000000 for 9000
+ 13341 strings out of 494045
+ 276629 string characters out of 3148384
+ 354844 words of memory out of 3000000
+ 16351 multiletter control sequences out of 15000+200000
+ 4094 words of font info for 16 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 49i,7n,69p,417b,615s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/symbols/msbm10.pfb>
-Output written on Confidence.pdf (1 page, 38458 bytes).
+ 49i,10n,61p,423b,133s stack positions out of 5000i,500n,10000p,200000b,50000s
+<
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmsy7.pfb>
+Output written on Admissiblevalues.pdf (1 page, 57728 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
+ 33 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 19 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

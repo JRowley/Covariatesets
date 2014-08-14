@@ -30,6 +30,12 @@ Beresteanu, A., I.~Molchanov, and F.~Molinari (2012).
 \newblock Partial identification using random set theory.
 \newblock {\em Journal of Econometrics\/}~{\em 166\/}(1), 17 -- 32.
 
+\bibitem[\protect\citeauthoryear{Bugni}{Bugni}{2010}]{bU10}
+Bugni, F.~A. (2010).
+\newblock Bootstrap inference in partially identified models defined by moment
+  inequalities: Coverage of the identified set.
+\newblock {\em Econometrica\/}~{\em 78\/}(2), 735 -- 753.
+
 \bibitem[\protect\citeauthoryear{Chernozhukov, Lee, and Rosen}{Chernozhukov
   et~al.}{2013}]{cHlr13}
 Chernozhukov, V., S.~Lee, and A.~M. Rosen (2013).
@@ -58,11 +64,6 @@ Chesher, A. and A.~M. Rosen (2013).
 Chesher, A., A.~M. Rosen, and K.~Smolinski (2013).
 \newblock An instrumental variable model of multiple discrete choice.
 \newblock {\em Quantitative Economics\/}~{\em 4\/}(2), 157 -- 196.
-
-\bibitem[\protect\citeauthoryear{Heckman}{Heckman}{1978}]{hE78}
-Heckman, J.~J. (1978).
-\newblock {Dummy Endogenous Variables in a Simultaneous Equation System}.
-\newblock {\em Econometrica\/}~{\em 46\/}(4), 931 -- 59.
 
 \bibitem[\protect\citeauthoryear{Heckman and Vytlacil}{Heckman and
   Vytlacil}{2005}]{hEvY05}
@@ -110,11 +111,6 @@ Manski, C.~F. (2013).
 Molchanov, I. (2005).
 \newblock {\em Theory of Random Sets}.
 \newblock Springer.
-
-\bibitem[\protect\citeauthoryear{Pearl}{Pearl}{1993}]{p93}
-Pearl, J. (1993).
-\newblock Aspects of graphical models connected with causality.
-\newblock {\em Department of Statistics, UCLA\/}.
 
 \bibitem[\protect\citeauthoryear{Shaikh and Vytlacil}{Shaikh and
   Vytlacil}{2011}]{sHvY11}

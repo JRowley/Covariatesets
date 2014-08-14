@@ -1,0 +1,71 @@
+\documentclass[class=article,border = 0pt,crop]{standalone}
+\usepackage{pgf}
+\usepackage{tikz}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\DeclareMathAlphabet\mathbb{U}{msb}{m}{n}
+\usetikzlibrary{arrows,automata,shapes,calc,backgrounds,decorations.pathreplacing}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{positioning}
+\pagestyle{empty}
+ \usepackage{booktabs}
+ \usepackage{multirow}
+\begin{document}
+\centering
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{multirow}
+\begin{tabular}{lcrcrcrcr}
+\toprule
+&	& \multicolumn{7}{c}{Bound} \\
+\cmidrule(r){2-9}	
+	$\mathcal{R}_Z$	&	&	$\theta_{n}^{0-}$	&	&	$\theta_n^{1-}$	&	&	$\theta_{n}^{0+}$	&	&	$\theta_n^{1+}$\\
+\midrule
+%1	
+$\text{Male-Male}\cup\text{Female-Female}$	&	&	$[0.533,0.721]$	&	&	$[0.189,0.524]$	&	&	$[0.374,0.524]$	&	&	$[0.533,0.775]$
+\\
+$\text{Male-Female}\cup\text{Female-Male}$	&	&	\color{blue}$[0.530,0.723]$	&	&	\color{blue}$[0.187,0.527]$	&	&	\color{blue}$[0.371,0.527]$	&	&	\color{blue}$[0.530,0.777]$\\
+\\
+%2
+$\text{Male-Male}$	&	&	$[0.530,0.731]$	&	&	$[0.182,0.523]$	&	&	$[0.359,0.523]$	&	&	$[0.530,0.778]$
+\\
+$\text{Male-Female}\cup\text{Female-Male}\cup\text{Female-Female}$	&	&	\color{blue}$[0.528,0.733]$	&	&	\color{blue}$[0.179,0.527]$	&	&	\color{blue}$[0.357,0.527]$	&	&	\color{blue}$[0.528,0.781]$\\
+\\
+%3
+$\text{Female-Female}$	&	&	$[0.529,0.729]$	&	&	$[0.196,0.524]$	&	&	$[0.362,0.524]$	&	&	$[0.529,0.771]$
+\\
+$\text{Male-Male}\cup\text{Male-Female}\cup\text{Female-Male}$	& &\color{blue}$[0.527,0.731]$	&	&	\color{blue}$[0.193,0.529]$	&	&	\color{blue}$[0.360,0.529]$	&	&	\color{blue}$[0.527,0.774]$\\	
+\\
+%4
+$\text{Male-Male}$&	&	$[0.533,0.721]$	&	&	$[0.196,0.523]$	&	&	$[0.374,0.523]$	&	&	$[0.533,0.771]$
+\\
+$\text{Female-Female}$ & &\color{blue}$[0.530,0.723]$	&	&	\color{blue}$[0.192,0.528]$	&	&	\color{blue}$[0.371,0.528]$	&	&	\color{blue}$[0.530,0.775]$\\
+$\text{Male-Female}\cup\text{Female-Male}$\\	
+\\
+%5
+$\text{Male-Male}$&	&	$[0.536,0.718]$	&	&	$[0.196,0.523]$	&	&	$[0.376,0.523]$	&	&	$[0.536,0.771]$
+\\
+$\text{Female-Female}$& &\color{blue}$[0.531,0.722]$	&	&	\color{blue}$[0.193,0.528]$	&	&	\color{blue}$[0.372,0.528]$	&	&	\color{blue}$[0.531,0.775]$\\
+$\text{Male-Female}$ \\
+$\text{Female-Male}$\\	
+\\
+%6
+$\text{Multiple birth}$&	&	$[0.529,0.733]$	&	&	$0.476$\\
+$\text{Single birth}$& &\color{blue}$[0.526,0.734]$	&	&	\color{blue}$[0.460,0.498]$\\
+\\
+%7
+$\text{Multiple birth}$&	&	$[0.534,0.718]$	&	&	$0.476$\\
+$\text{Single birth}\cap(\text{Male-Male}\cup\text{Female-Female})$& &\color{blue}$[0.530,0.721]$	&	&	\color{blue}$[0.460,0.498]$\\
+$\text{Single birth}\cap(\text{Male-Female}\cup\text{Female-Male})$\\
+\\
+%8
+$\text{Multiple birth}$&	&	$[0.537,0.716]$	&	&	$0.476$\\
+$\text{Single birth}\cap\text{Male-Male}$& &\color{blue}$[0.532,0.720]$	&	&	\color{blue}$[0.460,0.498]$\\
+$\text{Single birth}\cap\text{Female-Female}$\\
+$\text{Single birth}\cap\text{Male-Female}$ \\
+$\text{Single birth}\cap\text{Female-Male}$\\	
+\\
+\bottomrule
+\end{tabular}
+\end{document}

@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.23)  14 AUG 2014 17:08
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.23)  14 AUG 2014 23:32
 entering extended mode
-**Confidence.tex
-(C:\Users\Jeffro\Documents\GitHub\Covariatesets\Diagrams\Confidence.tex
+**Instruments.tex
+(C:\Users\Jeffro\Documents\GitHub\Covariatesets\Diagrams\Instruments.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -736,26 +736,39 @@ librarydecorations.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgflibraryd
 ecorations.pathreplacing.code.tex"))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+librarysnakes.code.tex"
+File: tikzlibrarysnakes.code.tex 2008/02/05 v2.10 (rcs-revision 1.6)
+
+
+Package tikz Warning: Snakes have been superseded by decorations. Please use th
+e decoration libraries instead of the snakes library on input line 14.
+
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
 librarydecorations.pathmorphing.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgflibraryd
 ecorations.pathmorphing.code.tex"))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+librarydecorations.shapes.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgflibraryd
+ecorations.shapes.code.tex")))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
 librarypositioning.code.tex"
 File: tikzlibrarypositioning.code.tex 2008/10/06 v2.10 (rcs-revision 1.7)
 )
-(C:\Users\Jeffro\Documents\GitHub\Covariatesets\Diagrams\Confidence.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
+(C:\Users\Jeffro\Documents\GitHub\Covariatesets\Diagrams\Instruments.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
 
 ABD: EveryShipout initializing macros
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
@@ -771,29 +784,24 @@ ABD: EveryShipout initializing macros
 \MPnumerator=\count118
 \makeMPintoPDFobject=\count119
 \everyMPtoPDFconversion=\toks39
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 47.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ) [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(C:\Users\Jeffro\Documents\GitHub\Covariatesets\Diagrams\Confidence.aux) ) 
+(C:\Users\Jeffro\Documents\GitHub\Covariatesets\Diagrams\Instruments.aux) ) 
 Here is how much of TeX's memory you used:
- 13235 strings out of 494045
- 276765 string characters out of 3148384
- 339670 words of memory out of 3000000
- 16250 multiletter control sequences out of 15000+200000
- 4719 words of font info for 19 fonts, out of 3000000 for 9000
+ 13370 strings out of 494045
+ 281727 string characters out of 3148384
+ 342131 words of memory out of 3000000
+ 16383 multiletter control sequences out of 15000+200000
+ 4094 words of font info for 16 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 49i,7n,69p,417b,615s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/symbols/msbm10.pfb>
-Output written on Confidence.pdf (1 page, 38458 bytes).
+ 49i,7n,65p,418b,598s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Instruments.pdf (1 page, 33897 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
+ 25 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 19 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
