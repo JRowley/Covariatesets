@@ -5,34 +5,16 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \DeclareMathAlphabet\mathbb{U}{msb}{m}{n}
-\usetikzlibrary{arrows,automata,shapes,calc,backgrounds,decorations.pathreplacing}
+%==========================================
+\usetikzlibrary{arrows}
+\usetikzlibrary{automata}
+\usetikzlibrary{shapes}
+\usetikzlibrary{calc}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{decorations.pathreplacing}
 \usetikzlibrary{positioning}
+%==========================================
 \pagestyle{empty}
-\tikzset{
-    state/.style={
-           rectangle,
-           rounded corners,
-           draw=black, very thick,
-           minimum height=2em,
-           inner sep=5pt,
-           text centered,
-           },
-    pil/.style={
-           ->,
-           thick,
-           shorten <=4pt,
-           shorten >=4pt,
-           },
-    ball/.style={
-           circle,
-           draw,
-           align=center,
-           anchor=north,
-           inner sep=0,
-           fill=black,
-           }
-}
-
 \begin{document}
 \centering
 \begin{tikzpicture}
@@ -52,10 +34,6 @@
   \draw[color=blue] (0,1) -- (0,5.5);
   \draw[color=red] (0,0.7) -- (0,1);
   \draw[color=red] (0,5.5) -- (0,5.8);
-%  \draw[color=red] (0,5.8) -- (-0.2,5.8);
-%  \draw[color=red] (0,0.7) -- (-0.2,0.7);
-%  \draw[color=blue] (0,5.5) -- (-0.2,5.5);
-%  \draw[color=blue] (0,1) -- (-0.2,1);
   \draw [decorate,decoration={brace,amplitude=10pt},xshift=-0.1cm,yshift=0pt]
 (0,0.7) -- (0,5.8);
 \node (a) [] at (-0.5,3.25) {};

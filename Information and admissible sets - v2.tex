@@ -46,6 +46,7 @@
  \usepackage{booktabs}
  \usepackage{multirow}
  \usepackage{rotating}
+ \usepackage{anyfontsize}
 %==================================================%
 %% Theorem environments.
 \newcounter{countthm}[section]
@@ -375,6 +376,9 @@ Y&=\mathbbm{1}[p(D,X)>U]\\
 Hence, I have that
 \[p(d)=\sum_{x\in\mathcal{R}_X}\mathbb{P}(x)p(d,x)\]
 %==================================================%
+%%Figures and tables.
+\footnotesize
+%==================================================%
 %% Diagrams
 \invisiblesection{Figures}
 %==================================================%
@@ -506,11 +510,11 @@ $\mathbb{P}(\theta_n>\phi_n^u)=\alpha$. A na{\"i}ve approach would be to look on
 \begin{figure}[p]
 \centering
 \begin{subfigure}{0.8\textwidth}
-\caption{The plot shows how the admissible set of values of $ACE_n(D\rightarrow Y)$ changes as $\mathcal{R}_Z$ is varied. Each value on the $y$-axis corresponds to a different experiment. In each experiment, $\mathcal{R}_Z$ is varied and the admissible set of values of $ACE_n(D\rightarrow Y)$ is calculated. See Table~\ref{tbl:setssame} through Table~\ref{tbl:acemult} for the definition of $\mathcal{R}_Z$ in each experiment (the \emph{No.} column states the experiment number in each table). The plot is a graphical representation of Table~\ref{tbl:acesame} and Table~\ref{tbl:acemult}. Blue regions represent the admissible set of values of $ACE_n(D\rightarrow Y)$, and the union of blue and red regions represent $95\%$ confidence regions for $ACE_n(D\rightarrow Y)$.}
+\caption{The plot shows how the admissible set of values of $ACE_n(D\rightarrow Y)$ changes as $\mathcal{R}_Z$ is varied. Each value on the $y$-axis corresponds to a different experiment. In each experiment, $\mathcal{R}_Z$ is varied and the admissible set of values of $ACE_n(D\rightarrow Y)$ is calculated. See Table~\ref{tbl:acesame} and Table~\ref{tbl:acemult} for the definition of $\mathcal{R}_Z$ in each experiment (the column headed No. states the experiment number in each table, and the column headed $\mathcal{R}_Z$ states the events that form the points of support for $Z$). The plot is a graphical representation of Table~\ref{tbl:acesame} and Table~\ref{tbl:acemult}. Blue regions represent the admissible set of values of $ACE_n(D\rightarrow Y)$, and the union of blue and red regions represent $0.950$ confidence regions for $ACE_n(D\rightarrow Y)$.}
 \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Instruments.pdf}
-\caption{Hello}
+\caption{In experiment 1 through experiment 5, information relating to the incidence of a multiple second birth is ignored. The admissible sets of values of $ACE_n(D\rightarrow Y)$ in these experiments are large and disconnected, which suggests that child gender is weakly associated with the number of children in a household. In other words, that child gender is a weak instrumental variable. Child gender is, by itself, insufficient to determine the sign of the average causal effect of the number of children in a household on a mother's employment. Experiment 2 and experiment 3 are unable to rule out a null effect at the $0.950$ significance level (the central red regions overlap at zero). In experiment 6 through experiment 7, information relating to the incidence of a multiple second birth is incorporated. The sign of the average causal effect of the number of children in a household on a mother's employment is negative, and significant. The length of the admissible set of values of $ACE_n(D\rightarrow Y)$ is decreasing as more information is incorporated, as is the $0.950$ confidence region for $ACE_n(D\rightarrow Y)$.}
 \end{subfigure}
-\caption{Admissible sets of values of $ACE_n(D\rightarrow Y)$ for various $\mathcal{R}_Z$.}
+\caption{Admissible sets of values of $ACE_n(D\rightarrow Y)$ and $\mathcal{R}_Z$.}
 \end{figure}
 %==================================================%
 %% Diagrams
@@ -518,11 +522,15 @@ $\mathbb{P}(\theta_n>\phi_n^u)=\alpha$. A na{\"i}ve approach would be to look on
 %==================================================%
 \begin{sidewaystable}[p]
 \centering
+\caption{$\mathcal{R}_Z$ and admissible sets of values of $\mathbb{E}_n[Y(d)]$.}
+\centering
+\begin{subfigure}{\textwidth}
+\centering
 \begin{tabular}{lclcrcrcrcr}
 \toprule
-&	& \multicolumn{7}{c}{Bound} \\
+&	& &	& \multicolumn{7}{c}{Bound} \\
 \cmidrule(r){4-11}	
-No. & &	$\mathcal{R}_Z$	&	&	$\theta_{n}^{0-}$	&	&	$\theta_n^{1-}$	&	&	$\theta_{n}^{0+}$	&	&	$\theta_n^{1+}$\\
+No. & &	$\mathcal{R}_Z$	&	&	$\mathbb{E}_n^-[Y(0)]$	&	&	$\mathbb{E}_n^-[Y(1)]$	&	&	$\mathbb{E}_n^+[Y(0)]$	&	&	$\mathbb{E}_n^+[Y(1)]$\\
 \midrule
 & &\phantom{$\text{Male-Female}\cup\text{Female-Male}\cup\text{Female-Female}$}\\
 %1	
@@ -555,17 +563,23 @@ No. & &	$\mathcal{R}_Z$	&	&	$\theta_{n}^{0-}$	&	&	$\theta_n^{1-}$	&	&	$\theta_{n
 	\\
 \bottomrule
 \end{tabular}
-\caption{$95\%$ confidence regions for parameters $(1-p)$ constructed using $97.5\%$ one-sided confidence. }
+\vspace{10pt}
+\caption{The column headed No. states the experiment number. The column headed $\mathcal{R}_Z$ states the events that form the points of support for $Z$. For example, in experiment 1 $Z$ is a random variable that takes the value $z$ when the event $\text{Male-Male}\cup\text{Female-Female}$ occurs and the value $z'$ when this does not occur. The event $Male-Female$ is the event that the oldest two children in a household are male and female, respectively. The columns headed Bound are the admissible set of values of $\mathbb{E}_n[Y(D)]$. A superscript $-$ is written when the bounds are conditional on $\mathbb{E}_n[Y(0)]\geq\mathbb{E}_n[Y(1)]$, and a superscript $+$ is written when the bounds are conditional on $\mathbb{E}_n[Y(0)]\leq\mathbb{E}_n[Y(1)]$. $0.950$ confidence regions for $\mathbb{E}_n[Y(D)]$ are in blue and are constructed from one-sided $0.975$ confidence regions for the lower bound and the upper bound.}
+\end{subfigure}
 \label{tbl:setssame}
 \end{sidewaystable}
 %==================================================%
 \begin{sidewaystable}[p]
 \centering
+\caption{$\mathcal{R}_Z$ and admissible sets of values of $\mathbb{E}_n[Y(d)]$.}
+\centering
+\begin{subfigure}{\textwidth}
+\centering
 \begin{tabular}{lclcrcr}
 \toprule
-&	& \multicolumn{3}{c}{Bound} \\
+&	&  & &\multicolumn{3}{c}{Bound} \\
 \cmidrule(r){4-7}	
-No. & &	$\mathcal{R}_Z$	&	&	$\theta_{n}^{0-}$	&	&	$\theta_n^{1-}$	\\
+No. & &	$\mathcal{R}_Z$	&	&	$\mathbb{E}_n^-[Y(0)]$	&	&	$\mathbb{E}_n^-[Y(1)]$\\
 \midrule
 & &\phantom{$\text{Male-Female}\cup\text{Female-Male}\cup\text{Female-Female}$}\\
 %6
@@ -586,17 +600,23 @@ No. & &	$\mathcal{R}_Z$	&	&	$\theta_{n}^{0-}$	&	&	$\theta_n^{1-}$	\\
 	\\
 \bottomrule
 \end{tabular}
-\caption{}
+\vspace{10pt}
+\caption{The column headed No. states the experiment number. The column headed $\mathcal{R}_Z$ states the events that form the points of support for $Z$. For example, in experiment 1 $Z$ is a random variable that takes the value $z$ when the event $\text{Male-Male}\cup\text{Female-Female}$ occurs and the value $z'$ when this does not occur. The event $Male-Female$ is the event that the oldest two children in a household are male and female, respectively. The columns headed Bound are the admissible set of values of $\mathbb{E}_n[Y(D)]$. A superscript $-$ is written when the bounds are conditional on $\mathbb{E}_n[Y(0)]\geq\mathbb{E}_n[Y(1)]$, and a superscript $+$ is written when the bounds are conditional on $\mathbb{E}_n[Y(0)]\leq\mathbb{E}_n[Y(1)]$. $0.950$ confidence regions for $\mathbb{E}_n[Y(D)]$ are in blue and are constructed from one-sided $0.975$ confidence regions for the lower bound and the upper bound.}
+\end{subfigure}
 \label{tbl:setsmult}
 \end{sidewaystable}
 %==================================================%
 \begin{sidewaystable}[p]
 \centering
+\caption{$\mathcal{R}_Z$ and admissible sets of values of $ACE_n(D\rightarrow Y)$.}
+\centering
+\begin{subfigure}{\textwidth}
+\centering
 \begin{tabular}{lclcrcr}
 \toprule
-&	& \multicolumn{3}{c}{Bound} \\
+&	&  & &\multicolumn{3}{c}{Bound} \\
 \cmidrule(r){4-7}	
-No.& &	$\mathcal{R}_Z$	&	&	$ACE_n(D\rightarrow Y)^-$	&	&	$ACE_n(D\rightarrow Y)^+$\\
+No.& &	$\mathcal{R}_Z$	&	&	$ACE_n^-(D\rightarrow Y)$	&	&	$ACE_n^+(D\rightarrow Y)$\\
 \midrule
 & &\phantom{$\text{Male-Female}\cup\text{Female-Male}\cup\text{Female-Female}$}\\
 %1	
@@ -624,17 +644,23 @@ No.& &	$\mathcal{R}_Z$	&	&	$ACE_n(D\rightarrow Y)^-$	&	&	$ACE_n(D\rightarrow Y)^
 	\\
 \bottomrule
 \end{tabular}
-\caption{$95\%$ confidence regions for parameters $ACE$ constructed using $98.75\%$ one-sided confidence for each parameter.}
+\vspace{10pt}
+\caption{The column headed No. states the experiment number. The column headed $\mathcal{R}_Z$ states the events that form the points of support for $Z$. For example, in experiment 1 $Z$ is a random variable that takes the value $z$ when the event $\text{Male-Male}\cup\text{Female-Female}$ occurs and the value $z'$ when this does not occur. The event $Male-Female$ is the event that the oldest two children in a household are male and female, respectively. The columns headed Bound are the admissible set of values of $ACE_n(D\rightarrow Y)$. A superscript $-$ is written when the bounds are conditional on $ACE_n(D\rightarrow Y)\leq 0$, and a superscript $+$ is written when the bounds are conditional on $ACE_n(D\rightarrow Y)\geq 0$. $0.950$ confidence regions for $ACE_n(D\rightarrow Y)$ are in blue and are constructed from one-sided $0.975$ confidence regions for the lower bound and the upper bound.}
+\end{subfigure}
 \label{tbl:acesame}
 \end{sidewaystable}
 %==================================================%
 \begin{sidewaystable}[p]
 \centering
+\caption{$\mathcal{R}_Z$ and admissible sets of values of $ACE_n(D\rightarrow Y)$.}
+\centering
+\begin{subfigure}{\textwidth}
+\centering
 \begin{tabular}{lclcr}
 \toprule
-&	& \multicolumn{1}{c}{Bound} \\
+&	& & & \multicolumn{1}{c}{Bound} \\
 \cmidrule(r){5-5}	
-No.& &	$\mathcal{R}_Z$	&	&	$\theta_{n}^{0-}$\\
+No.& &	$\mathcal{R}_Z$	&	&	$ACE_n^-(D\rightarrow Y)$\\
 \midrule
 & &\phantom{$\text{Male-Female}\cup\text{Female-Male}\cup\text{Female-Female}$}\\
 %6
@@ -655,7 +681,9 @@ No.& &	$\mathcal{R}_Z$	&	&	$\theta_{n}^{0-}$\\
 	\\
 \bottomrule
 \end{tabular}
-\caption{}
+\vspace{10pt}
+\caption{The column headed No. states the experiment number. The column headed $\mathcal{R}_Z$ states the events that form the points of support for $Z$. For example, in experiment 1 $Z$ is a random variable that takes the value $z$ when the event $\text{Male-Male}\cup\text{Female-Female}$ occurs and the value $z'$ when this does not occur. The event $Male-Female$ is the event that the oldest two children in a household are male and female, respectively. The columns headed Bound are the admissible set of values of $ACE_n(D\rightarrow Y)$. A superscript $-$ is written when the bounds are conditional on $ACE_n(D\rightarrow Y)\leq 0$, and a superscript $+$ is written when the bounds are conditional on $ACE_n(D\rightarrow Y)\geq 0$. $0.950$ confidence regions for $ACE_n(D\rightarrow Y)$ are in blue and are constructed from one-sided $0.975$ confidence regions for the lower bound and the upper bound.}
+\end{subfigure}
 \label{tbl:acemult}
 \end{sidewaystable}
 %==================================================%

@@ -2,34 +2,17 @@
 \usepackage{pgf}
 \usepackage{tikz}
 \usepackage[utf8]{inputenc}
-\usetikzlibrary{arrows,automata,shapes,calc, backgrounds}
+%==========================================
+\usetikzlibrary{arrows}
+\usetikzlibrary{automata}
+\usetikzlibrary{shapes}
+\usetikzlibrary{calc}
+\usetikzlibrary{backgrounds}
 \usetikzlibrary{positioning}
+%==========================================
+\tikzset{pil/.style={->,thick,shorten <=4pt,shorten >=4pt,}}
+%==========================================
 \pagestyle{empty}
-\tikzset{
-    state/.style={
-           rectangle,
-           rounded corners,
-           draw=black, very thick,
-           minimum height=2em,
-           inner sep=5pt,
-           text centered,
-           },
-    pil/.style={
-           ->,
-           thick,
-           shorten <=4pt,
-           shorten >=4pt,
-           },
-    ball/.style={
-           circle,
-           draw,
-           align=center,
-           anchor=north,
-           inner sep=0,
-           fill=black,
-           }
-}
-
 \begin{document}
 \centering
 \begin{tikzpicture}[->,>=stealth']

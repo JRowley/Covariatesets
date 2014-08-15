@@ -5,35 +5,18 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \DeclareMathAlphabet\mathbb{U}{msb}{m}{n}
-\usetikzlibrary{arrows,automata,shapes,calc,backgrounds,decorations.pathreplacing}
+%==========================================
+\usetikzlibrary{arrows}
+\usetikzlibrary{automata}
+\usetikzlibrary{shapes}
+\usetikzlibrary{calc}
+\usetikzlibrary{backgrounds{
+\usetikzlibrary{decorations.pathreplacing}
 \usetikzlibrary{decorations.pathmorphing}
 \usetikzlibrary{positioning}
-\pagestyle{empty}
-\tikzset{
-    state/.style={
-           rectangle,
-           rounded corners,
-           draw=black, very thick,
-           minimum height=2em,
-           inner sep=5pt,
-           text centered,
-           },
-    pil/.style={
-           ->,
-           thick,
-           shorten <=4pt,
-           shorten >=4pt,
-           },
-    ball/.style={
-           circle,
-           draw,
-           align=center,
-           anchor=north,
-           inner sep=0,
-           fill=black,
-           }
-}
 \tikzset{discont/.style={decoration={zigzag,segment length=0.5cm, amplitude=0.25cm},decorate}}
+%==========================================
+\pagestyle{empty}
 \begin{document}
 \centering
 \begin{tikzpicture}

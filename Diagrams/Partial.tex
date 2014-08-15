@@ -2,9 +2,23 @@
 \usepackage{pgf}
 \usepackage{tikz}
 \usepackage[utf8]{inputenc}
-\usetikzlibrary{arrows,automata,shapes,calc, backgrounds}
+%==========================================
+\usetikzlibrary{arrows}
+\usetikzlibrary{automata}
+\usetikzlibrary{shapes}
+\usetikzlibrary{calc}
+\usetikzlibrary{backgrounds}
 \usetikzlibrary{positioning}
-\pagestyle{empty}
+%==========================================
+\tikzset{%Define standard arrow tip
+    >=stealth',
+    % Define arrow style
+    pil/.style={->,red,},
+    pilar/.style={->,blue,},
+    pilon/.style={->,yellow,},
+    pilot/.style={->,gray,}       
+}
+%==========================================
 \newcommand\irregularcircle[2]{% radius, irregularity
   \pgfextra {\pgfmathsetmacro\len{(#1)+rand*(#2)}}
   +(0:\len pt)
@@ -13,27 +27,8 @@
     -- +(\a:\len pt)
   } -- cycle
 }
-\tikzset{
-    %Define standard arrow tip
-    >=stealth',
-    % Define arrow style
-    pil/.style={
-           ->,
-           red,
-           },
-    pilar/.style={
-           ->,
-           blue,
-		   },
-    pilon/.style={
-           ->,
-           yellow,
-           },
-    pilot/.style={
-    	   ->,
-    	   gray,
-    	   }       
-}
+%==========================================
+\pagestyle{empty}
 \begin{document}
 \centering
 \begin{tikzpicture}
@@ -69,9 +64,6 @@
   	\node (h) at (2.5,-2.5) [] {$\color{yellow}\mathcal{M}$};
   	\node (i) at (-9.4,-0.4) [] {$\color{yellow}\mathcal{P}$};
   	\node (j) at (-7.7,3) [] {$\color{gray}\mathcal{P}$};
-%  	\node (c) at (0,4) [label=above:$\mathcal{S}$] {};
-%  	\node (d) at (-8,2) [label=above:$\mathcal{P}$] {};
-%  	\draw [pil] (q.south west) to [bend left=45] node [] {} (r.south east); 
   	\draw [pilar] (d) to [bend left=15] node [] {} (a);
   	\draw [pilar] (d) to [bend right=15] node [] {} (b);
   	\draw [pil] (e) to [bend right=15] node [] {} (c);
