@@ -491,15 +491,26 @@ $\mathbb{P}(\theta_n>\phi_n^u)=\alpha$. A na{\"i}ve approach would be to look on
 \caption{A note on the inferential problem.}
 \label{fig:confidence}
 \end{figure}
+%==================================================%
 \begin{figure}[p]
 \centering
 \begin{subfigure}{0.8\textwidth}
 \caption{Suppose that the admissible set of values of $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$ is given by the blue rectangle, and that the $1-\alpha$-confidence region for this set is the union of the blue rectangle and the red polygon. }
 \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/ACE.pdf}
-\caption{It is possible to recover $ACE(D\rightarrow Y)$ from the plot. First, note that $ACE(D\rightarrow Y)$ is increasing in the $y$-direction and is decreasing in the $x$-direction. Second, note that $ACE(D\rightarrow Y)$ is constant along any line with unit gradient. Third, note that the value of $ACE(D\rightarrow Y)$ along any line with unit gradient is dependent upon the value of the intercept of this line. Fourthly, note that a projection from the normal of a line with unit gradient is a line that has unit gradient. For example, the blue dashed line is a projection from the normal of the $45^\circ$ line; notice that the blue dashed line is parallel to the $45^\circ$ line. Fifth, note that any projection from the normal of the $45^\circ$ line that passes through the blue rectangle is an admissible value of $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$; equivalently, that any projection from the normal of the $45^\circ$ line that passes through the union of the blue rectangle and the red polygon is in the $1-\alpha$ confidence region of $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$. Together these five facts suggest that the admissible set of values of $ACE(D\rightarrow Y)$ and its $1-\alpha$ confidence region can be recovered from the projection from the normal of the $45^\circ$ line onto the $y$-axis. This method gives a geometric interpretation to $ACE(D\rightarrow Y)$.}
+\caption{It is possible to recover $ACE(D\rightarrow Y)$ from the plot. First, note that $ACE(D\rightarrow Y)$ is increasing in the $y$-direction and is decreasing in the $x$-direction. Second, note that $ACE(D\rightarrow Y)$ is constant along any line with unit gradient. Third, note that the value of $ACE(D\rightarrow Y)$ along any line with unit gradient is dependent upon the value of the intercept of this line. Fourth, note that a projection from the normal of a line with unit gradient is a line that has unit gradient. For example, the blue dashed line is a projection from the normal of the $45^\circ$ line; notice that the blue dashed line is parallel to the $45^\circ$ line. Fifth, note that any projection from the normal of the $45^\circ$ line that passes through the blue rectangle is an admissible value of $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$; equivalently, that any projection from the normal of the $45^\circ$ line that passes through the union of the blue rectangle and the red polygon is in the $1-\alpha$ confidence region of $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$. Together these five facts suggest that the admissible set of values of $ACE(D\rightarrow Y)$ and its $1-\alpha$ confidence region can be recovered from the projection from the normal of the $45^\circ$ line onto the $y$-axis. This method gives a geometric interpretation to $ACE(D\rightarrow Y)$.}
 \end{subfigure}
 \caption{A note on recovering the average causal effect.}
 \label{fig:ace}
+\end{figure}
+%==================================================%
+\begin{figure}[p]
+\centering
+\begin{subfigure}{0.8\textwidth}
+\caption{The plot shows how the admissible set of values of $ACE_n(D\rightarrow Y)$ changes as $\mathcal{R}_Z$ is varied. Each value on the $y$-axis corresponds to a different experiment. In each experiment, $\mathcal{R}_Z$ is varied and the admissible set of values of $ACE_n(D\rightarrow Y)$ is calculated. See Table~\ref{tbl:setssame} through Table~\ref{tbl:acemult} for the definition of $\mathcal{R}_Z$ in each experiment (the \emph{No.} column states the experiment number in each table). The plot is a graphical representation of Table~\ref{tbl:acesame} and Table~\ref{tbl:acemult}. Blue regions represent the admissible set of values of $ACE_n(D\rightarrow Y)$, and the union of blue and red regions represent $95\%$ confidence regions for $ACE_n(D\rightarrow Y)$.}
+\includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Instruments.pdf}
+\caption{Hello}
+\end{subfigure}
+\caption{Admissible sets of values of $ACE_n(D\rightarrow Y)$ for various $\mathcal{R}_Z$.}
 \end{figure}
 %==================================================%
 %% Diagrams
@@ -507,40 +518,40 @@ $\mathbb{P}(\theta_n>\phi_n^u)=\alpha$. A na{\"i}ve approach would be to look on
 %==================================================%
 \begin{sidewaystable}[p]
 \centering
-\begin{tabular}{lcrcrcrcr}
+\begin{tabular}{lclcrcrcrcr}
 \toprule
 &	& \multicolumn{7}{c}{Bound} \\
-\cmidrule(r){2-9}	
-	$\mathcal{R}_Z$	&	&	$\theta_{n}^{0-}$	&	&	$\theta_n^{1-}$	&	&	$\theta_{n}^{0+}$	&	&	$\theta_n^{1+}$\\
+\cmidrule(r){4-11}	
+No. & &	$\mathcal{R}_Z$	&	&	$\theta_{n}^{0-}$	&	&	$\theta_n^{1-}$	&	&	$\theta_{n}^{0+}$	&	&	$\theta_n^{1+}$\\
 \midrule
-\phantom{$\text{Male-Female}\cup\text{Female-Male}\cup\text{Female-Female}$}\\
+& &\phantom{$\text{Male-Female}\cup\text{Female-Male}\cup\text{Female-Female}$}\\
 %1	
-$\text{Male-Male}\cup\text{Female-Female}$	&	&	$[0.533,0.721]$	&	&	$[0.189,0.524]$	&	&	$[0.374,0.524]$	&	&	$[0.533,0.775]$
+1& & $\text{Male-Male}\cup\text{Female-Female}$	&	&	$[0.533,0.721]$	&	&	$[0.189,0.524]$	&	&	$[0.374,0.524]$	&	&	$[0.533,0.775]$
 \\
-$\text{Male-Female}\cup\text{Female-Male}$	&	&	\color{blue}$[0.530,0.723]$	&	&	\color{blue}$[0.187,0.527]$	&	&	\color{blue}$[0.371,0.527]$	&	&	\color{blue}$[0.530,0.777]$\\
+& &$\text{Male-Female}\cup\text{Female-Male}$	&	&	\color{blue}$[0.530,0.723]$	&	&	\color{blue}$[0.187,0.527]$	&	&	\color{blue}$[0.371,0.527]$	&	&	\color{blue}$[0.530,0.777]$\\
 \\
 %2
-$\text{Male-Male}$	&	&	$[0.530,0.731]$	&	&	$[0.182,0.523]$	&	&	$[0.359,0.523]$	&	&	$[0.530,0.778]$
+2 & &$\text{Male-Male}$	&	&	$[0.530,0.731]$	&	&	$[0.182,0.523]$	&	&	$[0.359,0.523]$	&	&	$[0.530,0.778]$
 \\
-$\text{Male-Female}\cup\text{Female-Male}\cup\text{Female-Female}$	&	&	\color{blue}$[0.528,0.733]$	&	&	\color{blue}$[0.179,0.527]$	&	&	\color{blue}$[0.357,0.527]$	&	&	\color{blue}$[0.528,0.781]$\\
+& &$\text{Male-Female}\cup\text{Female-Male}\cup\text{Female-Female}$	&	&	\color{blue}$[0.528,0.733]$	&	&	\color{blue}$[0.179,0.527]$	&	&	\color{blue}$[0.357,0.527]$	&	&	\color{blue}$[0.528,0.781]$\\
 \\
 %3
-$\text{Female-Female}$	&	&	$[0.529,0.729]$	&	&	$[0.196,0.524]$	&	&	$[0.362,0.524]$	&	&	$[0.529,0.771]$
+3 & &$\text{Female-Female}$	&	&	$[0.529,0.729]$	&	&	$[0.196,0.524]$	&	&	$[0.362,0.524]$	&	&	$[0.529,0.771]$
 \\
-$\text{Male-Male}\cup\text{Male-Female}\cup\text{Female-Male}$	& &\color{blue}$[0.527,0.731]$	&	&	\color{blue}$[0.193,0.529]$	&	&	\color{blue}$[0.360,0.529]$	&	&	\color{blue}$[0.527,0.774]$\\	
+& &$\text{Male-Male}\cup\text{Male-Female}\cup\text{Female-Male}$	& &\color{blue}$[0.527,0.731]$	&	&	\color{blue}$[0.193,0.529]$	&	&	\color{blue}$[0.360,0.529]$	&	&	\color{blue}$[0.527,0.774]$\\	
 \\
 %4
-$\text{Male-Male}$&	&	$[0.533,0.721]$	&	&	$[0.196,0.523]$	&	&	$[0.374,0.523]$	&	&	$[0.533,0.771]$
+4 & &$\text{Male-Male}$&	&	$[0.533,0.721]$	&	&	$[0.196,0.523]$	&	&	$[0.374,0.523]$	&	&	$[0.533,0.771]$
 \\
-$\text{Female-Female}$ & &\color{blue}$[0.530,0.723]$	&	&	\color{blue}$[0.192,0.528]$	&	&	\color{blue}$[0.371,0.528]$	&	&	\color{blue}$[0.530,0.775]$\\
-$\text{Male-Female}\cup\text{Female-Male}$\\	
+& &$\text{Female-Female}$ & &\color{blue}$[0.530,0.723]$	&	&	\color{blue}$[0.192,0.528]$	&	&	\color{blue}$[0.371,0.528]$	&	&	\color{blue}$[0.530,0.775]$\\
+& &$\text{Male-Female}\cup\text{Female-Male}$\\	
 \\
 %5
-$\text{Male-Male}$&	&	$[0.536,0.718]$	&	&	$[0.196,0.523]$	&	&	$[0.376,0.523]$	&	&	$[0.536,0.771]$
+5 & &$\text{Male-Male}$&	&	$[0.536,0.718]$	&	&	$[0.196,0.523]$	&	&	$[0.376,0.523]$	&	&	$[0.536,0.771]$
 \\
-$\text{Female-Female}$& &\color{blue}$[0.531,0.722]$	&	&	\color{blue}$[0.193,0.528]$	&	&	\color{blue}$[0.372,0.528]$	&	&	\color{blue}$[0.531,0.775]$\\
-$\text{Male-Female}$ \\
-$\text{Female-Male}$\\	
+& &$\text{Female-Female}$& &\color{blue}$[0.531,0.722]$	&	&	\color{blue}$[0.193,0.528]$	&	&	\color{blue}$[0.372,0.528]$	&	&	\color{blue}$[0.531,0.775]$\\
+& &$\text{Male-Female}$ \\
+& &$\text{Female-Male}$\\	
 	\\
 \bottomrule
 \end{tabular}
@@ -550,28 +561,28 @@ $\text{Female-Male}$\\
 %==================================================%
 \begin{sidewaystable}[p]
 \centering
-\begin{tabular}{lcrcr}
+\begin{tabular}{lclcrcr}
 \toprule
 &	& \multicolumn{3}{c}{Bound} \\
-\cmidrule(r){2-5}	
-	$\mathcal{R}_Z$	&	&	$\theta_{n}^{0-}$	&	&	$\theta_n^{1-}$	\\
+\cmidrule(r){4-7}	
+No. & &	$\mathcal{R}_Z$	&	&	$\theta_{n}^{0-}$	&	&	$\theta_n^{1-}$	\\
 \midrule
-\phantom{$\text{Male-Female}\cup\text{Female-Male}\cup\text{Female-Female}$}\\
+& &\phantom{$\text{Male-Female}\cup\text{Female-Male}\cup\text{Female-Female}$}\\
 %6
-$\text{Multiple birth}$&	&	$[0.529,0.733]$	&	&	$0.476$\\
-$\text{Single birth}$& &\color{blue}$[0.526,0.734]$	&	&	\color{blue}$[0.460,0.498]$\\
+6& &$\text{Multiple birth}$&	&	$[0.529,0.733]$	&	&	$0.476$\\
+& &$\text{Single birth}$& &\color{blue}$[0.526,0.734]$	&	&	\color{blue}$[0.460,0.498]$\\
 \\
 %7
-$\text{Multiple birth}$&	&	$[0.534,0.718]$	&	&	$0.476$\\
-$\text{Single birth}\cap(\text{Male-Male}\cup\text{Female-Female})$& &\color{blue}$[0.530,0.721]$	&	&	\color{blue}$[0.460,0.498]$\\
-$\text{Single birth}\cap(\text{Male-Female}\cup\text{Female-Male})$\\
+7& &$\text{Multiple birth}$&	&	$[0.534,0.718]$	&	&	$0.476$\\
+& &$\text{Single birth}\cap(\text{Male-Male}\cup\text{Female-Female})$& &\color{blue}$[0.530,0.721]$	&	&	\color{blue}$[0.460,0.498]$\\
+& &$\text{Single birth}\cap(\text{Male-Female}\cup\text{Female-Male})$\\
 \\
 %8
-$\text{Multiple birth}$&	&	$[0.537,0.716]$	&	&	$0.476$\\
-$\text{Single birth}\cap\text{Male-Male}$& &\color{blue}$[0.532,0.720]$	&	&	\color{blue}$[0.460,0.498]$\\
-$\text{Single birth}\cap\text{Female-Female}$\\
-$\text{Single birth}\cap\text{Male-Female}$ \\
-$\text{Single birth}\cap\text{Female-Male}$\\
+8& &$\text{Multiple birth}$&	&	$[0.537,0.716]$	&	&	$0.476$\\
+& &$\text{Single birth}\cap\text{Male-Male}$& &\color{blue}$[0.532,0.720]$	&	&	\color{blue}$[0.460,0.498]$\\
+& &$\text{Single birth}\cap\text{Female-Female}$\\
+& &$\text{Single birth}\cap\text{Male-Female}$ \\
+& &$\text{Single birth}\cap\text{Female-Male}$\\
 	\\
 \bottomrule
 \end{tabular}
@@ -579,74 +590,74 @@ $\text{Single birth}\cap\text{Female-Male}$\\
 \label{tbl:setsmult}
 \end{sidewaystable}
 %==================================================%
-\begin{table}[p]
+\begin{sidewaystable}[p]
 \centering
-\begin{tabular}{lcrcr}
+\begin{tabular}{lclcrcr}
 \toprule
 &	& \multicolumn{3}{c}{Bound} \\
-\cmidrule(r){2-5}	
-	$\mathcal{R}_Z$	&	&	$ACE_n(D\rightarrow Y)^-$	&	&	$ACE_n(D\rightarrow Y)^+$\\
+\cmidrule(r){4-7}	
+No.& &	$\mathcal{R}_Z$	&	&	$ACE_n(D\rightarrow Y)^-$	&	&	$ACE_n(D\rightarrow Y)^+$\\
 \midrule
-\phantom{$\text{Male-Female}\cup\text{Female-Male}\cup\text{Female-Female}$}\\
+& &\phantom{$\text{Male-Female}\cup\text{Female-Male}\cup\text{Female-Female}$}\\
 %1	
-$\text{Male-Male}\cup\text{Female-Female}$	&	&	$[-0.532,-0.009]$	&	&	$[0.009,0.401]$	\\
-$\text{Male-Female}\cup\text{Female-Male}$	&	&	\color{blue}$[-0.537,-0.002]$	&	&	\color{blue}$[0.002,0.406]$	\\
+1& &$\text{Male-Male}\cup\text{Female-Female}$	&	&	$[-0.532,-0.009]$	&	&	$[0.009,0.401]$	\\
+& &$\text{Male-Female}\cup\text{Female-Male}$	&	&	\color{blue}$[-0.537,-0.002]$	&	&	\color{blue}$[0.002,0.406]$	\\
 \\
 %2
-$\text{Male-Male}$	&	&	$[-0.549,-0.007]$	&	&	$[0.007,0.419]$	\\
-$\text{Male-Female}\cup\text{Female-Male}\cup\text{Female-Female}$	&	&	\color{blue}$[-0.555,0.001]$	&	&	\color{blue}$[-0.001,0.425]$\\
+2& &$\text{Male-Male}$	&	&	$[-0.549,-0.007]$	&	&	$[0.007,0.419]$	\\
+& &$\text{Male-Female}\cup\text{Female-Male}\cup\text{Female-Female}$	&	&	\color{blue}$[-0.555,0.001]$	&	&	\color{blue}$[-0.001,0.425]$\\
 \\
 %3
-$\text{Female-Female}$	&	&	$[-0.533,-0.005]$	&	&	$[0.005,0.409]$	\\
-$\text{Male-Male}\cup\text{Male-Female}\cup\text{Female-Male}$	& &\color{blue}$[-0.539,0.003]$	&	&	\color{blue}$[-0.003,0.415]$\\	
+3& &$\text{Female-Female}$	&	&	$[-0.533,-0.005]$	&	&	$[0.005,0.409]$	\\
+& &$\text{Male-Male}\cup\text{Male-Female}\cup\text{Female-Male}$	& &\color{blue}$[-0.539,0.003]$	&	&	\color{blue}$[-0.003,0.415]$\\	
 \\
 %4
-$\text{Male-Male}$&	&	$[-0.525,-0.010]$	&	&	$[0.010,0.397]$	\\
-$\text{Female-Female}$ & &\color{blue}$[-0.531,-0.001]$	&	&	\color{blue}$[0.002,0.404]$\\
-$\text{Male-Female}\cup\text{Female-Male}$\\	
+4& &$\text{Male-Male}$&	&	$[-0.525,-0.010]$	&	&	$[0.010,0.397]$	\\
+& &$\text{Female-Female}$ & &\color{blue}$[-0.531,-0.001]$	&	&	\color{blue}$[0.002,0.404]$\\
+& &$\text{Male-Female}\cup\text{Female-Male}$\\	
 \\
 %5
-$\text{Male-Male}$&	&	$[-0.523,-0.013]$	&	&	$[0.013,0.395]$	\\
-$\text{Female-Female}$& &\color{blue}$[-0.530,-0.003]$	&	&	\color{blue}$[0.003,0.403]$	\\
-$\text{Male-Female}$ \\
-$\text{Female-Male}$\\	
+5& &$\text{Male-Male}$&	&	$[-0.523,-0.013]$	&	&	$[0.013,0.395]$	\\
+& &$\text{Female-Female}$& &\color{blue}$[-0.530,-0.003]$	&	&	\color{blue}$[0.003,0.403]$	\\
+& &$\text{Male-Female}$ \\
+& &$\text{Female-Male}$\\	
 	\\
 \bottomrule
 \end{tabular}
 \caption{$95\%$ confidence regions for parameters $ACE$ constructed using $98.75\%$ one-sided confidence for each parameter.}
 \label{tbl:acesame}
-\end{table}
+\end{sidewaystable}
 %==================================================%
-\begin{table}[p]
+\begin{sidewaystable}[p]
 \centering
-\begin{tabular}{lcr}
+\begin{tabular}{lclcr}
 \toprule
 &	& \multicolumn{1}{c}{Bound} \\
-\cmidrule(r){3-3}	
-	$\mathcal{R}_Z$	&	&	$\theta_{n}^{0-}$\\
+\cmidrule(r){5-5}	
+No.& &	$\mathcal{R}_Z$	&	&	$\theta_{n}^{0-}$\\
 \midrule
-\phantom{$\text{Male-Female}\cup\text{Female-Male}\cup\text{Female-Female}$}\\
+& &\phantom{$\text{Male-Female}\cup\text{Female-Male}\cup\text{Female-Female}$}\\
 %6
-$\text{Multiple birth}$&	&	$[-0.256,-0.052]$\\
-$\text{Single birth}$& &\color{blue}$[-0.277,-0.025]$	\\
+6& &$\text{Multiple birth}$&	&	$[-0.256,-0.052]$\\
+& &$\text{Single birth}$& &\color{blue}$[-0.277,-0.025]$	\\
 \\
 %7
-$\text{Multiple birth}$&	&	$[-0.242,-0.057]$	\\
-$\text{Single birth}\cap(\text{Male-Male}\cup\text{Female-Female})$& &\color{blue}$[-0.263,-0.029]$\\
-$\text{Single birth}\cap(\text{Male-Female}\cup\text{Female-Male})$\\
+7& &$\text{Multiple birth}$&	&	$[-0.242,-0.057]$	\\
+& &$\text{Single birth}\cap(\text{Male-Male}\cup\text{Female-Female})$& &\color{blue}$[-0.263,-0.029]$\\
+& &$\text{Single birth}\cap(\text{Male-Female}\cup\text{Female-Male})$\\
 \\
 %8
-$\text{Multiple birth}$&	&	$[-0.240,-0.061]$	\\
-$\text{Single birth}\cap\text{Male-Male}$& &\color{blue}$[-0.262,-0.031]$	\\
-$\text{Single birth}\cap\text{Female-Female}$\\
-$\text{Single birth}\cap\text{Male-Female}$ \\
-$\text{Single birth}\cap\text{Female-Male}$\\
+8& &$\text{Multiple birth}$&	&	$[-0.240,-0.061]$	\\
+& &$\text{Single birth}\cap\text{Male-Male}$& &\color{blue}$[-0.262,-0.031]$	\\
+& &$\text{Single birth}\cap\text{Female-Female}$\\
+& &$\text{Single birth}\cap\text{Male-Female}$ \\
+& &$\text{Single birth}\cap\text{Female-Male}$\\
 	\\
 \bottomrule
 \end{tabular}
 \caption{}
 \label{tbl:acemult}
-\end{table}
+\end{sidewaystable}
 %==================================================%
 %% Bibliography.
 \newpage

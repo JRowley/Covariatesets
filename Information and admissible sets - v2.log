@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.23)  14 AUG 2014 22:35
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.23)  15 AUG 2014 14:52
 entering extended mode
 **Information*and*admissible*sets*-*v2.tex
 
@@ -1377,46 +1377,53 @@ ile (type pdf)
 
 <use C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/ACE.pdf>
 Package pdftex.def Info: C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagram
-s/ACE.pdf used on input line 498.
+s/ACE.pdf used on input line 499.
 (pdftex.def)             Requested size: 339.24956pt x 299.78178pt.
- [8]
-[9 <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Identification.pdf>
- <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Observationalrestrict
-iveness.pdf>] [10 <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Poin
-tidentification.pdf> <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/S
-etidentification.pdf>] [11 <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diag
-rams/Characteristic.pdf> <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagra
-ms/Uniform.pdf>] [12 <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/P
-artial.pdf>] [13 <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Indis
-tinguishable1.pdf> <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Ind
-istinguishable2.pdf> <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/E
-xogenous1.pdf> <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Exogeno
-us2.pdf>] [14 <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Confiden
-ce.pdf>] [15 <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/ACE.pdf>]
-[16] [17] [18]
+
+<C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Instruments.pdf, id=26
+1, 571.13374pt x 511.9125pt>
+File: C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Instruments.pdf G
+raphic file (type pdf)
+
+<use C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Instruments.pdf>
+Package pdftex.def Info: C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagram
+s/Instruments.pdf used on input line 510.
+(pdftex.def)             Requested size: 339.24956pt x 304.07228pt.
+
+[8] [9 <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Identification.
+pdf> <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Observationalrest
+rictiveness.pdf>] [10 <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/
+Pointidentification.pdf> <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagra
+ms/Setidentification.pdf>] [11 <C:/Users/Jeffro/Documents/GitHub/Covariatesets/
+Diagrams/Characteristic.pdf> <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Di
+agrams/Uniform.pdf>] [12 <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagra
+ms/Partial.pdf>] [13 <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/I
+ndistinguishable1.pdf> <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams
+/Indistinguishable2.pdf> <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagra
+ms/Exogenous1.pdf> <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Exo
+genous2.pdf>] [14 <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Conf
+idence.pdf>] [15 <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/ACE.p
+df>] [16 <C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Instruments.p
+df>] [17] [18] [19] [20]
 ("C:\Users\Jeffro\Documents\GitHub\Covariatesets\Information and admissible set
 s - v2.bbl")
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 655.
- [19]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 655.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 666.
+ [21]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 666.
 
 ("C:\Users\Jeffro\Documents\GitHub\Covariatesets\Information and admissible set
 s - v2.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 655.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 655.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 666.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 666.
 Package rerunfilecheck Info: File `Information*and*admissible*sets*-*v2.out' ha
 s not changed.
 (rerunfilecheck)             Checksum: <no file>.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 14555 strings out of 494045
- 211617 string characters out of 3148384
- 512373 words of memory out of 3000000
- 17398 multiletter control sequences out of 15000+200000
+ 14563 strings out of 494045
+ 211966 string characters out of 3148384
+ 518373 words of memory out of 3000000
+ 17402 multiletter control sequences out of 15000+200000
  43144 words of font info for 127 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  42i,16n,74p,2643b,602s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1456,10 +1463,10 @@ rm0800.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0900.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Pro
 gram Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfti0900.pfb><C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on "Information and admissible sets - v2.pdf" (19 pages, 698237 
+Output written on "Information and admissible sets - v2.pdf" (21 pages, 714460 
 bytes).
 PDF statistics:
- 569 PDF objects out of 1000 (max. 8388607)
- 85 named destinations out of 1000 (max. 500000)
- 135 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 600 PDF objects out of 1000 (max. 8388607)
+ 88 named destinations out of 1000 (max. 500000)
+ 140 words of extra memory for PDF output out of 10000 (max. 10000000)
 
