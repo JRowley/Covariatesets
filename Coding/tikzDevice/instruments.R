@@ -1,5 +1,10 @@
+require(tikzDevice)
+options(tikzMetricPackages = c("\\usepackage[utf8]{inputenc}",
+                               "\\usepackage[T1]{fontenc}", "\\usetikzlibrary{calc}",
+                               "\\usepackage{amssymb}"))
+tikz('instruments.tex')
 p <- ggplot(ACE, aes(xmin=cl,xmax=cu,ymin=Exp-0.4,ymax=Exp+0.4))
-q <- p + theme_bw() + 
+p + theme_bw() + 
   theme(text = element_text(family = "CM Roman"),
         axis.text.x = element_text(size = 10),
         axis.text.y = element_text(size = 10),
@@ -18,6 +23,5 @@ q <- p + theme_bw() +
   #   geom_vline(xintercept = 0) +
   scale_x_continuous(breaks = round(seq(min(ACE$lower), max(ACE$upper), by = 0.1),1)) +
   scale_y_continuous(breaks = round(seq(min(ACE$Exp), max(ACE$Exp), by = 1),1)) +
-  xlab(expression(ACE[n]*(D%->%Y)))
-ggsave("C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Instruments.pdf", q)
-embed_fonts("C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Instruments.pdf")
+  xlab("$ACE_n(D\\rightarrow Y)$")
+dev.off()
