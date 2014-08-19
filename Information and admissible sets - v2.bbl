@@ -18,6 +18,11 @@ Angrist, J.~D. and W.~N. Evans (1998).
   variation in family size.
 \newblock {\em American Economic Review\/}~{\em 88\/}(3), 450 -- 477.
 
+\bibitem[\protect\citeauthoryear{Artstein}{Artstein}{1983}]{aR83}
+Artstein, Z. (1983).
+\newblock Distributions of random sets and random selections.
+\newblock {\em Israel Journal of Mathematics\/}~{\em 46\/}(4), 313 -- 324.
+
 \bibitem[\protect\citeauthoryear{Balke and Pearl}{Balke and Pearl}{1997}]{bp97}
 Balke, A. and J.~Pearl (1997).
 \newblock Bounds on treatment effects from studies with imperfect compliance.
@@ -94,6 +99,11 @@ Koopmans, T.~C. and O.~Reiers{\o}l (1950).
 Manski, C.~F. (2013).
 \newblock {\em Public Policy in an Uncertain World: Analysis and Decisions.}
 \newblock Cambridge and London: Harvard University Press.
+
+\bibitem[\protect\citeauthoryear{Molchanov}{Molchanov}{2005}]{book.molchanov}
+Molchanov, I. (2005).
+\newblock {\em Theory of Random Sets}.
+\newblock Springer.
 
 \bibitem[\protect\citeauthoryear{Pearl}{Pearl}{1995}]{p95b}
 Pearl, J. (1995).
