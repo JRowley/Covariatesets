@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.22)  26 JUN 2014 15:13
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.22)  20 AUG 2014 11:40
 entering extended mode
 **Information*and*admissible*sets.tex
 
@@ -446,16 +446,17 @@ Package: amsthm 2004/08/06 v2.20
 \thm@headsep=\skip48
 \dth@everypar=\toks30
 )
+(U:\PortableTex\MiKTeX\tex\latex\amsfonts\amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
 (U:\PortableTex\MiKTeX\tex\latex\amsfonts\amsfonts.sty
 Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
-)
-(U:\PortableTex\MiKTeX\tex\latex\amsfonts\amssymb.sty
-Package: amssymb 2009/06/22 v3.00
-)
+LaTeX Font Info:    Redeclaring math alphabet \mathbb on input line 97.
+))
 (U:\PortableTex\MiKTeX\tex\latex\tools\calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count130
@@ -476,6 +477,47 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count133
 )
+(U:\PortableTex\MiKTeX\tex\latex\graphics\color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(U:\PortableTex\MiKTeX\tex\latex\00miktex\color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+
+(U:\PortableTex\MiKTeX\tex\latex\pdftex-def\pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(U:\PortableTex\MiKTeX\tex\generic\oberdiek\infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(U:\PortableTex\MiKTeX\tex\generic\oberdiek\ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count134
+))
+(U:\PortableTex\MiKTeX\tex\latex\caption\subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+
+(U:\PortableTex\MiKTeX\tex\latex\caption\caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(U:\PortableTex\MiKTeX\tex\latex\caption\caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen123
+\captionmargin@=\dimen124
+\captionwidth=\dimen125
+\caption@tempdima=\dimen126
+\caption@indent=\dimen127
+\caption@parindent=\dimen128
+\caption@hangindent=\dimen129
+)
+\c@ContinuedFloat=\count135
+)
+\c@subfigure=\count136
+\c@subtable=\count137
+)
 (U:\PortableTex\MiKTeX\tex\latex\titling\titling.sty
 Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmarkwidth=\skip54
@@ -495,7 +537,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 )
 (U:\PortableTex\MiKTeX\tex\latex\lipsum\lipsum.sty
 Package: lipsum 2011/04/14 v1.2 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count134
+\c@lips@count=\count138
 )
 (U:\PortableTex\MiKTeX\tex\latex\mnsymbol\MnSymbol.sty
 Package: MnSymbol 2007/01/21 v1.4 support for the MnSymbol font
@@ -743,26 +785,67 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
+)
+\Gin@req@height=\dimen130
+\Gin@req@width=\dimen131
+)
+(U:\PortableTex\MiKTeX\tex\latex\mh\mathtools.sty
+Package: mathtools 2013/02/12 v1.13 mathematical typesetting tools
 
-(U:\PortableTex\MiKTeX\tex\latex\pdftex-def\pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-
-(U:\PortableTex\MiKTeX\tex\generic\oberdiek\infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+(U:\PortableTex\MiKTeX\tex\latex\mh\mhsetup.sty
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 )
-(U:\PortableTex\MiKTeX\tex\generic\oberdiek\ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count139
+\l_MT_multwidth_dim=\dimen132
+\origjot=\skip57
+\l_MT_shortvdotswithinadjustabove_dim=\dimen133
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen134
+\l_MT_above_intertext_sep=\dimen135
+\l_MT_below_intertext_sep=\dimen136
+\l_MT_above_shortintertext_sep=\dimen137
+\l_MT_below_shortintertext_sep=\dimen138
 )
-\Gread@gobject=\count135
-))
-\Gin@req@height=\dimen123
-\Gin@req@width=\dimen124
+(U:\PortableTex\MiKTeX\tex\latex\booktabs\booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen139
+\lightrulewidth=\dimen140
+\cmidrulewidth=\dimen141
+\belowrulesep=\dimen142
+\belowbottomsep=\dimen143
+\aboverulesep=\dimen144
+\abovetopsep=\dimen145
+\cmidrulesep=\dimen146
+\cmidrulekern=\dimen147
+\defaultaddspace=\dimen148
+\@cmidla=\count140
+\@cmidlb=\count141
+\@aboverulesep=\dimen149
+\@belowrulesep=\dimen150
+\@thisruleclass=\count142
+\@lastruleclass=\count143
+\@thisrulewidth=\dimen151
 )
-\c@countthm=\count136
-\c@countlem=\count137
-\c@countex=\count138
-\c@saveenumi=\count139
-\c@saveenumi1=\count140
+(U:\PortableTex\MiKTeX\tex\latex\multirow\multirow.sty
+\bigstrutjot=\dimen152
+)
+(U:\PortableTex\MiKTeX\tex\latex\rotating\rotating.sty
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+\c@r@tfl@t=\count144
+\rotFPtop=\skip58
+\rotFPbot=\skip59
+\rot@float@box=\box28
+\rot@mess@toks=\toks32
+)
+(U:\PortableTex\MiKTeX\tex\latex\anyfontsize\anyfontsize.sty
+Package: anyfontsize 2007/11/22 anyfontsize.sty by pts
+)
+\c@countthm=\count145
+\c@countlem=\count146
+\c@countex=\count147
+\c@saveenumi=\count148
+\c@saveenumi1=\count149
 
 (U:\PortableTex\MiKTeX\tex\latex\hyperref\hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
@@ -815,16 +898,16 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 (U:\PortableTex\MiKTeX\tex\latex\oberdiek\kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen125
-\Hy@linkcounter=\count141
-\Hy@pagecounter=\count142
+\@linkdim=\dimen153
+\Hy@linkcounter=\count150
+\Hy@pagecounter=\count151
 
 (U:\PortableTex\MiKTeX\tex\latex\hyperref\pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count143
+\Hy@SavedSpaceFactor=\count152
 
 (U:\PortableTex\MiKTeX\tex\latex\00miktex\hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -836,17 +919,17 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count144
+\c@Hy@tempcnt=\count153
 
 (U:\PortableTex\MiKTeX\tex\latex\ltxmisc\url.sty
 \Urlmuskip=\muskip11
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen126
-\Fld@menulength=\count145
-\Field@Width=\dimen127
-\Fld@charsize=\dimen128
+\XeTeXLinkMargin=\dimen154
+\Fld@menulength=\count154
+\Field@Width=\dimen155
+\Fld@charsize=\dimen156
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -856,24 +939,24 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count146
-\c@Item=\count147
-\c@Hfootnote=\count148
+\Hy@abspage=\count155
+\c@Item=\count156
+\c@Hfootnote=\count157
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (U:\PortableTex\MiKTeX\tex\latex\hyperref\hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count149
-\c@bookmark@seq@number=\count150
+\Fld@listcount=\count158
+\c@bookmark@seq@number=\count159
 
 (U:\PortableTex\MiKTeX\tex\latex\oberdiek\rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip57
+\Hy@SectionHShift=\skip60
 )
 (U:\PortableTex\MiKTeX\tex\latex\pstricks\pstricks.sty
 Package: pstricks 2012/08/24 v0.53 LaTeX wrapper for `PSTricks' (RN,HV)
@@ -886,85 +969,85 @@ File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
 Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
 
 (U:\PortableTex\MiKTeX\tex\generic\xkeyval\xkeyval.tex
-\XKV@toks=\toks32
-\XKV@tempa@toks=\toks33
-\XKV@depth=\count151
+\XKV@toks=\toks33
+\XKV@tempa@toks=\toks34
+\XKV@depth=\count160
 File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 )))
 (U:\PortableTex\MiKTeX\tex\generic\pstricks\base\pst-fp.tex
 `pst-fp' v0.05, 2010/01/17 (hv)
-\pstFP@xs=\count152
-\pstFP@xia=\count153
-\pstFP@xib=\count154
-\pstFP@xfa=\count155
-\pstFP@xfb=\count156
-\pstFP@rega=\count157
-\pstFP@regb=\count158
-\pstFP@regs=\count159
-\pstFP@times=\count160
+\pstFP@xs=\count161
+\pstFP@xia=\count162
+\pstFP@xib=\count163
+\pstFP@xfa=\count164
+\pstFP@xfb=\count165
+\pstFP@rega=\count166
+\pstFP@regb=\count167
+\pstFP@regs=\count168
+\pstFP@times=\count169
 )
 (U:\PortableTex\MiKTeX\tex\generic\pgf\utilities\pgfutil-common.tex
-\pgfutil@everybye=\toks34
+\pgfutil@everybye=\toks35
 )
 (U:\PortableTex\MiKTeX\tex\generic\pgf\utilities\pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks35
-\pgfkeys@temptoks=\toks36
+\pgfkeys@pathtoks=\toks36
+\pgfkeys@temptoks=\toks37
 
 (U:\PortableTex\MiKTeX\tex\generic\pgf\utilities\pgfkeysfiltered.code.tex
-\pgfkeys@tmptoks=\toks37
+\pgfkeys@tmptoks=\toks38
 ))
 (U:\PortableTex\MiKTeX\tex\generic\pgf\utilities\pgffor.code.tex
-\pgffor@iter=\dimen129
-\pgffor@skip=\dimen130
-\pgffor@stack=\toks38
-\pgffor@toks=\toks39
+\pgffor@iter=\dimen157
+\pgffor@skip=\dimen158
+\pgffor@stack=\toks39
+\pgffor@toks=\toks40
 )
-\psLoopIndex=\count161
+\psLoopIndex=\count170
 
 `PSTricks' v2.35  <2012/12/21> (tvz)
-\pst@dima=\dimen131
-\pst@dimb=\dimen132
-\pst@dimc=\dimen133
-\pst@dimd=\dimen134
-\pst@dimg=\dimen135
-\pst@dimh=\dimen136
-\pst@dimm=\dimen137
-\pst@dimn=\dimen138
-\pst@dimo=\dimen139
-\pst@dimp=\dimen140
-\pst@hbox=\box28
-\pst@ibox=\box29
-\pst@boxg=\box30
-\pst@cnta=\count162
-\pst@cntb=\count163
-\pst@cntc=\count164
-\pst@cntd=\count165
-\pst@cntg=\count166
-\pst@cnth=\count167
-\pst@cntm=\count168
-\pst@cntn=\count169
-\pst@cnto=\count170
-\pst@cntp=\count171
-\@zero=\count172
-\pst@toks=\toks40
+\pst@dima=\dimen159
+\pst@dimb=\dimen160
+\pst@dimc=\dimen161
+\pst@dimd=\dimen162
+\pst@dimg=\dimen163
+\pst@dimh=\dimen164
+\pst@dimm=\dimen165
+\pst@dimn=\dimen166
+\pst@dimo=\dimen167
+\pst@dimp=\dimen168
+\pst@hbox=\box29
+\pst@ibox=\box30
+\pst@boxg=\box31
+\pst@cnta=\count171
+\pst@cntb=\count172
+\pst@cntc=\count173
+\pst@cntd=\count174
+\pst@cntg=\count175
+\pst@cnth=\count176
+\pst@cntm=\count177
+\pst@cntn=\count178
+\pst@cnto=\count179
+\pst@cntp=\count180
+\@zero=\count181
+\pst@toks=\toks41
 (U:\PortableTex\MiKTeX\tex\generic\pstricks\base\pstricks.con)
-\psunit=\dimen141
-\psxunit=\dimen142
-\psyunit=\dimen143
-\pst@C@@rType=\count173
-\pslinewidth=\dimen144
-\psk@startLW=\dimen145
-\psk@endLW=\dimen146
-\pst@customdefs=\toks41
-\pslinearc=\dimen147
-\pst@symbolStep=\dimen148
-\pst@symbolWidth=\dimen149
-\pst@symbolLinewidth=\dimen150
-\everypsbox=\toks42
-\psframesep=\dimen151
-\pslabelsep=\dimen152
-\pst@shift=\dimen153
-\theoverlaybox=\box31
+\psunit=\dimen169
+\psxunit=\dimen170
+\psyunit=\dimen171
+\pst@C@@rType=\count182
+\pslinewidth=\dimen172
+\psk@startLW=\dimen173
+\psk@endLW=\dimen174
+\pst@customdefs=\toks42
+\pslinearc=\dimen175
+\pst@symbolStep=\dimen176
+\pst@symbolWidth=\dimen177
+\pst@symbolLinewidth=\dimen178
+\everypsbox=\toks43
+\psframesep=\dimen179
+\pslabelsep=\dimen180
+\pst@shift=\dimen181
+\theoverlaybox=\box32
 )
 File: pstricks.tex 2012/12/21 v2.35 `PSTricks' (tvz,hv)
 
@@ -978,6 +1061,7 @@ Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
 Package xcolor Info: Model `RGB' extended on input line 1353.
@@ -989,38 +1073,38 @@ Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 ))
 (U:\PortableTex\MiKTeX\tex\latex\egameps\egameps.sty
-\egplayerlabelsep=\dimen154
-\egplayerboxsep=\dimen155
-\egactionlabelsep=\dimen156
-\egactionboxsep=\dimen157
-\egpayoffboxsep=\dimen158
-\egpayofflabelsep=\dimen159
-\@egxnum=\count174
-\@egxxnum=\count175
-\@egxxxnum=\count176
-\@egxxxxnum=\count177
-\@egynum=\count178
-\@egyynum=\count179
-\@egyyynum=\count180
-\@egyyyynum=\count181
-\@egrad=\dimen160
-\@egxdim=\dimen161
-\@egydim=\dimen162
-\@@egxnum=\count182
-\@@egxxnum=\count183
-\@@egxxxnum=\count184
-\@@egynum=\count185
-\@@egyynum=\count186
-\@@egyyynum=\count187
-\@eghnum=\count188
-\@egvnum=\count189
-\@egabshnum=\count190
-\@egabsvnum=\count191
-\@eghdistance=\count192
-\@tempcntx=\count193
-\@tempcnty=\count194
-\egalhshift=\count195
-\egalvshift=\count196
+\egplayerlabelsep=\dimen182
+\egplayerboxsep=\dimen183
+\egactionlabelsep=\dimen184
+\egactionboxsep=\dimen185
+\egpayoffboxsep=\dimen186
+\egpayofflabelsep=\dimen187
+\@egxnum=\count183
+\@egxxnum=\count184
+\@egxxxnum=\count185
+\@egxxxxnum=\count186
+\@egynum=\count187
+\@egyynum=\count188
+\@egyyynum=\count189
+\@egyyyynum=\count190
+\@egrad=\dimen188
+\@egxdim=\dimen189
+\@egydim=\dimen190
+\@@egxnum=\count191
+\@@egxxnum=\count192
+\@@egxxxnum=\count193
+\@@egynum=\count194
+\@@egyynum=\count195
+\@@egyyynum=\count196
+\@eghnum=\count197
+\@egvnum=\count198
+\@egabshnum=\count199
+\@egabsvnum=\count200
+\@eghdistance=\count201
+\@tempcntx=\count202
+\@tempcnty=\count203
+\egalhshift=\count204
+\egalvshift=\count205
 )
 (U:\PortableTex\MiKTeX\tex\latex\pst-3d\pst-3d.sty
 Package: pst-3d 2009/07/28 package wrapper for pst-3d.tex (hv)
@@ -1030,60 +1114,60 @@ Package: pst-3d 2009/07/28 package wrapper for pst-3d.tex (hv)
 File: pst-3d.tex 2010/02/14 v1.11 `PST-3d' (hv)
 )
 (U:\PortableTex\MiKTeX\tex\latex\sgame\sgame.sty
-\sglabelsep=\skip58
-\sgcolsep=\dimen163
-\sg@colwd=\dimen164
-\sg@xcolwd=\dimen165
-\sg@colnum=\count197
-\sg@colindex=\count198
-\sg@numcols=\count199
-\sg@xnumcols=\count200
-\sg@rowindex=\count201
-\sg@numrows=\count202
-\sg@strutbox=\box32
-\sg@tempsep=\dimen166
+\sglabelsep=\skip61
+\sgcolsep=\dimen191
+\sg@colwd=\dimen192
+\sg@xcolwd=\dimen193
+\sg@colnum=\count206
+\sg@colindex=\count207
+\sg@numcols=\count208
+\sg@xnumcols=\count209
+\sg@rowindex=\count210
+\sg@numrows=\count211
+\sg@strutbox=\box33
+\sg@tempsep=\dimen194
 )
 (U:\PortableTex\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
-\fancy@headwidth=\skip59
-\f@ncyO@elh=\skip60
-\f@ncyO@erh=\skip61
-\f@ncyO@olh=\skip62
-\f@ncyO@orh=\skip63
-\f@ncyO@elf=\skip64
-\f@ncyO@erf=\skip65
-\f@ncyO@olf=\skip66
-\f@ncyO@orf=\skip67
+\fancy@headwidth=\skip62
+\f@ncyO@elh=\skip63
+\f@ncyO@erh=\skip64
+\f@ncyO@olh=\skip65
+\f@ncyO@orh=\skip66
+\f@ncyO@elf=\skip67
+\f@ncyO@erf=\skip68
+\f@ncyO@olf=\skip69
+\f@ncyO@orf=\skip70
 )
 (U:\PortableTex\MiKTeX\tex\latex\epigraph\epigraph.sty
 Package: epigraph 2009/09/02 v1.5c typesetting epigraphs
-\beforeepigraphskip=\skip68
-\afterepigraphskip=\skip69
-\epigraphwidth=\skip70
-\epigraphrule=\skip71
+\beforeepigraphskip=\skip71
+\afterepigraphskip=\skip72
+\epigraphwidth=\skip73
+\epigraphrule=\skip74
 )
 ("\\econ-fs\Home3\zctpep9\GitHub\Covariatesets\Information and admissible sets.
 aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 168.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 168.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 192.
+LaTeX Font Info:    ... okay on input line 192.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 192.
+LaTeX Font Info:    ... okay on input line 192.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 192.
+LaTeX Font Info:    ... okay on input line 192.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 192.
+LaTeX Font Info:    ... okay on input line 192.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 192.
+LaTeX Font Info:    ... okay on input line 192.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 192.
+LaTeX Font Info:    ... okay on input line 192.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 192.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 192.
 
  (U:\PortableTex\MiKTeX\tex\latex\base\ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
+LaTeX Font Info:    ... okay on input line 192.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 192.
+LaTeX Font Info:    ... okay on input line 192.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1094,14 +1178,14 @@ LaTeX Font Info:    ... okay on input line 168.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
 * h-part:(L,W,R)=(86.72377pt, 424.06033pt, 86.72377pt)
-* v-part:(T,H,B)=(108.405pt, 628.23685pt, 108.405pt)
+* v-part:(T,H,B)=(86.72377pt, 671.5993pt, 86.72377pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=424.06033pt
-* \textheight=628.23685pt
+* \textheight=671.5993pt
 * \oddsidemargin=14.45378pt
 * \evensidemargin=14.45378pt
-* \topmargin=-0.86499pt
+* \topmargin=-22.54622pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -1121,31 +1205,35 @@ LaTeX Font Info:    ... okay on input line 168.
 
 (U:\PortableTex\MiKTeX\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count203
-\scratchdimen=\dimen167
-\scratchbox=\box33
-\nofMPsegments=\count204
-\nofMParguments=\count205
-\everyMPshowfont=\toks43
-\MPscratchCnt=\count206
-\MPscratchDim=\dimen168
-\MPnumerator=\count207
-\makeMPintoPDFobject=\count208
-\everyMPtoPDFconversion=\toks44
+\scratchcounter=\count212
+\scratchdimen=\dimen195
+\scratchbox=\box34
+\nofMPsegments=\count213
+\nofMParguments=\count214
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count215
+\MPscratchDim=\dimen196
+\MPnumerator=\count216
+\makeMPintoPDFobject=\count217
+\everyMPtoPDFconversion=\toks45
 )
-\AtBeginShipoutBox=\box34
-Package hyperref Info: Link coloring OFF on input line 168.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: rotating package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\AtBeginShipoutBox=\box35
+Package hyperref Info: Link coloring OFF on input line 192.
  (U:\PortableTex\MiKTeX\tex\latex\hyperref\nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (U:\PortableTex\MiKTeX\tex\generic\oberdiek\gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count209
+\c@section@level=\count218
 )
-LaTeX Info: Redefining \ref on input line 168.
-LaTeX Info: Redefining \pageref on input line 168.
-LaTeX Info: Redefining \nameref on input line 168.
+LaTeX Info: Redefining \ref on input line 192.
+LaTeX Info: Redefining \pageref on input line 192.
+LaTeX Info: Redefining \nameref on input line 192.
 
 ("\\econ-fs\Home3\zctpep9\GitHub\Covariatesets\Information and admissible sets.
 out")
@@ -1153,23 +1241,23 @@ out")
 out")
 \@outlinefile=\write3
 
-<C:/Dropbox/TeXTemplates/UCL_Logo_Orange.jpg, id=11, 501.875pt x 148.555pt>
+<C:/Dropbox/TeXTemplates/UCL_Logo_Orange.jpg, id=39, 501.875pt x 148.555pt>
 File: C:/Dropbox/TeXTemplates/UCL_Logo_Orange.jpg Graphic file (type jpg)
 
 <use C:/Dropbox/TeXTemplates/UCL_Logo_Orange.jpg>
 Package pdftex.def Info: C:/Dropbox/TeXTemplates/UCL_Logo_Orange.jpg used on in
-put line 170.
+put line 194.
 (pdftex.def)             Requested size: 113.81102pt x 33.68637pt.
 
 (U:\PortableTex\MiKTeX\tex\latex\fmtcount\fc-UKenglish.def
 File: fc-UKenglish.def 2013/08/17
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 170.
+LaTeX Font Info:    Try loading font information for U+msa on input line 194.
 
 (U:\PortableTex\MiKTeX\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 170.
+LaTeX Font Info:    Try loading font information for U+msb on input line 194.
 
 (U:\PortableTex\MiKTeX\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -1184,55 +1272,239 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!{U:/PortableTex/MiKTeX/pdftex/config/pdftex.map} <C:/Dr
 opbox/TeXTemplates/UCL_Logo_Orange.jpg>]
-LaTeX Font Info:    Try loading font information for U+bbm on input line 201.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+LaTeX Font Info:    Try loading font information for U+bbm on input line 233.
 
 (U:\PortableTex\MiKTeX\tex\latex\bbm\ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-)
+) [3] [4] [5] [6] [7] [8] [9]
+[10]
+Underfull \vbox (badness 4505) has occurred while \output is active []
+
+ [11]
+<U:/GitHub/Covariatesets/Diagrams/Identification.pdf, id=309, 411.90288pt x 250
+.71667pt>
+File: U:/GitHub/Covariatesets/Diagrams/Identification.pdf Graphic file (type pd
+f)
+ <use U:/GitHub/Covariatesets/Diagrams/Identification.pdf>
+Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Identification.pdf us
+ed on input line 523.
+(pdftex.def)             Requested size: 339.24956pt x 206.50714pt.
+
+<U:/GitHub/Covariatesets/Diagrams/Observationalrestrictiveness.pdf, id=310, 411
+.90288pt x 232.2537pt>
+File: U:/GitHub/Covariatesets/Diagrams/Observationalrestrictiveness.pdf Graphic
+ file (type pdf)
+
+<use U:/GitHub/Covariatesets/Diagrams/Observationalrestrictiveness.pdf>
+Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Observationalrestrict
+iveness.pdf used on input line 529.
+(pdftex.def)             Requested size: 339.24956pt x 191.29979pt.
+
+<U:/GitHub/Covariatesets/Diagrams/Pointidentification.pdf, id=311, 411.90288pt 
+x 259.32483pt>
+File: U:/GitHub/Covariatesets/Diagrams/Pointidentification.pdf Graphic file (ty
+pe pdf)
+ <use U:/GitHub/Covariatesets/Diagrams/Pointidentification.pdf>
+Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Pointidentification.p
+df used on input line 541.
+(pdftex.def)             Requested size: 339.24956pt x 213.5974pt.
+
+<U:/GitHub/Covariatesets/Diagrams/Setidentification.pdf, id=312, 411.90288pt x 
+259.32483pt>
+File: U:/GitHub/Covariatesets/Diagrams/Setidentification.pdf Graphic file (type
+ pdf)
+ <use U:/GitHub/Covariatesets/Diagrams/Setidentification.pdf>
+Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Setidentification.pdf
+ used on input line 547.
+(pdftex.def)             Requested size: 339.24956pt x 213.5974pt.
+
+<U:/GitHub/Covariatesets/Diagrams/Characteristic.pdf, id=313, 411.90288pt x 259
+.32483pt>
+File: U:/GitHub/Covariatesets/Diagrams/Characteristic.pdf Graphic file (type pd
+f)
+ <use U:/GitHub/Covariatesets/Diagrams/Characteristic.pdf>
+Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Characteristic.pdf us
+ed on input line 559.
+(pdftex.def)             Requested size: 339.24956pt x 213.5974pt.
+
+<U:/GitHub/Covariatesets/Diagrams/Uniform.pdf, id=314, 411.90288pt x 232.2537pt
+>
+File: U:/GitHub/Covariatesets/Diagrams/Uniform.pdf Graphic file (type pdf)
+ <use U:/GitHub/Covariatesets/Diagrams/Uniform.pdf>
+Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Uniform.pdf used on i
+nput line 565.
+(pdftex.def)             Requested size: 339.24956pt x 191.29979pt.
+
+<U:/GitHub/Covariatesets/Diagrams/Partial.pdf, id=317, 411.90288pt x 232.2537pt
+>
+File: U:/GitHub/Covariatesets/Diagrams/Partial.pdf Graphic file (type pdf)
+ <use U:/GitHub/Covariatesets/Diagrams/Partial.pdf>
+Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Partial.pdf used on i
+nput line 581.
+(pdftex.def)             Requested size: 339.24956pt x 191.29979pt.
+
+<U:/GitHub/Covariatesets/Diagrams/Indistinguishable1.pdf, id=320, 134.89397pt x
+ 135.21918pt>
+File: U:/GitHub/Covariatesets/Diagrams/Indistinguishable1.pdf Graphic file (typ
+e pdf)
+ <use U:/GitHub/Covariatesets/Diagrams/Indistinguishable1.pdf>
+Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Indistinguishable1.pd
+f used on input line 593.
+(pdftex.def)             Requested size: 169.62154pt x 170.03249pt.
+
+<U:/GitHub/Covariatesets/Diagrams/Indistinguishable2.pdf, id=321, 134.89397pt x
+ 135.21918pt>
+File: U:/GitHub/Covariatesets/Diagrams/Indistinguishable2.pdf Graphic file (typ
+e pdf)
+ <use U:/GitHub/Covariatesets/Diagrams/Indistinguishable2.pdf>
+Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Indistinguishable2.pd
+f used on input line 598.
+(pdftex.def)             Requested size: 169.62154pt x 170.03249pt.
+
+<U:/GitHub/Covariatesets/Diagrams/Exogenous1.pdf, id=322, 134.89397pt x 135.219
+18pt>
+File: U:/GitHub/Covariatesets/Diagrams/Exogenous1.pdf Graphic file (type pdf)
+ <use U:/GitHub/Covariatesets/Diagrams/Exogenous1.pdf>
+Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Exogenous1.pdf used o
+n input line 606.
+(pdftex.def)             Requested size: 169.62154pt x 170.03249pt.
+
+<U:/GitHub/Covariatesets/Diagrams/Exogenous2.pdf, id=323, 134.89397pt x 135.219
+18pt>
+File: U:/GitHub/Covariatesets/Diagrams/Exogenous2.pdf Graphic file (type pdf)
+ <use U:/GitHub/Covariatesets/Diagrams/Exogenous2.pdf>
+Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Exogenous2.pdf used o
+n input line 611.
+(pdftex.def)             Requested size: 169.62154pt x 170.03249pt.
+
+<U:/GitHub/Covariatesets/Diagrams/Confidence.pdf, id=324, 344.26817pt x 318.277
+1pt>
+File: U:/GitHub/Covariatesets/Diagrams/Confidence.pdf Graphic file (type pdf)
+ <use U:/GitHub/Covariatesets/Diagrams/Confidence.pdf>
+Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/Confidence.pdf used o
+n input line 625.
+(pdftex.def)             Requested size: 339.24956pt x 313.65291pt.
+
+<U:/GitHub/Covariatesets/Diagrams/ACE.pdf, id=337, 350.51352pt x 309.72614pt>
+File: U:/GitHub/Covariatesets/Diagrams/ACE.pdf Graphic file (type pdf)
+
+<use U:/GitHub/Covariatesets/Diagrams/ACE.pdf>
+Package pdftex.def Info: U:/GitHub/Covariatesets/Diagrams/ACE.pdf used on input
+ line 637.
+(pdftex.def)             Requested size: 339.24956pt x 299.78178pt.
+
+<U:/GitHub/Covariatesets/Coding/tikzDevice/Instruments.pdf, id=346, 509.22346pt
+ x 505.89pt>
+File: U:/GitHub/Covariatesets/Coding/tikzDevice/Instruments.pdf Graphic file (t
+ype pdf)
+ <use U:/GitHub/Covariatesets/Coding/tikzDevice/Instruments.pdf>
+Package pdftex.def Info: U:/GitHub/Covariatesets/Coding/tikzDevice/Instruments.
+pdf used on input line 648.
+(pdftex.def)             Requested size: 339.24956pt x 337.03015pt.
+
+<U:/GitHub/Covariatesets/Coding/tikzDevice/Samesex.pdf, id=353, 509.22346pt x 5
+05.89pt>
+File: U:/GitHub/Covariatesets/Coding/tikzDevice/Samesex.pdf Graphic file (type 
+pdf)
+ <use U:/GitHub/Covariatesets/Coding/tikzDevice/Samesex.pdf>
+Package pdftex.def Info: U:/GitHub/Covariatesets/Coding/tikzDevice/Samesex.pdf 
+used on input line 659.
+(pdftex.def)             Requested size: 339.24956pt x 337.03015pt.
+
+<U:/GitHub/Covariatesets/Coding/tikzDevice/Multiple.pdf, id=360, 509.22346pt x 
+505.89pt>
+File: U:/GitHub/Covariatesets/Coding/tikzDevice/Multiple.pdf Graphic file (type
+ pdf)
+ <use U:/GitHub/Covariatesets/Coding/tikzDevice/Multiple.pdf>
+Package pdftex.def Info: U:/GitHub/Covariatesets/Coding/tikzDevice/Multiple.pdf
+ used on input line 670.
+(pdftex.def)             Requested size: 339.24956pt x 337.03015pt.
+
+<U:/GitHub/Covariatesets/Coding/tikzDevice/Allin.pdf, id=367, 509.22346pt x 505
+.89pt>
+File: U:/GitHub/Covariatesets/Coding/tikzDevice/Allin.pdf Graphic file (type pd
+f)
+ <use U:/GitHub/Covariatesets/Coding/tikzDevice/Allin.pdf>
+Package pdftex.def Info: U:/GitHub/Covariatesets/Coding/tikzDevice/Allin.pdf us
+ed on input line 681.
+(pdftex.def)             Requested size: 339.24956pt x 337.03015pt.
+ [12] [13 <U:/GitHub/Covariatesets/Diagrams/Identification.pdf> <U:/GitHub/Cova
+riatesets/Diagrams/Observationalrestrictiveness.pdf>] [14 <U:/GitHub/Covariates
+ets/Diagrams/Pointidentification.pdf> <U:/GitHub/Covariatesets/Diagrams/Setiden
+tification.pdf>] [15 <U:/GitHub/Covariatesets/Diagrams/Characteristic.pdf> <U:/
+GitHub/Covariatesets/Diagrams/Uniform.pdf>] [16 <U:/GitHub/Covariatesets/Diagra
+ms/Partial.pdf>] [17 <U:/GitHub/Covariatesets/Diagrams/Indistinguishable1.pdf> 
+<U:/GitHub/Covariatesets/Diagrams/Indistinguishable2.pdf> <U:/GitHub/Covariates
+ets/Diagrams/Exogenous1.pdf> <U:/GitHub/Covariatesets/Diagrams/Exogenous2.pdf>]
+ [18 <U:/GitHub/Covariatesets/Diagrams/Confidence.pdf>] [19 <U:/GitHub/Covariat
+esets/Diagrams/ACE.pdf>] [20 <U:/GitHub/Covariatesets/Coding/tikzDevice/Instrum
+ents.pdf>]
+[21 <U:/GitHub/Covariatesets/Coding/tikzDevice/Samesex.pdf>] [22 <U:/GitHub/Cov
+ariatesets/Coding/tikzDevice/Multiple.pdf>] [23 <U:/GitHub/Covariatesets/Coding
+/tikzDevice/Allin.pdf>] [24] [25] [26] [27]
 ("\\econ-fs\Home3\zctpep9\GitHub\Covariatesets\Information and admissible sets.
-bbl" [2])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 211.
- [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 211.
+bbl" [28])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 861.
+ [29]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 861.
 
 ("\\econ-fs\Home3\zctpep9\GitHub\Covariatesets\Information and admissible sets.
 aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 211.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 211.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 861.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 861.
 Package rerunfilecheck Info: File `Information*and*admissible*sets.out' has not
  changed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 13516 strings out of 493921
- 189192 string characters out of 3149748
- 401882 words of memory out of 3000000
- 16500 multiletter control sequences out of 15000+200000
- 26272 words of font info for 76 fonts, out of 3000000 for 9000
+ 15607 strings out of 493921
+ 227334 string characters out of 3149748
+ 535370 words of memory out of 3000000
+ 18384 multiletter control sequences out of 15000+200000
+ 43479 words of font info for 128 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 37i,11n,51p,1817b,451s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,18n,75p,2631b,661s stack positions out of 5000i,500n,10000p,200000b,50000s
 {U:/PortableTex/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{U:/PortableTex
-/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolA.enc} <U:\PortableTex\MiKTeX\fonts\pk
-\ljfour\public\bbm\dpi600\bbm10.pk>{U:/PortableTex/MiKTeX/fonts/enc/dvips/mnsym
-bol/MnSymbolS.enc}{U:/PortableTex/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolE.enc
-} <U:\PortableTex\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <U:\Po
-rtableTex\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk> <U:\PortableTe
-x\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <U:\PortableTex\MiKTeX
-\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <U:\PortableTex\MiKTeX\fonts\p
-k\ljfour\jknappen\ec\dpi600\ecti0900.pk> <U:\PortableTex\MiKTeX\fonts\pk\ljfour
-\jknappen\ec\dpi600\ecrm0900.pk> <U:\PortableTex\MiKTeX\fonts\pk\ljfour\jknappe
-n\ec\dpi600\ecbx0900.pk> <U:\PortableTex\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi
-600\ecrm0700.pk> <U:\PortableTex\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx
-1728.pk> <U:\PortableTex\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk>
-<U:/PortableTex/MiKTeX/fonts/type1/public/mnsymbol/MnSymbol10.pfb><U:/PortableT
-ex/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><U:/PortableTex/MiKTeX/font
-s/type1/public/amsfonts/cm/cmmi7.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmr10.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
-7.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Information and admissible sets.pdf" (3 pages, 178496 bytes)
-.
+/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{U:/PortableTex/MiKTeX/fonts/enc
+/dvips/mnsymbol/MnSymbolE.enc}{U:/PortableTex/MiKTeX/fonts/enc/dvips/mnsymbol/M
+nSymbolD.enc}{U:/PortableTex/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolS.enc} <U:
+\PortableTex\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk>{U:/Portable
+Tex/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolF.enc} <U:\PortableTex\MiKTeX\fonts
+\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <U:\PortableTex\MiKTeX\fonts\pk\ljfo
+ur\jknappen\ec\dpi600\ecbx1000.pk> <U:\PortableTex\MiKTeX\fonts\pk\ljfour\publi
+c\bbm\dpi600\bbm10.pk> <U:\PortableTex\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi60
+0\ecti1000.pk> <U:\PortableTex\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx14
+40.pk> <U:\PortableTex\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <
+U:\PortableTex\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <U:\Porta
+bleTex\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0900.pk> <U:\PortableTex\M
+iKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk> <U:\PortableTex\MiKTeX\fo
+nts\pk\ljfour\jknappen\ec\dpi600\ecbx0900.pk> <U:\PortableTex\MiKTeX\fonts\pk\l
+jfour\jknappen\ec\dpi600\ecrm0700.pk> <U:\PortableTex\MiKTeX\fonts\pk\ljfour\jk
+nappen\ec\dpi600\ecbx1728.pk> <U:\PortableTex\MiKTeX\fonts\pk\ljfour\jknappen\e
+c\dpi600\ecrm1000.pk><U:/PortableTex/MiKTeX/fonts/type1/public/mnsymbol/MnSymbo
+l10.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/mnsymbol/MnSymbol6.pfb><U:/Po
+rtableTex/MiKTeX/fonts/type1/public/mnsymbol/MnSymbol7.pfb><U:/PortableTex/MiKT
+eX/fonts/type1/public/mnsymbol/MnSymbol8.pfb><U:/PortableTex/MiKTeX/fonts/type1
+/public/mnsymbol/MnSymbol9.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmmi10.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pf
+b><U:/PortableTex/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><U:/PortableT
+ex/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><U:/PortableTex/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmmi8.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmmi9.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi
+b10.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><U:/Por
+tableTex/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><U:/PortableTex/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmr8.pfb><U:/PortableTex/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmr9.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/amsfonts/cm/c
+msy10.pfb><U:/PortableTex/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><U:/P
+ortableTex/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb><U:/PortableTex/MiKT
+eX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "Information and admissible sets.pdf" (29 pages, 647511 bytes
+).
 PDF statistics:
- 355 PDF objects out of 1000 (max. 8388607)
- 11 named destinations out of 1000 (max. 500000)
- 22 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1185 PDF objects out of 1200 (max. 8388607)
+ 115 named destinations out of 1000 (max. 500000)
+ 163 words of extra memory for PDF output out of 10000 (max. 10000000)
 
