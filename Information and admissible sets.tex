@@ -109,6 +109,7 @@
 %==================================================%
 \newcommand{\ESRC}{I gratefully acknowledge financial support from the Economic and Social Research Council (ESRC).}
 \newcommand{\RLaTeX}{I acknowledge the \emph{R} and \emph{\LaTeX} communities, and the wealth of knowledge that they have made freely available to all.}
+\newcommand{\Art}{Artstein's Inequality}
 %==================================================%
 %% The title page.
 \makeatletter				
@@ -230,7 +231,7 @@ I study a probability space $(\Omega,\Sigma,\mathbb{P})$. I define random variab
 
 I refer to $Y$ as the outcome variable, to $D$ as the endogenous variable, to $X$ as the endogenous variable, to $Z$ as the instrumental variable, and to $U$ as unobservable heterogeneity. Despite the use of \emph{the}, I permit $(X,Z)$ to be vectors. I write the structural equation for the outcome variable as $h$, and the structural equation for the endogenous variable as $g$.  
 
-I write the expectation operator as $\mathbb{E}$, and the indicator function as $\mathbbm{1}$. I write $A$ is independent of $B$ as $A\independent B$. To distinguish between population and sample quantities, I subscript sample quantities by $n$. 
+I write the dimension of a set $S$ as $\dim(S)$, and its length as $\| S\|$. I write the expectation operator as $\mathbb{E}$, and the indicator function as $\mathbbm{1}$. I write $A$ is independent of $B$ as $A\independent B$. To distinguish between population and sample quantities, I subscript sample quantities by $n$. 
 
 I introduce further terminology and notation in Figure~\ref{fig:models} through Figure~\ref{fig:partials}. This specifically relates to models and structures, and is consistent with the approach that is formally laid out in \cite{h50} and in \cite{krE50}. 
 %==================================================%
@@ -300,6 +301,8 @@ The single equation model partially identifies $ACE(D\rightarrow Y)$. The single
 \end{enumerate}
 %==================================================%
 \section{Credibility in economic modelling}
+I define credibility. I discuss the conditions under which a model is more credible than another. I discuss opposition to the assumption and use of partially identifying models.
+
 Credibility is a statement of the validity and the plausibility of the restrictions that a model embeds, and is a desirable property. The need to discuss both validity and plausibility arises because restrictions can be either verifiable or non-verifiable. The distinction between verifiable and non-verifiable restrictions is that verifiable restrictions are testable using data while non-verifiable restrictions cannot be tested even if data is collected for the population. As verifiable restrictions can be rejected or not rejected on the basis of observed behaviour, it makes sense to talk about such restrictions as being valid or invalid. In contrast, the validity of non-verifiable restrictions is indeterminable. Whether to accept a set of non-verifiable restrictions as an accurate representation of how economic agents behave is subjective and depends upon how plausible the restrictions seem. Restrictions that are founded in economic theory, or that impose weaker constraints on assumed behaviour are more plausible (a view that is consistent with Occam's razor, a widely accepted principle of parsimony).      
 
 I regard a model as incredible if the verifiable restrictions that it embeds are invalid. I regard a model as more credible relative to another if the verifiable restrictions that it embeds are valid and if the sum of the non-verifiable restrictions that it embeds are more plausible. \cite{book.manski} adopts an equivalent stance, formalised as The Law of Decreasing Credibility. 
@@ -422,48 +425,53 @@ which is valid by the definition of $z(y,d,x)$. I note that (\ref{proof:1h}) is 
 \noindent I note that the instrumental inequality and its proof are adapted from \cite{p95b}. I extend \cite{p95b} in that I permit the existence of an exogenous variable. 
 %==================================================%
 \section{Identification}
-I derive sharp bounds on $ACE(D\rightarrow Y|x)$ using random set theory \citep{book.molchanov}, exploiting the restrictions that are embedded in the single equation model. In particular, I exploit joint independence (Restriction M3) and monotonicity (Restriction M5).
+I introduce random set theory \citep{book.molchanov} as a tool for identification analysis. I discuss random set theory in the context of the single equation model. I exploit joint independence (Restriction M3) and monotonicity (Restriction M5), and derive sharp bounds on the distribution of $U$.
 
-Artstein's inequality \citep{aR83} is a crucial tool of random set theory, which I use to derive sharp bounds on $ACE(D\rightarrow Y|x)$. The value of Artstein's inequality is its dual representation as both a capacity functional and a containment functional, which bound functionals of latent probability distributions from above and from below. For a selection $\xi$ from a random closed set $\Xi$,
+{\Art} \citep{aR83} is an important theorem of random set theory that is useful for deriving bounds on latent probability distributions. The usefulness of {\Art} is its dual representation as a capacity functional and as a containment functional, and that it defines a sharp set. Together these properties determine that identification analysis that is conducted using {\Art} defines the identified set of a functional of a latent probability distribution, as opposed to a proper superset (of the identified set). For a selection $\xi$ from a random closed set $\Xi$,
 \begin{align}
-\mathbb{P}(\xi\in K)&\leq\mathbb{P}(\Xi\cap K\neq\emptyset)\label{eq:artcap}
-\intertext{and}
-\mathbb{P}(\xi\in K)&\geq\mathbb{P}(\Xi\subset K)\label{eq:artcon}
+\mathbb{P}(\xi\in T|\mathcal{I})&\leq\mathbb{P}(\Xi\cap T\neq\emptyset|\mathcal{I})\label{eq:artcap}\\
+\mathbb{P}(\xi\in T|\mathcal{I})&\geq\mathbb{P}(\Xi\subseteq T|\mathcal{I})\label{eq:artcon}
 \end{align}
-for all $K$ in the class of compact sets $\mathcal{K}$. (\ref{eq:artcap}) is the capacity functional representation of Artstein's inequality, and (\ref{eq:artcon}) is its containment functional representation. 
+for all test sets $T$ in the class of compact sets $\mathcal{T}$. Here, I write a conditional form (conditional on an arbitrary information set $\mathcal{I}$) of {\Art} since the identification analysis that is conducted exploits the independence relations that the single equation model embeds. (\ref{eq:artcap}) is the capacity functional representation of {\Art}, and (\ref{eq:artcon}) is its containment functional representation. 
 
-I follow \cite{cr13} in defining level sets $\mathcal{U}_h$, which are random closed sets (that are unobservable).
+In the context of the single equation model, $(Y(0),Y(1))$ is a random closed set that has a well-defined probability distribution. I follow \cite{cr13} in defining a level set $\mathcal{U}_h$.
 \[\mathcal{U}_h(y,d,x)\equiv\lbrace u : y=h(d,x,u)\rbrace\] 
-The relevance of $\mathcal{U}_h$ to the identification analysis is the subject of Figure~(\color{red}yet to be drawn\color{black}). For the single equation model, Arstein's inequality then translates to 
+The usefulness of $\mathcal{U}_h$ to the identification analysis is its synonymity with $(Y(0),Y(1))$. This point is the subject of Figure~(\color{red}yet to be drawn\color{black}). I translate {\Art} as 
 \begin{align}
-\mathbb{P}(U\in K|x,z)&\leq\mathbb{P}(\mathcal{U}_h(Y,D,x)\cap K\neq\emptyset|x,z)\label{eq:modcap}
-\intertext{and}
-\mathbb{P}(U\in K|x,z)&\geq\mathbb{P}(\mathcal{U}_h(Y,D,x)\subset K|x,z)\label{eq:modcon}
+\mathbb{P}(U\in T|x,z)&\leq\mathbb{P}(\mathcal{U}_h(Y,D,x)\cap T\neq\emptyset|x,z)\label{eq:modcap}\\
+\mathbb{P}(U\in T|x,z)&\geq\mathbb{P}(\mathcal{U}_h(Y,D,x)\subseteq T|x,z)\label{eq:modcon}
 \end{align}
-for all $K$ in the class of compact sets $\mathcal{K}$. By Restriction M3 and Restriction M5, the left-hand side of (\ref{eq:modcap}) and of(\ref{eq:modcon}) is simply the length of $K$.    
+for all $T$ in the class of all compact sets on $[0,1]$, and for some $(x,z)\in\mathcal{R}_X\times\mathcal{R}_X$.\footnote{The restriction on the class of test sets is valid by joint independence and monotonicity} Further, I exploit joint independence and monotonicity, and write the left-hand side of (\ref{eq:modcap}) and of (\ref{eq:modcon}) as $\| T\|$. 
 
-$\mathcal{K}$ is a large class, and it is not feasible to test Artstein's inequality for each $K\in\mathcal{K}$. \cite{crs13} show that it is sufficient to test Artstein's inequality for a smaller class, which they name the class of core determining sets. For the single equation model, the class of core determining sets is the collection of 
+The class of all compact sets on $[0,1]$ is a large class, and it is infeasible to compute {\Art} for all test sets in this class. \cite{crs13} shows that it is sufficient to compute {\Art} for a smaller class of test sets, and names this class the class of core determining sets. For the single equation model, the class of core determining sets is the collection of 
+\[[0,p(d,x)]\text{ and }(p(d,x),1]\]
+over $\mathcal{R}_D\times\mathcal{R}_X$.\footnote{Notice that $(p(d,x),1]$ is an open set, but that {\Art} is defined for compact test sets. Strictly speaking, the class of core determining sets should include $\text{cl}(p(d,x),1]$ rather than $(p(d,x),1]$. Since $U$ is distributed continuously, there is zero mass at $p(d,x)$ and so the measure of $\text{cl}(p(d,x),1]$ is equal to the measure of $(p(d,x),1]$.} The left-hand side of (\ref{eq:modcap}) and of (\ref{eq:modcon}) is then either $p(d,x)$ or $1-p(d,x)$, depending upon the core determining set that is tested. Further, the class of core determining sets can be reduced to the collection of
 \[[0,p(d,x)]\]
-and 
-\[(p(d,x),1]\]
-over $\mathcal{R}_D\times\mathcal{R}_X$.\footnote{Notice that $(p(d,x),1]$ is an open set, but that Artstein's inequality is defined for compact test sets. Strictly speaking, the class of core determining sets should include $\text{cl}(p(d,x),1]$ rather than $(p(d,x),1]$. Since $U$ is distributed continuously, there is zero mass at $p(d,x)$ and so the measure of $\text{cl}(p(d,x),1]$ is equal to the measure of $(p(d,x),1]$.} The left-hand side of (\ref{eq:modcap}) and of(\ref{eq:modcon}) is then either $p(d,x)$ or $1-p(d,x)$, depending upon the core determining set that is tested. 
+over $\mathcal{R}_D\times\mathcal{R}_X$. This refinement is valid since $[0,p(d,x)]$ is the complement of $(p(d,x),1]$, and so the capacity functional representation of {\Art} for $[0,p(d,x)]$ is equivalent to the containment functional representation function of {\Art} for $(p(d,x),1]$.
+\subsection{Identification analysis}
+I describe the identified set of the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$. I employ random set theory as a tool for the identification analysis. I distinguish between the identified set of a functional of a latent probability distribution and the admissible set of values for that functional.
 
-I follow \cite{cr13} in defining sets $\mathcal{A}_p$ and $\mathcal{B}_p$, which describe the sign of $ACE(D\rightarrow Y|x)$ (for the single equation model).
+Assume that there is a particular ordering of the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_D$. First, I define correspondences (set-valued functions) $\mathcal{A}_p$ and $\mathcal{B}_p$ as follows.
 \begin{align*}
-\mathcal{A}_p(d,x)&\equiv\lbrace a : p(a,x)\leq p(d,x)\rbrace\\
-\mathcal{B}_p(d,x)&\equiv\lbrace b : p(b,x)\geq p(d,x)\rbrace
+\mathcal{A}_p(\eta;d,x)&\equiv\lbrace a : p(a,\eta)\leq p(d,x)\rbrace\\
+\mathcal{B}_p(\eta;d,x)&\equiv\lbrace b : p(b,\eta)\geq p(d,x)\rbrace
 \end{align*}
-$\mathcal{A}_p$ and $\mathcal{B}_p$ describe the sign of $ACE(D\rightarrow Y|x)$ since $ACE(D\rightarrow Y|x)$ is equal to $p(0,x)-p(1,x)$. To illustrate, suppose that $p(0,x)\leq p(1,x)$ such that $ACE(D\rightarrow Y|x)\leq 0$. Then 
-\begin{align*}
-\mathcal{A}_p(0,x)&=\lbrace 0,1\rbrace
-\intertext{and}
-\mathcal{B}_p(0,x)&=\lbrace 0\rbrace.
-\end{align*}
-As the ordering of $p(d,x)$ is unknown over $\mathcal{R}_D$, $\mathcal{A}_p$ and $\mathcal{B}_p$ must be computed for each possible ordering. From (\ref{eq:modcap}) and (\ref{eq:modcon}), I derive sharp bounds on $p(d,x)$ that are satisfied for all $(d,x)$ almost surely.
+I write $\eta$ so as to emphasise the distinction between $\eta$ as a conditioning value, and $x$ as a determinant of a test set. That is, for a given test set $[0,p(d,x)]$, there is a conditional form of {\Art} for each $\eta\in\mathcal{R}_X$. Second, I describe the identified set of $p(d,x)$ as
 \begin{equation}
-\sup_{z\in\mathcal{R}_Z}\mathbb{P}(Y=0\cap D\in\mathcal{A}_p(d,x)|x,z)\leq p(d,x)\leq 1-\sup_{z\in\mathcal{R}_Z}\mathbb{P}(Y=1\cap D\in\mathcal{B}_p(d,x)|x,z)\label{eq:identification}
+\sup_{\eta\in\mathcal{R}_X}\sup_{z\in\mathcal{R}_Z}\mathbb{P}(Y=0,D\in\mathcal{A}_p(\eta;d,x)|\eta,z)\leq p(d,x)\leq 1-\sup_{\eta\in\mathcal{R}_X}\sup_{z\in\mathcal{R}_Z}\mathbb{P}(Y=1,D\in\mathcal{B}_p(\eta;d,x)|\eta,z),\label{eq:identification}
 \end{equation}
-If (\ref{eq:identification}) is empty then the ordering of $p(d,x)$ over $\mathcal{R}_D$ that generates the empty set can be rejected. The goal of the identification analysis is to locate each $p(d,x)$; the single equation model partially identifies each $p(d,x)$ since it is only able to determine the location of each $p(d,x)$ up to a non-trivial set. As such, the single equation model partially identifies $ACE(D\rightarrow Y|x)$.
+which is valid by {\Art}. Note that alternative forms of {\Art} that rely only on marginal independence relations that are implied by joint independence also describe sets of $p(d,x)$, but that these sets constitute proper or improper supersets of (\ref{eq:identification}). Further, (\ref{eq:identification}) is defined for each possible ordering of the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$. If (\ref{eq:identification}) is empty for a particular ordering of the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_D$, then that ordering can be rejected. 
+
+Generally, the sampling process does not identify $\mathbb{P}$. Instead, the sampling process identifies $\mathbb{P}_n$ that is representative of a proper subset of the population, and that is often distinct from $\mathbb{P}$. To estimate (\ref{eq:identification}), it is natural to replace $\mathbb{P}$ with $\mathbb{P}_n$, which is valid by the assumption that the sampling process is informative of $\mathbb{P}$ as $n\rightarrow\infty$. This assumption is known as the analogue principle \citep{book.analogue}. It is unnatural to regard the sample analogue of (\ref{eq:identification}) as an identified set since identification is a concept of the population. Instead, I refer to the sample analogue of (\ref{eq:identification}) as an admissible set to emphasise the distinction.   
+\subsection{Dimensionality}
+I discuss the number of inequalities that describe the identified set, and how this number changes as $\dim(\mathcal{R}_X)$ increases. I show that there is a curse of dimensionality.
+
+Tractability is a legitimate concern: regardless of whether incorporating information is advantageous in the context of the single equation model, the computational cost of incorporating information may be prohibitive. Let
+\[\dim(X)=K\text{ and }\dim(Z)=L,\]
+and fix a particular ordering of the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$. There are $2K$ parameters in the collection  of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$, and there are $2K\times L$ inequality relations for each parameter. Then, there are $2K!$ possible orderings of the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$. In sum, the number of inequalities is 
+\[2K!\times 4K^2\times L,\]
+which grows in $K$ at a faster-than-exponential rate. 
+\subsection{Computation}  
 %==================================================%
 \section{Incorporating information}
 I explore the effect of incorporating information for the single equation model. I study a special case of the single equation model that embeds the restriction that $h$ excludes $X$. That is, I study a special case of the single equation model that embeds the restriction that 

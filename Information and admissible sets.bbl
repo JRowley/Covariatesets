@@ -101,9 +101,14 @@ Koopmans, T.~C. and O.~Reiers{\o}l (1950).
 \newblock The identification of structural characteristics.
 \newblock {\em Annals of Mathematical Statistics\/}~{\em 21\/}(2), 165 -- 181.
 
+\bibitem[\protect\citeauthoryear{Manski}{Manski}{1988}]{book.analogue}
+Manski, C.~F. (1988).
+\newblock {\em Analog Estimation Methods in Econometrics}.
+\newblock New York and London: Chapman and Hall.
+
 \bibitem[\protect\citeauthoryear{Manski}{Manski}{2013}]{book.manski}
 Manski, C.~F. (2013).
-\newblock {\em Public Policy in an Uncertain World: Analysis and Decisions.}
+\newblock {\em Public Policy in an Uncertain World: Analysis and Decisions}.
 \newblock Cambridge and London: Harvard University Press.
 
 \bibitem[\protect\citeauthoryear{Molchanov}{Molchanov}{2005}]{book.molchanov}
