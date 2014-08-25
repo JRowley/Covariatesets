@@ -471,7 +471,16 @@ Tractability is a legitimate concern: regardless of whether incorporating inform
 and fix a particular ordering of the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$. There are $2K$ parameters in the collection  of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$, and there are $2K\times L$ inequality relations for each parameter. Then, there are $2K!$ possible orderings of the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$. In sum, the number of inequalities is 
 \[2K!\times 4K^2\times L,\]
 which grows in $K$ at a faster-than-exponential rate. 
-\subsection{Computation}  
+\subsection{Computation} 
+An algorithm for determining the inequalities governing the identified set.
+\begin{enumerate}
+\item Restrict attention to the lower bound (a similar procedure exists for the upper bound).
+\item Save the support of $X$.
+\item Create a dataframe that lists all $2K!$ orderings over the $p(d,x)$.
+\item Name the columns of the dataframe $x.d$. It is important that the columns of the dataframe are ordered first in terms of $x$ and then in term of $d$. So, for example, $a.1,a.2,b.1,b.2,c.1,...$.
+\item Fix a row of the dataframe. This is the raw data that you will fill in.
+\item Now, 
+\end{enumerate} 
 %==================================================%
 \section{Incorporating information}
 I explore the effect of incorporating information for the single equation model. I study a special case of the single equation model that embeds the restriction that $h$ excludes $X$. That is, I study a special case of the single equation model that embeds the restriction that 

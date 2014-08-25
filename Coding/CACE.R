@@ -18,9 +18,7 @@ PUMS80M$Z <- PUMS80M$multi2nd
 # X takes the value 1 if whitem == 1
 # X takes the value 2 if blackm == 1
 # X takes the value 3 if othracem == 1
-PUMS80M$X <- PUMS80M$whitem +
-  2*PUMS80M$blackm +
-  3*PUMS80M$othracem
+PUMS80M$X <- PUMS80M$whitem
 # ======================================================================== #
 # Select relevant data
 # ======================================================================== #
