@@ -1,3 +1,4 @@
+ptm <- proc.time()
 # ======================================================================= #
 # Setup.
 # ======================================================================= #
@@ -9,6 +10,12 @@ X = 2
 # Get all possible strict orderings of p(d,x).
 a = iterpc(2*X, 2*X, ordered = T, replace = T)
 Order <- data.frame(getall(a))
+Output <- matrix(nrow=nrow(Order),ncol=4)
+for(j in 1:nrow(Order)){
+  Output[j,] = as.numeric(factor(as.numeric(Order[j,])))
+}
+Order <- unique(Output)
+rm(Output)
 rm(a)
 # Rename columns of Order.
 a = as.vector(outer(0:1, 1:X-1, paste, sep="")) 
@@ -77,9 +84,9 @@ grid$reference <- 1 + grid$d + 2*grid$x
 a = function(j){
   output <- list()
   for(k in 1:nrow(grid)){
-  q = grid[k,]$eta
-  output[[k]] <- which(Order[j,((1+2*q):(2+2*q))] <=
-                         Order[j,grid$reference[k]]) - 1        
+    q = grid[k,]$eta
+    output[[k]] <- which(Order[j,((1+2*q):(2+2*q))] <=
+                           Order[j,grid$reference[k]]) - 1        
   }
   return(output)
 }
@@ -177,3 +184,21 @@ rm(list=c("a","b"))
 # ====================================================================== #
 # Remove bounds that do not satisfy the ordering.
 # ====================================================================== #
+
+a = function(r){
+  Store <- list()
+  for(j in 1:length(r[is.na(r)==F])){
+    s <- data.frame(r[is.na(r)==F][j])
+    s <- s[with(s, order(x,d)),]
+    s <- cbind(s,Order[is.na(r)==F,][j,])
+    colnames(s) <- c("d","x","lower","upper","order")
+    Store[[j]] <- s
+  }
+  return(Store)
+}
+
+bound <- a(bound)
+
+rm(a)
+
+proc.time() - ptm

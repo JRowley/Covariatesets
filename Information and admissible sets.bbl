@@ -123,6 +123,11 @@ Pearl, J. (1995).
 \newblock In {\em Proceedings of the Eleventh conference on Uncertainty in
   artificial intelligence}, pp.\  435 -- 443. Morgan Kaufmann Publishers Inc.
 
+\bibitem[\protect\citeauthoryear{{R Core Team}}{{R Core Team}}{2013}]{R}
+{R Core Team} (2013).
+\newblock {\em R: A Language and Environment for Statistical Computing}.
+\newblock Vienna, Austria: R Foundation for Statistical Computing.
+
 \bibitem[\protect\citeauthoryear{Shaikh and Vytlacil}{Shaikh and
   Vytlacil}{2011}]{sHvY11}
 Shaikh, A.~M. and E.~J. Vytlacil (2011).

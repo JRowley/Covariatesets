@@ -87,6 +87,8 @@
 % Write generate symbol (identification).
 \DeclareMathOperator*{\generated}{.:}
 % Write generated symbol (identification).
+\DeclareRobustCommand{\stirling}{\genfrac\{\}{0pt}{}}
+% Stirling number of the second kind.
 %==================================================%
 %% Abbreviations.
 \newcommand{\US}{United States}
@@ -464,14 +466,22 @@ which is valid by {\Art}. Note that alternative forms of {\Art} that rely only o
 
 Generally, the sampling process does not identify $\mathbb{P}$. Instead, the sampling process identifies $\mathbb{P}_n$ that is representative of a proper subset of the population, and that is often distinct from $\mathbb{P}$. To estimate (\ref{eq:identification}), it is natural to replace $\mathbb{P}$ with $\mathbb{P}_n$, which is valid by the assumption that the sampling process is informative of $\mathbb{P}$ as $n\rightarrow\infty$. This assumption is known as the analogue principle \citep{book.analogue}. It is unnatural to regard the sample analogue of (\ref{eq:identification}) as an identified set since identification is a concept of the population. Instead, I refer to the sample analogue of (\ref{eq:identification}) as an admissible set to emphasise the distinction.   
 \subsection{Dimensionality}
-I discuss the number of inequalities that describe the identified set, and how this number changes as $\dim(\mathcal{R}_X)$ increases. I show that there is a curse of dimensionality.
+I calculate the number of inequalities that describe the identified set, and how this number changes as $\dim(\mathcal{R}_X)$ increases. I show that there is a curse of dimensionality.
 
 Tractability is a legitimate concern: regardless of whether incorporating information is advantageous in the context of the single equation model, the computational cost of incorporating information may be prohibitive. Let
-\[\dim(X)=K\text{ and }\dim(Z)=L,\]
-and fix a particular ordering of the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$. There are $2K$ parameters in the collection  of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$, and there are $2K\times L$ inequality relations for each parameter. Then, there are $2K!$ possible orderings of the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$. In sum, the number of inequalities is 
-\[2K!\times 4K^2\times L,\]
-which grows in $K$ at a faster-than-exponential rate. 
+\[\|\mathcal{R}_X\|=K\text{ and }\|\mathcal{R}_Z\|=L,\]
+and fix a particular ordering of the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$. There are $2K$ parameters in the collection  of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$, and there are $2K\times L$ inequality relations for each parameter. In sum, the number of inequalities for each ordering of the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$ is
+\[4K^2\times L.\]
+The total number of orderings of the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$ is then
+\[\sum_{j=1}^{K\times L}j!\stirling{K\times L}{j},\]
+where $\stirling{n}{m}$ counts the number of ways that a set of length $n$ can be partitioned into $m$ non-empty subsets (the Stirling Number of the Second Kind). Each $\stirling{n}{m}$ is multiplied by $m!$, which accounts for the possible ordering over the $m$ non-empty subsets. Combining the number of inequalities for a particular ordering of the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$ with the number of possible orderings yields
+\[4K^2\times\sum_{j=1}^{K\times L}j!\stirling{K\times L}{j}\times L\]
+as the number of inequalities that describe the identified set. There is a clear curse of dimensionality.
 \subsection{Computation} 
+I describe an algorithm for determining those inequalities that describe the identified set. The algorithm is written with R \citep{R} functionality in mind, but may be adapted for other statistical packages.
+
+Given the large numbers of inequalities for even small 
+
 An algorithm for determining the inequalities governing the identified set.
 \begin{enumerate}
 \item Restrict attention to the lower bound (a similar procedure exists for the upper bound).
