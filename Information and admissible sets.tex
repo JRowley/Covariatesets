@@ -546,18 +546,35 @@ An implication of its special status is that $\mathbb{E}_n[Y(1)]$ is identified.
 
 In fact, whether the instrumental variable is a good predictor of the endogenous variable is of first-order importance only for estimation, and not for inference. The difference between those inequalities that are binding constraints, and those that are not binding constraints only becomes important if the statistical uncertainty in those inequalities that are binding constraints is considerable. In other words, if the instrumental variable is a rare event. In sum, the ideal instrumental variable is a good predictor of the endogenous variable and is approximately as frequent as not.  
 
-Figure~\ref{fig:experiments} shows the admissible set of values of $ACE_n(D\rightarrow Y)$ for Experiment 1 and for Experiment 6 (and all other experiments). 
- 
-\noindent\color{red}What do I find? I find that child gender is a weak instrument. Very few occurrences of multiple second birth lead to larger confidence regions for parameters associated with that instrument. I can also rule out a null effect. This might eb design of the structural equation which makes sets covering zero in terms of the point estimate difficult to achieve.\color{black} 
+Figure~\ref{fig:experiments} shows the admissible set of values of $ACE_n(D\rightarrow Y)$ for Experiment 1 and for Experiment 6 (and all other experiments that I conduct). In Experiment 1, the admissible set is large and disconnected. The event that the oldest two children in the household share the same gender is insufficient to sign $ACE_n(D\rightarrow Y)$. Further, either side of zero the admissible set is not informative beyond what anecdotal evidence might suggest, and certainly cannot inform policy. The only information that Experiment 1 conveys with respect to $ACE_n(D\rightarrow Y)$ is that there is a statistically significant effect (since the confidence region for the admissible set does not cover zero). In Experiment 6, the admissible set is not disconnected. The event that there is a multiple second birth is sufficient to sign $ACE_n(D\rightarrow Y)$ as negative. Although Experiment 6 is informative with respect to the sign of $ACE_n(D\rightarrow Y)$, it conveys little other information to inform policy.  
 %==================================================%
 \subsection{Enriching the support of the instrumental variable}
-Main points to make here:
-\begin{itemize}
-\item Child gender is a weak instrument (already documented).
-\item Very few occurrences of multiple second birth lead to larger confidence regions for parameters associated with that instrument.
-\item More information is a good thing.
-\item Model is overidentified.
-\end{itemize}
+I explore the effect of enriching $\mathcal{R}_Z$ for the simple single equation model. Specifically, I disaggregate the event that the oldest two children in the household share the same gender into the possible permutations of gender for two children. Further, I combine the event that there is a multiple second birth with the possible permutations of gender for two children.
+
+In all, I consider eight experiments. Each experiment is characterised by a different definition of $Z$. The results of these experiments are the subject of Table~\ref{tbl:setssame} through Table~\ref{tbl:acemult}, and the tables also give the definition of $Z$ in each experiment. I make the following observations.
+\begin{enumerate}
+\item[(a)] Disaggregating the event that the oldest two children in the household share the same gender into either the event that the oldest two children in the household are male, or into the event that the oldest two children in the household are female has less informational content.
+\end{enumerate}
+In Experiment 2, I disaggregate the event that the oldest two children in the household share the same gender into the event that the oldest two children are male. In Experiment 3, I disaggregate the event that the oldest two children in the household share the same gender into the event that the oldest two children are female. In both experiments, the admissible set of values of $ACE_n(D\rightarrow Y)$ is larger than the admissible set for Experiment 1. Further, there is greater statistical uncertainty in the admissible set for Experiment 2 and for Experiment 3.  
+
+Either disaggregation maintains $Z$ as a binary variable and, if preferences are convex, 
+
+Importantly, either disaggregation maintains $Z$ as binary. 
+\begin{enumerate}
+\item[(b)] Disaggregating the event that the oldest two children in the household share the same gender into the possible permutations of gender for two children has more informational content.
+\end{enumerate}
+In Experiment 4, I disaggregate the event that the oldest two children in the household share the same gender into the event that the oldest two children are male, the event that the oldest two children are female, and the event that the oldest two children do not share the same gender. In Experiment 5, I disaggregate the event that the oldest two children in the household share the same gender into the possible permutations of gender for two children. In both experiments, the admissible set of values of $ACE_n(D\rightarrow Y)$ is smaller than the admissible set for Experiment 1. There is greater statistical uncertainty in the admissible set for Experiment 4 and for Experiment 5, but the net effect of greater accuracy and less precision is to make the admissible set smaller in both cases. The admissible set of values of $ACE_n(D\rightarrow Y)$ is smaller than the admissible set for Experiment 6. 
+\begin{enumerate}
+\item[(c)] Combining the event that there is a multiple second birth with the possible permutations of gender for two children has more informational content. 
+\end{enumerate}
+In Experiment 8, I combine the event that there is a multiple second birth with the possible permutations of gender for two children. There is greater statistical uncertainty in the admissible set for Experiment 8, but the net effect of greater accuracy and less precision is to make the admissible set smaller. 
+%Main points to make here:
+%\begin{itemize}
+%\item Child gender is a weak instrument (already documented).
+%\item Very few occurrences of multiple second birth lead to larger confidence regions for parameters associated with that instrument.
+%\item More information is a good thing.
+%\item Model is overidentified.
+%\end{itemize}
 %==================================================%
 \subsection{Enriching individual response}
 First of all what is the parameter that \cite{cr13} identifies? They are after $ACE(D\rightarrow Y)$ which is a function of $Y(1)$ and $Y(0)$. In the model that doesn't include the $X$s, the parameter that they identify is $p(d)$. What is this?
