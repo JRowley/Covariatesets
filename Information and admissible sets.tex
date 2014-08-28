@@ -473,9 +473,9 @@ Tractability is a legitimate concern: regardless of whether incorporating inform
 and fix a particular ordering of the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$. There are $2K$ parameters in the collection  of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$, and there are $2K\times L$ inequality relations for each parameter. In sum, the number of inequalities for each ordering of the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$ is
 \[4K^2\times L.\]
 The total number of orderings of the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$ is then
-\[\sum_{j=1}^{K\times L}j!\stirling{K\times L}{j},\]
+\[\sum_{j=1}^{2K}j!\stirling{2K}{j},\]
 where $\stirling{n}{m}$ counts the number of ways that a set of length $n$ can be partitioned into $m$ non-empty subsets (the Stirling Number of the Second Kind). Each $\stirling{n}{m}$ is multiplied by $m!$, which accounts for the possible ordering over the $m$ non-empty subsets. Combining the number of inequalities for a particular ordering of the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$ with the number of possible orderings yields
-\[4K^2\times\sum_{j=1}^{K\times L}j!\stirling{K\times L}{j}\times L\]
+\[4K^2\times\sum_{j=1}^{2K}j!\stirling{2K}{j}\times L\]
 as the number of inequalities that describe the identified set. There is a clear curse of dimensionality. It is sensible to automate the task of calculating the inequalities that describe the identified set.
 %\subsection{Computation} 
 %I describe an algorithm that automates the task of calculating the inequalities that describe the identified set. The algorithm excludes those inequalities that are not internally valid (those inequalities that are inconsistent with the ordering that generates them). The algorithm is written with R \citep{R} functionality in mind, but may be adapted for other statistical packages. 
@@ -555,19 +555,19 @@ In all, I consider eight experiments. Each experiment is characterised by a diff
 \begin{enumerate}
 \item[(a)] Disaggregating the event that the oldest two children in the household share the same gender into either the event that the oldest two children in the household are male, or into the event that the oldest two children in the household are female has less informational content.
 \end{enumerate}
-In Experiment 2, I disaggregate the event that the oldest two children in the household share the same gender into the event that the oldest two children are male. In Experiment 3, I disaggregate the event that the oldest two children in the household share the same gender into the event that the oldest two children are female. In both experiments, the admissible set of values of $ACE_n(D\rightarrow Y)$ is larger than the admissible set for Experiment 1. Further, there is greater statistical uncertainty in the admissible set for Experiment 2 and for Experiment 3.  
+In Experiment 2 I disaggregate the event that the oldest two children in the household share the same gender into the event that the oldest two children are male. In Experiment 3 I disaggregate the event that the oldest two children in the household share the same gender into the event that the oldest two children are female. In both experiments, the admissible set of values of $ACE_n(D\rightarrow Y)$ is larger than the admissible set for Experiment 1. Further, there is greater statistical uncertainty in the admissible set for Experiment 2 and for Experiment 3.  
 
-Either disaggregation maintains $Z$ as a binary variable and, if preferences are convex, 
-
-Importantly, either disaggregation maintains $Z$ as binary. 
+Either disaggregation maintains $Z$ as a binary variable and, if preferences are convex, aggregates an event that the oldest two children in the household share the same gender with the event that the oldest two children do not share the same gender. For example, in Experiment 2 the disaggregation aggregates the event that the oldest two children in the household are female with the event that the oldest two children do not share the same gender. Importantly, this dilutes the identifying power of $Z$ (since the event that the oldest two children in the household share the same gender is associated with both values of $Z$). Further, each value of $Z$ is no longer as frequent as not. The imbalance in the sub-populations leads to greater statistical uncertainty. 
 \begin{enumerate}
 \item[(b)] Disaggregating the event that the oldest two children in the household share the same gender into the possible permutations of gender for two children has more informational content.
 \end{enumerate}
-In Experiment 4, I disaggregate the event that the oldest two children in the household share the same gender into the event that the oldest two children are male, the event that the oldest two children are female, and the event that the oldest two children do not share the same gender. In Experiment 5, I disaggregate the event that the oldest two children in the household share the same gender into the possible permutations of gender for two children. In both experiments, the admissible set of values of $ACE_n(D\rightarrow Y)$ is smaller than the admissible set for Experiment 1. There is greater statistical uncertainty in the admissible set for Experiment 4 and for Experiment 5, but the net effect of greater accuracy and less precision is to make the admissible set smaller in both cases. The admissible set of values of $ACE_n(D\rightarrow Y)$ is smaller than the admissible set for Experiment 6. 
+In Experiment 4 I disaggregate the event that the oldest two children in the household share the same gender into the event that the oldest two children are male, the event that the oldest two children are female, and the event that the oldest two children do not share the same gender. In Experiment 5 I disaggregate the event that the oldest two children in the household share the same gender into the possible permutations of gender for two children. In both experiments, the admissible set of values of $ACE_n(D\rightarrow Y)$ is smaller than the admissible set for Experiment 1. There is greater statistical uncertainty in the admissible set for Experiment 4 and for Experiment 5, but the net effect of greater accuracy and less precision is to make the admissible set smaller in both cases. The admissible set of values of $ACE_n(D\rightarrow Y)$ is smaller than the admissible set for Experiment 6. 
+
+Either disaggregation increases $\|\mathcal{R}_Z\|$. 
 \begin{enumerate}
 \item[(c)] Combining the event that there is a multiple second birth with the possible permutations of gender for two children has more informational content. 
 \end{enumerate}
-In Experiment 8, I combine the event that there is a multiple second birth with the possible permutations of gender for two children. There is greater statistical uncertainty in the admissible set for Experiment 8, but the net effect of greater accuracy and less precision is to make the admissible set smaller. 
+In Experiment 8 I combine the event that there is a multiple second birth with the possible permutations of gender for two children. There is greater statistical uncertainty in the admissible set for Experiment 8, but the net effect of greater accuracy and less precision is to make the admissible set smaller. 
 %Main points to make here:
 %\begin{itemize}
 %\item Child gender is a weak instrument (already documented).
