@@ -7,6 +7,8 @@ ptm <- proc.time()
 X = 2
 # I will consider whether a mother is white or not.
 
+library(iterpc)
+
 # Get all possible strict orderings of p(d,x).
 a = iterpc(2*X, 2*X, ordered = T, replace = T)
 Order <- data.frame(getall(a))
@@ -35,7 +37,7 @@ DF <- load(Source)
 PUMS80M <- D
 rm(list = c("Source","DF","D"))
 
-Data <- PUMS80M[,c("workedm","morekids","whitem","multi2nd")]
+Data <- PUMS80M[,c("workedm","morekids","hispm","multi2nd")]
 colnames(Data) <- c("Y","D","X","Z")
 
 rm(PUMS80M)

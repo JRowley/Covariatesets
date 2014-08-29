@@ -211,10 +211,9 @@ I define information to be those additional characteristics of economic agents t
 
 It is useful to distinguish between classes of information since each class enters the latent structure in a different way. Exogenous variables are permitted to enter the structural equation for the outcome variable and to determine the endogenous variable. As such, exogenous variables can be seen to enrich both individual response and individual selection, respectively. An important consequence is that the causal effect of the endogenous variable on the outcome variable depends upon the values of exogenous variables when individual response is enriched. In contrast, instrumental variables are excluded from the structural equation for the outcome variable by definition and so only enrich individual selection. Given this, the effect of incorporating information is different depending upon the class of information that is being incorporated into the model.  
 
-Incorporating information of either class is generally sensible for a number of reasons. Firstly, incorporating information is known to be efficient; variation that is attributable to an observable variable is instead attributable to unobservable heterogeneity when that variable is omitted. Secondly, the effect of incorporating information for partially identifying models is not well-documented; one hypothesis is that incorporating information narrows bounds on admissible sets. Such an effect is not documented in identifying models precisely because such models deliver a point estimate (a set of length zero), but point estimates may shift as information is incorporated. A contribution that I make is in showing that \color{red} incorporating information leads to narrower bounds on the admissible sets \color{black} that are delivered by the model. A further reason to particularly favour incorporating exogenous variables is that the average causal effect of the endogenous variable on the outcome variable in identifiable sub-populations can be recovered. I name this structural characteristic the conditional average causal effect of the endogenous variable on the outcome variable, and index it by the conditioning value.\footnote{The conditioning value is specifically the value of the exogenous variables. \cite{hEvY05} defines a parameter $ATE(x)$ that is equivalent to the conditional average causal effect of the endogenous variable on the outcome variable at the conditioning value $x$. \cite{kHt10} and \cite{13.misc.abrevaya} instead refer to this parameter as the conditional average treatment effect and abbreviate this to $CATE(x)$.} Understanding the effect of an intervention in sub-populations can be interesting if the intervention can be targeted or if the intervention is to be applied elsewhere in a population that differs according to its observable characteristics. 
+Incorporating information of either class is generally sensible for a number of reasons. Firstly, incorporating information is known to be efficient; variation that is attributable to an observable variable is instead attributable to unobservable heterogeneity when that variable is omitted. Secondly, the effect of incorporating information for partially identifying models is not well-documented. In identifying models, if an omitted variable is a determinant of the endogenous variable then its effect on the outcome variable is instead attributable to the endogenous variable, and is a bias. A contribution that I make is in showing that incorporating information negates this bias, and is equivalent to a shift in the location of the admissible set. A further reason to particularly favour incorporating exogenous variables is that the average causal effect of the endogenous variable on the outcome variable in identifiable sub-populations can be recovered. I name this structural characteristic the conditional average causal effect of the endogenous variable on the outcome variable, and index it by the conditioning value.\footnote{The conditioning value is specifically the value of the exogenous variables. \cite{hEvY05} defines a parameter $ATE(x)$ that is equivalent to the conditional average causal effect of the endogenous variable on the outcome variable at the conditioning value $x$. \cite{kHt10} and \cite{13.misc.abrevaya} instead refer to this parameter as the conditional average treatment effect and abbreviate this to $CATE(x)$.} Understanding the effect of an intervention in sub-populations can be interesting if the intervention can be targeted or if the intervention is to be applied elsewhere in a population that differs according to its observable characteristics. 
 
-A relevant question is how to relate conditional causal effects to (unconditional) causal effects. More precisely, how does the average causal effect of the endogenous variable on the outcome variable relate to its conditional counterparts? I show that the average causal effect of the endogenous variable on the outcome variable can be expressed as a Minkowski summation of its conditional counterparts when the non-parametric binary choice model is augmented. I derive sharp bounds on the conditional average causal effect by applying random set theory. I establish the conditions under which bounds on conditional causal effects can be informative about bounds on (unconditional) causal effects. That is, I establish the conditions under which bounds on conditional causal effects can be used to narrow bounds on (unconditional) causal effects, exploiting the mapping from one to the other. 
-
+A relevant question is how to relate conditional causal effects to (unconditional) causal effects. More precisely, how does the average causal effect of the endogenous variable on the outcome variable relate to its conditional counterparts? I show that the average causal effect of the endogenous variable on the outcome variable can be expressed as a Minkowski summation of its conditional counterparts when the non-parametric binary choice model is augmented. I derive sharp bounds on the conditional average causal effect by applying random set theory. 
 %I employ the capacity (or containment) functional as in \cite{crs13} as a matter of choice, rather than the Aumann expectation as in \cite{bEmOImOF12}. As I show that the average causal effect of the endogenous variable on the outcome variable can be expressed as a Minkowski summation of its conditional counterparts, I derive sharp bounds on the average causal effect of the endogenous variable on the outcome variable.\footnote{\cite{book.molchanov} is a useful companion in the study of random sets.}     
 
 I demonstrate application of the non-parametric binary choice model, elucidating the practical difficulties that arise when estimating set identifying models (focusing on those issues that arise from incorporating information). As in \cite{cr13}, I estimate the average causal effect of additional children on a mother's employment using US census data. I extend \cite{cr13} in a number of ways. Firstly, I report statistical uncertainty in the estimate of the average causal effect of additional children on a mother's employment using a method that is outlined in \cite{cHlr13}. Secondly, I enrich the support of the instrumental variable and explore the effect that this has on the admissible set of values for the average causal effect of additional children on a mother's employment, and on its accompanying confidence region. Thirdly, I enrich individual response by permitting the structural equation for employment to depend upon predetermined and immutable characteristics of mothers. I discuss the complication of calculating statistical uncertainty when exogenous variables are permitted to enter the structural equation for employment. With respect to the second and third extensions, it is necessary that I augment the model by embedding additional restrictions. In fact, \cite{cr13} describe the augmented non-parametric binary choice model that I assume but simplify this model for application (by excluding exogenous variables from the structural equation for the outcome variable). I discuss how the augmented model relates to the simplified model in each case and the credibility of the additional restrictions that are embedded in the augmented model.
@@ -466,7 +465,7 @@ which is valid by {\Art}. Note that alternative forms of {\Art} that rely only o
 
 Generally, the sampling process does not identify $\mathbb{P}$. Instead, the sampling process identifies $\mathbb{P}_n$ that is representative of a proper subset of the population, and that is often distinct from $\mathbb{P}$. To estimate (\ref{eq:identification}), it is natural to replace $\mathbb{P}$ with $\mathbb{P}_n$, which is valid by the assumption that the sampling process is informative of $\mathbb{P}$ as $n\rightarrow\infty$. This assumption is known as the analogue principle \citep{book.analogue}. It is unnatural to regard the sample analogue of (\ref{eq:identification}) as an identified set since identification is a concept of the population. Instead, I refer to the sample analogue of (\ref{eq:identification}) as an admissible set to emphasise the distinction.   
 \subsection{Dimensionality}
-I calculate the number of inequalities that describe the identified set, and how this number changes as $\dim(\mathcal{R}_X)$ increases. I show that there is a curse of dimensionality.
+I calculate the number of inequalities that describe the identified set, and how this number changes as $\|\mathcal{R}_X\|$ increases. I show that there is a curse of dimensionality.
 
 Tractability is a legitimate concern: regardless of whether incorporating information is advantageous in the context of the single equation model, the computational cost of incorporating information may be prohibitive. Let
 \[\|\mathcal{R}_X\|=K\text{ and }\|\mathcal{R}_Z\|=L,\]
@@ -477,6 +476,43 @@ The total number of orderings of the collection of $p(d,x)$ over $\mathcal{R}_D\
 where $\stirling{n}{m}$ counts the number of ways that a set of length $n$ can be partitioned into $m$ non-empty subsets (the Stirling Number of the Second Kind). Each $\stirling{n}{m}$ is multiplied by $m!$, which accounts for the possible ordering over the $m$ non-empty subsets. Combining the number of inequalities for a particular ordering of the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$ with the number of possible orderings yields
 \[4K^2\times\sum_{j=1}^{2K}j!\stirling{2K}{j}\times L\]
 as the number of inequalities that describe the identified set. There is a clear curse of dimensionality. It is sensible to automate the task of calculating the inequalities that describe the identified set.
+\subsection{Average causal effects}
+I state the definition of $ACE(D\rightarrow Y)$ when $D$ is a binary variable. I discuss the relationship between $ACE(D\rightarrow Y)$ and its conditional counterparts. I show that $ACE(D\rightarrow Y)$ is expressible as a function of the parameters of the single equation model. 
+
+First, $ACE(D\rightarrow Y)$ is defined as 
+\[\mathbb{E}[Y(1)]-\mathbb{E}[Y(0)],\]
+which is commonly referred to as the average treatment effect in economics. For the single equation model, $ACE(D\rightarrow Y)$ is equal to 
+\begin{equation}
+\mathbb{E}[p(0,X)]-\mathbb{E}[p(1,X)].\label{eq:ace}
+\end{equation} 
+\vspace{20pt}
+\begin{proof}
+I focus on $\mathbb{E}[Y(d)]$ since $ACE(D\rightarrow Y)$ is an additive function of this expectation. To prove (\ref{eq:ace}), I must show that 
+\begin{align}
+\mathbb{E}[Y(d)]&=1-\mathbb{E}[p(d,X)].\nonumber
+\intertext{First, I note that $\mathbb{E}[Y(d)]$ is equivalent to $\mathbb{P}(Y(d)=1)$ since $Y(d)$ is a binary variable. Substituting for $Y(d)$ yields}
+\mathbb{P}(Y(d)=1)&=\mathbb{P}(p(d,X)<U).\nonumber
+\intertext{Then,}
+\mathbb{P}(p(d,X)<U)&=\sum_{x\in\mathcal{R}_X}\mathbb{P}(p(d,x)<U|x)\mathbb{P}(x),\label{eq:cace}
+\intertext{which is valid by the Law of Iterated Expectations. The restrictions that the single equation model embeds determine that }
+\mathbb{P}(p(d,x)<U|x)&=\mathbb{P}(p(d,x)<U),\nonumber
+\intertext{and that}
+\mathbb{P}(p(d,x)<U)&=1-p(d,x).\nonumber
+\intertext{I rewrite (\ref{eq:cace}) as}
+\mathbb{P}(p(d,X)<U)&=1-\sum_{x\in\mathcal{R}_X}p(d,x)\mathbb{P}(x)\label{eq:parametrisation},
+\end{align}
+which is an expectation. This completes the proof of (\ref{eq:ace}).
+\end{proof}
+\vspace{20pt}
+\noindent Second, $p(d,x)$ is a parameter of the single equation model. Although $p$ is a non-parametric function it can be summarised by the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$. Further, knowledge of $p$ (and of the distribution of $X$) is sufficient to determine the distribution of $Y(d)$. $ACE(D\rightarrow Y)$ is a function of the parameters of the single equation model, which is valid by (\ref{eq:parametrisation}).
+
+Third, $ACE(D\rightarrow Y|x)$ is defined as 
+\[\mathbb{E}[Y(1)|x]-\mathbb{E}[Y(0)|x],\]
+which for the single equation model is equivalent to $p(0,x)-p(1,x)$ (stated without proof). The relationship between $ACE(D\rightarrow Y)$ and its conditional counterparts is then 
+\begin{equation}
+ACE(D\rightarrow Y)=\sum_{x\in\mathcal{R}_X}ACE(D\rightarrow Y|x)\mathbb{P}(x),\label{eq:relationship}
+\end{equation}
+which is established in the proof of (\ref{eq:ace}). I exploit this relationship to describe the identified set of $ACE(D\rightarrow Y)$.  
 %\subsection{Computation} 
 %I describe an algorithm that automates the task of calculating the inequalities that describe the identified set. The algorithm excludes those inequalities that are not internally valid (those inequalities that are inconsistent with the ordering that generates them). The algorithm is written with R \citep{R} functionality in mind, but may be adapted for other statistical packages. 
 %
@@ -549,7 +585,7 @@ In fact, whether the instrumental variable is a good predictor of the endogenous
 Figure~\ref{fig:experiments} shows the admissible set of values of $ACE_n(D\rightarrow Y)$ for Experiment 1 and for Experiment 6 (and all other experiments that I conduct). In Experiment 1, the admissible set is large and disconnected. The event that the oldest two children in the household share the same gender is insufficient to sign $ACE_n(D\rightarrow Y)$. Further, either side of zero the admissible set is not informative beyond what anecdotal evidence might suggest, and certainly cannot inform policy. The only information that Experiment 1 conveys with respect to $ACE_n(D\rightarrow Y)$ is that there is a statistically significant effect (since the confidence region for the admissible set does not cover zero). In Experiment 6, the admissible set is not disconnected. The event that there is a multiple second birth is sufficient to sign $ACE_n(D\rightarrow Y)$ as negative. Although Experiment 6 is informative with respect to the sign of $ACE_n(D\rightarrow Y)$, it conveys little other information to inform policy.  
 %==================================================%
 \subsection{Enriching the support of the instrumental variable}
-I explore the effect of enriching $\mathcal{R}_Z$ for the simple single equation model. Specifically, I disaggregate the event that the oldest two children in the household share the same gender into the possible permutations of gender for two children. Further, I combine the event that there is a multiple second birth with the possible permutations of gender for two children.
+I explore the effect of enriching $\mathcal{R}_Z$ for the simple single equation model in the context of the application. Specifically, I disaggregate the event that the oldest two children in the household share the same gender into the possible permutations of gender for two children. Further, I combine the event that there is a multiple second birth with the possible permutations of gender for two children. I show that incorporating informational is advantageous.
 
 In all, I consider eight experiments. Each experiment is characterised by a different definition of $Z$. The results of these experiments are the subject of Table~\ref{tbl:setssame} through Table~\ref{tbl:acemult}, and the tables also give the definition of $Z$ in each experiment. I make the following observations.
 \begin{enumerate}
@@ -561,44 +597,66 @@ Either disaggregation maintains $Z$ as a binary variable and, if preferences are
 \begin{enumerate}
 \item[(b)] Disaggregating the event that the oldest two children in the household share the same gender into the possible permutations of gender for two children has more informational content.
 \end{enumerate}
-In Experiment 4 I disaggregate the event that the oldest two children in the household share the same gender into the event that the oldest two children are male, the event that the oldest two children are female, and the event that the oldest two children do not share the same gender. In Experiment 5 I disaggregate the event that the oldest two children in the household share the same gender into the possible permutations of gender for two children. In both experiments, the admissible set of values of $ACE_n(D\rightarrow Y)$ is smaller than the admissible set for Experiment 1. There is greater statistical uncertainty in the admissible set for Experiment 4 and for Experiment 5, but the net effect of greater accuracy and less precision is to make the admissible set smaller in both cases. The admissible set of values of $ACE_n(D\rightarrow Y)$ is smaller than the admissible set for Experiment 6. 
+In Experiment 4 I disaggregate the event that the oldest two children in the household share the same gender into the event that the oldest two children are male, the event that the oldest two children are female, and the event that the oldest two children do not share the same gender. In Experiment 5 I disaggregate the event that the oldest two children in the household share the same gender into the possible permutations of gender for two children. In both experiments, the admissible set of values of $ACE_n(D\rightarrow Y)$ is smaller than the admissible set for Experiment 1. There is greater statistical uncertainty in the admissible set for Experiment 4 and for Experiment 5, but the net effect of greater accuracy and less precision is to make the admissible set and the confidence region of the admissible set smaller in both cases. The admissible set of values of $ACE_n(D\rightarrow Y)$ is smaller than the admissible set for Experiment 1. 
 
-Either disaggregation increases $\|\mathcal{R}_Z\|$. 
+Most importantly, either disaggregation increases $\|\mathcal{R}_Z\|$. The advantage of disaggregating the event that the oldest two children in the household is that more variation is introduced that might be exploited. To illustrate, notice that
+\[\mathbb{P}_n(A|\text{Male-Male}\cup\text{Female-Female})\approx\frac{1}{2}\mathbb{P}_n(A|\text{Male-Male})+\frac{1}{2}\mathbb{P}_n(A|\text{Female-Female})\]
+for some event $A$. If 
+\[\mathbb{P}_n(A|\text{Male-Male})\neq\mathbb{P}_n(A|\text{Female-Female})\]
+(rather, the probabilities are not sufficiently close) then there is advantage to conditioning solely on one of these events. The reason is that one of the probabilities will constitute a more binding constraint. If preferences are convex but also exhibit gender bias then such an effect might be observed. For example, if 
+\[\text{Male-Male-Unknown}\succ\text{Female-Female-Unknown}\]
+in expectation then the probability that there are three or more children in the household is different depending upon whether the oldest two children in the household are male, or are female. Such an effect might lead to an imbalance in the conditional probabilities. The disaggregation does not dilute the identifying power of $Z$.   
 \begin{enumerate}
 \item[(c)] Combining the event that there is a multiple second birth with the possible permutations of gender for two children has more informational content. 
 \end{enumerate}
-In Experiment 8 I combine the event that there is a multiple second birth with the possible permutations of gender for two children. There is greater statistical uncertainty in the admissible set for Experiment 8, but the net effect of greater accuracy and less precision is to make the admissible set smaller. 
-%Main points to make here:
-%\begin{itemize}
-%\item Child gender is a weak instrument (already documented).
-%\item Very few occurrences of multiple second birth lead to larger confidence regions for parameters associated with that instrument.
-%\item More information is a good thing.
-%\item Model is overidentified.
-%\end{itemize}
+In Experiment 8 I combine the event that there is a multiple second birth with the possible permutations of gender for two children. There is greater statistical uncertainty in the admissible set for Experiment 8, but the net effect of greater accuracy and less precision is to make the admissible set and the confidence region of the admissible set smaller than the admissible set for Experiment 6. 
+
+Whether there are three or more children is dependent upon the quality margin (if preferences are convex then whether the oldest two children in the household share the same gender) and the quantity margin (whether there is a multiple second birth), and so combining information on both margins yields a more complete picture of the relationship. Some caution must be taken in combining information on both margins; namely, that the quantity margin has primacy over the quality margin. For example, if the oldest child in the household is male and there is a multiple second birth say, then whether the second oldest child is male or female is not relevant to whether there are three or more children in the household. A multiple second birth implies that there are three or more children in the household, regardless. The advantage of incorporating information on the quality margin is that quality is relevant when there is not a multiple second birth. 
+
+Incorporating information is advantageous, but (a) emphasises that simple redefinition of $Z$ without enriching $\mathcal{R}_Z$ is insufficient for a model to have more informational context. To enrich $\mathcal{R}_Z$, it is essential that $\|\mathcal{R}_Z\|$ increases such that there is greater variation to exploit. Although the gains from enriching $\mathcal{R}_Z$ in conducting estimation and inference are not substantial, the cost of incorporating information is low since the number of inequalities increases linearly in $\mathcal{R}_Z$. If the task of calculating the inequalities that describe the admissible set is automated then there is little reason not to incorporate information. Further, the availability of information on so many events implies that the single equation model is overidentified, and so its credibility is testable (to an extent).
 %==================================================%
 \subsection{Enriching individual response}
-First of all what is the parameter that \cite{cr13} identifies? They are after $ACE(D\rightarrow Y)$ which is a function of $Y(1)$ and $Y(0)$. In the model that doesn't include the $X$s, the parameter that they identify is $p(d)$. What is this?
-\begin{align*}
-Y&=\mathbbm{1}[p(D)>U]\\
-\mathbb{E}[Y(d)]&=\mathbb{E}[\mathbbm{1}[p(d)>U]]\\
-&=\mathbb{P}(U<p(d))\\
-&=p(d)
-\end{align*} 
-So $p(d)$ is equal to $\mathbb{E}[Y(d)]$. So what is this in the augmented model?
-\begin{align*}
-Y&=\mathbbm{1}[p(D,X)>U]\\
-\mathbb{E}[Y(d)]&=\mathbb{E}[\mathbbm{1}[p(d,X)>U]]\\
-&=\mathbb{E}[\mathbb{E}[\mathbbm{1}[p(d,X)>U]|X=x]]\\
-&=\mathbb{E}[\mathbb{E}[\mathbbm{1}[p(d,x)>U]]]\\
-&=\sum_{x\in\mathcal{R}_X}\mathbb{P}(x)\mathbb{E}[\mathbbm{1}[p(d,x)>U]]\\
-&=\sum_{x\in\mathcal{R}_X}\mathbb{P}(x)\mathbb{P}(U<p(d,x))\\
-&=\sum_{x\in\mathcal{R}_X}\mathbb{P}(x)p(d,x)
-\end{align*} 
-Hence, I have that
-\[p(d)=\sum_{x\in\mathcal{R}_X}\mathbb{P}(x)p(d,x)\]
-Model is actually falsified upon incorporation of exogenous variables for any race/ethnicity specification when the instrument is multi2nd. When the instrument is child gender then it is fine.
+I explore the effect of permitting $X$ to enter $h$ for the simple single equation model. That is, I explore the effect of assuming the simple single equation model versus assuming the single equation model. I show that $ACE(D\rightarrow Y)$ is a well-defined functional for the simple single equation model and for the single equation model. 
 
-Why is this the case? Instrumental inequality dictates that no greater than unity. But because the left-hand side can be shown to be no less than unity when there is a perfect instrument, this creates a problem. Clearly, unless $D$ has the same distribution for each $x$ then this will not be satisfied. Even if this is true in the population, the sampling process may lead its violation.
+I note that $ACE(D\rightarrow Y)$ is defined as 
+\[r(0)-r(1)\]
+for the simple single equation model. Equivalently, I note that 
+\[\mathbb{E}[Y(d)]=1-r(d)\]
+for the simple single equation model. As such, $ACE(D\rightarrow Y)$ is a well-defined functional for the simple single equation model. Further, the relationship between $r$ and $p$ is 
+\[r(d)=\sum_{x\in\mathcal{R}_X}p(d,x)\mathbb{P}(x),\]
+although I stress that this relationship is purely theoretical and does not hold in practice.\footnote{In other words, estimation of $r$ in the simple single equation model is not equivalent to estimation of $p$ in the single equation model.} The relationship between $r$ and $p$ illustrates the 
+\begin{itemize}
+\item simple single equation model is appropriate if $X$ only matters in the aggregate (general equilibrium effects). 
+\item need to show identification analysis for simple single equation model; sets $A$ and $B$ are not the same as the aggregation of the sets $A,B$ for the single equation model. 
+\item Weighting function is conditional and so need not be equal; sets can shift therefore like point estimates when you include relevant $X$.
+\item Context of application it is different.
+\end{itemize}
+%\begin{itemize}
+%\item can always define $p(d,x)$ as $r(d)$.
+%\item suggestive that $r(d)$ is an empirical strategy for recovering an outer region of the identified set under certain maintained assumptions.
+%\end{itemize}
+%First of all what is the parameter that \cite{cr13} identifies? They are after $ACE(D\rightarrow Y)$ which is a function of $Y(1)$ and $Y(0)$. In the model that doesn't include the $X$s, the parameter that they identify is $p(d)$. What is this?
+%\begin{align*}
+%Y&=\mathbbm{1}[p(D)>U]\\
+%\mathbb{E}[Y(d)]&=\mathbb{E}[\mathbbm{1}[p(d)>U]]\\
+%&=\mathbb{P}(U<p(d))\\
+%&=p(d)
+%\end{align*} 
+%So $p(d)$ is equal to $\mathbb{E}[Y(d)]$. So what is this in the augmented model?
+%\begin{align*}
+%Y&=\mathbbm{1}[p(D,X)>U]\\
+%\mathbb{E}[Y(d)]&=\mathbb{E}[\mathbbm{1}[p(d,X)>U]]\\
+%&=\mathbb{E}[\mathbb{E}[\mathbbm{1}[p(d,X)>U]|X=x]]\\
+%&=\mathbb{E}[\mathbb{E}[\mathbbm{1}[p(d,x)>U]]]\\
+%&=\sum_{x\in\mathcal{R}_X}\mathbb{P}(x)\mathbb{E}[\mathbbm{1}[p(d,x)>U]]\\
+%&=\sum_{x\in\mathcal{R}_X}\mathbb{P}(x)\mathbb{P}(U<p(d,x))\\
+%&=\sum_{x\in\mathcal{R}_X}\mathbb{P}(x)p(d,x)
+%\end{align*} 
+%Hence, I have that
+%\[p(d)=\sum_{x\in\mathcal{R}_X}\mathbb{P}(x)p(d,x)\]
+%Model is actually falsified upon incorporation of exogenous variables for any race/ethnicity specification when the instrument is multi2nd. When the instrument is child gender then it is fine.
+%
+%Why is this the case? Instrumental inequality dictates that no greater than unity. But because the left-hand side can be shown to be no less than unity when there is a perfect instrument, this creates a problem. Clearly, unless $D$ has the same distribution for each $x$ then this will not be satisfied. Even if this is true in the population, the sampling process may lead its violation.
 %==================================================%
 %%Figures and tables.
 \invisiblesection{Figures and tables}
@@ -646,13 +704,13 @@ Why is this the case? Instrumental inequality dictates that no greater than unit
 \begin{subfigure}{0.8\textwidth}
   \centering
   \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Characteristic.pdf}
-  \caption{A structural characteristic $\chi$ is a function of a structure $S$. A model $\mathcal{M}$ can be partitioned such that structures in a partition deliver the same value for $\chi$. Structures in the red partition $\color{red}\mathcal{M}$ deliver the value $a$ for $\chi$, and structures in the red partition $\color{blue}\mathcal{M}$ deliver the value $b$ for $\chi$. If $\chi$ is constant across all observationally equivalent structures that $\mathcal{M}$ admits then $\mathcal{M}$ is said to identify $\chi$. As $\chi(S_a)$ is equal to $\chi(S_b)$ (is equal to $a$) $\mathcal{M}$ identifies $\chi$.}
+  \caption{A structural characteristic $\chi$ is a function of a structure $S$. A model $\mathcal{M}$ can be partitioned such that structures in a partition deliver the same value for $\chi$. Structures in the red partition $\color{red}\mathcal{M}$ deliver the value $a$ for $\chi$, and structures in the blue partition $\color{blue}\mathcal{M}$ deliver the value $b$ for $\chi$. If $\chi$ is constant across all observationally equivalent structures that $\mathcal{M}$ admits then $\mathcal{M}$ is said to identify $\chi$. As $\chi(S_a)$ is equal to $\chi(S_b)$ (is equal to $a$) $\mathcal{M}$ identifies $\chi$.}
   \label{fig:characteristic}
   \end{subfigure}
   \begin{subfigure}{0.8\textwidth}
   \centering
   \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Uniform.pdf}
-  \caption{If $\mathcal{M}$ identifies $\chi$ for all structures in $\mathcal{M}$ then $\mathcal{M}$ is said to uniformly identify $\chi$. The class of all probability distributions (of observable variables) is partitioned into the blue partition $\color{red}\mathcal{P}$ and into the red partition $\color{blue}\mathcal{P}$. Probability distributions in $\color{red}\mathcal{P}$ are generated by (potentially many) structures in $\color{red}\mathcal{M}$, and probability distributions in $\color{blue}\mathcal{P}$ are generated by (potentially many) structures in $\color{blue}\mathcal{M}$. It is important that the number of partitions in $\mathcal{M}$ and in $\mathcal{P}$ are equal, although that number can be countably infinite. In the context of Figure~\ref{fig:uniform} $\mathcal{M}$ uniformly identifies $\chi$ since observationally equivalent structures that $\mathcal{M}$ admits are in the same colour of $\mathcal{M}$. More conveniently, whether $\mathcal{M}$ uniformly identifies $\chi$ can be determined by the existence of an identifying correspondence $G$, a functional. $\color{red}P$ is a probability distribution in $\color{red}\mathcal{P}$, and $\color{blue}P$ is a probability distribution in $\color{blue}\mathcal{P}$. Then $\mathcal{M}$ uniformly identifies $\chi$ if the value of $G(\color{red}P\color{black})$ is $a$ and if the value of $G(\color{blue}P\color{black})$ is $b$, holding for any such $\color{red}P$ and $\color{blue}P$. Notice that if $\mathcal{M}$ uniformly identifies all $\chi$ then $\mathcal{M}$ also uniformly identifies structures.}
+  \caption{If $\mathcal{M}$ identifies $\chi$ for all structures in $\mathcal{M}$ then $\mathcal{M}$ is said to uniformly identify $\chi$. The class of all probability distributions (of observable variables) is partitioned into the red partition $\color{red}\mathcal{P}$ and into the blue partition $\color{blue}\mathcal{P}$. Probability distributions in $\color{red}\mathcal{P}$ are generated by (potentially many) structures in $\color{red}\mathcal{M}$, and probability distributions in $\color{blue}\mathcal{P}$ are generated by (potentially many) structures in $\color{blue}\mathcal{M}$. It is important that the number of partitions in $\mathcal{M}$ and in $\mathcal{P}$ are equal, although that number can be countably infinite. In the context of Figure~\ref{fig:uniform} $\mathcal{M}$ uniformly identifies $\chi$ since observationally equivalent structures that $\mathcal{M}$ admits are in the same colour of $\mathcal{M}$. More conveniently, whether $\mathcal{M}$ uniformly identifies $\chi$ can be determined by the existence of an identifying correspondence $G$, a functional. $\color{red}P$ is a probability distribution in $\color{red}\mathcal{P}$, and $\color{blue}P$ is a probability distribution in $\color{blue}\mathcal{P}$. Then $\mathcal{M}$ uniformly identifies $\chi$ if the value of $G(\color{red}P\color{black})$ is $a$ and if the value of $G(\color{blue}P\color{black})$ is $b$, holding for any such $\color{red}P$ and $\color{blue}P$. Notice that if $\mathcal{M}$ uniformly identifies all $\chi$ then $\mathcal{M}$ also uniformly identifies structures.}
   \label{fig:uniform}
   \end{subfigure}
   \caption{The identification of structural characteristics, and identifying correspondences.}
@@ -688,7 +746,7 @@ Why is this the case? Instrumental inequality dictates that no greater than unit
   \label{fig:indistinguishable2}
   \end{subfigure}
 \begin{subfigure}{0.8\textwidth}
-  \caption{The left- and right-hand panels show directed acyclic graphs that are able to represent the same probability distribution of $(Y,D)$. In the left-hand panel, $U$ causes $Y$ and $D$. The left-hand panel is a representation of selection in that particular values of $D$ are strongly associated with particular values of $Y$ independently of the causal effect of $D$. In the right-hand panel, $U$ causes $Y$ but has an indirect effect on $D$ through $Y$. The right-hand panel is a representation of simultaneity in that $Y$ is both a cause of and an effect of $D$. The equivalence between the two directed acyclic graphs is that $Y$ can always be written as $\xi(D,U)$ for $\xi : \mathcal{R}_D\times\mathcal{R}_U\rightarrow\mathcal{R}_Y$ (provided that the right-hand panel is convergent).}
+  \caption{The left- and right-hand panels show directed acyclic graphs that are able to represent the same probability distribution of $(Y,D)$. In the left-hand panel, $U$ causes $Y$ and $D$. The left-hand panel is a representation of selection in that particular values of $D$ are strongly associated with particular values of $Y$ independently of the causal effect of $D$. In the right-hand panel, $U$ causes $Y$ but has an indirect effect on $D$ through $Y$. The right-hand panel is a representation of simultaneity in that $Y$ is both a cause of and an effect of $D$. The equivalence between the two directed acyclic graphs is that $Y$ can always be written as $\xi(D,U)$ for $\xi : \mathcal{R}_D\times\mathcal{R}_U\rightarrow\mathcal{R}_Y$ (provided that the right-hand panel converges to an equilibrium).}
   \end{subfigure}
    \begin{subfigure}{0.4\textwidth}
   \centering
@@ -713,7 +771,7 @@ Why is this the case? Instrumental inequality dictates that no greater than unit
 \caption{Suppose that $\color{blue}\theta_n^u(z)\color{black}$ and $\color{red}\theta_n^u(z')\color{black}$ are estimates of upper bounds on $\mathbb{E}[Y(0)]$. Similarly, suppose that $\color{blue}\phi_n^u(z)\color{black}$ and $\color{red}\phi_n^u(z')\color{black}$ are one-sided $1-\alpha$ confidence regions for $\color{blue}\theta_n^u(z)\color{black}$ and $\color{red}\theta_n^u(z')\color{black}$. $\color{red}\phi_n^u(z')\color{black}>\color{blue}\phi_n^u(z')\color{black}$ if there is greater variation in the estimate of $\color{blue}\theta_n^u(z)\color{black}$ (if there are fewer observations of $z$ than $z'$, say).}
 \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Confidence.pdf}
 \caption{As $\color{blue}\theta_n^u(z)\color{black}$ and $\color{red}\theta_n^u(z')\color{black}$ are both binding constraints on $\mathbb{E}[Y(0)]$, the minimum of these upper bounds must be binding. The minimum upper bound is written as $\theta^u_n$ and is $\color{blue}\theta_n^u(z)\color{black}$. The inferential problem is to determine $\phi_n^u$, which satisfies 
-$\mathbb{P}(\theta_n>\phi_n^u)=\alpha$. A na{\"i}ve approach would be to look only at the one-sided $1-\alpha$ confidence region for $\color{blue}\theta_n^u(z)\color{black}$, which is $\color{blue}\phi_n^u(z)\color{black}$. This approach ignores variation in $\color{red}\theta_n^u(z')\color{black}$. An equally na{\"i}ve approach would be to simply add aggregate variation to $\color{blue}\theta_n^u(z)\color{black}$. In other words, to add the weighted average of $\color{blue}\phi_n^u(z)\color{black}-\color{blue}\theta_n^u(z)\color{black}$ and $\color{red}\phi_n^u(z')\color{black}-\color{red}\theta_n^u(z')\color{black}$ to $\color{blue}\theta_n^u(z)\color{black}$. This approach is standard but fails in this case because it does not account for the fact that $\color{blue}\theta_n^u(z)\color{black}<\color{red}\theta_n^u(z')\color{black}$. Inference must account for the fact that upward variation in $\color{red}\theta_n^u(z')\color{black}$ does not matter so long as $\color{blue}\theta_n^u(z)\color{black}<\color{red}\theta_n^u(z')\color{black}$; equivalently, that $\color{red}\theta_n^u(z')\color{black}$ is a one-sided $1-\gamma$ confidence region for $\color{blue}\theta_n^u(z)\color{black}$ for $\gamma>\alpha$. \cite{cHlr13} solves the inferential problem by adjusting the critical value that is associated with the one-sided $1-\alpha$-confidence region. That is, \cite{cHlr13} adjusts $k$ such that $k$ that solves $\mathbb{P}(\theta_n>\color{blue}\theta_n^u(z)\color{black}+k\sigma)=\alpha$. The solution for $k$ yields $\phi_n^u$ with the one-sided $1-\alpha$ confidence region for $\theta_n^u$ given by the grey area. The distribution of $\theta_n^u$ over repeated samples is non-standard in this case and the bootstrap is  not necessarily consistent \citep{bU10}.} 
+$\mathbb{P}(\mathbb{E}[Y(0)]>\phi_n^u)=\alpha$. A na{\"i}ve approach would be to look only at the one-sided $1-\alpha$ confidence region for $\color{blue}\theta_n^u(z)\color{black}$, which is $\color{blue}\phi_n^u(z)\color{black}$. This approach ignores variation in $\color{red}\theta_n^u(z')\color{black}$. An equally na{\"i}ve approach would be to simply add aggregate variation to $\color{blue}\theta_n^u(z)\color{black}$. In other words, to add the weighted average of $\color{blue}\phi_n^u(z)\color{black}-\color{blue}\theta_n^u(z)\color{black}$ and $\color{red}\phi_n^u(z')\color{black}-\color{red}\theta_n^u(z')\color{black}$ to $\color{blue}\theta_n^u(z)\color{black}$. This approach is standard but fails in this case because it does not account for the fact that $\color{blue}\theta_n^u(z)\color{black}<\color{red}\theta_n^u(z')\color{black}$. Inference must account for the fact that upward variation in $\color{red}\theta_n^u(z')\color{black}$ does not matter so long as $\color{blue}\theta_n^u(z)\color{black}<\color{red}\theta_n^u(z')\color{black}$; equivalently, that $\color{red}\theta_n^u(z')\color{black}$ is a one-sided $1-\gamma$ confidence region for $\color{blue}\theta_n^u(z)\color{black}$ for $\gamma>\alpha$. \cite{cHlr13} solves the inferential problem by adjusting the critical value that is associated with the one-sided $1-\alpha$-confidence region. That is, \cite{cHlr13} adjusts $k$ such that $k$ that solves $\mathbb{P}(\mathbb{E}[Y(0)]>\color{blue}\theta_n^u(z)\color{black}+k\sigma)=\alpha$. The solution for $k$ yields $\phi_n^u$ with the one-sided $1-\alpha$ confidence region for $\theta_n^u$ given by the grey area. The distribution of $\theta_n^u$ over repeated samples is non-standard in this case and the bootstrap is  not necessarily consistent \citep{bU10}.} 
 \end{subfigure}
 \caption{A note on the inferential problem.}
 \label{fig:confidence}
