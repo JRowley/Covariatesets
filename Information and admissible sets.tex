@@ -452,7 +452,7 @@ over $\mathcal{R}_D\times\mathcal{R}_X$. This refinement is valid since $[0,p(d,
 \subsection{Identification analysis}
 I describe the identified set of the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$. I employ random set theory as a tool for the identification analysis. I distinguish between the identified set of a functional of a latent probability distribution and the admissible set of values for that functional.
 
-Assume that there is a particular ordering of the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_D$. First, I define correspondences (set-valued functions) $\mathcal{A}_p$ and $\mathcal{B}_p$ as follows.
+Assume that there is a particular ordering of the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$. First, I define correspondences (set-valued functions) $\mathcal{A}_p$ and $\mathcal{B}_p$ as follows.
 \begin{align*}
 \mathcal{A}_p(\eta;d,x)&\equiv\lbrace a : p(a,\eta)\leq p(d,x)\rbrace\\
 \mathcal{B}_p(\eta;d,x)&\equiv\lbrace b : p(b,\eta)\geq p(d,x)\rbrace
@@ -616,15 +616,54 @@ Whether there are three or more children is dependent upon the quality margin (i
 Incorporating information is advantageous, but (a) emphasises that simple redefinition of $Z$ without enriching $\mathcal{R}_Z$ is insufficient for a model to have more informational context. To enrich $\mathcal{R}_Z$, it is essential that $\|\mathcal{R}_Z\|$ increases such that there is greater variation to exploit. Although the gains from enriching $\mathcal{R}_Z$ in conducting estimation and inference are not substantial, the cost of incorporating information is low since the number of inequalities increases linearly in $\mathcal{R}_Z$. If the task of calculating the inequalities that describe the admissible set is automated then there is little reason not to incorporate information. Further, the availability of information on so many events implies that the single equation model is overidentified, and so its credibility is testable (to an extent).
 %==================================================%
 \subsection{Enriching individual response}
-I explore the effect of permitting $X$ to enter $h$ for the simple single equation model. That is, I explore the effect of assuming the simple single equation model versus assuming the single equation model. I show that $ACE(D\rightarrow Y)$ is a well-defined functional for the simple single equation model and for the single equation model. 
+I explore the effect of permitting $X$ to enter $h$ for the simple single equation model. I discuss the implications for individual behaviour of assuming the simple single equation model versus assuming the single equation model, and discuss the misspecification issue that arises when individual behaviour is dependent upon $X$ but the single equation model is assumed. 
 
-I note that $ACE(D\rightarrow Y)$ is defined as 
-\[r(0)-r(1)\]
-for the simple single equation model. Equivalently, I note that 
-\[\mathbb{E}[Y(d)]=1-r(d)\]
-for the simple single equation model. As such, $ACE(D\rightarrow Y)$ is a well-defined functional for the simple single equation model. Further, the relationship between $r$ and $p$ is 
-\[r(d)=\sum_{x\in\mathcal{R}_X}p(d,x)\mathbb{P}(x),\]
-although I stress that this relationship is purely theoretical and does not hold in practice.\footnote{In other words, estimation of $r$ in the simple single equation model is not equivalent to estimation of $p$ in the single equation model.} The relationship between $r$ and $p$ illustrates the 
+The principal difference between the simple single equation model and the single equation model is the treatment of $X$. The simple single equation model embeds the restriction that individual behaviour is not dependent upon $X$.\footnote{In fact, individual behaviour is permitted to depend upon $X$ provided that this dependency is in the aggregate. In other words, if only the aggregate of $X$ matters for individual behaviour, and so is constant across all economic agents.} In the context of the application, the restriction implies that race does not affect a mother's employment. Cultural norms or discriminatory policies that reduce the incentive to seek employment for mothers of a particular race say, independently of ability, are excluded by the simple single equation model. Supposing that the restriction that $U\independent X$ is maintained (a reasonable restriction given the definition of $X$) then the interpretation of $X$ for the simple single equation model is 
+\begin{enumerate}[(a)]
+\item as an exogenous variable that is irrelevant to the determination of any component of the structural model; or,
+\item as an instrumental variable if $X$ is figured to be a determinant of $D$, or is a good predictor of $D$.
+\end{enumerate}   
+In either case, if individual behaviour is dependent upon $X$ but the simple single equation model is assumed, the restriction that $U\independent X$ is no longer valid. Note that
+\[Y=\mathbbm{1}[p(D,X)<U]\]
+can always be written as
+\begin{equation}
+Y=\mathbbm{1}[\zeta(D,X)<\lambda(D,V)]\label{eq:bias}
+\end{equation}
+if the restrictions that the single equation model embeds are maintained. I define a function $\pi$ such that
+\[F_{\upsilon|d}(\upsilon<\pi(d)|d)=r(d),\] 
+where $F_\upsilon$ is the distribution function of some as yet undefined variable.\footnote{I depart from the notation that is employed throughout the rest of the paper in order to emphasise the variable to which this distribution corresponds.} Adding and subtracting $\pi(D)$ inside the indicator of (\ref{eq:bias}) yields
+\[Y=\mathbbm{1}[\pi(D)<\lambda(D,V)+\pi(D)-\zeta(D,X),\]
+which upon defining 
+\[\upsilon\equiv\lambda(D,V)+\pi(D)-\zeta(D,X)]\]
+demonstrates why the restriction that $U\independent X$ is no longer valid ($\upsilon$ is a function of $X$). The interpretation of the bias term $\zeta(D,X)$ is then as omitted variable bias in the case of (a), but more worryingly as a violation of the exclusion restriction if $X$ is re-branded as an instrumental variable as in the case of (b). 
+\subsubsection{Identification analysis}
+I describe the identified set of the collection of $r(d)$ over $\mathcal{R}_D$ for the simple single equation model. I employ random set theory as a tool for the identification analysis, and proceed as for the identification analysis of the single equation model. 
+
+Assume that there is a particular ordering of the collection of $r(d)$ over $\mathcal{R}_D$. First, I define correspondences $\mathcal{A}_r$ and $\mathcal{B}_r$ as follows.
+\begin{align*}
+\mathcal{A}_r(d)&\equiv\lbrace a : r(a)\leq r(d)\rbrace\\
+\mathcal{B}_r(d)&\equiv\lbrace b : r(b)\geq r(d)\rbrace
+\end{align*}
+Second, I describe the identified set of $r(d)$ as
+\begin{equation}
+\sup_{z\in\mathcal{R}_Z}\mathbb{P}(Y=0,D\in\mathcal{A}_r(d)|z)\leq r(d)\leq 1-\sup_{z\in\mathcal{R}_Z}\mathbb{P}(Y=1,D\in\mathcal{B}_r(d)|z),\label{eq:rident}
+\end{equation}
+which is valid by {\Art}.
+\subsubsection{Bias and the exclusion of $X$}
+I discuss the bias that arises when individual behaviour is dependent upon $X$ but the simple single equation model is assumed. I show that assuming the simple single equation model does not identify a superset of the identified set for the single equation model. 
+
+
+
+
+From the proof of (\ref{eq:ace}), the relationship between $r$ and $p$ is
+\[r(d)=\sum_{x\in\mathcal{R}_X}p(d,x)\mathbb{P}(x)\]
+
+
+
+
+
+
+
 \begin{itemize}
 \item simple single equation model is appropriate if $X$ only matters in the aggregate (general equilibrium effects). 
 \item need to show identification analysis for simple single equation model; sets $A$ and $B$ are not the same as the aggregation of the sets $A,B$ for the single equation model. 
