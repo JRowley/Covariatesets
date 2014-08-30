@@ -649,27 +649,50 @@ Second, I describe the identified set of $r(d)$ as
 \sup_{z\in\mathcal{R}_Z}\mathbb{P}(Y=0,D\in\mathcal{A}_r(d)|z)\leq r(d)\leq 1-\sup_{z\in\mathcal{R}_Z}\mathbb{P}(Y=1,D\in\mathcal{B}_r(d)|z),\label{eq:rident}
 \end{equation}
 which is valid by {\Art}.
-\subsubsection{Bias and the exclusion of $X$}
-I discuss the bias that arises when individual behaviour is dependent upon $X$ but the simple single equation model is assumed. I show that assuming the simple single equation model does not identify a superset of the identified set for the single equation model. 
+\subsubsection{Model misspecification and bias}
+I discuss the bias that arises when individual behaviour is dependent upon $X$ but the simple single equation model is assumed. I show that the simple single equation model does not identify a superset of the identified set if the restrictions that the single equation model embeds are maintained (model misspecification).
 
-
-
-
-From the proof of (\ref{eq:ace}), the relationship between $r$ and $p$ is
-\[r(d)=\sum_{x\in\mathcal{R}_X}p(d,x)\mathbb{P}(x)\]
-
-
-
-
-
-
-
+If the simple single equation model is misspecified then it does not (partially) identify $\mathbb{E}[Y(d)]$. Rather, the simple single equation model (partially) identifies the functional $r(d)$ that encompasses a bias. A natural question is then how does the identified set of $r(d)$ compare to the identified set of $\mathbb{E}[Y(d)]$, which is identified by the single equation model? I focus on the lower set of inequalities that describe the identified set in each case since the analysis is sufficient to address the question. I expand the left-hand inequality of (\ref{eq:rident}) to
+\begin{equation}
+\sup_{z\in\mathcal{R}_Z}\sum_{x\in\mathcal{R}_X}\mathbb{P}(Y=0,D\in\mathcal{A}_r(d)|x,z)\mathbb{P}(x|z),\label{eq:simplelower}
+\end{equation}
+which is valid by the Law of Total Expectation. Contrast this with the lower bound that is identified by the single equation model. 
+\begin{equation}
+\sum_{x\in\mathcal{R}_X}\mathbb{P}(\color{black}x\color{black})\color{black}\sup_{\eta\in\mathcal{R}_X}\sup_{z\in\mathcal{R}_Z}\color{black}\mathbb{P}(Y=0,D\in\color{black}\mathcal{A}_p(\eta;d,x)\color{black}|\color{black}\eta\color{black},z)\label{eq:lower}
+\end{equation} 
+I study the differences between (\ref{eq:simplelower}) and (\ref{eq:lower}), emphasising each difference that I study in turn to facilitate comparison. I study the partial (\emph{ceteris paribus}) effect of each difference.
+\begin{enumerate}[(a)]
+\item First, the supremum operator in (\ref{eq:lower}) guarantees that the conditional probability $\mathbb{P}(\cdot|\eta,z)$ is at least as great as in (\ref{eq:simplelower}).
+\[\sum_{x\in\mathcal{R}_X}\mathbb{P}(\color{black}x\color{black})\color{blue}\sup_{\eta\in\mathcal{R}_X}\color{black}\sup_{z\in\mathcal{R}_Z}\color{black}\mathbb{P}(Y=0,D\in\color{black}\mathcal{A}_p(\eta;d,x)\color{black}|\color{blue}\eta\color{black},z)\]
+This difference determines that the bias from model misspecification is a downwards bias. 
+\item Second, the location of the supremum operator in (\ref{eq:lower}) guarantees that the conditional probability $\mathbb{P}(\cdot|\eta,z)$ is at least as great as in (\ref{eq:simplelower}).
+\[\sum_{x\in\mathcal{R}_X}\mathbb{P}(\color{black}x\color{black})\color{black}\sup_{\eta\in\mathcal{R}_X}\color{blue}\sup_{z\in\mathcal{R}_Z}\color{black}\mathbb{P}(Y=0,D\in\color{black}\mathcal{A}_p(\eta;d,x)\color{black}|\color{black}\eta\color{black},z)\]
+It is somewhat misleading to study this difference independently of the weighting function but it is nonetheless enlightening to study the partial effect of moving the supremum operator inside the sum. If the difference between the probability weights is ignored then moving the supremum operator inside the sum determines that the bias from model misspecification is a downwards bias.
+\item Third, the probability weights in (\ref{eq:lower}) are unconditional probabilities.
+\[\sum_{x\in\mathcal{R}_X}\mathbb{P}(\color{blue}x\color{black})\color{black}\sup_{\eta\in\mathcal{R}_X}\color{blue}\sup_{z\in\mathcal{R}_Z}\color{black}\mathbb{P}(Y=0,D\in\color{black}\mathcal{A}_p(\eta;d,x)\color{black}|\color{black}\eta\color{black},z)\]
+Together with moving the supremum operator inside the sum, the difference in probability weights determines that the bias from model misspecification is ambiguous. 
+\item Fourth, $\mathcal{A}_r$ is not necessarily equal to $\mathcal{A}_p$.
+\[\sum_{x\in\mathcal{R}_X}\mathbb{P}(\color{black}x\color{black})\color{black}\sup_{\eta\in\mathcal{R}_X}\color{black}\sup_{z\in\mathcal{R}_Z}\color{black}\mathbb{P}(Y=0,D\in\color{blue}\mathcal{A}_p(\eta;d,x)\color{black}|\color{black}\eta\color{black},z)\] 
+Notice that the set $\mathcal{A}_r$ is constant across the summation, but that $\mathcal{A}_p$ can be different in each term of the summation. Further, it is unclear whether $\mathcal{A}_r$ and $\mathcal{A}_p$ are equal in any term of the summation. This difference determines that the bias from model misspecification is ambiguous.
+\end{enumerate} 
+Overall, the  differences between (\ref{eq:simplelower}) and (\ref{eq:lower}) determine that the bias from model misspecification is ambiguous; the bias from (c) and (d) can outweigh the bias from (a) and (b). Extending this finding to the upper bound that is identified by the single equation model, the effect of permitting $X$ to enter $h$ is to alter the length of the identified set, to shift the location of the identified set, or a combination of both. With respect to location shift, the finding is consistent with the behaviour of identifying models.  
+\subsubsection{Hispanic ethnicity}
+\color{red}
 \begin{itemize}
-\item simple single equation model is appropriate if $X$ only matters in the aggregate (general equilibrium effects). 
-\item need to show identification analysis for simple single equation model; sets $A$ and $B$ are not the same as the aggregation of the sets $A,B$ for the single equation model. 
-\item Weighting function is conditional and so need not be equal; sets can shift therefore like point estimates when you include relevant $X$.
-\item Context of application it is different.
-\end{itemize}
+\item Add in $X$ to $h$.
+\item Context of application.
+\item Define $X$ as event that a mother is Hispanic; $Z$ is multi2nd.
+\item Of 75 possible orderings there is only one possible ordering that is admitted (72 are not internally consistent - lower bound greater than upper bound on at least one of the parameters; and 2 of the 3 non-excluded orderings do not respect their ordering over the parameters). 
+\item Ordering that is preserved is 
+\[p(0,0)=p(0,1)<p(1,0)<p(1,1),\]
+or that the conditional average causal effect is greater for Hispanics than for non-Hispanics.
+\item $[0.272,0.470]<0.521<0.555$ - again multi2nd point identifies $p(1,x)$. 
+\item Probability of Hispanic is $0.074$. 
+\item $ACE_n(D\rightarrow Y|1)\in [-0.250,-0.052]$ and $ACE_n(D\rightarrow Y|0)\in [-0.283,-0.085]$. 
+\item Minkowski sum of the two sets weighted by the probability of Hispanic gives $ACE(D\rightarrow Y)\in [-0.252,-0.054]$.
+\item Gives a narrower set than the original admissible set without $X$.
+\end{itemize} 
+\color{black}
 %\begin{itemize}
 %\item can always define $p(d,x)$ as $r(d)$.
 %\item suggestive that $r(d)$ is an empirical strategy for recovering an outer region of the identified set under certain maintained assumptions.
