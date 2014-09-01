@@ -1,6 +1,206 @@
-ptm <- proc.time()
+Source <- url("http://www.ucl.ac.uk/~zctpep9/Data%20archive/AE98Data.RData")
+DF <- load(Source)
+PUMS80M <- D
+rm(list = c("Source","DF","D"))
 # ======================================================================= #
 # Setup.
+# ======================================================================= #
+
+tol = 1e-8
+
+# Randomly sample.
+D <- PUMS80M[sample(1:nrow(PUMS80M),254654,replace=F),]
+
+library(iterpc)
+
+# Get all possible strict orderings of r(d).
+a = iterpc(2, 2, ordered = T, replace = T)
+Order <- data.frame(getall(a))
+Output <- matrix(nrow=nrow(Order),ncol=2)
+for(j in 1:nrow(Order)){
+  Output[j,] = as.numeric(factor(as.numeric(Order[j,])))
+}
+Order <- unique(Output)
+rm(Output)
+rm(a)
+# Rename columns of Order.
+a = 0:1 
+a = as.vector(paste("f",a,sep="."))
+colnames(Order) <- a
+rm(a)
+rm(j)
+
+# ======================================================================= #
+# Get a grid for (Y,D,X,Z) and fill in probabilities.
+# ======================================================================= #
+
+Data <- D[,c("workedm","morekids","multi2nd")]
+colnames(Data) <- c("Y","D","Z")
+
+rm(PUMS80M)
+
+P <- expand.grid(Y=unique(Data$Y),
+                 D=unique(Data$D),
+                 Z=unique(Data$Z))
+
+library(plyr)
+
+a <- count(Data)
+b <- count(Data,c("Z"))
+colnames(a) <- c(colnames(a[,1:3]),"Total")
+
+Prob <- merge(a,b,by=c("Z"),all=T)
+Prob$p <- Prob$Total/Prob$freq
+Prob <- Prob[,c(1:3,6)]
+rm(a)
+rm(b)
+
+P <- merge(P,Prob,by=c("Y","D","Z"),all=T)
+P[is.na(P)] = 0
+rm(Prob)
+rm(Data)
+
+# ====================================================================== #
+# Compute the lower probability for an order.
+# ====================================================================== #
+
+grid <- expand.grid(d = unique(P$D),
+                    z = unique(P$Z))
+
+grid$reference <- 1 + grid$d 
+
+# Let j be the ordering that is being considered.
+# Let k be the row of grid that is being considered.
+
+# I will take a particular ordering and then create a list for that 
+# ordering. The list will consist of one slice for each row of the grid,
+# and will be the set A that I have defined in the text.
+
+
+a = function(j){
+  output <- list()
+  for(k in 1:nrow(grid)){
+    output[[k]] <- which(Order[j,] <=
+                           Order[j,grid$reference[k]]) - 1        
+  }
+  return(output)
+}
+
+b = function(j){
+  intermediate <- a(j)
+  output <- vector(length=nrow(grid))
+  for(k in 1:nrow(grid)){
+    output[k] <- sum(P[P$Y == 0 & P$D %in% unlist(intermediate[k]) &
+                         P$Z == grid$z[k],]$p)    
+  }
+  return(output)
+}
+
+lower = function(){
+  output <- list()
+  for(j in 1:nrow(Order)){
+    intermediate <- cbind(grid,b(j))
+    colnames(intermediate) <- c(colnames(grid),"inequal")
+    intermediate <- ddply(intermediate,.(d),summarize,bound=max(inequal))
+    output[[j]] <- intermediate
+  }
+  return(output)
+}
+
+bound.l <- lower()
+
+rm(list=c("a","b","lower"))
+
+# ====================================================================== #
+# Compute the upper probability for an order.
+# ====================================================================== #
+
+a = function(j){
+  output <- list()
+  for(k in 1:nrow(grid)){
+    output[[k]] <- which(Order[j,] >=
+                           Order[j,grid$reference[k]]) - 1        
+  }
+  return(output)
+}
+
+b = function(j){
+  intermediate <- a(j)
+  output <- vector(length=nrow(grid))
+  for(k in 1:nrow(grid)){
+    output[k] <- sum(P[P$Y == 1 & P$D %in% unlist(intermediate[k]) &
+                         P$Z == grid$z[k],]$p)    
+  }
+  return(output)
+}
+
+upper = function(){
+  output <- list()
+  for(j in 1:nrow(Order)){
+    intermediate <- cbind(grid,b(j))
+    colnames(intermediate) <- c(colnames(grid),"inequal")
+    intermediate <- ddply(intermediate,.(d),summarize,bound=1-max(inequal))
+    output[[j]] <- intermediate
+  }
+  return(output)
+}
+
+bound.u <- upper()
+
+rm(list=c("a","b","upper"))
+
+# ====================================================================== #
+# Store them all in one list.
+# ====================================================================== #
+
+a = function(r,s){
+  bound <- list()
+  for(k in 1:length(r)){
+    bound[[k]] <- merge(r[k],s[k],by=c("d"),all=T)
+    colnames(bound[[k]]) <- c("d","lower","upper")
+  }
+  return(bound)
+}
+
+b = function(r){
+  for(k in 1:length(r)){
+    s = data.frame(r[k])
+    r[[k]] <- ifelse(prod(s$upper >= (s$lower-tol)) == 0,NA,r[k])
+  }
+  return(r)
+}
+
+bound <- a(bound.l,bound.u)
+bound <- b(bound)
+
+rm(list=c("a","b"))
+
+# ====================================================================== #
+# Remove bounds that do not satisfy the ordering.
+# ====================================================================== #
+
+a = function(r){
+  Store <- list()
+  for(j in 1:length(r[is.na(r)==F])){
+    s <- data.frame(r[is.na(r)==F][j])
+    s <- s[with(s, order(d)),]
+    s <- cbind(s,Order[is.na(r)==F,])
+    colnames(s) <- c("d","lower","upper","order")
+    Store[[j]] <- s
+  }
+  return(Store)
+}
+
+bound.x1 <- a(bound)
+
+rm(a)
+
+# ======================================================================= #
+# ======================================================================= #
+# ======================================================================= #
+# Do again for X=2.
+# ======================================================================= #
+# ======================================================================= #
 # ======================================================================= #
 
 # Specify the support of X.
@@ -12,7 +212,7 @@ library(iterpc)
 # Get all possible strict orderings of p(d,x).
 a = iterpc(2*X, 2*X, ordered = T, replace = T)
 Order <- data.frame(getall(a))
-Output <- matrix(nrow=nrow(Order),ncol=2*X)
+Output <- matrix(nrow=nrow(Order),ncol=4)
 for(j in 1:nrow(Order)){
   Output[j,] = as.numeric(factor(as.numeric(Order[j,])))
 }
@@ -31,16 +231,8 @@ X = letters[1:X]
 # Get a grid for (Y,D,X,Z) and fill in probabilities.
 # ======================================================================= #
 
-Source <- url("http://www.ucl.ac.uk/~zctpep9/Data%20archive/AE98Data.RData")
-DF <- load(Source)
-
-PUMS80M <- D
-rm(list = c("Source","DF","D"))
-
-Data <- PUMS80M[,c("workedm","morekids","hispm","multi2nd")]
+Data <- D[,c("workedm","morekids","hispm","multi2nd")]
 colnames(Data) <- c("Y","D","X","Z")
-
-rm(PUMS80M)
 
 P <- expand.grid(Y=unique(Data$Y),
                  D=unique(Data$D),
@@ -172,7 +364,7 @@ a = function(r,s){
 b = function(r){
   for(k in 1:length(r)){
     s = data.frame(r[k])
-    r[[k]] <- ifelse(prod(s$upper >= s$lower) == 0,NA,r[k])
+    r[[k]] <- ifelse(prod(s$upper >= (s$lower-tol)) == 0,NA,r[k])
   }
   return(r)
 }
@@ -229,7 +421,7 @@ a = function(r){
     bash <- vector(length = nrow(s))
     for(k in 1:nrow(s)){
       bash[k] <- prod(s$upper[k]<=s[s$order>s$order[k],3])
-      }
+    }
     Store[j] = prod(bash)
   }
   return(Store)
@@ -269,5 +461,3 @@ Bound <- b(bound,a)
 
 rm(a)
 rm(b)
-
-proc.time() - ptm

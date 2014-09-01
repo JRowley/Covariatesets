@@ -437,7 +437,7 @@ for all test sets $T$ in the class of compact sets $\mathcal{T}$. Here, I write 
 
 In the context of the single equation model, $(Y(0),Y(1))$ is a random closed set that has a well-defined probability distribution. I follow \cite{cr13} in defining a level set $\mathcal{U}_h$.
 \[\mathcal{U}_h(y,d,x)\equiv\lbrace u : y=h(d,x,u)\rbrace\] 
-The usefulness of $\mathcal{U}_h$ to the identification analysis is its synonymity with $(Y(0),Y(1))$. This point is the subject of Figure~(\color{red}yet to be drawn\color{black}). I translate {\Art} as 
+The usefulness of $\mathcal{U}_h$ to the identification analysis is its synonymity with $(Y(0),Y(1))$. This point is the subject of Figure~(\ref{fig:timeline}). I translate {\Art} as 
 \begin{align}
 \mathbb{P}(U\in T|x,z)&\leq\mathbb{P}(\mathcal{U}_h(Y,D,x)\cap T\neq\emptyset|x,z)\label{eq:modcap}\\
 \mathbb{P}(U\in T|x,z)&\geq\mathbb{P}(\mathcal{U}_h(Y,D,x)\subseteq T|x,z)\label{eq:modcon}
@@ -892,6 +892,18 @@ $\mathbb{P}(\mathbb{E}[Y(0)]>\phi_n^u)=\alpha$. A na{\"i}ve approach would be to
 \end{subfigure}
 \caption{}
 \label{fig:allin}
+\end{figure}
+%==================================================%
+\begin{figure}[p]
+\centering
+\begin{subfigure}{0.8\textwidth}
+\caption{The goal of the identification analysis is to determine the location of $r(0)$ and of $r(1)$. The analysis is confounded by the fact that it is not known whether $r(0)>r(1)$, $r(0)<r(1)$ or $r(0)=r(1)$. The order of the collection of $r(d)$ is crucial since it is the order that determines the value of $\mathcal{A}_r$ and of $\mathcal{B}_r$.}
+\includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Timeline.pdf}
+\caption{Suppose that $r(0)<r(1)$. What can be determined about the location of $p(0)$ from observable variables alone? Any economic agent that is characterised by $\color{blue}Y=0\cap D=0\color{black}$ must also be characterised by $u$ somewhere in the blue dashed interval. Similarly, any economic agent that is characterised by $\color{red}Y=0\cap D=1\color{black}$ must also be characterised by $u$ somewhere in the red dashed interval. The location of $r(0)$ is confounded since it is not known what proportion of $\color{red}Y=0\cap D=1\color{black}$ are located in $[0,r(0)]$ (the left partition of the red dashed interval), and what proportion of $\color{red}Y=0\cap D=1\color{black}$ are located in $[r(0),r(1)]$ (the right partition of the red dashed interval). A lower bound on the location of $r(0)$ is then that all economic agents that are are characterised by $\color{red}Y=0\cap D=1\color{black}$ are located in $[r(0),r(1)]$. The measure of economic agents that are located in $[0,r(0)]$ in this case is then $\mathbb{P}(Y=0,D=\color{blue}0\color{black})$. An upper bound on the location of $r(0)$ is then that all economic agents that are are characterised by $\color{red}Y=0\cap D=1\color{black}$ are located in $[0,r(0)]$. The measure of economic agents that are located in $[0,r(0)]$ in this case is then $\mathbb{P}(Y=0,D=\color{blue}0\color{black}\cup\color{red}1\color{black})$. In this case, $\mathcal{A}_r(0)=\lbrace 0\rbrace$ and $\mathcal{B}_r(0)=\lbrace 0,1\rbrace$.}
+\caption{Note that economic agents that are located in $[0,r(0)]$ are characterised by $Y(0)=0$ and $Y(1)=0$. In contrast, economic agents that are located in $(r(0),r(1)]$ are characterised by $Y(0)=1$ and $Y(1)=0$. The problem of determining the measure of economic agents that are characterised by each pair $(Y(0),Y(1))$ is then equivalent to locating $r(0)$ and $r(1)$. This point validates consideration of level sets of $U$.}
+\end{subfigure}
+\caption{A note on partial identification.}
+\label{fig:timeline}
 \end{figure}
 %==================================================%
 %% Tables

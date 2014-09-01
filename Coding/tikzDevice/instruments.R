@@ -1,3 +1,4 @@
+require(ggplot2)
 require(tikzDevice)
 options(tikzMetricPackages = c("\\usepackage[utf8]{inputenc}",
                                "\\usepackage[T1]{fontenc}", "\\usetikzlibrary{calc}",
@@ -17,10 +18,9 @@ p + theme_bw() +
           panel.background = element_blank(),
           axis.line = element_line(colour = 'black')) +
   theme(legend.position="none") +
-  geom_rect(aes(xmin=cl,xmax=lower,ymin=Exp-0.4,ymax=Exp+0.4),fill="red",alpha=0.5) +
-  geom_rect(aes(xmin=lower,xmax=upper,ymin=Exp-0.4,ymax=Exp+0.4),fill="blue",alpha=0.5) +
-  geom_rect(aes(xmin=upper,xmax=cu,ymin=Exp-0.4,ymax=Exp+0.4),fill="red",alpha=0.5) +
-  #   geom_vline(xintercept = 0) +
+  geom_rect(aes(xmin=cl,xmax=cu,ymin=Exp-0.4,ymax=Exp+0.4),fill="red") +
+  geom_rect(aes(xmin=lower,xmax=upper,ymin=Exp-0.4,ymax=Exp+0.4),fill="blue") +
+    #   geom_vline(xintercept = 0) +
   scale_x_continuous(breaks = round(seq(min(ACE$lower), max(ACE$upper), by = 0.1),1)) +
   scale_y_continuous(breaks = round(seq(min(ACE$Exp), max(ACE$Exp), by = 1),1)) +
   xlab("$ACE_n(D\\rightarrow Y)$")

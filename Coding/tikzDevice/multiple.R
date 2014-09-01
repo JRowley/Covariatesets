@@ -17,16 +17,13 @@ p + theme_bw() +
         panel.background = element_blank(),
         axis.line = element_line(colour = 'black')) +
   theme(legend.position="none") +
-  geom_rect(data=df,aes(xmin=cl0,xmax=l0,ymin=cl1,ymax=cu1),fill="red",alpha=0.5) +
-  geom_rect(data=df,aes(xmin=u0,xmax=cu0,ymin=cl1,ymax=cu1),fill="red",alpha=0.5) +
-  geom_rect(data=df,aes(xmin=l0,xmax=u0,ymin=cl1,ymax=l1),fill="red",alpha=0.5) +
-  geom_rect(data=df,aes(xmin=l0,xmax=u0,ymin=u1,ymax=cu1),fill="red",alpha=0.5) +
+  geom_rect(data=df,aes(xmin=cl0,xmax=cu0,ymin=cl1,ymax=cu1),fill="red") +
+#   geom_rect(data=df,aes(xmin=u0,xmax=cu0,ymin=cl1,ymax=cu1),fill="red",alpha=0.5) +
+#   geom_rect(data=df,aes(xmin=l0,xmax=u0,ymin=cl1,ymax=l1),fill="red",alpha=0.5) +
+#   geom_rect(data=df,aes(xmin=l0,xmax=u0,ymin=u1,ymax=cu1),fill="red",alpha=0.5) +
   geom_line(aes(x=c(0.529,0.733),y=0.476),color="blue") +
   scale_x_continuous(breaks = round(seq(0.371, 0.723, by = 0.1),1)) +
   scale_y_continuous(breaks = round(seq(0.186, 0.777, by = 0.1),1)) +
   xlab("$\\mathbb{E}_n[Y(0)]$") +
   ylab("$\\mathbb{E}_n[Y(1)]$") 
 dev.off()
-
-# File to input is located at F:\Documents and photos\Masters work\test2.tex
-# Check out Yihui and the vignette
