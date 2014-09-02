@@ -23,7 +23,7 @@
 \author{Jeff Rowley}
 \newcommand{\thedate}{\today}
 % Enter document details here.
-\newcommand{\details}{C:/Users/Jeffro/Dropbox/TeXTemplates/}
+\newcommand{\details}{C:/Dropbox/TeXTemplates/}
 % Enter the file path here for the UCL logo and bibliography.
 % Change this file path for different computer systems.
 \newcommand{\homePC}{C:/Users/Jeffro/Documents/}
@@ -677,22 +677,42 @@ Notice that the set $\mathcal{A}_r$ is constant across the summation, but that $
 \end{enumerate} 
 Overall, the  differences between (\ref{eq:simplelower}) and (\ref{eq:lower}) determine that the bias from model misspecification is ambiguous; the bias from (c) and (d) can outweigh the bias from (a) and (b). Extending this finding to the upper bound that is identified by the single equation model, the effect of permitting $X$ to enter $h$ is to alter the length of the identified set, to shift the location of the identified set, or a combination of both. With respect to location shift, the finding is consistent with the behaviour of identifying models.  
 \subsubsection{Hispanic ethnicity}
-\color{red}
-\begin{itemize}
-\item Add in $X$ to $h$.
-\item Context of application.
-\item Define $X$ as event that a mother is Hispanic; $Z$ is multi2nd.
-\item Of 75 possible orderings there is only one possible ordering that is admitted (72 are not internally consistent - lower bound greater than upper bound on at least one of the parameters; and 2 of the 3 non-excluded orderings do not respect their ordering over the parameters). 
-\item Ordering that is preserved is 
+%\color{red}
+%\begin{itemize}
+%\item Add in $X$ to $h$.
+%\item Context of application.
+%\item Define $X$ as event that a mother is Hispanic; $Z$ is multi2nd.
+%\item Of 75 possible orderings there is only one possible ordering that is admitted (72 are not internally consistent - lower bound greater than upper bound on at least one of the parameters; and 2 of the 3 non-excluded orderings do not respect their ordering over the parameters). 
+%\item Ordering that is preserved is 
+%\[p(0,0)=p(0,1)<p(1,0)<p(1,1),\]
+%or that the conditional average causal effect is greater for Hispanics than for non-Hispanics.
+%\item $[0.272,0.470]<0.521<0.555$ - again multi2nd point identifies $p(1,x)$. 
+%\item Probability of Hispanic is $0.074$. 
+%\item $ACE_n(D\rightarrow Y|1)\in [-0.250,-0.052]$ and $ACE_n(D\rightarrow Y|0)\in [-0.283,-0.085]$. 
+%\item Minkowski sum of the two sets weighted by the probability of Hispanic gives $ACE(D\rightarrow Y)\in [-0.252,-0.054]$.
+%\item Gives a narrower set than the original admissible set without $X$.
+%\end{itemize} 
+%\color{black}
+I show that there is a non-trivial difference in the admissible set of $ACE_n(D\rightarrow Y)$ for the simple single equation model versus for the single equation model in the context of the application. I determine the admissible set of $ACE_n(D\rightarrow Y|x)$ when $X$ is defined as the event that a mother is Hispanic. I discuss computation when there are many admissible orderings. 
+
+I define $X$ as the event that a mother is Hispanic. There is reason to suppose that the behaviour of Hispanic mothers is different to mothers of a different ethnic background due to cultural differences and immigration patterns.   
+\[\mathbb{P}_n(X=0)=0.926\text{ versus }\mathbb{P}_n(X=1)=0.074\] 
+I define $Z$ as the event that there is a multiple second birth. The choice of definition for $Z$ reflects a desire to simplify the analysis, so as not to confound the analysis with issues of computation (recall that the event that there is a multiple second birth excludes many orderings).
+
+When $X$ and $D$ are both binary variables there are four parameters to estimate, and 75 possible orderings over these parameters. Of these 75 possible orderings, 72 are not internally consistent given $\mathbb{P}_n$ and are eliminated. That is, given $\mathbb{P}_n$ and an ordering, the admissible set is empty for at least one of the parameters (in practice, an upper bound is less than a lower bound). Further, of the three admissible orderings, a further two do not yield admissible sets that are consistent with the ordering that generates them. For example, if the admissible set of $p(d,x)$ has a non-empty intersection with the admissible set of $p(1-d,1-x)$ this would violate a strict order relation. The only ordering that survives elimination is
 \[p(0,0)=p(0,1)<p(1,0)<p(1,1),\]
-or that the conditional average causal effect is greater for Hispanics than for non-Hispanics.
-\item $[0.272,0.470]<0.521<0.555$ - again multi2nd point identifies $p(1,x)$. 
-\item Probability of Hispanic is $0.074$. 
-\item $ACE_n(D\rightarrow Y|1)\in [-0.250,-0.052]$ and $ACE_n(D\rightarrow Y|0)\in [-0.283,-0.085]$. 
-\item Minkowski sum of the two sets weighted by the probability of Hispanic gives $ACE(D\rightarrow Y)\in [-0.252,-0.054]$.
-\item Gives a narrower set than the original admissible set without $X$.
-\end{itemize} 
-\color{black}
+which confirms that the effect of additional children is different for Hispanic mothers than for non-Hispanic mothers. Further, the ordering suggests that the employment rate of Hispanic mothers should be the same as the employment rate of non-Hispanic mothers if there are two children in the household. The admissible set of the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$ for the only admissible ordering is
+\[[0.272,0.470]=[0.272,0.470]<0.521<0.555.\]
+Again, the event that there is a multiple second birth identifies $\mathbb{E}_n[Y(1)]$ in the sub-population of mothers that experience a multiple second birth, and this property carries over to the groups of Hispanic mothers and non-Hispanic mothers (that is, the property holds conditionally as well as unconditionally). The admissible set of the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$ for the only admissible ordering determines that the employment of Hispanic mothers responds more negatively to additional children than the employment of non-Hispanic mothers.  
+\[ACE_n(D\rightarrow Y|X=0)\in[-0.283,-0.085]\text{ versus }ACE_n(D\rightarrow Y|X=1)\in[-0.250,-0.052]\] 
+Although estimation determines that the employment of Hispanic mothers responds more negatively to additional children it does not give an indication of why this should be the case. It of concern for policy-makers whether this effect is due to cultural differences or is due to the type of employment that is available to Hispanic individuals, since a policy such as subsidised childcare for mothers will have a induce a different response depending upon which mechanism is driving the effect.
+
+The relationship between $ACE_n(D\rightarrow Y)$ and its conditional counterparts takes the form of a weighted sum (over $\mathcal{R}_X$ with weights equal to $\mathbb{P}_n(x)$). As the sum is a summation of sets, it is a Minkowski sum and defines a convex set for the admissible set of $ACE_n(D\rightarrow Y)$. 
+\[ACE_n(D\rightarrow Y|X=0)\in[-0.252,-0.054]\]
+The admissible set for the single equation model is a proper subset of the admissible set for the simple single equation model. Although this is not a general property (the direction of the bias is ambiguous), it is suggestive of the advantages of permitting $X$ to enter $h$.
+
+As a final remark, the event that there is a multiple second birth is a good predictor of whether there are three or more children in the household and so eliminates many orderings. Whether the oldest two children in the household share the same gender is a weak predictor of whether there are three or more children in the household and so does not eliminate as many orderings. A relevant question is how to define the Minkowski sum when the admissible set for $p(d,x)$ is a set of disconnected sets, as many as one disconnected set per admissible ordering. I note that it is sufficient to define the Minkowski sum for the sets that are generated by the same ordering, and that it is not necessary to consider the sum of sets that are generated by different orderings. The number of disconnected sets that forms the admissible sets is then at most equal to the number of admissible orderings.
+\section{Conclusion}
 %\begin{itemize}
 %\item can always define $p(d,x)$ as $r(d)$.
 %\item suggestive that $r(d)$ is an empirical strategy for recovering an outer region of the identified set under certain maintained assumptions.
@@ -729,13 +749,13 @@ or that the conditional average causal effect is greater for Hispanics than for 
 \centering
 \begin{subfigure}{0.8\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Identification.pdf}
+  \includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/Identification.pdf}
   \caption{A model $\mathcal{M}$ is a set of structures that forms a proper subset of the class of all structures $\mathcal{S}$. Each structure in $\mathcal{M}$ generates a probability distribution in the class of all probability distributions (of observable variables) $\mathcal{P}$. Then the image $\mathcal{I}$ is the set of all probability distributions that are generated by structures in $\mathcal{M}$.}
   \label{fig:model}
   \end{subfigure}
 \begin{subfigure}{0.8\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Observationalrestrictiveness.pdf}
+  \includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/Observationalrestrictiveness.pdf}
   \caption{A structure $S$ is incompatible with data if it generates a probability distribution (of observable variables) $P$ that is distinct from a realised probability distribution $\mathbb{P}$. If all structures in $\mathcal{M}$ are incompatible with data then $\mathcal{M}$ is said to be observationally restrictive, and is falsified. This condition is equivalent to $\mathbb{P}\in\mathcal{P}\setminus\mathcal{I}$.}
   \label{fig:obs.restrict}
   \end{subfigure}
@@ -747,13 +767,13 @@ or that the conditional average causal effect is greater for Hispanics than for 
 \centering
 \begin{subfigure}{0.8\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Pointidentification.pdf}
+  \includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/Pointidentification.pdf}
   \caption{A model $\mathcal{M}$ is said to identify a structure $S$ if the probability distribution (of observable variables) $P$ that is generated by $S$ is distinct from those generated by other structures in $\mathcal{M}$. The structures $S_a$, $S_b$ and $S_c$ are said to be observationally equivalent as they all generate $P$ but $S_b$ and $S_c$ are not admitted by $\mathcal{M}$. As $S_a$ is the only structure that is admitted by $\mathcal{M}$ and that generates $P$, $S_a$ is identified by $\mathcal{M}$. For completeness, $\mathcal{M}$ is said to be uniformly identifying if it identifies each structure that it admits.}
   \label{fig:identify}
   \end{subfigure}
   \begin{subfigure}{0.8\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Setidentification.pdf}
+  \includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/Setidentification.pdf}
   \caption{As $S_a$ and $S_b$ are observationally equivalent and are both admitted by $\mathcal{M}$ then $\mathcal{M}$ does not identify either $S_a$ or $S_b$. Nonetheless, as $\mathcal{M}$ restricts the set of observationally equivalent structures that generate $P$ to $S_a$ and $S_b$ then $\mathcal{M}$ partially identifies $S_a$ (and $S_b$ to within $\lbrace S_a,S_b\rbrace$).}
   \label{fig:partial}
   \end{subfigure}
@@ -765,13 +785,13 @@ or that the conditional average causal effect is greater for Hispanics than for 
 \centering
 \begin{subfigure}{0.8\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Characteristic.pdf}
+  \includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/Characteristic.pdf}
   \caption{A structural characteristic $\chi$ is a function of a structure $S$. A model $\mathcal{M}$ can be partitioned such that structures in a partition deliver the same value for $\chi$. Structures in the red partition $\color{red}\mathcal{M}$ deliver the value $a$ for $\chi$, and structures in the blue partition $\color{blue}\mathcal{M}$ deliver the value $b$ for $\chi$. If $\chi$ is constant across all observationally equivalent structures that $\mathcal{M}$ admits then $\mathcal{M}$ is said to identify $\chi$. As $\chi(S_a)$ is equal to $\chi(S_b)$ (is equal to $a$) $\mathcal{M}$ identifies $\chi$.}
   \label{fig:characteristic}
   \end{subfigure}
   \begin{subfigure}{0.8\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Uniform.pdf}
+  \includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/Uniform.pdf}
   \caption{If $\mathcal{M}$ identifies $\chi$ for all structures in $\mathcal{M}$ then $\mathcal{M}$ is said to uniformly identify $\chi$. The class of all probability distributions (of observable variables) is partitioned into the red partition $\color{red}\mathcal{P}$ and into the blue partition $\color{blue}\mathcal{P}$. Probability distributions in $\color{red}\mathcal{P}$ are generated by (potentially many) structures in $\color{red}\mathcal{M}$, and probability distributions in $\color{blue}\mathcal{P}$ are generated by (potentially many) structures in $\color{blue}\mathcal{M}$. It is important that the number of partitions in $\mathcal{M}$ and in $\mathcal{P}$ are equal, although that number can be countably infinite. In the context of Figure~\ref{fig:uniform} $\mathcal{M}$ uniformly identifies $\chi$ since observationally equivalent structures that $\mathcal{M}$ admits are in the same colour of $\mathcal{M}$. More conveniently, whether $\mathcal{M}$ uniformly identifies $\chi$ can be determined by the existence of an identifying correspondence $G$, a functional. $\color{red}P$ is a probability distribution in $\color{red}\mathcal{P}$, and $\color{blue}P$ is a probability distribution in $\color{blue}\mathcal{P}$. Then $\mathcal{M}$ uniformly identifies $\chi$ if the value of $G(\color{red}P\color{black})$ is $a$ and if the value of $G(\color{blue}P\color{black})$ is $b$, holding for any such $\color{red}P$ and $\color{blue}P$. Notice that if $\mathcal{M}$ uniformly identifies all $\chi$ then $\mathcal{M}$ also uniformly identifies structures.}
   \label{fig:uniform}
   \end{subfigure}
@@ -787,7 +807,7 @@ or that the conditional average causal effect is greater for Hispanics than for 
 \end{subfigure}
 \begin{subfigure}{0.8\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Partial.pdf}
+  \includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/Partial.pdf}
   \caption{That probability distributions in $\color{gray}\mathcal{P}$ are generated by structures in $\color{red}\mathcal{M}$ and in $\color{yellow}\mathcal{M}$ creates a complication; the value of $\chi$ is not constant across observationally equivalent structures that $\mathcal{M}$ admits and that generate a probability distribution in $\color{gray}\mathcal{P}$. So $\mathcal{M}$ does not uniformly identify $\chi$. Consideration of the identifying correspondence $G$ determines that this corresponds to there being structures in $\mathcal{M}$ for which $G$ does not deliver the value of $\chi$ when applied to the probability distributions that these structures generate. Nonetheless, if $\mathcal{M}$ restricts the set of values of $\chi$ for any probability distribution in $\mathcal{P}$ then $\mathcal{M}$ does have some non-trivial identifying power for $\chi$. Then $\mathcal{M}$ is said to uniformly partially identify $\chi$ if $\mathcal{M}$ and $\mathcal{P}$ can each be partitioned into countably many disjoint subsets and that a probability distribution in a partition of $\mathcal{P}$ is not generated by a structure in at least one partition of $\mathcal{M}$, holding for any such partition of $\mathcal{P}$. In the context of Figure~\ref{fig:partials} $\color{red}\mathcal{M}$ identifies $\chi$ up to $\lbrace a,c\rbrace$, $\color{blue}\mathcal{M}$ identifies $\chi$ uniquely to $b$, and $\color{yellow}\mathcal{M}$ identifies $\chi$ up to $\lbrace a,c\rbrace$. Each partition of $\mathcal{P}$ includes probability distributions that are generated by structures in at least one partition of $\mathcal{M}$. Equivalently, if $G$ is permitted to be a multivalued functional (or one-to-many) then $\mathcal{M}$ uniformly partially identifies $\chi$ if $G$ exists and if $G(P)$ contains the set of values of $\chi$ that are delivered by structures that generate $P$, holding for all such $P$. A caveat must be applied here; $G$ cannot be trivial in the sense that it is constant across all such $P$. Clearly this definition of $G$ does not exclude the possibility that there is multiplicity of identifying correspondences that satisfy this property. Sharpness is a desirable property in such circumstances; a functional $G$ that can be shown to deliver smaller sets according to some well-defined distance measure across all possible $P$ (and that satisfies the properties above) should be preferred to any alternative identifying correspondence.}
   \label{fig:partial1}
   \end{subfigure}
@@ -799,12 +819,12 @@ or that the conditional average causal effect is greater for Hispanics than for 
 \centering
 \begin{subfigure}{0.4\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Indistinguishable1.pdf}
+  \includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/Indistinguishable1.pdf}
   \label{fig:indistinguishable1}
   \end{subfigure}
   \begin{subfigure}{0.4\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Indistinguishable2.pdf}
+  \includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/Indistinguishable2.pdf}
   \label{fig:indistinguishable2}
   \end{subfigure}
 \begin{subfigure}{0.8\textwidth}
@@ -812,12 +832,12 @@ or that the conditional average causal effect is greater for Hispanics than for 
   \end{subfigure}
    \begin{subfigure}{0.4\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Exogenous1.pdf}
+  \includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/Exogenous1.pdf}
   \label{fig:exogenous1}
   \end{subfigure}
    \begin{subfigure}{0.4\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Exogenous2.pdf}
+  \includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/Exogenous2.pdf}
   \label{fig:exogenous2}
   \end{subfigure}
   \begin{subfigure}{0.8\textwidth}
@@ -831,7 +851,7 @@ or that the conditional average causal effect is greater for Hispanics than for 
 \centering
 \begin{subfigure}{0.8\textwidth}
 \caption{Suppose that $\color{blue}\theta_n^u(z)\color{black}$ and $\color{red}\theta_n^u(z')\color{black}$ are estimates of upper bounds on $\mathbb{E}[Y(0)]$. Similarly, suppose that $\color{blue}\phi_n^u(z)\color{black}$ and $\color{red}\phi_n^u(z')\color{black}$ are one-sided $1-\alpha$ confidence regions for $\color{blue}\theta_n^u(z)\color{black}$ and $\color{red}\theta_n^u(z')\color{black}$. $\color{red}\phi_n^u(z')\color{black}>\color{blue}\phi_n^u(z')\color{black}$ if there is greater variation in the estimate of $\color{blue}\theta_n^u(z)\color{black}$ (if there are fewer observations of $z$ than $z'$, say).}
-\includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Confidence.pdf}
+\includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/Confidence.pdf}
 \caption{As $\color{blue}\theta_n^u(z)\color{black}$ and $\color{red}\theta_n^u(z')\color{black}$ are both binding constraints on $\mathbb{E}[Y(0)]$, the minimum of these upper bounds must be binding. The minimum upper bound is written as $\theta^u_n$ and is $\color{blue}\theta_n^u(z)\color{black}$. The inferential problem is to determine $\phi_n^u$, which satisfies 
 $\mathbb{P}(\mathbb{E}[Y(0)]>\phi_n^u)=\alpha$. A na{\"i}ve approach would be to look only at the one-sided $1-\alpha$ confidence region for $\color{blue}\theta_n^u(z)\color{black}$, which is $\color{blue}\phi_n^u(z)\color{black}$. This approach ignores variation in $\color{red}\theta_n^u(z')\color{black}$. An equally na{\"i}ve approach would be to simply add aggregate variation to $\color{blue}\theta_n^u(z)\color{black}$. In other words, to add the weighted average of $\color{blue}\phi_n^u(z)\color{black}-\color{blue}\theta_n^u(z)\color{black}$ and $\color{red}\phi_n^u(z')\color{black}-\color{red}\theta_n^u(z')\color{black}$ to $\color{blue}\theta_n^u(z)\color{black}$. This approach is standard but fails in this case because it does not account for the fact that $\color{blue}\theta_n^u(z)\color{black}<\color{red}\theta_n^u(z')\color{black}$. Inference must account for the fact that upward variation in $\color{red}\theta_n^u(z')\color{black}$ does not matter so long as $\color{blue}\theta_n^u(z)\color{black}<\color{red}\theta_n^u(z')\color{black}$; equivalently, that $\color{red}\theta_n^u(z')\color{black}$ is a one-sided $1-\gamma$ confidence region for $\color{blue}\theta_n^u(z)\color{black}$ for $\gamma>\alpha$. \cite{cHlr13} solves the inferential problem by adjusting the critical value that is associated with the one-sided $1-\alpha$-confidence region. That is, \cite{cHlr13} adjusts $k$ such that $k$ that solves $\mathbb{P}(\mathbb{E}[Y(0)]>\color{blue}\theta_n^u(z)\color{black}+k\sigma)=\alpha$. The solution for $k$ yields $\phi_n^u$ with the one-sided $1-\alpha$ confidence region for $\theta_n^u$ given by the grey area. The distribution of $\theta_n^u$ over repeated samples is non-standard in this case and the bootstrap is  not necessarily consistent \citep{bU10}.} 
 \end{subfigure}
@@ -843,7 +863,7 @@ $\mathbb{P}(\mathbb{E}[Y(0)]>\phi_n^u)=\alpha$. A na{\"i}ve approach would be to
 \centering
 \begin{subfigure}{0.8\textwidth}
 \caption{Suppose that the admissible set of values of $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$ is given by the blue rectangle, and that the $1-\alpha$-confidence region for this set is the union of the blue rectangle and the red polygon. }
-\includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/ACE.pdf}
+\includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/ACE.pdf}
 \caption{It is possible to recover $ACE(D\rightarrow Y)$ from the plot. First, note that $ACE(D\rightarrow Y)$ is increasing in the $y$-direction and is decreasing in the $x$-direction. Second, note that $ACE(D\rightarrow Y)$ is constant along any line with unit gradient. Third, note that the value of $ACE(D\rightarrow Y)$ along any line with unit gradient is dependent upon the value of the intercept of this line. Fourth, note that a projection from the normal of a line with unit gradient is a line that has unit gradient. For example, the blue dashed line is a projection from the normal of the $45^\circ$ line; notice that the blue dashed line is parallel to the $45^\circ$ line. Fifth, note that any projection from the normal of the $45^\circ$ line that passes through the blue rectangle is an admissible value of $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$; equivalently, that any projection from the normal of the $45^\circ$ line that passes through the union of the blue rectangle and the red polygon is in the $1-\alpha$ confidence region of $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$. Together these five facts suggest that the admissible set of values of $ACE(D\rightarrow Y)$ and its $1-\alpha$ confidence region can be recovered from the projection from the normal of the $45^\circ$ line onto the $y$-axis. This method gives a geometric interpretation to $ACE(D\rightarrow Y)$.}
 \end{subfigure}
 \caption{A note on recovering the average causal effect.}
@@ -854,7 +874,7 @@ $\mathbb{P}(\mathbb{E}[Y(0)]>\phi_n^u)=\alpha$. A na{\"i}ve approach would be to
 \centering
 \begin{subfigure}{0.8\textwidth}
 \caption{The plot shows how the admissible set of values of $ACE_n(D\rightarrow Y)$ changes as $\mathcal{R}_Z$ is varied. Each value on the $y$-axis corresponds to a different experiment. In each experiment, $\mathcal{R}_Z$ is varied and the admissible set of values of $ACE_n(D\rightarrow Y)$ is calculated. See Table~\ref{tbl:acesame} and Table~\ref{tbl:acemult} for the definition of $\mathcal{R}_Z$ in each experiment (the column headed No. states the experiment number in each table, and the column headed $\mathcal{R}_Z$ states the events that form the points of support for $Z$). The plot is a graphical representation of Table~\ref{tbl:acesame} and Table~\ref{tbl:acemult}. Blue regions represent the admissible set of values of $ACE_n(D\rightarrow Y)$, and the union of blue and red regions represent $0.950$ confidence regions for $ACE_n(D\rightarrow Y)$.}
-\includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Coding/tikzDevice/Instruments.pdf}
+\includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Coding/tikzDevice/Instruments.pdf}
 \caption{In experiment 1 through experiment 5, information relating to the incidence of a multiple second birth is ignored. The admissible sets of values of $ACE_n(D\rightarrow Y)$ in these experiments are large and disconnected, which suggests that child gender is weakly associated with the number of children in a household. In other words, that child gender is a weak instrumental variable. Child gender is, by itself, insufficient to determine the sign of the average causal effect of the number of children in a household on a mother's employment. Experiment 2 and experiment 3 are unable to rule out a null effect at the $0.950$ significance level (the central red regions overlap at zero). In experiment 6 through experiment 7, information relating to the incidence of a multiple second birth is incorporated. The sign of the average causal effect of the number of children in a household on a mother's employment is negative, and significant. The length of the admissible set of values of $ACE_n(D\rightarrow Y)$ is decreasing as more information is incorporated, as is the $0.950$ confidence region for $ACE_n(D\rightarrow Y)$.}
 \end{subfigure}
 \caption{Admissible sets of values of $ACE_n(D\rightarrow Y)$ and $\mathcal{R}_Z$.}
@@ -865,7 +885,7 @@ $\mathbb{P}(\mathbb{E}[Y(0)]>\phi_n^u)=\alpha$. A na{\"i}ve approach would be to
 \centering
 \begin{subfigure}{0.8\textwidth}
 \caption{The plot shows the admissible set of values of $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$ when $\mathcal{R}_Z$ is formed of the events $\text{Male-Male}\cup\text{Female-Female}$ and $\text{Male-Female}\cup\text{Female-Male}$. This is experiment 1 in Table~\ref{tbl:setssame}. Blue regions represent the admissible set of values of $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$, and the union of blue and red regions represent $0.950$ confidence regions for $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$. The confidence regions that are shown in the plot are different to those that are reported in Table~\ref{tbl:setssame}. The distinction arises since Table~\ref{tbl:setssame} reports $0.950$ confidence regions for $\mathbb{E}_n[Y(0)]$ and for $\mathbb{E}_n[Y(1)]$ whereas the plot shows the $0.950$ confidence region for $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$.}
-\includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Coding/tikzDevice/Samesex.pdf}
+\includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Coding/tikzDevice/Samesex.pdf}
 \caption{}
 \end{subfigure}
 \caption{}
@@ -876,7 +896,7 @@ $\mathbb{P}(\mathbb{E}[Y(0)]>\phi_n^u)=\alpha$. A na{\"i}ve approach would be to
 \centering
 \begin{subfigure}{0.8\textwidth}
 \caption{The plot shows the admissible set of values of $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$ when $\mathcal{R}_Z$ is formed of the events $\text{Multiple birth}$, $\text{Single birth}\cap(\text{Male-Male}\cup\text{Female-Female})$ and $\text{Single birth}\cap(\text{Male-Female}\cup\text{Male-Female})$. This is experiment 6 in Table~\ref{tbl:setsmult}. Blue regions represent the admissible set of values of $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$, and the union of blue and red regions represent $0.950$ confidence regions for $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$. The confidence regions that are shown in the plot are different to those that are reported in Table~\ref{tbl:setsmult}. The distinction arises since Table~\ref{tbl:setsmult} reports $0.950$ confidence regions for $\mathbb{E}_n[Y(0)]$ and for $\mathbb{E}_n[Y(1)]$ whereas the plot shows the $0.950$ confidence region for $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$.}
-\includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Coding/tikzDevice/Multiple.pdf}
+\includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Coding/tikzDevice/Multiple.pdf}
 \caption{}
 \end{subfigure}
 \caption{}
@@ -887,7 +907,7 @@ $\mathbb{P}(\mathbb{E}[Y(0)]>\phi_n^u)=\alpha$. A na{\"i}ve approach would be to
 \centering
 \begin{subfigure}{0.8\textwidth}
 \caption{The plot shows the admissible set of values of $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$ when $\mathcal{R}_Z$ is formed of the events $\text{Multiple birth}$, $\text{Single birth}\cap\text{Male-Male}$, $\text{Single birth}\cap\text{Female-Female}$, $\text{Single birth}\cap\text{Male-Female}$ and $\text{Single birth}\cap\text{Female-Male}$. This is experiment 8 in Table~\ref{tbl:setsmult}. Blue regions represent the admissible set of values of $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$, and the union of blue and red regions represent $0.950$ confidence regions for $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$. The confidence regions that are shown in the plot are different to those that are reported in Table~\ref{tbl:setsmult}. The distinction arises since Table~\ref{tbl:setsmult} reports $0.950$ confidence regions for $\mathbb{E}_n[Y(0)]$ and for $\mathbb{E}_n[Y(1)]$ whereas the plot shows the $0.950$ confidence region for $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$.}
-\includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Coding/tikzDevice/Allin.pdf}
+\includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Coding/tikzDevice/Allin.pdf}
 \caption{}
 \end{subfigure}
 \caption{}
@@ -898,7 +918,7 @@ $\mathbb{P}(\mathbb{E}[Y(0)]>\phi_n^u)=\alpha$. A na{\"i}ve approach would be to
 \centering
 \begin{subfigure}{0.8\textwidth}
 \caption{The goal of the identification analysis is to determine the location of $r(0)$ and of $r(1)$. The analysis is confounded by the fact that it is not known whether $r(0)>r(1)$, $r(0)<r(1)$ or $r(0)=r(1)$. The order of the collection of $r(d)$ is crucial since it is the order that determines the value of $\mathcal{A}_r$ and of $\mathcal{B}_r$.}
-\includegraphics[width=\textwidth]{C:/Users/Jeffro/Documents/GitHub/Covariatesets/Diagrams/Timeline.pdf}
+\includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Diagrams/Timeline.pdf}
 \caption{Suppose that $r(0)<r(1)$. What can be determined about the location of $p(0)$ from observable variables alone? Any economic agent that is characterised by $\color{blue}Y=0\cap D=0\color{black}$ must also be characterised by $u$ somewhere in the blue dashed interval. Similarly, any economic agent that is characterised by $\color{red}Y=0\cap D=1\color{black}$ must also be characterised by $u$ somewhere in the red dashed interval. The location of $r(0)$ is confounded since it is not known what proportion of $\color{red}Y=0\cap D=1\color{black}$ are located in $[0,r(0)]$ (the left partition of the red dashed interval), and what proportion of $\color{red}Y=0\cap D=1\color{black}$ are located in $[r(0),r(1)]$ (the right partition of the red dashed interval). A lower bound on the location of $r(0)$ is then that all economic agents that are are characterised by $\color{red}Y=0\cap D=1\color{black}$ are located in $[r(0),r(1)]$. The measure of economic agents that are located in $[0,r(0)]$ in this case is then $\mathbb{P}(Y=0,D=\color{blue}0\color{black})$. An upper bound on the location of $r(0)$ is then that all economic agents that are are characterised by $\color{red}Y=0\cap D=1\color{black}$ are located in $[0,r(0)]$. The measure of economic agents that are located in $[0,r(0)]$ in this case is then $\mathbb{P}(Y=0,D=\color{blue}0\color{black}\cup\color{red}1\color{black})$. In this case, $\mathcal{A}_r(0)=\lbrace 0\rbrace$ and $\mathcal{B}_r(0)=\lbrace 0,1\rbrace$.}
 \caption{Note that economic agents that are located in $[0,r(0)]$ are characterised by $Y(0)=0$ and $Y(1)=0$. In contrast, economic agents that are located in $(r(0),r(1)]$ are characterised by $Y(0)=1$ and $Y(1)=0$. The problem of determining the measure of economic agents that are characterised by each pair $(Y(0),Y(1))$ is then equivalent to locating $r(0)$ and $r(1)$. This point validates consideration of level sets of $U$.}
 \end{subfigure}

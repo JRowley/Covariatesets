@@ -1,5 +1,8 @@
+ptm <- proc.time()
+
 Source <- url("http://www.ucl.ac.uk/~zctpep9/Data%20archive/AE98Data.RData")
 DF <- load(Source)
+
 PUMS80M <- D
 rm(list = c("Source","DF","D"))
 # ======================================================================= #
@@ -461,3 +464,5 @@ Bound <- b(bound,a)
 
 rm(a)
 rm(b)
+
+proc.time() - ptm
