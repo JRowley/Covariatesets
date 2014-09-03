@@ -23,7 +23,7 @@
 %==================================================%
 %% Document details.
 \usepackage{titling}
-\title{Information and admissible sets}
+\title{Information and identified sets}
 \author{Jeff Rowley}
 \newcommand{\thedate}{\today}
 % Enter document details here.
@@ -210,7 +210,6 @@
 %==================================================%
 %% Document.
 %==================================================%
-
 I study a non-parametric binary choice model with a binary endogenous variable. I explore the effect of incorporating information into the model on the identified set of the average causal effect of the endogenous variable on the outcome variable. The model embeds an exclusion restriction and an independence restriction that together define an instrumental variable but is silent as to the relationship between the endogenous variable and the instrumental variable. I restrict the relationship between the outcome variable and the endogenous variable up to a non-parametric threshold crossing function. The model is credible \citep{book.manski} in that it embeds restrictions that impose weaker constraints on assumed behaviour, but does not identify the average causal effect of the endogenous variable on the outcome variable.\footnote{Assumptions that cannot be tested using data. The model does embed some non-trivial non-verifiable restrictions that might be relaxed.} Rather, the model partially identifies the average causal effect of the endogenous variable on the outcome variable. 
 
 I define information to be those additional characteristics of economic agents that are observable with the caveat that these characteristics are exogenous and are relevant to the latent structure. It is convenient to think of such characteristics as being predetermined and immutable; characteristics that result from choices that are made jointly with the outcome variable are excluded by the definition. Accordingly, exogenous variables and instrumental variables are each regarded as information, and I distinguish between these classes of information. I study how the the identified set of the average causal effect of the endogenous variable on the outcome variable changes as each class of information is incorporated into the model separately. 
@@ -348,7 +347,7 @@ Fifth, the single equation model embeds the restriction that $U\independent (X,Z
 
 Sixth, the single equation model embeds the restriction that $h$ is separable in $U$ (Restriction M5). In general, this is an implausible restriction since it is implies that individual response is monotonic. In the context of the application, the restriction implies that the causal effect of additional children on a mother's employment is positive for all mothers or is negative for all mothers. There is no reason to suppose that individual response is monotonic. A mother that uses a paid-for childcare service might find the cost of such services prohibitive for additional children and so exit employment. In contrast, a mother that relies on family members for childcare might find need to return to employment to increase household income.
 
-As a final remark regarding the credibility of the single equation model, Restriction M6 is a weaker restriction than the monotonicity restriction that is embedded in the model that is described in \cite{ai94} (hereafter, the LATE model), which identifies the Local Average Treatment Effect. Restriction M6 permits the existence of compliers and defiers. In other words, it permits individual selection to be both positive and negative. In fact, the monotonicity restriction that is embedded in the LATE model nests Restriction M6. In the context of the application, it is plausible that whether there are three or more children in the household depends upon the gender of the oldest two children. If preferences are convex then it is plausible that whether there are three or more children in the household is more likely when the oldest two children share the same gender, but there may be other considerations which determine perceived child quality. 
+As a final remark regarding the credibility of the single equation model, Restriction M6 is a weaker restriction than the monotonicity restriction that is embedded in the model that is described in \cite{ai94} (hereafter, the LATE model), which identifies the Local Average Treatment Effect. Restriction M6 permits the existence of compliers and defiers. In other words, it permits individual selection to be both positive and negative. In fact, the monotonicity restriction that is embedded in the LATE model is nested by Restriction M6. In the context of the application, it is plausible that whether there are three or more children in the household depends upon the gender of the oldest two children. If preferences are convex then it is plausible that whether there are three or more children in the household is more likely when the oldest two children share the same gender, but there may be other considerations which determine perceived child quality. 
 
 The single equation model is reasonably credible in general, and in the context of the application. Nonetheless, some of the restrictions that the single equation model embeds are unsatisfactory in general, and are implausible in the context of the application. Joint independence and monotonicity are two such restrictions. 
 
@@ -479,42 +478,61 @@ where $\stirling{n}{m}$ counts the number of ways that a set of length $n$ can b
 \[4K^2\times\sum_{j=1}^{2K}j!\stirling{2K}{j}\times L\]
 as the number of inequalities that describe the identified set. There is a clear curse of dimensionality. It is sensible to automate the task of calculating the inequalities that describe the identified set.
 \subsection{Average causal effects}
-I state the definition of $ACE(D\rightarrow Y)$ when $D$ is a binary variable. I discuss the relationship between $ACE(D\rightarrow Y)$ and its conditional counterparts. I show that $ACE(D\rightarrow Y)$ is expressible as a function of the parameters of the single equation model. 
+I state the definition of $ACE(D\rightarrow Y)$ when $D$ is a binary variable. I discuss the relationship between $ACE(D\rightarrow Y)$ and its conditional counterparts. I show that $ACE(D\rightarrow Y)$ is expressible as a function of the parameters of the single equation model.
 
-First, $ACE(D\rightarrow Y)$ is defined as 
-\[\mathbb{E}[Y(1)]-\mathbb{E}[Y(0)],\]
-which is commonly referred to as the Average Treatment Effect in economics. For the single equation model, $ACE(D\rightarrow Y)$ is equal to 
+In economics, $ACE(D\rightarrow Y)$ is commonly referred to as the Average Treatment Effect. When $D$ is a binary variable, this convention is intuitive since $ACE(D\rightarrow Y)$ is the effect of receiving treatment versus not receiving treatment; or,
 \begin{equation}
-\mathbb{E}[p(0,X)]-\mathbb{E}[p(1,X)].\label{eq:ace}
-\end{equation} 
-\vspace{20pt}
-\begin{proof}
-I focus on $\mathbb{E}[Y(d)]$ since $ACE(D\rightarrow Y)$ is an additive function of this expectation. To prove (\ref{eq:ace}), I must show that 
-\begin{align}
-\mathbb{E}[Y(d)]&=1-\mathbb{E}[p(d,X)].\nonumber
-\intertext{First, I note that $\mathbb{E}[Y(d)]$ is equivalent to $\mathbb{P}(Y(d)=1)$ since $Y(d)$ is a binary variable. Substituting for $Y(d)$ yields}
-\mathbb{P}(Y(d)=1)&=\mathbb{P}(p(d,X)<U).\nonumber
-\intertext{Then,}
-\mathbb{P}(p(d,X)<U)&=\sum_{x\in\mathcal{R}_X}\mathbb{P}(p(d,x)<U|x)\mathbb{P}(x),\label{eq:cace}
-\intertext{which is valid by the Law of Iterated Expectations. The restrictions that the single equation model embeds determine that }
-\mathbb{P}(p(d,x)<U|x)&=\mathbb{P}(p(d,x)<U),\nonumber
-\intertext{and that}
-\mathbb{P}(p(d,x)<U)&=1-p(d,x).\nonumber
-\intertext{I rewrite (\ref{eq:cace}) as}
-\mathbb{P}(p(d,X)<U)&=1-\sum_{x\in\mathcal{R}_X}p(d,x)\mathbb{P}(x)\label{eq:parametrisation},
-\end{align}
-which is an expectation. This completes the proof of (\ref{eq:ace}).
-\end{proof}
-\vspace{20pt}
-\noindent Second, $p(d,x)$ is a parameter of the single equation model. Although $p$ is a non-parametric function it can be summarised by the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$. Further, knowledge of $p$ (and of the distribution of $X$) is sufficient to determine the distribution of $Y(d)$. $ACE(D\rightarrow Y)$ is a function of the parameters of the single equation model, which is valid by (\ref{eq:parametrisation}).
-
-Third, $ACE(D\rightarrow Y|x)$ is defined as 
-\[\mathbb{E}[Y(1)|x]-\mathbb{E}[Y(0)|x],\]
-which for the single equation model is equivalent to $p(0,x)-p(1,x)$ (stated without proof). The relationship between $ACE(D\rightarrow Y)$ and its conditional counterparts is then 
-\begin{equation}
-ACE(D\rightarrow Y)=\sum_{x\in\mathcal{R}_X}ACE(D\rightarrow Y|x)\mathbb{P}(x),\label{eq:relationship}
+\mathbb{E}[Y(1)]-\mathbb{E}[Y(0)].\label{eq:ace}
 \end{equation}
-which is established in the proof of (\ref{eq:ace}). I exploit this relationship to describe the identified set of $ACE(D\rightarrow Y)$.  
+For the single equation model, (\ref{eq:ace}) is equal to
+\[\mathbb{E}[p(0,X)]-\mathbb{E}[p(1,X)],\]
+and may be more conveniently expressed as
+\begin{equation}
+\sum_{x\in\mathcal{R}_X}\mathbb{P}(x)(p(0,x)-p(1,x)).\label{eq:acecace}
+\end{equation}
+In fact, (\ref{eq:acecace}) reveals the relationship between $ACE(D\rightarrow Y)$ and its conditional counterparts: $p(0,x)-p(1,x)$ is $ACE(D\rightarrow Y|x)$, and so $ACE(D\rightarrow Y)$ is a weighted sum of its conditional counterparts.
+\[ACE(D\rightarrow Y)=\sum_{x\in\mathcal{R}_X}\mathbb{P}(x)ACE(D\rightarrow Y|x)\] 
+I exploit this relationship to describe the identified set of $ACE(D\rightarrow Y)$.
+
+Although $p$ is a non-parametric function, it has a discrete domain and a discrete codomain. As such, $p$ can be summarised by the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$. Since knowledge of this collection is also sufficient to determine the distribution of $Y(d)$, the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$ may be regarded as parameters of the single equation model. $ACE(D\rightarrow Y)$ and its conditional counterparts are then functions of the parameters of the single equation model.
+%
+%
+%I state the definition of $ACE(D\rightarrow Y)$ when $D$ is a binary variable. I discuss the relationship between $ACE(D\rightarrow Y)$ and its conditional counterparts. I show that $ACE(D\rightarrow Y)$ is expressible as a function of the parameters of the single equation model. 
+%
+%First, $ACE(D\rightarrow Y)$ is defined as 
+%\[\mathbb{E}[Y(1)]-\mathbb{E}[Y(0)],\]
+%which is commonly referred to as the Average Treatment Effect in economics. For the single equation model, $ACE(D\rightarrow Y)$ is equal to 
+%\begin{equation}
+%\mathbb{E}[p(0,X)]-\mathbb{E}[p(1,X)].\label{eq:ace}
+%\end{equation} 
+%\vspace{20pt}
+%\begin{proof}
+%I focus on $\mathbb{E}[Y(d)]$ since $ACE(D\rightarrow Y)$ is an additive function of this expectation. To prove (\ref{eq:ace}), I must show that 
+%\begin{align}
+%\mathbb{E}[Y(d)]&=1-\mathbb{E}[p(d,X)].\nonumber
+%\intertext{First, I note that $\mathbb{E}[Y(d)]$ is equivalent to $\mathbb{P}(Y(d)=1)$ since $Y(d)$ is a binary variable. Substituting for $Y(d)$ yields}
+%\mathbb{P}(Y(d)=1)&=\mathbb{P}(p(d,X)<U).\nonumber
+%\intertext{Then,}
+%\mathbb{P}(p(d,X)<U)&=\sum_{x\in\mathcal{R}_X}\mathbb{P}(p(d,x)<U|x)\mathbb{P}(x),\label{eq:cace}
+%\intertext{which is valid by the Law of Iterated Expectations. The restrictions that the single equation model embeds determine that }
+%\mathbb{P}(p(d,x)<U|x)&=\mathbb{P}(p(d,x)<U),\nonumber
+%\intertext{and that}
+%\mathbb{P}(p(d,x)<U)&=1-p(d,x).\nonumber
+%\intertext{I rewrite (\ref{eq:cace}) as}
+%\mathbb{P}(p(d,X)<U)&=1-\sum_{x\in\mathcal{R}_X}p(d,x)\mathbb{P}(x)\label{eq:parametrisation},
+%\end{align}
+%which is an expectation. This completes the proof of (\ref{eq:ace}).
+%\end{proof}
+%\vspace{20pt}
+%\noindent Second, $p(d,x)$ is a parameter of the single equation model. Although $p$ is a non-parametric function it can be summarised by the collection of $p(d,x)$ over $\mathcal{R}_D\times\mathcal{R}_X$. Further, knowledge of $p$ (and of the distribution of $X$) is sufficient to determine the distribution of $Y(d)$. $ACE(D\rightarrow Y)$ is a function of the parameters of the single equation model, which is valid by (\ref{eq:parametrisation}).
+%
+%Third, $ACE(D\rightarrow Y|x)$ is defined as 
+%\[\mathbb{E}[Y(1)|x]-\mathbb{E}[Y(0)|x],\]
+%which for the single equation model is equivalent to $p(0,x)-p(1,x)$ (stated without proof). The relationship between $ACE(D\rightarrow Y)$ and its conditional counterparts is then 
+%\begin{equation}
+%ACE(D\rightarrow Y)=\sum_{x\in\mathcal{R}_X}ACE(D\rightarrow Y|x)\mathbb{P}(x),\label{eq:relationship}
+%\end{equation}
+%which is established in the proof of (\ref{eq:ace}). I exploit this relationship to describe the identified set of $ACE(D\rightarrow Y)$.  
 %\subsection{Computation} 
 %I describe an algorithm that automates the task of calculating the inequalities that describe the identified set. The algorithm excludes those inequalities that are not internally valid (those inequalities that are inconsistent with the ordering that generates them). The algorithm is written with R \citep{R} functionality in mind, but may be adapted for other statistical packages. 
 %
@@ -540,7 +558,7 @@ which is established in the proof of (\ref{eq:ace}). I exploit this relationship
 %\end{enumerate} 
 %==================================================%
 \section{Incorporating information}
-I explore the effect of incorporating information for the single equation model. I study a special case of the single equation model that embeds the restriction that $h$ excludes $X$. That is, I study a special case of the single equation model that embeds the restriction that 
+I explore the effect of incorporating information into the single equation model. I study a special case of the single equation model that embeds the restriction that $h$ excludes $X$. That is, I study a special case of the single equation model that embeds the restriction that 
 \[Y=\mathbbm{1}[r(D)<U]\]
 for a non-parametric function $r$. I name this special case of the single equation model the simple single equation model, and note that this model is assumed in \cite{cr13} for the purpose of estimating the average causal effect of additional children on a mother's employment. I study how the estimate of the identified set of $ACE(D\rightarrow Y)$, equal to $r(0)-r(1)$, changes as 
 \begin{enumerate}[(a.)]
@@ -563,20 +581,20 @@ In the context of the application, I consider two definitions for $Z$ in the fra
 0 &\text{Single birth}.
 \end{cases}$
 
-\noindent Figure~\ref{fig:samesex} and Figure~\ref{fig:multiple} show the estimate of the identified set of $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$ for Specification 1 and Specification 6, respectively. 
+\noindent Figure~\ref{fig:samesex} and Figure~\ref{fig:multiple} show the estimate of the identified set of $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$ for Specification 1 and Specification 6, respectively.\footnote{Note that the estimate of the identified set of $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$ is equivalent to the identified set of $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$. I prefer to use the former since it makes clear the uncertainty that is present in estimation.} 
 
-In Specification 1, the estimate of the identified set of $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$ is large and disconnected. The gender of the oldest two children is not a good predictor of whether there are three or more children in the household. 
+In Specification 1, the estimate of the identified set of $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$ is large and disconnected. The gender of the oldest two children is not a good predictor of whether there are three or more children in the household. 
 \[\mathbb{P}_n(D=1|Z=1)=0.414\text{ versus }\mathbb{P}_n(D=1|Z=0)=0.346\]
-There is little statistical uncertainty in the estimate of the identified set; the intersection of the estimate of the identified set and the confidence region for the estimate of the identified set is large relative to the confidence region for the estimate of the identified set. There is little statistical uncertainty in the estimate of the identified set as
+There is little statistical uncertainty in the estimate of the identified set; the estimate of the identified set is large relative to the confidence region for the estimate of the identified set. There is little statistical uncertainty in the estimate of the identified set as
 \begin{enumerate}[(a)]
 \item the event that the oldest two children in the household share the same gender is approximately as frequent as the event that the oldest two children in the household do not share the same gender; and,
 \item the gender of the oldest two children is not a good predictor of whether there are three or more children in the household.
 \end{enumerate} 
 Specifically, (a) means that each of the inequalities that describe the estimate of the identified set is a functional of a large number of data, and so there should be little statistical uncertainty in each of these inequalities. Further, (b) means that there is little difference between those inequalities that are binding constraints, and those that are not binding constraints. 
 
-In Specification 6, the estimate of the identified set of $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$ collapses to a line, which covers a medium interval. The estimate of the identified set collapses due to the nature of the relationship between whether there are three or more children in the household and the event that the second birth is a multiple birth: clearly, if there is a multiple second birth then there must be three or more children in the household. The event that there is a multiple second birth is a special instrumental variable as it excludes some events in the probability space.
+In Specification 6, the estimate of the identified set of $(\mathbb{E}[Y(0)],\mathbb{E}n[Y(1)])$ collapses to a line, which covers a medium interval. The estimate of the identified set collapses due to the nature of the relationship between whether there are three or more children in the household and the event that the second birth is a multiple birth: clearly, if there is a multiple second birth then there must be three or more children in the household. The event that there is a multiple second birth is a special instrumental variable as it excludes some events in the probability space.
 \[\mathbb{P}_n(D=1|Z=1)=1\text{ versus }\mathbb{P}_n(D=1|Z=0)=0.375\]
-An implication of its special status is that $\mathbb{E}_n[Y(1)]$ is identified. Essentially, if there is a multiple second birth then there is no selection and so $\mathbb{E}_n[Y(1)]$ is identified from the sub-population of mothers that experience a multiple second birth. There is considerable statistical uncertainty in the estimate of the identified set; the intersection of the estimate of the identified set and the confidence region for the estimate of the identified set is small relative to the confidence region for the estimate of the identified set. In particular, there is considerable uncertainty in the $\mathbb{E}_n[Y(1)]$-direction of the estimate of the identified set of $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$ as
+An implication of its special status is that $\mathbb{E}_n[Y(1)]$ is identified. Essentially, if there is a multiple second birth then there is no selection and so $\mathbb{E}_n[Y(1)]$ is identified from the sub-population of mothers that experience a multiple second birth. There is considerable statistical uncertainty in the estimate of the identified set; the estimate of the identified set is small relative to the confidence region for the estimate of the identified set. In particular, there is considerable uncertainty in the $\mathbb{E}[Y(1)]$-direction of the estimate of the identified set of $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$ as
 \begin{enumerate}[(a)]
 \item the event that there is a multiple second birth is rare; and,
 \item the event that there is a multiple second birth is a good predictor of whether there are three or more children in the household.
@@ -584,7 +602,7 @@ An implication of its special status is that $\mathbb{E}_n[Y(1)]$ is identified.
 
 In fact, whether the instrumental variable is a good predictor of the endogenous variable is of first-order importance only for estimation, and not for inference. The difference between those inequalities that are binding constraints, and those that are not binding constraints only becomes important if the statistical uncertainty in those inequalities that are binding constraints is considerable. In other words, if the instrumental variable is a rare event. In sum, the ideal instrumental variable is a good predictor of the endogenous variable and is approximately as frequent as not.  
 
-Figure~\ref{fig:experiments} shows the estimate of the identified set of $ACE_n(D\rightarrow Y)$ for Specification 1 and for Specification 6 (and all other specifications that I conduct). In Specification 1, the estimate of the identified set is large and disconnected. The event that the oldest two children in the household share the same gender is insufficient to sign $ACE_n(D\rightarrow Y)$. Further, either side of zero the estimate of the identified set is not informative beyond what anecdotal evidence might suggest, and certainly cannot inform policy. The only information that Specification 1 conveys with respect to $ACE_n(D\rightarrow Y)$ is that there is a statistically significant effect (since the confidence region for the estimate of the identified set does not cover zero). In Specification 6, the estimate of the identified set is not disconnected. The event that there is a multiple second birth is sufficient to sign $ACE_n(D\rightarrow Y)$ as negative. Although Specification 6 is informative with respect to the sign of $ACE_n(D\rightarrow Y)$, it conveys little other information to inform policy.  
+Figure~\ref{fig:experiments} shows the estimate of the identified set of $ACE(D\rightarrow Y)$ for Specification 1 and for Specification 6 (and all other specifications that I conduct). In Specification 1, the estimate of the identified set is large and disconnected. The event that the oldest two children in the household share the same gender is insufficient to sign $ACE(D\rightarrow Y)$. Further, either side of zero the estimate of the identified set is not informative beyond what anecdotal evidence might suggest, and certainly cannot inform policy. The only information that Specification 1 conveys with respect to $ACE(D\rightarrow Y)$ is that there is a statistically significant effect (since the confidence region for the estimate of the identified set does not cover zero). In Specification 6, the estimate of the identified set is not disconnected. The event that there is a multiple second birth is sufficient to sign $ACE(D\rightarrow Y)$ as negative. Although Specification 6 is informative with respect to the sign of $ACE(D\rightarrow Y)$, it conveys little other information to inform policy.  
 %==================================================%
 \subsection{Enriching the support of the instrumental variable}
 I explore the effect of enriching $\mathcal{R}_Z$ for the simple single equation model in the context of the application. Specifically, I disaggregate the event that the oldest two children in the household share the same gender into the possible permutations of gender for two children. Further, I combine the event that there is a multiple second birth with the possible permutations of gender for two children. I show that incorporating informational is advantageous.
@@ -593,21 +611,21 @@ In all, I consider eight specifications. Each specification is characterised by 
 \begin{enumerate}
 \item[(a)] Disaggregating the event that the oldest two children in the household share the same gender into either the event that the oldest two children in the household are male, or into the event that the oldest two children in the household are female has less informational content.
 \end{enumerate}
-In Specification 2 I disaggregate the event that the oldest two children in the household share the same gender into the event that the oldest two children are male. In Specification 3 I disaggregate the event that the oldest two children in the household share the same gender into the event that the oldest two children are female. In both specifications, the estimate of the identified set of $ACE_n(D\rightarrow Y)$ is larger than the estimate of the identified set for Specification 1. Further, there is greater statistical uncertainty in the estimate of the identified set for Specification 2 and for Specification 3.  
+In Specification 2 I disaggregate the event that the oldest two children in the household share the same gender into the event that the oldest two children are male. In Specification 3 I disaggregate the event that the oldest two children in the household share the same gender into the event that the oldest two children are female. In both specifications, the estimate of the identified set of $ACE(D\rightarrow Y)$ is larger than the estimate of the identified set for Specification 1. Further, there is greater statistical uncertainty in the estimate of the identified set for Specification 2 and for Specification 3.  
 
 Either disaggregation maintains $Z$ as a binary variable and, if preferences are convex, aggregates an event that the oldest two children in the household share the same gender with the event that the oldest two children do not share the same gender. For example, in Specification 2 the disaggregation aggregates the event that the oldest two children in the household are female with the event that the oldest two children do not share the same gender. Importantly, this dilutes the identifying power of $Z$ (since the event that the oldest two children in the household share the same gender is associated with both values of $Z$). Further, each value of $Z$ is no longer as frequent as not. The imbalance in the sub-populations leads to greater statistical uncertainty. 
 \begin{enumerate}
 \item[(b)] Disaggregating the event that the oldest two children in the household share the same gender into the possible permutations of gender for two children has more informational content.
 \end{enumerate}
-In Specification 4 I disaggregate the event that the oldest two children in the household share the same gender into the event that the oldest two children are male, the event that the oldest two children are female, and the event that the oldest two children do not share the same gender. In Specification 5 I disaggregate the event that the oldest two children in the household share the same gender into the possible permutations of gender for two children. In both specifications, the estimate of the identified set of $ACE_n(D\rightarrow Y)$ is smaller than the estimate of the identified set for Specification 1. There is greater statistical uncertainty in the estimate of the identified set for Specification 4 and for Specification 5, but the net effect of greater accuracy and less precision is to make the estimate of the identified set and the confidence region of the estimate of the identified set smaller in both cases. The estimate of the identified set of $ACE_n(D\rightarrow Y)$ is smaller than the estimate of the identified set for Specification 1. 
+In Specification 4 I disaggregate the event that the oldest two children in the household share the same gender into the event that the oldest two children are male, the event that the oldest two children are female, and the event that the oldest two children do not share the same gender. In Specification 5 I disaggregate the event that the oldest two children in the household share the same gender into the possible permutations of gender for two children. In both specifications, the estimate of the identified set of $ACE(D\rightarrow Y)$ is smaller than the estimate of the identified set for Specification 1. There is greater statistical uncertainty in the estimate of the identified set for Specification 4 and for Specification 5, but the net effect of greater accuracy and less precision is to make the estimate of the identified set and the confidence region of the estimate of the identified set smaller in both cases. The estimate of the identified set of $ACE(D\rightarrow Y)$ is smaller than the estimate of the identified set for Specification 1. 
 
-Most importantly, either disaggregation increases $\|\mathcal{R}_Z\|$. The advantage of disaggregating the event that the oldest two children in the household is that more variation is introduced that might be exploited. To illustrate, notice that
+Most importantly, either disaggregation increases $\card (\mathcal{R}_Z)$. The advantage of disaggregating the event that the oldest two children in the household is that more variation is introduced that might be exploited. To illustrate, notice that
 \[\mathbb{P}_n(A|\text{Male-Male}\cup\text{Female-Female})\approx\frac{1}{2}\mathbb{P}_n(A|\text{Male-Male})+\frac{1}{2}\mathbb{P}_n(A|\text{Female-Female})\]
 for some event $A$. If 
 \[\mathbb{P}_n(A|\text{Male-Male})\neq\mathbb{P}_n(A|\text{Female-Female})\]
 (rather, the probabilities are not sufficiently close) then there is advantage to conditioning solely on one of these events. The reason is that one of the probabilities will constitute a more binding constraint. If preferences are convex but also exhibit gender bias then such an effect might be observed. For example, if 
-\[\text{Male-Male-Unknown}\succ\text{Female-Female-Unknown}\]
-in expectation then the probability that there are three or more children in the household is different depending upon whether the oldest two children in the household are male, or are female. Such an effect might lead to an imbalance in the conditional probabilities. The disaggregation does not dilute the identifying power of $Z$.   
+\[\mathbb{E}[\text{Male-Male-Third child}]\succ\mathbb{E}[\text{Female-Female-Third child}]\]
+then the probability that there are three or more children in the household is different depending upon whether the oldest two children in the household are male, or are female. Such an effect might lead to an imbalance in the conditional probabilities. The disaggregation does not dilute the identifying power of $Z$.   
 \begin{enumerate}
 \item[(c)] Combining the event that there is a multiple second birth with the possible permutations of gender for two children has more informational content. 
 \end{enumerate}
@@ -615,29 +633,29 @@ In Specification 8 I combine the event that there is a multiple second birth wit
 
 Whether there are three or more children is dependent upon the quality margin (if preferences are convex then whether the oldest two children in the household share the same gender) and the quantity margin (whether there is a multiple second birth), and so combining information on both margins yields a more complete picture of the relationship. Some caution must be taken in combining information on both margins; namely, that the quantity margin has primacy over the quality margin. For example, if the oldest child in the household is male and there is a multiple second birth say, then whether the second oldest child is male or female is not relevant to whether there are three or more children in the household. A multiple second birth implies that there are three or more children in the household, regardless. The advantage of incorporating information on the quality margin is that quality is relevant when there is not a multiple second birth. 
 
-Incorporating information is advantageous, but (a) emphasises that simple redefinition of $Z$ without enriching $\mathcal{R}_Z$ is insufficient for a model to have more informational context. To enrich $\mathcal{R}_Z$, it is essential that $\|\mathcal{R}_Z\|$ increases such that there is greater variation to exploit. Although the gains from enriching $\mathcal{R}_Z$ in conducting estimation and inference are not substantial, the cost of incorporating information is low since the number of inequalities increases linearly in $\mathcal{R}_Z$. If the task of calculating the inequalities that describe the estimate of the identified set is automated then there is little reason not to incorporate information. Further, the availability of information on so many events implies that the single equation model is overidentified, and so its credibility is testable (to an extent).
+Incorporating information is advantageous, but (a) emphasises that simple redefinition of $Z$ without enriching $\mathcal{R}_Z$ is insufficient for a model to have more informational context. To enrich $\mathcal{R}_Z$, it is essential that $\card (\mathcal{R}_Z)$ increases such that there is greater variation to exploit. Although the gains from enriching $\mathcal{R}_Z$ in conducting estimation and inference are not substantial, the cost of incorporating information is low since the number of inequalities increases linearly in $\card( \mathcal{R}_Z)$. If the task of calculating the inequalities that describe the estimate of the identified set is automated then there is little reason not to incorporate information. Further, the availability of information on so many events implies that the single equation model is overidentified, and so its credibility is testable (to an extent).
 %==================================================%
 \subsection{Enriching individual response}
 I explore the effect of permitting $X$ to enter $h$ for the simple single equation model. I discuss the implications for individual behaviour of assuming the simple single equation model versus assuming the single equation model, and discuss the misspecification issue that arises when individual behaviour is dependent upon $X$ but the single equation model is assumed. 
 
-The principal difference between the simple single equation model and the single equation model is the treatment of $X$. The simple single equation model embeds the restriction that individual behaviour is not dependent upon $X$.\footnote{In fact, individual behaviour is permitted to depend upon $X$ provided that this dependency is in the aggregate. In other words, if only the aggregate of $X$ matters for individual behaviour, and so is constant across all economic agents.} In the context of the application, the restriction implies that race does not affect a mother's employment. Cultural norms or discriminatory policies that reduce the incentive to seek employment for mothers of a particular race say, independently of ability, are excluded by the simple single equation model. Supposing that the restriction that $U\independent X$ is maintained (a reasonable restriction given the definition of $X$) then the interpretation of $X$ for the simple single equation model is 
+The principal difference between the simple single equation model and the single equation model is the treatment of $X$. The simple single equation model embeds the restriction that individual behaviour is not dependent upon $X$.\footnote{In fact, individual behaviour is permitted to depend upon $X$ provided that this dependency is in the aggregate. In other words, if only the aggregate of $X$ matters for individual behaviour, and so is constant across all economic agents.} In the context of the application, the restriction implies that race does not affect a mother's employment. Cultural norms or discriminatory policies that reduce the incentive to seek employment for mothers of a particular race say, independently of ability, are excluded by the simple single equation model. Supposing that the restriction $U\independent X$ is maintained (a reasonable restriction given the definition of $X$) then the interpretation of $X$ for the simple single equation model is 
 \begin{enumerate}[(a)]
 \item as an exogenous variable that is irrelevant to the determination of any component of the structural model; or,
 \item as an instrumental variable if $X$ is figured to be a determinant of $D$, or is a good predictor of $D$.
 \end{enumerate}   
-In either case, if individual behaviour is dependent upon $X$ but the simple single equation model is assumed, the restriction that $U\independent X$ is no longer valid. Note that
+In either case, if individual behaviour is dependent upon $X$ but the simple single equation model is assumed, the restriction $U\independent X$ is no longer valid. Note that, if the restrictions that single equation model embeds are maintained then
 \[Y=\mathbbm{1}[p(D,X)<U]\]
 can always be written as
 \begin{equation}
-Y=\mathbbm{1}[\zeta(D,X)<\lambda(D,V)]\label{eq:bias}
+Y=\mathbbm{1}[\zeta(D,X)<\lambda(D,V),]\label{eq:bias}
 \end{equation}
-if the restrictions that the single equation model embeds are maintained. I define a function $\pi$ such that
-\[F_{\upsilon|d}(\upsilon<\pi(d)|d)=r(d),\] 
+where $(\xi,\lambda)$ are arbitrary functions and $V$ is an independent random variable. This transformation is valid by the quantile transform that is a monotonic transformation of either side of the inequality. I define a function $\pi$ such that
+\[F_{\upsilon}(\upsilon<\pi(d))\equiv r(d),\] 
 where $F_\upsilon$ is the distribution function of some as yet undefined variable.\footnote{I depart from the notation that is employed throughout the rest of the paper in order to emphasise the variable to which this distribution corresponds.} Adding and subtracting $\pi(D)$ inside the indicator of (\ref{eq:bias}) yields
-\[Y=\mathbbm{1}[\pi(D)<\lambda(D,V)+\pi(D)-\zeta(D,X),\]
+\[Y=\mathbbm{1}[\pi(D)<\lambda(D,V)+\pi(D)-\zeta(D,X)],\]
 which upon defining 
-\[\upsilon\equiv\lambda(D,V)+\pi(D)-\zeta(D,X)]\]
-demonstrates why the restriction that $U\independent X$ is no longer valid ($\upsilon$ is a function of $X$). The interpretation of the bias term $\zeta(D,X)$ is then as omitted variable bias in the case of (a), but more worryingly as a violation of the exclusion restriction if $X$ is re-branded as an instrumental variable as in the case of (b). 
+\[\upsilon\equiv\lambda(D,V)+\pi(D)-\zeta(D,X)\]
+demonstrates why the restriction $U\independent X$ is no longer valid ($\upsilon$ is a function of $X$). The interpretation of the bias term $\zeta(D,X)$ is then as omitted variable bias in the case of (a), but more worryingly as a violation of the exclusion restriction if $X$ is re-branded as an instrumental variable as in the case of (b). 
 \subsubsection{Identification analysis}
 I describe the identified set of the collection of $r(d)$ over $\mathcal{R}_D$ for the simple single equation model. I employ random set theory as a tool for the identification analysis, and proceed as for the identification analysis of the single equation model. 
 
@@ -652,7 +670,7 @@ Second, I describe the identified set of $r(d)$ as
 \end{equation}
 which is valid by {\Art}.
 \subsubsection{Model misspecification and bias}
-I discuss the bias that arises when individual behaviour is dependent upon $X$ but the simple single equation model is assumed. I show that the simple single equation model does not identify a superset of the identified set if the restrictions that the single equation model embeds are maintained (model misspecification).
+I discuss the bias that arises when individual behaviour is dependent upon $X$ but the simple single equation model is assumed. I show that the simple single equation model does not necessarily identify a superset of the identified set if the restrictions that the single equation model embeds are maintained (model misspecification).
 
 If the simple single equation model is misspecified then it does not (partially) identify $\mathbb{E}[Y(d)]$. Rather, the simple single equation model (partially) identifies the functional $r(d)$ that encompasses a bias. A natural question is then how does the identified set of $r(d)$ compare to the identified set of $\mathbb{E}[Y(d)]$, which is identified by the single equation model? I focus on the lower set of inequalities that describe the identified set in each case since the analysis is sufficient to address the question. I expand the left-hand inequality of (\ref{eq:rident}) to
 \begin{equation}
@@ -675,7 +693,7 @@ It is somewhat misleading to study this difference independently of the weightin
 Together with moving the supremum operator inside the sum, the difference in probability weights determines that the bias from model misspecification is ambiguous. 
 \item Fourth, $\mathcal{A}_r$ is not necessarily equal to $\mathcal{A}_p$.
 \[\sum_{x\in\mathcal{R}_X}\mathbb{P}(\color{black}x\color{black})\color{black}\sup_{\eta\in\mathcal{R}_X}\color{black}\sup_{z\in\mathcal{R}_Z}\color{black}\mathbb{P}(Y=0,D\in\color{blue}\mathcal{A}_p(\eta;d,x)\color{black}|\color{black}\eta\color{black},z)\] 
-Notice that the set $\mathcal{A}_r$ is constant across the summation, but that $\mathcal{A}_p$ can be different in each term of the summation. Further, it is unclear whether $\mathcal{A}_r$ and $\mathcal{A}_p$ are equal in any term of the summation. This difference determines that the bias from model misspecification is ambiguous.
+Notice that the set $\mathcal{A}_r$ is constant across the summation, but that $\mathcal{A}_p$ can be different in each term of the summation. Further, it is unclear whether $\mathcal{A}_r$ and $\mathcal{A}_p$ are equal in each term of the summation. This difference determines that the bias from model misspecification is ambiguous.
 \end{enumerate} 
 Overall, the  differences between (\ref{eq:simplelower}) and (\ref{eq:lower}) determine that the bias from model misspecification is ambiguous; the bias from (c) and (d) can outweigh the bias from (a) and (b). Extending this finding to the upper bound that is identified by the single equation model, the effect of permitting $X$ to enter $h$ is to alter the length of the identified set, to shift the location of the identified set, or a combination of both. With respect to location shift, the finding is consistent with the behaviour of identifying models.  
 \subsubsection{Hispanic ethnicity}
@@ -823,9 +841,9 @@ As a final remark, the event that there is a multiple second birth is a good pre
 %==================================================%
 \begin{figure}[p]
 \centering
-\caption*{\footnotesize Suppose that $\color{blue}\theta_n^u(z)\color{black}$ and $\color{red}\theta_n^u(z')\color{black}$ are estimates of upper bounds on $\mathbb{E}_n[Y(0)]$. Similarly, suppose that $\color{blue}\phi_n^u(z)\color{black}$ and $\color{red}\phi_n^u(z')\color{black}$ are one-sided $1-\alpha$ confidence regions for $\color{blue}\theta_n^u(z)\color{black}$ and $\color{red}\theta_n^u(z')\color{black}$. $\color{red}\phi_n^u(z')\color{black}>\color{blue}\phi_n^u(z')\color{black}$ if there is greater variation in the estimate of $\color{blue}\theta_n^u(z)\color{black}$ (if there are fewer observations of $z$ than $z'$, say).}
+\caption*{\footnotesize Suppose that $\color{blue}\theta_n^u(z)\color{black}$ and $\color{red}\theta_n^u(z')\color{black}$ are estimates of upper bounds on the identified set of $\mathbb{E}[Y(0)]$. Similarly, suppose that $\color{blue}\phi_n^u(z)\color{black}$ and $\color{red}\phi_n^u(z')\color{black}$ are one-sided $1-\alpha$ confidence regions for $\color{blue}\theta_n^u(z)\color{black}$ and $\color{red}\theta_n^u(z')\color{black}$. $\color{red}\phi_n^u(z')\color{black}>\color{blue}\phi_n^u(z')\color{black}$ if there is greater variation in the estimate of $\color{blue}\theta_n^u(z)\color{black}$ (if there are fewer observations of $z$ than $z'$, say).}
 \includegraphics[width=0.75\textwidth]{U:/GitHub/Covariatesets/Diagrams/Confidence.pdf}
-\caption*{\footnotesize As $\color{blue}\theta_n^u(z)\color{black}$ and $\color{red}\theta_n^u(z')\color{black}$ are both constraints on $\mathbb{E}_n[Y(0)]$, the minimum of these upper bounds must be binding. The minimum upper bound is written as $\theta^u_n$ and is $\color{blue}\theta_n^u(z)\color{black}$. The inferential problem is to determine $\phi_n^u$, which satisfies $\mathbb{P}(\mathbb{E}[Y(0)]>\phi_n^u)=\alpha$. A na{\"i}ve approach would be to look only at the one-sided $1-\alpha$ confidence region for $\color{blue}\theta_n^u(z)\color{black}$, which is $\color{blue}\phi_n^u(z)\color{black}$. This approach ignores variation in $\color{red}\theta_n^u(z')\color{black}$. An equally na{\"i}ve approach would be to simply add aggregate variation to $\color{blue}\theta_n^u(z)\color{black}$. In other words, to add the weighted average of $\color{blue}\phi_n^u(z)\color{black}-\color{blue}\theta_n^u(z)\color{black}$ and $\color{red}\phi_n^u(z')\color{black}-\color{red}\theta_n^u(z')\color{black}$ to $\color{blue}\theta_n^u(z)\color{black}$. This approach is standard but fails in this case because it does not account for the fact that $\color{blue}\theta_n^u(z)\color{black}<\color{red}\theta_n^u(z')\color{black}$. Inference must account for the fact that upward variation in $\color{red}\theta_n^u(z')\color{black}$ does not matter so long as $\color{blue}\theta_n^u(z)\color{black}<\color{red}\theta_n^u(z')\color{black}$; equivalently, that $\color{red}\theta_n^u(z')\color{black}$ is a one-sided $1-\gamma$ confidence region for $\color{blue}\theta_n^u(z)\color{black}$ for $\gamma>\alpha$. \cite{cHlr13} solves the inferential problem by adjusting the critical value that is associated with the one-sided $1-\alpha$-confidence region. That is, \cite{cHlr13} adjusts $k$ such that $k$ that solves $\mathbb{P}(\mathbb{E}[Y(0)]>\color{blue}\theta_n^u(z)\color{black}+k\sigma)=\alpha$. The solution for $k$ yields $\phi_n^u$ with the one-sided $1-\alpha$ confidence region for $\theta_n^u$ given by the grey area. The distribution of $\theta_n^u$ over repeated samples is non-standard in this case and the bootstrap is not necessarily consistent \citep{bU10}.} 
+\caption*{\footnotesize As $\color{blue}\theta_n^u(z)\color{black}$ and $\color{red}\theta_n^u(z')\color{black}$ are both constraints on the identified set of $\mathbb{E}[Y(0)]$, the minimum of these upper bounds must be binding. The minimum upper bound is written as $\theta^u_n$ and is $\color{blue}\theta_n^u(z)\color{black}$. The inferential problem is to determine $\phi_n^u$, which satisfies $\mathbb{P}(\mathbb{E}[Y(0)]>\phi_n^u)=\alpha$. A na{\"i}ve approach would be to look only at the one-sided $1-\alpha$ confidence region for $\color{blue}\theta_n^u(z)\color{black}$, which is $\color{blue}\phi_n^u(z)\color{black}$. This approach ignores variation in $\color{red}\theta_n^u(z')\color{black}$. An equally na{\"i}ve approach would be to simply add aggregate variation to $\color{blue}\theta_n^u(z)\color{black}$. In other words, to add the weighted average of $\color{blue}\phi_n^u(z)\color{black}-\color{blue}\theta_n^u(z)\color{black}$ and $\color{red}\phi_n^u(z')\color{black}-\color{red}\theta_n^u(z')\color{black}$ to $\color{blue}\theta_n^u(z)\color{black}$. This approach is standard but fails in this case because it does not account for the fact that $\color{blue}\theta_n^u(z)\color{black}<\color{red}\theta_n^u(z')\color{black}$. Inference must account for the fact that upward variation in $\color{red}\theta_n^u(z')\color{black}$ does not matter so long as $\color{blue}\theta_n^u(z)\color{black}<\color{red}\theta_n^u(z')\color{black}$; equivalently, that $\color{red}\theta_n^u(z')\color{black}$ is a one-sided $1-\gamma$ confidence region for $\color{blue}\theta_n^u(z)\color{black}$ for $\gamma>\alpha$. \cite{cHlr13} solves the inferential problem by adjusting the critical value that is associated with the one-sided $1-\alpha$-confidence region. That is, \cite{cHlr13} adjusts $k$ such that $k$ that solves $\mathbb{P}(\mathbb{E}[Y(0)]>\color{blue}\theta_n^u(z)\color{black}+k\sigma)=\alpha$. The solution for $k$ yields $\phi_n^u$ with the one-sided $1-\alpha$ confidence region for $\theta_n^u$ given by the grey area. The distribution of $\theta_n^u$ over repeated samples is non-standard in this case and the bootstrap is not necessarily consistent \citep{bU10}.} 
 \caption{A note on the inferential problem.}
 \label{fig:confidence}
 \end{figure}
@@ -835,7 +853,7 @@ As a final remark, the event that there is a multiple second birth is a good pre
 \centering
 \caption*{\footnotesize Suppose that the estimate of the identified set of $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$ is given by the blue rectangle, and that the $1-\alpha$-confidence region for this set is the union of the blue rectangle and the red polygon.}
 \includegraphics[width=0.75\textwidth]{U:/GitHub/Covariatesets/Diagrams/ACE.pdf}
-\caption*{\footnotesize It is possible to recover $ACE(D\rightarrow Y)$ from the plot. First, note that $ACE(D\rightarrow Y)$ is increasing in the $y$-direction and is decreasing in the $x$-direction. Second, note that $ACE(D\rightarrow Y)$ is constant along any line with unit gradient. Third, note that the value of $ACE(D\rightarrow Y)$ along any line with unit gradient is dependent upon the value of the intercept of this line. Fourth, note that a projection from the normal of a line with unit gradient is a line that has unit gradient. For example, the blue dashed line is a projection from the normal of the $45^\circ$ line; notice that the blue dashed line is parallel to the $45^\circ$ line. Fifth, note that any projection from the normal of the $45^\circ$ line that passes through the blue rectangle is an admissible value of $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$; equivalently, that any projection from the normal of the $45^\circ$ line that passes through the union of the blue rectangle and the red polygon is in the $1-\alpha$ confidence region of $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$. Together these five facts suggest that the estimate of the identified set of $ACE(D\rightarrow Y)$ and its $1-\alpha$ confidence region can be recovered from the projection from the normal of the $45^\circ$ line onto the $y$-axis. This method gives a geometric interpretation to $ACE(D\rightarrow Y)$.}
+\caption*{\footnotesize It is possible to recover the estimate of the identified set of $ACE(D\rightarrow Y)$ from the plot. First, note that $ACE(D\rightarrow Y)$ is increasing in the $y$-direction and is decreasing in the $x$-direction. Second, note that $ACE(D\rightarrow Y)$ is constant along any line with unit gradient. Third, note that the value of $ACE(D\rightarrow Y)$ along any line with unit gradient is dependent upon the value of the intercept of this line. Fourth, note that a projection from the normal of a line with unit gradient is a line that has unit gradient. For example, the blue dashed line is a projection from the normal of the $45^\circ$ line; notice that the blue dashed line is parallel to the $45^\circ$ line. Fifth, note that any projection from the normal of the $45^\circ$ line that passes through the blue rectangle is an identified value of $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$; equivalently, that any projection from the normal of the $45^\circ$ line that passes through the union of the blue rectangle and the red polygon is in the $1-\alpha$ confidence region of $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$. Together these five facts suggest that the estimate of the identified set of $ACE(D\rightarrow Y)$ and its $1-\alpha$ confidence region can be recovered from the projection from the normal of the $45^\circ$ line onto the $y$-axis. This method gives a geometric interpretation to $ACE(D\rightarrow Y)$.}
 \caption{A note on recovering the average causal effect.}
 \label{fig:ace}
 \end{figure}
@@ -843,42 +861,39 @@ As a final remark, the event that there is a multiple second birth is a good pre
 %==================================================%
 \begin{figure}[p]
 \centering
-\caption*{\footnotesize The plot shows how the estimate of the identified set of $ACE_n(D\rightarrow Y)$ changes as $\mathcal{R}_Z$ is varied. Each value on the $y$-axis corresponds to a different specification. In each specification, $\mathcal{R}_Z$ is varied and the estimate of the identified set of $ACE_n(D\rightarrow Y)$ is calculated. See Table~\ref{tbl:acesame} and Table~\ref{tbl:acemult} for the definition of $\mathcal{R}_Z$ in each specification (the column headed No. states the specification number in each table, and the column headed $\mathcal{R}_Z$ states the events that form the points of support for $Z$). The plot is a graphical representation of Table~\ref{tbl:acesame} and Table~\ref{tbl:acemult}. Blue regions represent the estimate of the identified set of $ACE_n(D\rightarrow Y)$, and the union of blue and red regions represent $0.950$ confidence regions for $ACE_n(D\rightarrow Y)$.}
+\caption*{\footnotesize The plot shows how the estimate of the identified set of $ACE(D\rightarrow Y)$ changes as $\mathcal{R}_Z$ is varied. Each value on the $y$-axis corresponds to a different specification. In each specification, $\mathcal{R}_Z$ is varied and the estimate of the identified set of $ACE(D\rightarrow Y)$ is calculated. See Table~\ref{tbl:acesame} and Table~\ref{tbl:acemult} for the definition of $\mathcal{R}_Z$ in each specification (the column headed No. states the specification number in each table, and the column headed $\mathcal{R}_Z$ states the events that form the points of support for $Z$). The plot is a graphical representation of Table~\ref{tbl:acesame} and Table~\ref{tbl:acemult}. Blue regions represent the estimate of the identified set of $ACE(D\rightarrow Y)$, and the union of blue and red regions represent $0.950$ confidence regions for $ACE(D\rightarrow Y)$.}
 \includegraphics[width=0.75\textwidth]{U:/GitHub/Covariatesets/Coding/tikzDevice/Instruments.pdf}
-\caption*{\footnotesize In Specification 1 through Specification 5, information relating to the incidence of a multiple second birth is ignored. The estimate of the identified sets of values of $ACE_n(D\rightarrow Y)$ in these specifications are large and disconnected, which suggests that child gender is weakly associated with the number of children in a household. In other words, that child gender is a weak instrumental variable. Child gender is, by itself, insufficient to determine the sign of the average causal effect of the number of children in a household on a mother's employment. Specification 2 and Specification 3 are unable to rule out a null effect at the $0.950$ significance level (the central red regions overlap at zero). In Specification 6 through Specification 7, information relating to the incidence of a multiple second birth is incorporated. The sign of the average causal effect of the number of children in a household on a mother's employment is negative, and significant. The length of the estimate of the identified set of $ACE_n(D\rightarrow Y)$ is decreasing as more information is incorporated, as is the $0.950$ confidence region for $ACE_n(D\rightarrow Y)$.}
-\caption{Admissible sets of values of $ACE_n(D\rightarrow Y)$ and $\mathcal{R}_Z$.}
+\caption*{\footnotesize In Specification 1 through Specification 5, information relating to whether there is a multiple second birth is ignored. The estimate of the identified sets of values of $ACE(D\rightarrow Y)$ in these specifications are large and disconnected, which suggests that child gender is weakly associated with the number of children in a household. In other words, that child gender is a weak instrumental variable. Child gender is, by itself, insufficient to determine the sign of the average causal effect of the number of children in a household on a mother's employment. Specification 2 and Specification 3 are unable to rule out a null effect at the $0.950$ significance level (the central red regions overlap at zero). In Specification 6 through Specification 8, information relating to whether there is multiple second birth is incorporated. The sign of the average causal effect of the number of children in a household on a mother's employment is negative, and significant. The length of the estimate of the identified set of $ACE(D\rightarrow Y)$ is decreasing as more information is incorporated, as is the $0.950$ confidence region for $ACE(D\rightarrow Y)$.}
+\caption{Estimates of the identified set of $ACE(D\rightarrow Y)$ as $\mathcal{R}_Z$ is varied.}
 \label{fig:experiments}
 \end{figure}
 \clearpage
 %==================================================%
 \begin{figure}[p]
 \centering
-\caption*{\footnotesize The plot shows the estimate of the identified set of $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$ when $\mathcal{R}_Z$ is formed of the events $\text{Male-Male}\cup\text{Female-Female}$ and $\text{Male-Female}\cup\text{Female-Male}$. This is Specification 1 in Table~\ref{tbl:setssame}. Blue regions represent the estimate of the identified set of $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$, and the union of blue and red regions represent $0.950$ confidence regions for $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$. The confidence regions that are shown in the plot are different to those that are reported in Table~\ref{tbl:setssame}. The distinction arises since Table~\ref{tbl:setssame} reports $0.950$ confidence regions for $\mathbb{E}_n[Y(0)]$ and for $\mathbb{E}_n[Y(1)]$ whereas the plot shows the $0.950$ confidence region for $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$.}
+\caption*{\footnotesize The plot shows the estimate of the identified set of $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$ when $\mathcal{R}_Z$ is formed of the events $\text{Male-Male}\cup\text{Female-Female}$ and $\text{Male-Female}\cup\text{Female-Male}$. This is Specification 1 in Table~\ref{tbl:setssame}. Blue regions represent the estimate of the identified set of $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$, and the union of blue and red regions represent $0.950$ confidence regions for $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$. The confidence regions that are shown in the plot are different to those that are reported in Table~\ref{tbl:setssame}. The distinction arises since Table~\ref{tbl:setssame} reports $0.950$ confidence regions for $\mathbb{E}[Y(0)]$ and for $\mathbb{E}[Y(1)]$ whereas the plot shows the $0.950$ confidence region for $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$.}
 \includegraphics[width=0.75\textwidth]{U:/GitHub/Covariatesets/Coding/tikzDevice/Samesex.pdf}
-\caption{}
+\caption*{\footnotesize The estimate of the identified set of $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$ is large and disconnected as child gender is a weak instrumental variable. There is little statistical uncertainty since the number of data is large, and as the event that the oldest two children in the household is frequent. A null effect can be ruled out but the estimate is otherwise relatively uninformative.}
+\caption{Estimate of the identified set of $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$ for Specification 1.}
 \label{fig:samesex}
 \end{figure}
 \clearpage
 %==================================================%
 \begin{figure}[p]
 \centering
-\begin{subfigure}{0.8\textwidth}
-\caption{The plot shows the estimate of the identified set of $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$ when $\mathcal{R}_Z$ is formed of the events $\text{Multiple birth}$, $\text{Single birth}\cap(\text{Male-Male}\cup\text{Female-Female})$ and $\text{Single birth}\cap(\text{Male-Female}\cup\text{Male-Female})$. This is Specification 6 in Table~\ref{tbl:setsmult}. Blue regions represent the estimate of the identified set of $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$, and the union of blue and red regions represent $0.950$ confidence regions for $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$. The confidence regions that are shown in the plot are different to those that are reported in Table~\ref{tbl:setsmult}. The distinction arises since Table~\ref{tbl:setsmult} reports $0.950$ confidence regions for $\mathbb{E}_n[Y(0)]$ and for $\mathbb{E}_n[Y(1)]$ whereas the plot shows the $0.950$ confidence region for $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$.}
-\includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Coding/tikzDevice/Multiple.pdf}
-\caption{}
-\end{subfigure}
-\caption{}
+\caption*{\footnotesize The plot shows the estimate of the identified set of $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$ when $\mathcal{R}_Z$ is formed of the events $\text{Multiple birth}$, $\text{Single birth}\cap(\text{Male-Male}\cup\text{Female-Female})$ and $\text{Single birth}\cap(\text{Male-Female}\cup\text{Male-Female})$. This is Specification 6 in Table~\ref{tbl:setsmult}. Blue regions represent the estimate of the identified set of $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$, and the union of blue and red regions represent $0.950$ confidence regions for $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$. The confidence regions that are shown in the plot are different to those that are reported in Table~\ref{tbl:setsmult}. The distinction arises since Table~\ref{tbl:setsmult} reports $0.950$ confidence regions for $\mathbb{E}[Y(0)]$ and for $\mathbb{E}[Y(1)]$ whereas the plot shows the $0.950$ confidence region for $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$.}
+\includegraphics[width=0.75\textwidth]{U:/GitHub/Covariatesets/Coding/tikzDevice/Multiple.pdf}
+\caption*{\footnotesize The event that there is a multiple second birth is a special instrumental variable, and identifies $\mathbb{E}_n[Y(1)]$ in the sub-population of mothers that experience a multiple second birth. As such, the estimate of the identified set of $\mathbb{E}[Y(1)]$ is a point. The estimate of the identified set is small, although there is medium variation in the estimate of the identified set of $\mathbb{E}[Y(0)]$ that means that it is not overly informative about $ACE(D\rightarrow Y)$. The confidence region is large relative to the set due to the rarity of a multiple second birth. This is particularly apparent in the $y$-direction.}
+\caption{Estimate of the identified set of $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$ for Specification 6.}
 \label{fig:multiple}
 \end{figure}
 %==================================================%
 \begin{figure}[p]
 \centering
-\begin{subfigure}{0.8\textwidth}
-\caption{The plot shows the estimate of the identified set of $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$ when $\mathcal{R}_Z$ is formed of the events $\text{Multiple birth}$, $\text{Single birth}\cap\text{Male-Male}$, $\text{Single birth}\cap\text{Female-Female}$, $\text{Single birth}\cap\text{Male-Female}$ and $\text{Single birth}\cap\text{Female-Male}$. This is Specification 8 in Table~\ref{tbl:setsmult}. Blue regions represent the estimate of the identified set of $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$, and the union of blue and red regions represent $0.950$ confidence regions for $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$. The confidence regions that are shown in the plot are different to those that are reported in Table~\ref{tbl:setsmult}. The distinction arises since Table~\ref{tbl:setsmult} reports $0.950$ confidence regions for $\mathbb{E}_n[Y(0)]$ and for $\mathbb{E}_n[Y(1)]$ whereas the plot shows the $0.950$ confidence region for $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$.}
-\includegraphics[width=\textwidth]{U:/GitHub/Covariatesets/Coding/tikzDevice/Allin.pdf}
-\caption{}
-\end{subfigure}
-\caption{}
+\caption*{\footnotesize The plot shows the estimate of the identified set of $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$ when $\mathcal{R}_Z$ is formed of the events $\text{Multiple birth}$, $\text{Single birth}\cap\text{Male-Male}$, $\text{Single birth}\cap\text{Female-Female}$, $\text{Single birth}\cap\text{Male-Female}$ and $\text{Single birth}\cap\text{Female-Male}$. This is Specification 8 in Table~\ref{tbl:setsmult}. Blue regions represent the estimate of the identified set of $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$, and the union of blue and red regions represent $0.950$ confidence regions for $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$. The confidence regions that are shown in the plot are different to those that are reported in Table~\ref{tbl:setsmult}. The distinction arises since Table~\ref{tbl:setsmult} reports $0.950$ confidence regions for $\mathbb{E}_n[Y(0)]$ and for $\mathbb{E}_n[Y(1)]$ whereas the plot shows the $0.950$ confidence region for $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$.}
+\includegraphics[width=0.75\textwidth]{U:/GitHub/Covariatesets/Coding/tikzDevice/Allin.pdf}
+\caption*{\footnotesize Specification 8 incorporates all available information into the special single equation model with respect to $Z$. As such, the estimate of the identified set of $(\mathbb{E}_n[Y(0)],\mathbb{E}_n[Y(1)])$ is the smallest possible set that is achievable without further restriction or additional data. There is advantage to Specification 8 relative to Specification 6 but it is clear that the gains are not substantial.}
+\caption{Estimate of the identified set of $(\mathbb{E}[Y(0)],\mathbb{E}[Y(1)])$ for Specification 8.}
 \label{fig:allin}
 \end{figure}
 %==================================================%
@@ -899,7 +914,7 @@ As a final remark, the event that there is a multiple second birth is a good pre
 \renewcommand{\baselinestretch}{1}
 \begin{sidewaystable}[p]
 \centering
-\caption{$\mathcal{R}_Z$ and estimate of the identified sets of values of $\mathbb{E}_n[Y(d)]$.}
+\caption{$\mathcal{R}_Z$ and estimates of the identified set of $\mathbb{E}[Y(d)]$.}
 \begin{tabular}{lclcrcrcrcr}
 \toprule
 &	& &	& \multicolumn{7}{c}{Bound} \\
@@ -939,7 +954,7 @@ No. & &	$\mathcal{R}_Z$	&	&	$\mathbb{E}_n^-[Y(0)]$	&	&	$\mathbb{E}_n^-[Y(1)]$	&	
 \end{tabular}
 \vspace{10pt}
 \renewcommand{\baselinestretch}{1.5}
-\caption*{\scriptsize The column headed No. states the specification number. The column headed $\mathcal{R}_Z$ states the events that form the points of support of $Z$. For example, in Specification 1 $Z$ is a random variable that takes the value $z$ when the event $\text{Male-Male}\cup\text{Female-Female}$ occurs and the value $z'$ when this does not occur. The event $Male-Female$ is the event that the oldest two children in a household are male and female, respectively. The columns headed Bound are the estimate of the identified set of $\mathbb{E}_n[Y(D)]$. A superscript $-$ is written when the bounds are conditional on $\mathbb{E}_n[Y(0)]\geq\mathbb{E}_n[Y(1)]$, and a superscript $+$ is written when the bounds are conditional on $\mathbb{E}_n[Y(0)]\leq\mathbb{E}_n[Y(1)]$. $0.950$ confidence regions for $\mathbb{E}_n[Y(D)]$ are in blue and are constructed from one-sided $0.975$ confidence regions for the lower bound and the upper bound.}
+\caption*{\scriptsize The column headed No. states the specification number. The column headed $\mathcal{R}_Z$ states the events that form the points of support of $Z$. For example, in Specification 1 $Z$ is a random variable that takes the value $z$ when the event $\text{Male-Male}\cup\text{Female-Female}$ occurs and the value $z'$ when this does not occur. The event $\text{Male-Female}$ is the event that the oldest two children in a household are male and female, respectively. The columns headed Bound are the estimates of the identified set of $\mathbb{E}[Y(D)]$. A superscript $-$ is written when the bounds are conditional on $\mathbb{E}[Y(0)]\geq\mathbb{E}[Y(1)]$, and a superscript $+$ is written when the bounds are conditional on $\mathbb{E}[Y(0)]\leq\mathbb{E}[Y(1)]$. $0.950$ confidence regions for $\mathbb{E}[Y(D)]$ are in blue and are constructed from one-sided $0.975$ confidence regions for the lower bound and the upper bound.}
 \label{tbl:setssame}
 \end{sidewaystable}
 \clearpage
@@ -947,7 +962,7 @@ No. & &	$\mathcal{R}_Z$	&	&	$\mathbb{E}_n^-[Y(0)]$	&	&	$\mathbb{E}_n^-[Y(1)]$	&	
 \renewcommand{\baselinestretch}{1}
 \begin{sidewaystable}[p]
 \centering
-\caption{$\mathcal{R}_Z$ and estimate of the identified sets of values of $\mathbb{E}_n[Y(d)]$.}
+\caption{$\mathcal{R}_Z$ and estimates of the identified set of $\mathbb{E}[Y(d)]$ (\emph{continued}).}
 \begin{tabular}{lclcrcr}
 \toprule
 &	&  & &\multicolumn{3}{c}{Bound} \\
@@ -975,7 +990,7 @@ No. & &	$\mathcal{R}_Z$	&	&	$\mathbb{E}_n^-[Y(0)]$	&	&	$\mathbb{E}_n^-[Y(1)]$\\
 \end{tabular}
 \vspace{10pt}
 \renewcommand{\baselinestretch}{1.5}
-\caption*{\scriptsize The column headed No. states the specification number. The column headed $\mathcal{R}_Z$ states the events that form the points of support of $Z$. For example, in Specification 1 $Z$ is a random variable that takes the value $z$ when the event $\text{Male-Male}\cup\text{Female-Female}$ occurs and the value $z'$ when this does not occur. The event $Male-Female$ is the event that the oldest two children in a household are male and female, respectively. The columns headed Bound are the estimate of the identified set of $\mathbb{E}_n[Y(D)]$. A superscript $-$ is written when the bounds are conditional on $\mathbb{E}_n[Y(0)]\geq\mathbb{E}_n[Y(1)]$, and a superscript $+$ is written when the bounds are conditional on $\mathbb{E}_n[Y(0)]\leq\mathbb{E}_n[Y(1)]$. $0.950$ confidence regions for $\mathbb{E}_n[Y(D)]$ are in blue and are constructed from one-sided $0.975$ confidence regions for the lower bound and the upper bound.}
+\caption*{\scriptsize The column headed No. states the specification number. The column headed $\mathcal{R}_Z$ states the events that form the points of support of $Z$. For example, in Specification 1 $Z$ is a random variable that takes the value $z$ when the event $\text{Male-Male}\cup\text{Female-Female}$ occurs and the value $z'$ when this does not occur. The event $\text{Male-Female}$ is the event that the oldest two children in a household are male and female, respectively. The columns headed Bound are the estimates of the identified set of $\mathbb{E}[Y(D)]$. A superscript $-$ is written when the bounds are conditional on $\mathbb{E}[Y(0)]\geq\mathbb{E}[Y(1)]$, and a superscript $+$ is written when the bounds are conditional on $\mathbb{E}[Y(0)]\leq\mathbb{E}[Y(1)]$. $0.950$ confidence regions for $\mathbb{E}[Y(D)]$ are in blue and are constructed from one-sided $0.975$ confidence regions for the lower bound and the upper bound.}
 \label{tbl:setsmult}
 \end{sidewaystable}
 \clearpage
@@ -983,7 +998,7 @@ No. & &	$\mathcal{R}_Z$	&	&	$\mathbb{E}_n^-[Y(0)]$	&	&	$\mathbb{E}_n^-[Y(1)]$\\
 \renewcommand{\baselinestretch}{1}
 \begin{sidewaystable}[p]
 \centering
-\caption{$\mathcal{R}_Z$ and estimate of the identified sets of values of $ACE_n(D\rightarrow Y)$.}
+\caption{$\mathcal{R}_Z$ and estimates of the identified set of $ACE(D\rightarrow Y)$.}
 \begin{tabular}{lclcrcr}
 \toprule
 &	&  & &\multicolumn{3}{c}{Bound} \\
@@ -1018,7 +1033,7 @@ No.& &	$\mathcal{R}_Z$	&	&	$ACE_n^-(D\rightarrow Y)$	&	&	$ACE_n^+(D\rightarrow Y
 \end{tabular}
 \vspace{10pt}
 \renewcommand{\baselinestretch}{1.5}
-\caption*{\scriptsize The column headed No. states the specification number. The column headed $\mathcal{R}_Z$ states the events that form the points of support of $Z$. For example, in Specification 1 $Z$ is a random variable that takes the value $z$ when the event $\text{Male-Male}\cup\text{Female-Female}$ occurs and the value $z'$ when this does not occur. The event $Male-Female$ is the event that the oldest two children in a household are male and female, respectively. The columns headed Bound are the estimate of the identified set of $ACE_n(D\rightarrow Y)$. A superscript $-$ is written when the bounds are conditional on $ACE_n(D\rightarrow Y)\leq 0$, and a superscript $+$ is written when the bounds are conditional on $ACE_n(D\rightarrow Y)\geq 0$. $0.950$ confidence regions for $ACE_n(D\rightarrow Y)$ are in blue and are constructed from one-sided $0.975$ confidence regions for the lower bound and the upper bound.}
+\caption*{\scriptsize The column headed No. states the specification number. The column headed $\mathcal{R}_Z$ states the events that form the points of support of $Z$. For example, in Specification 1 $Z$ is a random variable that takes the value $z$ when the event $\text{Male-Male}\cup\text{Female-Female}$ occurs and the value $z'$ when this does not occur. The event $\text{Male-Female}$ is the event that the oldest two children in a household are male and female, respectively. The columns headed Bound are the estimates of the identified set of $ACE(D\rightarrow Y)$. A superscript $-$ is written when the bounds are conditional on $ACE(D\rightarrow Y)\leq 0$, and a superscript $+$ is written when the bounds are conditional on $ACE(D\rightarrow Y)\geq 0$. $0.950$ confidence regions for $ACE(D\rightarrow Y)$ are in blue and are constructed from one-sided $0.975$ confidence regions for the lower bound and the upper bound.}
 \label{tbl:acesame}
 \end{sidewaystable}
 \clearpage
@@ -1026,7 +1041,7 @@ No.& &	$\mathcal{R}_Z$	&	&	$ACE_n^-(D\rightarrow Y)$	&	&	$ACE_n^+(D\rightarrow Y
 \renewcommand{\baselinestretch}{1}
 \begin{sidewaystable}[p]
 \centering
-\caption{$\mathcal{R}_Z$ and estimate of the identified sets of values of $ACE_n(D\rightarrow Y)$.}
+\caption{$\mathcal{R}_Z$ and estimates of the identified set of $ACE(D\rightarrow Y)$ (\emph{continued}).}
 \begin{tabular}{lclcr}
 \toprule
 &	& & & \multicolumn{1}{c}{Bound} \\
@@ -1054,7 +1069,7 @@ No.& &	$\mathcal{R}_Z$	&	&	$ACE_n^-(D\rightarrow Y)$\\
 \end{tabular}
 \vspace{10pt}
 \renewcommand{\baselinestretch}{1.5}
-\caption*{\scriptsize The column headed No. states the specification number. The column headed $\mathcal{R}_Z$ states the events that form the points of support of $Z$. For example, in Specification 1 $Z$ is a random variable that takes the value $z$ when the event $\text{Male-Male}\cup\text{Female-Female}$ occurs and the value $z'$ when this does not occur. The event $Male-Female$ is the event that the oldest two children in a household are male and female, respectively. The columns headed Bound are the estimate of the identified set of $ACE_n(D\rightarrow Y)$. A superscript $-$ is written when the bounds are conditional on $ACE_n(D\rightarrow Y)\leq 0$, and a superscript $+$ is written when the bounds are conditional on $ACE_n(D\rightarrow Y)\geq 0$. $0.950$ confidence regions for $ACE_n(D\rightarrow Y)$ are in blue and are constructed from one-sided $0.975$ confidence regions for the lower bound and the upper bound.}
+\caption*{\scriptsize The column headed No. states the specification number. The column headed $\mathcal{R}_Z$ states the events that form the points of support of $Z$. For example, in Specification 1 $Z$ is a random variable that takes the value $z$ when the event $\text{Male-Male}\cup\text{Female-Female}$ occurs and the value $z'$ when this does not occur. The event $\text{Male-Female}$ is the event that the oldest two children in a household are male and female, respectively. The columns headed Bound are the estimates of the identified set of $ACE(D\rightarrow Y)$. A superscript $-$ is written when the bounds are conditional on $ACE(D\rightarrow Y)\leq 0$, and a superscript $+$ is written when the bounds are conditional on $ACE(D\rightarrow Y)\geq 0$. $0.950$ confidence regions for $ACE(D\rightarrow Y)$ are in blue and are constructed from one-sided $0.975$ confidence regions for the lower bound and the upper bound.}
 \label{tbl:acemult}
 \end{sidewaystable}
 \clearpage
