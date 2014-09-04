@@ -416,25 +416,25 @@ rm(b)
 # Remove bounds that do not satisfy the ordering (externally invalid).
 # ====================================================================== #
 
-a = function(r){
-  Store <- vector(length = length(r[is.na(r)==F]))
-  for(j in 1:length(r[is.na(r)==F])){
-    s <- data.frame(r[is.na(r)==F][j])
-    s <- arrange(s,order)
-    bash <- vector(length = nrow(s))
-    for(k in 1:nrow(s)){
-      bash[k] <- prod(s$upper[k]<=s[s$order>s$order[k],3])
-    }
-    Store[j] = prod(bash)
-  }
-  return(Store)
-}
-
-b <- which(a(bound)==1)
-bound <- bound[b]
-
-rm(a)
-rm(b)
+# a = function(r){
+#   Store <- vector(length = length(r[is.na(r)==F]))
+#   for(j in 1:length(r[is.na(r)==F])){
+#     s <- data.frame(r[is.na(r)==F][j])
+#     s <- arrange(s,order)
+#     bash <- vector(length = nrow(s))
+#     for(k in 1:nrow(s)){
+#       bash[k] <- prod(s$upper[k]<=s[s$order>s$order[k],3])
+#     }
+#     Store[j] = prod(bash)
+#   }
+#   return(Store)
+# }
+# 
+# b <- which(a(bound)==1)
+# bound <- bound[b]
+# 
+# rm(a)
+# rm(b)
 
 # ====================================================================== #
 # Find the weighted bound.
@@ -464,5 +464,48 @@ Bound <- b(bound,a)
 
 rm(a)
 rm(b)
+
+# ====================================================================== #
+# Compute ACE(D->Y|x).
+# ====================================================================== #
+
+a = function(r){
+  Store <- list()
+  for(j in 1:length(r)){
+    q = data.frame(r[j])
+    b <- q[q$d==0 & q$x==0,]$lower-q[q$d==1 & q$x==0,]$upper
+    f <- q[q$d==0 & q$x==0,]$upper-q[q$d==1 & q$x==0,]$lower
+    g <- q[q$d==0 & q$x==1,]$lower-q[q$d==1 & q$x==1,]$upper
+    h <- q[q$d==0 & q$x==1,]$upper-q[q$d==1 & q$x==1,]$lower
+    Store[[j]] <- c("x=0",b,f,"x=1",g,h)
+  }
+  return(Store)
+}
+
+a(Bound)
+
+rm(a)
+
+# ====================================================================== #
+# Compute ACE(D->Y).
+# ====================================================================== #
+
+a = function(r){
+  Store <- list()
+  for(j in 1:length(r)){
+    q = data.frame(r[j])
+    b <- q[q$d==0,]$lower-q[q$d==1,]$upper
+    f <- q[q$d==0,]$upper-q[q$d==1,]$lower
+    Store[[j]] <- c(b,f)
+  }
+  return(Store)
+}
+
+a(Bound)
+a(bound.x1)
+bound
+bound.x1
+
+rm(a)
 
 proc.time() - ptm
