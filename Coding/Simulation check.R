@@ -477,12 +477,12 @@ a = function(r){
     f <- q[q$d==0 & q$x==0,]$upper-q[q$d==1 & q$x==0,]$lower
     g <- q[q$d==0 & q$x==1,]$lower-q[q$d==1 & q$x==1,]$upper
     h <- q[q$d==0 & q$x==1,]$upper-q[q$d==1 & q$x==1,]$lower
-    Store[[j]] <- c("x=0",b,f,"x=1",g,h)
+    Store[[j]] <- list(c(b,f),c(g,h))
   }
   return(Store)
 }
 
-a(Bound)
+a(bound)
 
 rm(a)
 
