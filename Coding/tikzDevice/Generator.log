@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.23)  12 SEP 2014 17:57
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.23)  14 SEP 2014 21:32
 entering extended mode
 **Generator.tex
 
@@ -1256,12 +1256,12 @@ Dictionary: translator-theorem-dictionary, Language: English
 (C:\Users\Jeffro\Documents\GitHub\Covariatesets\Coding\tikzDevice\Generator.nav
 )
 (C:\Users\Jeffro\Documents\GitHub\Covariatesets\Coding\tikzDevice\instrumentssa
-ns.tex
-LaTeX Font Info:    Try loading font information for U+msa on input line 116.
+ns2.tex
+LaTeX Font Info:    Try loading font information for U+msa on input line 145.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 116.
+LaTeX Font Info:    Try loading font information for U+msb on input line 145.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -1287,10 +1287,10 @@ Package rerunfilecheck Info: File `Generator.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 20411 strings out of 494045
- 411874 string characters out of 3148384
+ 20437 strings out of 494045
+ 412398 string characters out of 3148384
  518376 words of memory out of 3000000
- 23212 multiletter control sequences out of 15000+200000
+ 23238 multiletter control sequences out of 15000+200000
  9651 words of font info for 36 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  55i,7n,71p,430b,623s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1298,7 +1298,7 @@ Here is how much of TeX's memory you used:
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Generator.pdf (1 page, 38402 bytes).
+Output written on Generator.pdf (1 page, 39286 bytes).
 PDF statistics:
  34 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)
