@@ -18,8 +18,8 @@ Calculator <- function(theta){
       y*(1-d)*(pmvnorm(lower=c(-Inf,beta*x+xi*d),upper=c(gamma*x+phi*z,Inf),sigma=matrix(c(1,sig,sig,1),nrow=2,ncol=2))) +
       (1-y)*d*(pmvnorm(lower=c(gamma*x+phi*z,-Inf),upper=c(Inf,beta*x+xi*d),sigma=matrix(c(1,sig,sig,1),nrow=2,ncol=2))) +
       (1-y)*(1-d)*(pmvnorm(lower=c(-Inf,-Inf),upper=c(gamma*x+phi*z,beta*x+xi*d),sigma=matrix(c(1,sig,sig,1),nrow=2,ncol=2)))
-    a$o[j] = b[b$X == a$X[j] & b$Z == a$Z[j],"freq"]/n
-    a$u[j] = a$p[j]*a$o[j]
+#     a$o[j] = b[b$X == a$X[j] & b$Z == a$Z[j],"freq"]/n
+    a$u[j] = a$p[j]#*a$o[j]
     a$u[j] = log(a$u[j])
     a$out[j] = a$freq[j]*a$u[j]
   }
