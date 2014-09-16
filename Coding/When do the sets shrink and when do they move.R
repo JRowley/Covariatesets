@@ -1,5 +1,8 @@
 ptm <- proc.time()
 
+library(mvtnorm)
+library(iterpc)
+
 Generator <- function(n,d,x.y,x.d,z,sigma,mu.x,mu.z,co){
   Z <- c(rep(c(0,1),0.5*n))
   X <- c(Z[1:(n*0.5*(1+co))],1-Z[(n*0.5*(1+co)+1):n])
@@ -22,12 +25,12 @@ Generator <- function(n,d,x.y,x.d,z,sigma,mu.x,mu.z,co){
 # mu.z = -0.5
 # co = 0.3
 
-n = 5e7
+n = 1e3
 d = 1
-x.y = 0
-x.d =0
+x.y = -0.5
+x.d = 0.75
 z = -1
-sigma = 0
+sigma = 0.5
 mu.x = 0
 mu.z = 0
 co = 0
@@ -39,8 +42,7 @@ PUMS80M <- Generator(n,d,x.y,x.d,z,sigma,mu.x,mu.z,co)
 
 tol = 1e-8
 
-# Randomly sample.
-D <- PUMS80M[sample(1:nrow(PUMS80M),254654,replace=F),]
+D <- PUMS80M
 
 library(iterpc)
 
@@ -534,10 +536,7 @@ a(bound.x1)
 # bound
 # bound.x1
 store <- as.numeric(a(bound.x1)[[1]])
-Store <- matrix(c(as.numeric(a(Bound)[[1]]),
-                  as.numeric(a(Bound)[[2]]),
-                  as.numeric(a(Bound)[[3]])),
-                nrow=3,ncol=2,byrow=T)
+Store <- matrix(unlist(a(Bound)), ncol = 2, byrow = TRUE)
 
 rm(a)
 
