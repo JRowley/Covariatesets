@@ -9,8 +9,8 @@ X = 2
 
 library(iterpc)
 
-# Get all possible strict orderings of p(d,x).
-a = iterpc(2*X, 2*X, ordered = T, replace = T)
+# Get all possible orderings of p(d,x).
+a = iterpc(2*X, 2*X, ordered = T, replace = F)
 Order <- data.frame(getall(a))
 Output <- matrix(nrow=nrow(Order),ncol=2*X)
 for(j in 1:nrow(Order)){
@@ -217,57 +217,60 @@ bound <- if(length(bound[is.na(bound)==F])>1){
 rm(a)
 rm(b)
 
-# # ====================================================================== #
-# # Remove bounds that do not satisfy the ordering (externally invalid).
-# # ====================================================================== #
-#
-# a = function(r){
-#   Store <- vector(length = length(r[is.na(r)==F]))
-#   for(j in 1:length(r[is.na(r)==F])){
-#     s <- data.frame(r[is.na(r)==F][j])
-#     s <- arrange(s,order)
-#     bash <- vector(length = nrow(s))
-#     for(k in 1:nrow(s)){
-#       bash[k] <- prod(s$upper[k]<=s[s$order>s$order[k],3])
-#       }
-#     Store[j] = prod(bash)
-#   }
-#   return(Store)
-# }
-#
-# b <- which(a(bound)==1)
-# bound <- bound[b]
-#
-# rm(a)
-# rm(b)
-#
-# # ====================================================================== #
-# # Find the weighted bound.
-# # ====================================================================== #
-#
-# a <- count(Data,"X")
-# a$p <- a$freq/sum(a$freq)
-# a <- a[,c(1,3)]
-# colnames(a) <- c("x","p")
-#
-# b = function(r,s){
-#   Store <- list()
-#   for(j in 1:length(r)){
-#     q = merge(data.frame(r[j]),s)
-#     q = cbind(q[,1:4],q[,6])
-#     colnames(q) <- c("x","d","l","u","p")
-#     q$lower <- q$p*q$l
-#     q$upper <- q$p*q$u
-#     q <- q[,c(1,2,6,7)]
-#     q <- ddply(q,.(d),summarize,lower=sum(lower),upper=sum(upper))
-#     Store[[j]] <- q
-#   }
-#   return(Store)
-# }
-#
-# Bound <- b(bound,a)
-#
-# rm(a)
-# rm(b)
+# ====================================================================== #
+# Remove bounds that do not satisfy the ordering (externally invalid).
+# ====================================================================== #
+
+a = function(r){
+  Store <- vector(length = length(r[is.na(r)==F]))
+  for(j in 1:length(r[is.na(r)==F])){
+    s <- data.frame(r[is.na(r)==F][j])
+    s <- arrange(s,order)
+    bashl <- vector(length = nrow(s))
+    bashu <- vector(length = nrow(s))
+    for(k in 1:nrow(s)){
+      bashl[k] <- prod(s$lower[k]<=s[s$order>s$order[k],3])
+      bashu[k] <- prod(s$upper[k]<=s[s$order>s$order[k],4])
+    }
+    bash = bashl*bashu
+    Store[j] = prod(bash)
+  }
+  return(Store)
+}
+
+b <- which(a(bound)==1)
+bound <- bound[b]
+
+rm(a)
+rm(b)
+
+# ====================================================================== #
+# Find the weighted bound.
+# ====================================================================== #
+
+a <- count(Data,"X")
+a$p <- a$freq/sum(a$freq)
+a <- a[,c(1,3)]
+colnames(a) <- c("x","p")
+
+b = function(r,s){
+  Store <- list()
+  for(j in 1:length(r)){
+    q = merge(data.frame(r[j]),s)
+    q = cbind(q[,1:4],q[,6])
+    colnames(q) <- c("x","d","l","u","p")
+    q$lower <- q$p*q$l
+    q$upper <- q$p*q$u
+    q <- q[,c(1,2,6,7)]
+    q <- ddply(q,.(d),summarize,lower=sum(lower),upper=sum(upper))
+    Store[[j]] <- list(Set=q,ACE=c(q[1,2]-q[2,3],q[1,3]-q[2,2]))
+  }
+  return(Store)
+}
+
+Bound <- b(bound,a)
+
+rm(a)
+rm(b)
 
 proc.time() - ptm
