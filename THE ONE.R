@@ -101,6 +101,7 @@ bounds <- function(O){
 O = iterpc(n = 4, r = 4, ordered = TRUE)
 O = getall(O)
 colnames(O) = h
+O = O[-c(7, 8, 13:24),]
 Intermediate = apply(O, 1, bounds)
 
 rep.TYPEA <- function(x){
@@ -214,3 +215,4 @@ final <- function(g){
   output = apply(O, 1, engine, g = x)
   return(output)
 }
+system.time(final(c(0.01,0.01,0.01,0.01)))
